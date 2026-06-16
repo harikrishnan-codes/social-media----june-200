@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ULTRA-PREMIUM & LUXURIOUS HEADER CORE MODULAR CSS
+   ULTRA-PREMIUM & LUXURIOUS HEADER CORE MODULAR CSS WITH DROPDOWN MATRIX
    ========================================================================== */
 
 /* Typography Assignments: Serifs map onto your luxury corporate branding explicitly */
@@ -10,7 +10,8 @@
 
 /* Sans-serif pairing rules for crisp, scannable interactive navigation tracks */
 .app-premium-header .app-nav-link,
-.app-premium-header .btn-social-base {
+.app-premium-header .btn-social-base,
+.dropdown-leaf-link {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
 
@@ -79,6 +80,7 @@
     gap: 8px;
     padding: 6px 0;
     position: relative;
+    cursor: pointer;
     transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -109,6 +111,73 @@
 .app-nav-link:hover::after,
 .app-nav-link.active-link-token::after {
     transform: scaleX(1);
+}
+
+/* ==========================================================================
+   EXACT ACCURATE DROPDOWN OVERLAY BOX GEOMETRY MODULE
+   ========================================================================== */
+.app-nav-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-arrow-indicator {
+    font-size: 10px !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.app-nav-dropdown-panel {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(14px);
+    width: 170px;
+    background-color: #121212; /* Matches your --surface-dark Slate Obsidian variable token precisely */
+    border: 1px solid var(--border-dark);
+    border-radius: 6px;
+    padding: 6px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2000;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                visibility 0.3s ease;
+}
+
+/* Active State Injections Driven via Interactive Clicks Hooks */
+.app-nav-dropdown-wrapper.dropdown-visible-active .app-nav-dropdown-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(6px);
+}
+
+.app-nav-dropdown-wrapper.dropdown-visible-active .dropdown-arrow-indicator {
+    transform: rotate(180deg);
+    color: var(--brand-vibrant); /* Fires Orange Accent color change match on open state */
+}
+
+.dropdown-text-stack {
+    list-style: none;
+    width: 100%;
+}
+
+.dropdown-leaf-link {
+    display: block;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-leaf-link:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: var(--text-dark-pure);
 }
 
 /* ==========================================================================
@@ -203,8 +272,9 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 32px;
+        gap: 24px;
         transition: right 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
     }
 
     /* Triggered state layer driven directly via core script commands toggles */
@@ -213,10 +283,45 @@
         box-shadow: -30px 0 60px rgba(0, 0, 0, 0.7);
     }
 
+    .app-nav-dropdown-wrapper {
+        width: 100%;
+    }
+
     .app-nav-link {
         font-size: 18px; /* Scaled touch row heights for micro mobile actions */
         width: 100%;
-        padding: 4px 0;
+        padding: 8px 0;
+        justify-content: space-between;
+    }
+
+    .app-nav-link::after {
+        display: none; /* Strip slider accent underline over mobile slide curtain views */
+    }
+
+    /* --- MOBILE CHASSIS ACCORDION EXPANSION --- */
+    .app-nav-dropdown-panel {
+        position: static;
+        transform: none !important;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        padding: 4px 0 0 16px;
+        margin-top: 2px;
+        display: none; /* Managed cleanly via script hooks */
+    }
+
+    .app-nav-dropdown-wrapper.dropdown-visible-active .app-nav-dropdown-panel {
+        display: block;
+    }
+
+    .dropdown-leaf-link {
+        padding: 12px 0;
+        font-size: 16px;
+        color: var(--text-secondary);
     }
 
     /* Hide horizontal button groups to keep viewport density clean */
@@ -240,8 +345,6 @@
         background-color: var(--brand-vibrant);
     }
 }
-
-
 
 
 

@@ -2,10 +2,10 @@
    CINEMATIC NAV TERMINAL & INTERACTIVE GLASSMORPHISM HEADER SYSTEM
    ========================================================================== */
 
-/* Typography Assignments: Plus Jakarta Sans for rapid navigation scannability */
 .workspace-premium-navigation .branding-handle-text,
 .workspace-premium-navigation .nav-link-token,
-.mobile-menu-utility-deck p {
+.mobile-menu-utility-deck p,
+.dropdown-text-stack li a {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
 
@@ -14,23 +14,21 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px; /* Executive structural navigation clearance boundary */
-    z-index: 9999; /* Forces absolute layer dominance over all scrolling canvas layouts */
+    height: 80px;
+    z-index: 9999;
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.01);
     background-color: transparent;
-    /* Clean fluid transitions handling your scroll transformations instantly */
     transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
                 backdrop-filter 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
                 height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
                 border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Scroll Transformation Sub-Engine Injector Class */
 .workspace-premium-navigation.scrolled-navigation-state {
-    height: 70px; /* Elegantly compresses header footprint spacing on layout scroll */
-    background-color: rgba(11, 15, 19, 0.75); /* Mapped explicitly into your Midnight Slate */
+    height: 70px;
+    background-color: rgba(11, 15, 19, 0.75);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-color: var(--border-dark);
@@ -54,13 +52,13 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    z-index: 10001; /* Locks branding anchor on top layer stacks always */
+    z-index: 10001;
 }
 
 .branding-logo-pulse {
     width: 8px;
     height: 8px;
-    background-color: var(--brand-vibrant); /* Liquid Copper pulse core */
+    background-color: var(--brand-vibrant);
     border-radius: 50%;
     position: relative;
     box-shadow: 0 0 10px var(--brand-vibrant);
@@ -76,22 +74,8 @@
     animation: beaconPulse 2s infinite ease-in-out;
 }
 
-.branding-handle-text {
-    font-size: 18px;
-    font-weight: 800;
-    color: var(--text-dark-pure);
-    letter-spacing: -0.5px;
-}
-
-.branding-handle-text span {
-    background: var(--action-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 600;
-}
-
 /* ==========================================================================
-   CENTRAL AXIS: DESKTOP INLINE NAVIGATION LINKS DECK
+   CENTRAL AXIS: INLINE CORES & DROPDOWN GEOMETRY HOOKS
    ========================================================================== */
 .nav-navigation-menu-links-deck {
     display: flex;
@@ -119,7 +103,6 @@
     color: var(--text-dark-pure);
 }
 
-/* Interactive Precision Slide Line Animation Underlays */
 .nav-link-token::after {
     content: '';
     position: absolute;
@@ -127,7 +110,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--action-gradient); /* Liquid Copper accent underline */
+    background: var(--action-gradient);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -139,9 +122,80 @@
     transform-origin: left;
 }
 
-.mobile-menu-utility-deck {
-    display: none; /* Stripped from desktop configuration visibility rules fields */
+/* --- DYNAMIC DROPDOWN COMPONENT MECHANICS --- */
+.nav-dropdown-item-container {
+    position: relative;
 }
+
+.dropdown-trigger-bridge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.dropdown-arrow-vector {
+    font-size: 10px;
+    color: var(--text-secondary);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+/* Precise Pixel-Aligned Box Placement matching screenshot */
+.nav-matrix-dropdown-panel {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    width: 180px;
+    background-color: #161616; /* Clean charcoal dark panel backing matching reference image */
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    padding: 6px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 10100;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                visibility 0.3s ease;
+}
+
+/* Open Toggle Modifiers (Triggered on link/arrow click via JS) */
+.nav-dropdown-item-container.dropdown-open-state .nav-matrix-dropdown-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(8px);
+}
+
+.nav-dropdown-item-container.dropdown-open-state .dropdown-arrow-vector {
+    transform: rotate(180deg);
+    color: var(--brand-vibrant); /* High contrast matching selection lines */
+}
+
+.dropdown-text-stack {
+    list-style: none;
+    width: 100%;
+}
+
+.dropdown-text-stack li a {
+    display: block;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-text-stack li a:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+}
+
+.mobile-menu-utility-deck { display: none; }
 
 /* ==========================================================================
    RIGHT WING: BUTTON SYSTEM & LUXURY HAMBURGER ENGINE
@@ -158,7 +212,6 @@
     font-size: 13px !important;
 }
 
-/* Luxury Customizable Minimal Hamburger Mechanical Box */
 .luxury-hamburger-trigger {
     background: transparent;
     border: none;
@@ -169,7 +222,7 @@
     background-color: rgba(255, 255, 255, 0.01);
     border: 1px solid var(--border-dark);
     cursor: pointer;
-    display: none; /* Invisible on desktop screens */
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -188,81 +241,90 @@
     background-color: var(--text-dark-pure);
     border-radius: 2px;
     transform-origin: center;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-                background-color 0.4s ease, 
-                opacity 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, opacity 0.3s ease;
 }
 
 /* ==========================================================================
    STRICT 768px LUXURY MEDIA QUERY REFLOW (Fullscreen Terminal Overlay Drop)
    ========================================================================== */
 @media (max-width: 768px) {
-    .luxury-hamburger-trigger {
-        display: flex; /* Activates interactive panel controller icon safely */
-    }
+    .luxury-hamburger-trigger { display: flex; }
+    .nav-desktop-action-btn { display: none; }
 
-    .nav-desktop-action-btn {
-        display: none; /* Clears row elements layout footprint bloat on small touch screens */
-    }
-
-    /* Transform navigation menus link decks completely into an expansive full-screen drop mask layer overlay */
     .nav-navigation-menu-links-deck {
         position: fixed;
         inset: 0;
         width: 100vw;
         height: 100vh;
-        background-color: #0b0f13; /* Full opaque high-status Midnight Slate canvas space lock */
+        background-color: #0b0f13;
         z-index: 10000;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        padding: 120px 40px 60px 40px; /* Generous industrial clearing padding lines variables */
-        
-        /* Hardware accelerated translation offsets forcing hidden status parameters by default */
+        padding: 100px 40px 40px 40px;
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-                    opacity 0.6s ease,
-                    visibility 0.6s ease;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease, visibility 0.5s ease;
+        overflow-y: auto;
     }
 
-    /* Active State Class Injection Triggered via Javascript Logic Hook */
     .nav-navigation-menu-links-deck.mobile-overlay-active-state {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
 
-    /* Pivot layout rows into high-contrast vertical stack pathways entries arrays */
     .nav-links-list {
         flex-direction: column;
         align-items: flex-start;
-        gap: 28px;
+        gap: 16px;
         width: 100%;
     }
 
     .nav-link-token {
-        font-size: 24px; /* Dramatic elegant editorial font scaling properties mapping over touch grids */
-        font-family: 'Playfair Display', serif !important; /* Premium structural accent separation font */
+        font-size: 24px;
         font-weight: 700;
         color: var(--text-dark-pure);
-        padding: 4px 0;
+        padding: 8px 0;
         width: 100%;
         display: block;
     }
 
-    .nav-link-token::after {
-        display: none; /* Drops slider bars mechanism over mobile view targets screens */
+    .nav-link-token::after { display: none; }
+
+    /* --- MOBILE CHASSIS EXPANSION DROP TRACK --- */
+    .nav-matrix-dropdown-panel {
+        position: static;
+        transform: none !important;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        padding: 0 0 0 16px;
+        margin-top: 4px;
+        display: none;
     }
 
-    /* Reveals custom lower actions dock inside mobile menus frames layer stack */
+    .nav-dropdown-item-container.dropdown-open-state .nav-matrix-dropdown-panel {
+        display: block;
+    }
+
+    .dropdown-text-stack li a {
+        padding: 12px 0;
+        font-size: 18px;
+        color: var(--text-secondary);
+    }
+
     .mobile-menu-utility-deck {
         display: block;
         width: 100%;
         margin-top: auto;
-        padding-top: 40px;
+        padding-top: 30px;
         border-top: 1px solid var(--border-dark);
     }
 
@@ -272,29 +334,10 @@
         padding: 16px 0 !important;
     }
 
-    /* ==========================================================================
-       HAMBURGER INTERACTION STATE SHIFTS MECHANICS SYSTEM HOOKS (TRIGGERS INVERSE TRANSFORMS)
-       ========================================================================== */
-    .luxury-hamburger-trigger.active-cross-state .bar-top {
-        transform: translateY(6.5px) rotate(45deg);
-        background-color: var(--brand-vibrant);
-    }
-
-    .luxury-hamburger-trigger.active-cross-state .bar-middle {
-        opacity: 0;
-        transform: scaleX(0);
-    }
-
-    .luxury-hamburger-trigger.active-cross-state .bar-bottom {
-        transform: translateY(-6.5px) rotate(-45deg);
-        background-color: var(--brand-vibrant);
-    }
+    .luxury-hamburger-trigger.active-cross-state .bar-top { transform: translateY(6.5px) rotate(45deg); background-color: var(--brand-vibrant); }
+    .luxury-hamburger-trigger.active-cross-state .bar-middle { opacity: 0; transform: scaleX(0); }
+    .luxury-hamburger-trigger.active-cross-state .bar-bottom { transform: translateY(-6.5px) rotate(-45deg); background-color: var(--brand-vibrant); }
 }
-
-
-
-
-
 
 
 
@@ -320,7 +363,8 @@
 
 .social-premium-hero-stage {
     background-color: var(--canvas-dark);
-    padding: 140px 0 60px 0; /* Expanded upper clearance safety bounds preventing scrolling navigation bugs */
+    padding: 140px 0 60px 0;
+    /* Expanded upper clearance safety bounds preventing scrolling navigation bugs */
     width: 100%;
     position: relative;
     border-bottom: 1px solid var(--border-dark);
@@ -342,7 +386,8 @@
 
 .hero-profile-layout-wrapper {
     width: 92%;
-    max-width: 935px; /* Symmetrically engineered to lock perfectly with standard high-status timeline grids */
+    max-width: 935px;
+    /* Symmetrically engineered to lock perfectly with standard high-status timeline grids */
     margin: 0 auto;
     position: relative;
     z-index: 5;
@@ -374,7 +419,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.05); /* Stale/viewed state fallback boundary decoration */
+    background: rgba(255, 255, 255, 0.05);
+    /* Stale/viewed state fallback boundary decoration */
 }
 
 .profile-avatar-story-halo.active-story-gradient {
@@ -386,7 +432,8 @@
     width: 100%;
     height: 100%;
     border-radius: var(--radius-avatar);
-    background-color: var(--canvas-dark); /* Protective dark offset separating image assets from color halo channels */
+    background-color: var(--canvas-dark);
+    /* Protective dark offset separating image assets from color halo channels */
     padding: 4px;
     display: flex;
     align-items: center;
@@ -432,7 +479,8 @@
 }
 
 .profile-verified-badge-copper {
-    color: var(--brand-vibrant); /* High contrast liquid copper identity verification mark */
+    color: var(--brand-vibrant);
+    /* High contrast liquid copper identity verification mark */
     font-size: 20px;
     filter: drop-shadow(0 2px 10px rgba(255, 110, 64, 0.25));
 }
@@ -447,7 +495,8 @@
 .profile-message-btn {
     padding: 9px 24px !important;
     font-size: 13px !important;
-    border-radius: 8px !important; /* Squaring targets slightly to isolate standard application visual cues */
+    border-radius: 8px !important;
+    /* Squaring targets slightly to isolate standard application visual cues */
 }
 
 .profile-utility-square-btn {
@@ -521,7 +570,8 @@
 .profile-anchor-hyperlink-token {
     font-size: 14px;
     font-weight: 700;
-    color: var(--brand-royal); /* Anchor deep links using your rich gold/amber support variables */
+    color: var(--brand-royal);
+    /* Anchor deep links using your rich gold/amber support variables */
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -539,7 +589,8 @@
    ========================================================================== */
 @media (max-width: 768px) {
     .social-premium-hero-stage {
-        padding: 110px 0 40px 0; /* Compresses pad limits slightly over smaller monitors profiles */
+        padding: 110px 0 40px 0;
+        /* Compresses pad limits slightly over smaller monitors profiles */
     }
 
     /* Dissolve horizontal columns down into a unified responsive centered stack system */
@@ -551,7 +602,8 @@
     }
 
     .profile-avatar-story-halo {
-        width: 100px; /* Scales down footprint size safely over restricted mobile screen scopes */
+        width: 100px;
+        /* Scales down footprint size safely over restricted mobile screen scopes */
         height: 100px;
     }
 
@@ -577,7 +629,8 @@
     .profile-action-buttons-deck {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 40px; /* Spans buttons symmetrically wide-bleed over viewports */
+        grid-template-columns: 1fr 1fr 40px;
+        /* Spans buttons symmetrically wide-bleed over viewports */
         gap: 8px;
     }
 
@@ -612,15 +665,21 @@
     }
 
     .metric-counter-cell span strong {
-        font-size: 16px; /* Pops metric values numbers cleanly above description label tags */
+        font-size: 16px;
+        /* Pops metric values numbers cleanly above description label tags */
         margin-bottom: 2px;
     }
 }
 
 /* Hardware Accelerated Story Halo Revolve Keyframe Animation Engines */
 @keyframes storyHaloRotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -683,7 +742,8 @@
 .live-beacon-dot {
     width: 8px;
     height: 8px;
-    background-color: var(--brand-vibrant); /* Liquid Copper pulse core marker */
+    background-color: var(--brand-vibrant);
+    /* Liquid Copper pulse core marker */
     border-radius: 50%;
     box-shadow: 0 0 10px var(--brand-vibrant);
     animation: beaconPulse 1.8s infinite ease-in-out;
@@ -697,7 +757,7 @@
     letter-spacing: -0.5px;
 }
 
-.stories-tray-header > span {
+.stories-tray-header>span {
     font-size: 12px;
     font-weight: 700;
     color: var(--text-secondary);
@@ -720,7 +780,8 @@
     border: 1px solid var(--border-dark);
     border-radius: 12px;
     padding: 10px;
-    height: 180px; /* Strong vertical smartphone layout capture balance profile weight dimensions */
+    height: 180px;
+    /* Strong vertical smartphone layout capture balance profile weight dimensions */
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -779,17 +840,29 @@
 }
 
 /* Colored verified identity validation loops tracking profile status channels */
-.active-broadcast-state .shard-avatar-ring { background: var(--action-gradient); }
-.verified-ring-copper { background: linear-gradient(135deg, #ff6e40 0%, #ffab40 100%); }
-.verified-ring-amber { background: linear-gradient(135deg, #ffab40 0%, #0b0f13 100%); }
-.verified-ring-cyan { background: linear-gradient(135deg, #00e5ff 0%, #0b0f13 100%); }
+.active-broadcast-state .shard-avatar-ring {
+    background: var(--action-gradient);
+}
+
+.verified-ring-copper {
+    background: linear-gradient(135deg, #ff6e40 0%, #ffab40 100%);
+}
+
+.verified-ring-amber {
+    background: linear-gradient(135deg, #ffab40 0%, #0b0f13 100%);
+}
+
+.verified-ring-cyan {
+    background: linear-gradient(135deg, #00e5ff 0%, #0b0f13 100%);
+}
 
 .shard-mini-avatar {
     width: 100%;
     height: 100%;
     border-radius: var(--radius-avatar);
     object-fit: cover;
-    border: 2px solid var(--surface-dark); /* Thick protective gap lifting image element assets cleanly */
+    border: 2px solid var(--surface-dark);
+    /* Thick protective gap lifting image element assets cleanly */
 }
 
 .shard-profile-handle {
@@ -822,12 +895,14 @@
    STRICT 768px LUXURY MEDIA QUERY REFLOW (Touch Horizontal Carousel Slide)
    ========================================================================== */
 @media (max-width: 768px) {
+
     /* Collapse desktop rows down into a unified responsive horizontal swiping grid track */
     .stories-layout-container {
         grid-template-columns: 1fr;
         gap: 16px;
         width: 100%;
-        padding-left: 5%; /* Shifts layouts to line up symmetrically with parent containers */
+        padding-left: 5%;
+        /* Shifts layouts to line up symmetrically with parent containers */
     }
 
     .stories-tray-header {
@@ -844,8 +919,10 @@
     .stories-scroll-deck-track {
         display: flex;
         overflow-x: auto;
-        scrollbar-width: none; /* Strips browser default UI tracking scroll bars blocks graphics */
-        padding-right: 5%; /* Appends clear trailing tail spacing paths bounds */
+        scrollbar-width: none;
+        /* Strips browser default UI tracking scroll bars blocks graphics */
+        padding-right: 5%;
+        /* Appends clear trailing tail spacing paths bounds */
         gap: 12px;
     }
 
@@ -855,7 +932,8 @@
 
     .story-shard-card {
         flex-shrink: 0;
-        width: 115px; /* Perfect proportional mobile device aspect mapping size footprint */
+        width: 115px;
+        /* Perfect proportional mobile device aspect mapping size footprint */
         height: 150px;
         padding: 8px;
     }
@@ -904,7 +982,8 @@
 
 .feed-layout-container {
     width: 92%;
-    max-width: 1000px; /* Aligned with standard narrow timeline focus dimensions for visual symmetry */
+    max-width: 1000px;
+    /* Aligned with standard narrow timeline focus dimensions for visual symmetry */
     margin: 0 auto;
     display: grid;
     /* Split timeline track: core timeline stream dominating the left parameters field columns */
@@ -967,7 +1046,8 @@
     right: 0;
     width: 10px;
     height: 10px;
-    background-color: var(--brand-vibrant); /* Liquid Copper pulse update dot */
+    background-color: var(--brand-vibrant);
+    /* Liquid Copper pulse update dot */
     border-radius: 50%;
     border: 2px solid var(--surface-dark);
 }
@@ -991,7 +1071,8 @@
 }
 
 .verification-badge-copper {
-    color: var(--brand-vibrant); /* Radiant liquid copper premium badge verification mark */
+    color: var(--brand-vibrant);
+    /* Radiant liquid copper premium badge verification mark */
     font-size: 12.5px;
 }
 
@@ -1010,13 +1091,16 @@
     transition: color 0.3s ease;
 }
 
-.card-utility-trigger:hover { color: var(--text-dark-pure); }
+.card-utility-trigger:hover {
+    color: var(--text-dark-pure);
+}
 
 /* Main Picture Box Image Shield Frames Window System */
 .card-media-canvas-frame {
     position: relative;
     width: 100%;
-    height: 520px; /* High-fidelity smartphone display ratio standard capture box heights */
+    height: 520px;
+    /* High-fidelity smartphone display ratio standard capture box heights */
     background-color: rgba(0, 0, 0, 0.2);
     overflow: hidden;
     cursor: pointer;
@@ -1155,7 +1239,8 @@
 
 .sidebar-sticky-en enclosure {
     position: sticky;
-    top: 110px; /* Safe clearing lock track matching global scrolling headers view offsets */
+    top: 110px;
+    /* Safe clearing lock track matching global scrolling headers view offsets */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1256,7 +1341,8 @@
     background: transparent;
     border: none;
     outline: none;
-    color: var(--brand-vibrant); /* High contrast liquid copper follow triggers action buttons */
+    color: var(--brand-vibrant);
+    /* High contrast liquid copper follow triggers action buttons */
     font-size: 12px;
     font-weight: 700;
     cursor: pointer;
@@ -1271,7 +1357,8 @@
 
 .sidebar-platform-minimal-footer p {
     font-size: 11px;
-    color: rgba(126, 139, 150, 0.5); /* Semi-transparent gunmetal slate legals footnotes text */
+    color: rgba(126, 139, 150, 0.5);
+    /* Semi-transparent gunmetal slate legals footnotes text */
     line-height: 1.5;
     margin: 0;
 }
@@ -1295,31 +1382,54 @@
     .feed-layout-container {
         grid-template-columns: 1fr;
         width: 100%;
-        padding: 0; /* Clear edge buffers completely to allow wide-bleed mobile content assets */
+        padding: 0;
+        /* Clear edge buffers completely to allow wide-bleed mobile content assets */
     }
 
     .feed-sidebar-suggestions-axis {
-        display: none; /* Safely hides suggestion bloat panel tracks over small device mobile targets screens */
+        display: none;
+        /* Safely hides suggestion bloat panel tracks over small device mobile targets screens */
     }
 
     .feed-instagram-card {
-        border-radius: 0; /* Installs full panoramic bleed parameters natively over touch frames viewports */
+        border-radius: 0;
+        /* Installs full panoramic bleed parameters natively over touch frames viewports */
         border-left: none;
         border-right: none;
     }
 
     .card-media-canvas-frame {
-        height: 420px; /* Scales picture window bounds proportionally down on small responsive grids */
+        height: 420px;
+        /* Scales picture window bounds proportionally down on small responsive grids */
     }
 }
 
 /* Hardware Accelerated Pop Animation Keyframe Matrices */
 @keyframes heartPopFlashAnim {
-    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
-    30% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.9; }
-    50% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.9; }
-    80% { transform: translate(-50%, -50%) scale(1); opacity: 0.9; }
-    100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0; }
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+
+    30% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(0.95);
+        opacity: 0.9;
+    }
+
+    80% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+    }
 }
 
 
@@ -1341,14 +1451,16 @@
 
 .social-explore-grid-stage {
     background-color: var(--canvas-dark);
-    padding: 0 0 100px 0; /* Comprehensive baseline margins preceding footers transformations */
+    padding: 0 0 100px 0;
+    /* Comprehensive baseline margins preceding footers transformations */
     width: 100%;
     position: relative;
 }
 
 .explore-layout-container {
     width: 92%;
-    max-width: 935px; /* Symmetrically mirrors executive profile hero widths perfectly */
+    max-width: 935px;
+    /* Symmetrically mirrors executive profile hero widths perfectly */
     margin: 0 auto;
 }
 
@@ -1399,18 +1511,21 @@
 .switcher-tab-btn::after {
     content: '';
     position: absolute;
-    top: -1px; /* Positions line accurately over the top border trace layout box rules */
+    top: -1px;
+    /* Positions line accurately over the top border trace layout box rules */
     left: 0;
     width: 100%;
     height: 1.5px;
-    background-color: var(--text-dark-pure); /* Liquid copper gradients or absolute whites */
+    background-color: var(--text-dark-pure);
+    /* Liquid copper gradients or absolute whites */
     transform: scaleX(0);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .switcher-tab-btn.active-tab-token::after {
     transform: scaleX(1);
-    background: var(--action-gradient); /* Locks onto high-status copper gradients */
+    background: var(--action-gradient);
+    /* Locks onto high-status copper gradients */
 }
 
 /* ==========================================================================
@@ -1419,7 +1534,8 @@
 .explore-mosaic-grid-track {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px; /* High-end breathing grid margin parameters */
+    gap: 28px;
+    /* High-end breathing grid margin parameters */
 }
 
 /* Elite Double-Height Asymmetrical Mosaic Modifier Grid Blocks */
@@ -1433,12 +1549,14 @@
     background-color: var(--surface-dark);
     overflow: hidden;
     cursor: pointer;
-    aspect-ratio: 1 / 1; /* Enforces sharp uniform square parameters lines by default */
+    aspect-ratio: 1 / 1;
+    /* Enforces sharp uniform square parameters lines by default */
     border: 1px solid var(--border-dark);
 }
 
 .mosaic-asset-card.feature-tall-node .mosaic-image-shield {
-    aspect-ratio: 1 / 2; /* Doubles vertical space weight for tall cinematic feature captures fluidly */
+    aspect-ratio: 1 / 2;
+    /* Doubles vertical space weight for tall cinematic feature captures fluidly */
 }
 
 .mosaic-main-graphic {
@@ -1453,7 +1571,8 @@
 .mosaic-interaction-mask {
     position: absolute;
     inset: 0;
-    background-color: rgba(11, 15, 19, 0.6); /* Translucent Midnight Slate shutter */
+    background-color: rgba(11, 15, 19, 0.6);
+    /* Translucent Midnight Slate shutter */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1511,7 +1630,8 @@
     .switcher-links-track {
         gap: 0;
         width: 100%;
-        justify-content: space-around; /* Distributes menu tabs evenly across device spans */
+        justify-content: space-around;
+        /* Distributes menu tabs evenly across device spans */
     }
 
     .switcher-tab-btn {
@@ -1522,22 +1642,25 @@
 
     /* Dissolve intricate grid layers into tight mobile application parameters sheets */
     .explore-mosaic-grid-track {
-        gap: 3px; /* Installs tight micro-groove borders exactly like premium mobile apps */
+        gap: 3px;
+        /* Installs tight micro-groove borders exactly like premium mobile apps */
         width: 100%;
         padding: 0;
     }
 
     .mosaic-asset-card.feature-tall-node {
-        grid-row: auto; /* Drops double-height priorities seamlessly over tiny screens viewports */
+        grid-row: auto;
+        /* Drops double-height priorities seamlessly over tiny screens viewports */
     }
 
     .mosaic-asset-card.feature-tall-node .mosaic-image-shield {
-        aspect-ratio: 1 / 1; /* Forces all cards into flawless scannable squares uniformly */
+        aspect-ratio: 1 / 1;
+        /* Forces all cards into flawless scannable squares uniformly */
     }
 
     /* Strip floating hover layer metrics overlay on touch devices to favor direct visual scans */
     .mosaic-interaction-mask {
-        display: none; 
+        display: none;
     }
 }
 
@@ -1569,7 +1692,8 @@
 }
 
 .platform-reels-matrix-stage {
-    background-color: var(--canvas-dark); /* Locked directly onto your AMOLED Black */
+    background-color: var(--canvas-dark);
+    /* Locked directly onto your AMOLED Black */
     padding: 60px 0 100px 0;
     width: 100%;
     position: relative;
@@ -1602,7 +1726,8 @@
 
 .reels-icon-vector {
     font-size: 24px;
-    color: var(--brand-vibrant); /* Electric Neon Rose */
+    color: var(--brand-vibrant);
+    /* Electric Neon Rose */
 }
 
 .reels-section-header h2 {
@@ -1650,7 +1775,8 @@
 .reel-media-viewport-shield {
     position: relative;
     width: 100%;
-    aspect-ratio: 9 / 16; /* Clean uniform vertical mobile capture bounding boxes dimensions */
+    aspect-ratio: 9 / 16;
+    /* Clean uniform vertical mobile capture bounding boxes dimensions */
     background-color: var(--surface-dark);
     border-radius: var(--radius-feed);
     overflow: hidden;
@@ -1693,7 +1819,8 @@
 .reel-hover-interaction-shutter {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(77, 56, 243, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%); /* Hyper Blue Alpha Shift Overlay */
+    background: linear-gradient(to top, rgba(77, 56, 243, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%);
+    /* Hyper Blue Alpha Shift Overlay */
     z-index: 3;
     display: flex;
     align-items: center;
@@ -1721,8 +1848,15 @@
 }
 
 /* Color Injections bound to your explicit color tokens */
-.color-rose-trigger { color: var(--brand-vibrant); filter: drop-shadow(0 0 8px var(--brand-vibrant)); }
-.color-cyan-trigger { color: var(--accent-glow); filter: drop-shadow(0 0 8px var(--accent-glow)); }
+.color-rose-trigger {
+    color: var(--brand-vibrant);
+    filter: drop-shadow(0 0 8px var(--brand-vibrant));
+}
+
+.color-cyan-trigger {
+    color: var(--accent-glow);
+    filter: drop-shadow(0 0 8px var(--accent-glow));
+}
 
 /* Footer Metadata Account Handle Descriptors */
 .reel-profile-footer-identity {
@@ -1744,7 +1878,8 @@
     line-height: 1.4;
     margin: 0;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Safe constraints preventing multi-line caption blowouts */
+    -webkit-line-clamp: 2;
+    /* Safe constraints preventing multi-line caption blowouts */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1752,12 +1887,21 @@
 /* ACTIVE CONTEXTUAL MOUSE POINTER INTERACTION STATES */
 .reel-video-card-node:hover .reel-media-viewport-shield {
     transform: translateY(-4px);
-    border-color: var(--brand-vibrant); /* Electric Neon Rose Edge Pop */
+    border-color: var(--brand-vibrant);
+    /* Electric Neon Rose Edge Pop */
 }
 
-.reel-video-card-node:hover .reel-fallback-cover { transform: scale(1.05); }
-.reel-video-card-node:hover .reel-hover-interaction-shutter { opacity: 1; }
-.reel-video-card-node:hover .reel-metrics-interaction-stack { transform: translateY(0); }
+.reel-video-card-node:hover .reel-fallback-cover {
+    transform: scale(1.05);
+}
+
+.reel-video-card-node:hover .reel-hover-interaction-shutter {
+    opacity: 1;
+}
+
+.reel-video-card-node:hover .reel-metrics-interaction-stack {
+    transform: translateY(0);
+}
 
 /* ==========================================================================
    STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Mobile Touch Grid)
@@ -1810,7 +1954,7 @@
         font-size: 12px;
         gap: 4px;
     }
-    
+
     .reel-metrics-interaction-stack span i {
         font-size: 11px;
     }
@@ -1856,7 +2000,8 @@
 }
 
 .platform-dialogue-ledger-stage {
-    background-color: var(--canvas-dark); /* Pure AMOLED Black Background Base */
+    background-color: var(--canvas-dark);
+    /* Pure AMOLED Black Background Base */
     padding: 40px 0 100px 0;
     width: 100%;
     position: relative;
@@ -1871,7 +2016,8 @@
     /* Split balance: equal column distribution runways across widescreen display formats */
     grid-template-columns: 1.1fr 0.9fr;
     gap: 40px;
-    align-items: stretch; /* Links row cell parameters borders height fields symmetrically */
+    align-items: stretch;
+    /* Links row cell parameters borders height fields symmetrically */
 }
 
 /* ==========================================================================
@@ -1912,7 +2058,8 @@
 .pulse-cyan-beacon {
     width: 6px;
     height: 6px;
-    background-color: var(--accent-glow); /* Cyan Pop beacon pointer */
+    background-color: var(--accent-glow);
+    /* Cyan Pop beacon pointer */
     border-radius: 50%;
     box-shadow: 0 0 8px var(--accent-glow);
     animation: beaconPulse 1.5s infinite ease-in-out;
@@ -2064,7 +2211,9 @@
     scrollbar-width: none;
 }
 
-.chat-message-viewport-canvas::-webkit-scrollbar { display: none; }
+.chat-message-viewport-canvas::-webkit-scrollbar {
+    display: none;
+}
 
 .message-bubble-row {
     display: flex;
@@ -2080,7 +2229,8 @@
 }
 
 .message-bubble-row.companion-bubble-type .message-text-content {
-    background-color: #1a1e22; /* Soft deep charcoal contrast backdrop tint */
+    background-color: #1a1e22;
+    /* Soft deep charcoal contrast backdrop tint */
     color: var(--text-dark-pure);
     border-radius: 4px 16px 16px 16px;
 }
@@ -2092,7 +2242,8 @@
 }
 
 .message-bubble-row.master-user-bubble-type .message-text-content {
-    background: var(--action-gradient); /* Electric Rose to Hyper Blue background line */
+    background: var(--action-gradient);
+    /* Electric Rose to Hyper Blue background line */
     color: var(--text-dark-pure);
     border-radius: 16px 4px 16px 16px;
 }
@@ -2132,7 +2283,9 @@
     transition: color 0.3s ease;
 }
 
-.chat-toolbar-vector-btn:hover { color: var(--brand-vibrant); }
+.chat-toolbar-vector-btn:hover {
+    color: var(--brand-vibrant);
+}
 
 .chat-facade-text-input {
     flex-grow: 1;
@@ -2146,13 +2299,16 @@
     transition: border-color 0.3s ease;
 }
 
-.chat-facade-text-input:focus { border-color: rgba(255, 255, 255, 0.15); }
+.chat-facade-text-input:focus {
+    border-color: rgba(255, 255, 255, 0.15);
+}
 
 .chat-transmit-action-btn {
     background: transparent;
     border: none;
     outline: none;
-    color: var(--brand-vibrant); /* Electric Neon Rose Triggers Send Button Text */
+    color: var(--brand-vibrant);
+    /* Electric Neon Rose Triggers Send Button Text */
     font-size: 13.5px;
     cursor: pointer;
     transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
@@ -2232,7 +2388,8 @@
 }
 
 .platform-broadcast-theater-stage {
-    background-color: var(--canvas-dark); /* Strict AMOLED Black Base Lock */
+    background-color: var(--canvas-dark);
+    /* Strict AMOLED Black Base Lock */
     padding: 40px 0 100px 0;
     width: 100%;
     position: relative;
@@ -2260,7 +2417,8 @@
 .monitor-video-viewport {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9; /* Modern panoramic broadcast landscape bounding dimensions */
+    aspect-ratio: 16 / 9;
+    /* Modern panoramic broadcast landscape bounding dimensions */
     background-color: var(--surface-dark);
     border-radius: var(--radius-feed);
     overflow: hidden;
@@ -2287,7 +2445,8 @@
 }
 
 .live-indicator-pill {
-    background-color: var(--brand-vibrant); /* Electric Neon Rose Status Pillar */
+    background-color: var(--brand-vibrant);
+    /* Electric Neon Rose Status Pillar */
     color: var(--text-dark-pure);
     font-size: 11px;
     font-weight: 800;
@@ -2344,7 +2503,8 @@
     height: 42px;
     border-radius: var(--radius-avatar);
     object-fit: cover;
-    border: 1.5px solid var(--brand-vibrant); /* High contrast ring tracker */
+    border: 1.5px solid var(--brand-vibrant);
+    /* High contrast ring tracker */
 }
 
 .broadcaster-meta-stack h4 {
@@ -2392,7 +2552,8 @@
 
 .network-pulse-icon-rose {
     font-size: 14px;
-    color: var(--brand-vibrant); /* Electric Neon Rose Core Status Pointer */
+    color: var(--brand-vibrant);
+    /* Electric Neon Rose Core Status Pointer */
     filter: drop-shadow(0 0 6px var(--brand-vibrant));
 }
 
@@ -2408,7 +2569,9 @@
     scrollbar-width: none;
 }
 
-.stream-messages-viewport-scroller::-webkit-scrollbar { display: none; }
+.stream-messages-viewport-scroller::-webkit-scrollbar {
+    display: none;
+}
 
 .stream-comment-row {
     font-size: 13px;
@@ -2425,8 +2588,13 @@
 }
 
 /* Text color helper injections bound directly to your multi-color system */
-.commenter-handle.color-cyan-text { color: var(--accent-glow); }
-.commenter-handle.color-rose-text { color: var(--brand-vibrant); }
+.commenter-handle.color-cyan-text {
+    color: var(--accent-glow);
+}
+
+.commenter-handle.color-rose-text {
+    color: var(--brand-vibrant);
+}
 
 .comment-body-text {
     color: rgba(247, 249, 250, 0.9);
@@ -2455,13 +2623,16 @@
     transition: border-color 0.3s ease;
 }
 
-.stream-facade-text-field:focus { border-color: rgba(255, 255, 255, 0.15); }
+.stream-facade-text-field:focus {
+    border-color: rgba(255, 255, 255, 0.15);
+}
 
 .stream-heart-reaction-trigger-btn {
     background: transparent;
     border: none;
     outline: none;
-    color: var(--brand-vibrant); /* Fires Electric Neon Rose Heart Pop Indicator Vector */
+    color: var(--brand-vibrant);
+    /* Fires Electric Neon Rose Heart Pop Indicator Vector */
     font-size: 20px;
     cursor: pointer;
     padding: 0;
@@ -2493,7 +2664,8 @@
     }
 
     .monitor-video-viewport {
-        aspect-ratio: 4 / 3; /* Compresses panoramic heights to prioritize reading depth values on screens */
+        aspect-ratio: 4 / 3;
+        /* Compresses panoramic heights to prioritize reading depth values on screens */
     }
 
     .monitor-upper-control-row {
@@ -2506,7 +2678,8 @@
     }
 
     .theater-chat-ledger-deck {
-        height: 280px; /* Establishes fixed bounding heights for clean interface balances */
+        height: 280px;
+        /* Establishes fixed bounding heights for clean interface balances */
     }
 }
 
@@ -2536,7 +2709,8 @@
 }
 
 .platform-search-filter-canopy-stage {
-    background-color: var(--canvas-dark); /* Strict AMOLED Black Base Lock */
+    background-color: var(--canvas-dark);
+    /* Strict AMOLED Black Base Lock */
     padding: 40px 0;
     width: 100%;
     position: relative;
@@ -2545,7 +2719,8 @@
 
 .search-layout-wrapper {
     width: 92%;
-    max-width: 935px; /* Symmetrically mirrors explore timelines, profile headers, and milestone counters */
+    max-width: 935px;
+    /* Symmetrically mirrors explore timelines, profile headers, and milestone counters */
     margin: 0 auto;
 }
 
@@ -2553,7 +2728,8 @@
    CENTRAL SEARCH TERMINAL CONTAINER HOUSING ENGINE
    ========================================================================== */
 .search-terminal-focal-box {
-    background-color: var(--surface-dark); /* Floating slate obsidian container platform */
+    background-color: var(--surface-dark);
+    /* Floating slate obsidian container platform */
     border: 1px solid var(--border-dark);
     border-radius: var(--radius-feed);
     padding: 24px;
@@ -2583,7 +2759,8 @@
 .search-inner-icon-cyan {
     position: absolute;
     left: 18px;
-    color: var(--accent-glow); /* Cyan Pop Indicator Vector */
+    color: var(--accent-glow);
+    /* Cyan Pop Indicator Vector */
     font-size: 14px;
     pointer-events: none;
     filter: drop-shadow(0 0 4px var(--accent-glow));
@@ -2591,7 +2768,8 @@
 
 .search-console-input-field {
     width: 100%;
-    background-color: var(--canvas-dark); /* AMOLED black entry frame backdrop */
+    background-color: var(--canvas-dark);
+    /* AMOLED black entry frame backdrop */
     border: 1px solid var(--border-dark);
     padding: 12px 60px 12px 46px;
     border-radius: 8px;
@@ -2656,7 +2834,8 @@
 .filter-action-toggle-btn.active-filter-rose {
     background-color: rgba(255, 48, 79, 0.05);
     border-color: rgba(255, 48, 79, 0.15);
-    color: var(--brand-vibrant); /* Electric Neon Rose Status Injection */
+    color: var(--brand-vibrant);
+    /* Electric Neon Rose Status Injection */
 }
 
 /* ==========================================================================
@@ -2688,7 +2867,9 @@
     width: 100%;
 }
 
-.tags-overflow-scroll-track::-webkit-scrollbar { display: none; }
+.tags-overflow-scroll-track::-webkit-scrollbar {
+    display: none;
+}
 
 .directory-tag-token {
     background-color: rgba(255, 255, 255, 0.01);
@@ -2722,7 +2903,8 @@
 .directory-tag-token.link-active-blue {
     background-color: rgba(77, 56, 243, 0.05);
     border-color: rgba(77, 56, 243, 0.15);
-    color: var(--brand-royal); /* Hyper Blue Active State Injection */
+    color: var(--brand-royal);
+    /* Hyper Blue Active State Injection */
 }
 
 /* ==========================================================================
@@ -2749,7 +2931,8 @@
     }
 
     .search-console-input-field {
-        padding: 12px 16px 12px 42px; /* Pulls right edge padding limits tight as hints dissolve */
+        padding: 12px 16px 12px 42px;
+        /* Pulls right edge padding limits tight as hints dissolve */
         font-size: 12.5px;
     }
 
@@ -2758,7 +2941,8 @@
     }
 
     .search-hotkey-badge-hint {
-        display: none; /* Strip keystroke combination labels entirely off touch layout boundaries screen scopes */
+        display: none;
+        /* Strip keystroke combination labels entirely off touch layout boundaries screen scopes */
     }
 
     /* Distribute toggle choices wide bleed uniformly over handheld touch lines profiles */
@@ -2807,7 +2991,8 @@
 }
 
 .platform-milestone-pulse-stage {
-    background-color: var(--canvas-dark); /* Pure AMOLED Black Background Canvas Base */
+    background-color: var(--canvas-dark);
+    /* Pure AMOLED Black Background Canvas Base */
     padding: 60px 0;
     width: 100%;
     position: relative;
@@ -2816,7 +3001,8 @@
 
 .milestone-layout-wrapper {
     width: 92%;
-    max-width: 935px; /* Symmetrically mirrors conversion cards and explore layout headers */
+    max-width: 935px;
+    /* Symmetrically mirrors conversion cards and explore layout headers */
     margin: 0 auto;
 }
 
@@ -2831,7 +3017,8 @@
 }
 
 .milestone-counter-cell {
-    background-color: var(--surface-dark); /* Floating post slate obsidian container background */
+    background-color: var(--surface-dark);
+    /* Floating post slate obsidian container background */
     border: 1px solid var(--border-dark);
     border-radius: var(--radius-feed);
     padding: 24px 20px;
@@ -2859,9 +3046,20 @@
 }
 
 /* Multicolor Core Injections mapping across your explicit branding vectors rules */
-.color-cyan-marker { color: var(--accent-glow); filter: drop-shadow(0 0 6px var(--accent-glow)); }
-.color-rose-marker { color: var(--brand-vibrant); filter: drop-shadow(0 0 6px var(--brand-vibrant)); }
-.color-blue-marker { color: var(--brand-royal); filter: drop-shadow(0 0 6px var(--brand-royal)); }
+.color-cyan-marker {
+    color: var(--accent-glow);
+    filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+.color-rose-marker {
+    color: var(--brand-vibrant);
+    filter: drop-shadow(0 0 6px var(--brand-vibrant));
+}
+
+.color-blue-marker {
+    color: var(--brand-royal);
+    filter: drop-shadow(0 0 6px var(--brand-royal));
+}
 
 .metric-live-signal-tag {
     font-size: 11px;
@@ -2872,14 +3070,16 @@
 
 .milestone-counter-cell h3 {
     font-size: 32px;
-    color: var(--text-dark-pure); /* Silk white intense readability heading */
+    color: var(--text-dark-pure);
+    /* Silk white intense readability heading */
     margin: 0 0 6px 0;
     letter-spacing: -1px;
     line-height: 1.1;
 }
 
 .milestone-counter-cell h3 span {
-    color: var(--brand-vibrant); /* Accent cross-color pop indicators */
+    color: var(--brand-vibrant);
+    /* Accent cross-color pop indicators */
 }
 
 .milestone-counter-cell p {
@@ -2896,20 +3096,33 @@
     background-color: rgba(255, 255, 255, 0.02);
     border-radius: 4px;
     overflow: hidden;
-    margin-top: auto; /* Forces elements downward to balance uneven copywriting scopes layout sizes */
+    margin-top: auto;
+    /* Forces elements downward to balance uneven copywriting scopes layout sizes */
 }
 
 .metric-indicator-fill {
     height: 100%;
     border-radius: 4px;
-    width: 0; /* Default collapsed properties updated via transition curves logs overrides */
+    width: 0;
+    /* Default collapsed properties updated via transition curves logs overrides */
     transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Colors bound to your explicit system tokens action matrices variables gradients */
-.fill-cyan-glow { background-color: var(--accent-glow); width: 85%; }
-.fill-rose-glow { background-color: var(--brand-vibrant); width: 92%; }
-.fill-blue-glow { background-color: var(--brand-royal); width: 78%; }
+.fill-cyan-glow {
+    background-color: var(--accent-glow);
+    width: 85%;
+}
+
+.fill-rose-glow {
+    background-color: var(--brand-vibrant);
+    width: 92%;
+}
+
+.fill-blue-glow {
+    background-color: var(--brand-royal);
+    width: 78%;
+}
 
 /* ==========================================================================
    STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Quad Grid Matrix)
@@ -2969,7 +3182,8 @@
 }
 
 .platform-conversion-canopy-stage {
-    background-color: var(--canvas-dark); /* Strict AMOLED Black Base Lock */
+    background-color: var(--canvas-dark);
+    /* Strict AMOLED Black Base Lock */
     padding: 60px 0 100px 0;
     width: 100%;
     position: relative;
@@ -2978,7 +3192,8 @@
 
 .cta-layout-wrapper {
     width: 92%;
-    max-width: 935px; /* Symmetrically mirrors explore timelines and profile headers */
+    max-width: 935px;
+    /* Symmetrically mirrors explore timelines and profile headers */
     margin: 0 auto;
 }
 
@@ -3046,7 +3261,8 @@
 
 /* Rotates your linear multi-color story tokens matrix automatically */
 .cta-story-halo-ring.active-story-gradient {
-    background: var(--story-gradient); /* Instagram Inspired Legacy Loop Curve */
+    background: var(--story-gradient);
+    /* Instagram Inspired Legacy Loop Curve */
     animation: storyHaloRotate 8s linear infinite;
 }
 
@@ -3054,7 +3270,8 @@
     width: 100%;
     height: 100%;
     border-radius: var(--radius-avatar);
-    background-color: #121212; /* Matches your Slate Obsidian surface background */
+    background-color: #121212;
+    /* Matches your Slate Obsidian surface background */
     padding: 2px;
 }
 
@@ -3079,7 +3296,8 @@
 }
 
 .cta-verified-badge-cyan {
-    color: var(--accent-glow); /* Cyan Pop badge verification checkpoint */
+    color: var(--accent-glow);
+    /* Cyan Pop badge verification checkpoint */
     font-size: 14px;
     filter: drop-shadow(0 0 6px var(--accent-glow));
 }
@@ -3094,7 +3312,8 @@
 }
 
 .cta-content-structural-stack h2 span {
-    background: var(--action-gradient); /* Electric Rose to Hyper Blue gradient tracking */
+    background: var(--action-gradient);
+    /* Electric Rose to Hyper Blue gradient tracking */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-style: italic;
@@ -3120,7 +3339,8 @@
 .cta-action-btn-secondary {
     padding: 14px 30px !important;
     font-size: 13.5px !important;
-    border-radius: 8px !important; /* Standard profile layout shape parameters fields */
+    border-radius: 8px !important;
+    /* Standard profile layout shape parameters fields */
 }
 
 /* ==========================================================================
@@ -3199,7 +3419,8 @@
 }
 
 .platform-master-directory-footer {
-    background-color: var(--canvas-dark); /* Firmly anchored on your Pure AMOLED Black */
+    background-color: var(--canvas-dark);
+    /* Firmly anchored on your Pure AMOLED Black */
     padding: 80px 0 40px 0;
     width: 100%;
     position: relative;
@@ -3215,7 +3436,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px; /* Generous industrial breathing separation gap spacing */
+    gap: 24px;
+    /* Generous industrial breathing separation gap spacing */
 }
 
 .footer-branding-anchor {
@@ -3242,19 +3464,23 @@
 .social-vector-link {
     width: 40px;
     height: 40px;
-    border-radius: 8px; /* Connected to premium squared social design paradigms */
-    background-color: var(--surface-dark); /* Slate Obsidian */
-    border: 1px solid var(--border-dark); /* Subtle Charcoal */
-    color: var(--text-secondary); /* Muted Graphite */
+    border-radius: 8px;
+    /* Connected to premium squared social design paradigms */
+    background-color: var(--surface-dark);
+    /* Slate Obsidian */
+    border: 1px solid var(--border-dark);
+    /* Subtle Charcoal */
+    color: var(--text-secondary);
+    /* Muted Graphite */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
     cursor: pointer;
     transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                background-color 0.3s ease,
-                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        background-color 0.3s ease,
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* ==========================================================================
@@ -3291,7 +3517,8 @@
    ========================================================================== */
 @media (max-width: 768px) {
     .footer-meta-brand-cell {
-        align-items: center; /* Symmetrically snaps entire core column elements to center */
+        align-items: center;
+        /* Symmetrically snaps entire core column elements to center */
         text-align: center;
         gap: 20px;
     }
@@ -3299,11 +3526,13 @@
     .footer-social-networks-deck {
         justify-content: center;
         width: 100%;
-        gap: 16px; /* Expands touch surface target separation space for fingers */
+        gap: 16px;
+        /* Expands touch surface target separation space for fingers */
     }
-    
+
     .social-vector-link {
-        width: 44px; /* Scaled slightly larger for native application touch parity */
+        width: 44px;
+        /* Scaled slightly larger for native application touch parity */
         height: 44px;
         font-size: 20px;
     }
@@ -3353,7 +3582,8 @@
 .footer-logo-pulse-cyan {
     width: 8px;
     height: 8px;
-    background-color: var(--accent-glow); /* Cyan Pop Indicator Core */
+    background-color: var(--accent-glow);
+    /* Cyan Pop Indicator Core */
     border-radius: 50%;
     position: relative;
     box-shadow: 0 0 10px var(--accent-glow);
@@ -3440,7 +3670,8 @@
     opacity: 0;
     transform: translateX(-4px);
     transition: all 0.3s ease;
-    color: var(--brand-vibrant); /* Electric Neon Rose Arrow pointers */
+    color: var(--brand-vibrant);
+    /* Electric Neon Rose Arrow pointers */
 }
 
 /* Subtle Link Push Interactivity Mechanics on Pointer Entry */
@@ -3497,9 +3728,23 @@
 }
 
 /* Dynamic State Color Injections bound safely to your multi-color layout choices */
-.status-value-badge.badge-active-cyan { background-color: rgba(0, 229, 255, 0.06); border: 1px solid rgba(0, 229, 255, 0.15); color: var(--accent-glow); }
-.status-value-badge.badge-active-rose { background-color: rgba(255, 48, 79, 0.06); border: 1px solid rgba(255, 48, 79, 0.15); color: var(--brand-vibrant); }
-.status-value-badge.badge-active-blue { background-color: rgba(77, 56, 243, 0.06); border: 1px solid rgba(77, 56, 243, 0.15); color: var(--brand-royal); }
+.status-value-badge.badge-active-cyan {
+    background-color: rgba(0, 229, 255, 0.06);
+    border: 1px solid rgba(0, 229, 255, 0.15);
+    color: var(--accent-glow);
+}
+
+.status-value-badge.badge-active-rose {
+    background-color: rgba(255, 48, 79, 0.06);
+    border: 1px solid rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant);
+}
+
+.status-value-badge.badge-active-blue {
+    background-color: rgba(77, 56, 243, 0.06);
+    border: 1px solid rgba(77, 56, 243, 0.15);
+    color: var(--brand-royal);
+}
 
 /* ==========================================================================
    LOWER SYSTEM BASELINE OPERATION COPYRIGHT ROW BLOCKS
@@ -3533,7 +3778,9 @@
     transition: color 0.3s ease;
 }
 
-.footer-baseline-utility-anchors a:hover { color: var(--text-dark-pure); }
+.footer-baseline-utility-anchors a:hover {
+    color: var(--text-dark-pure);
+}
 
 .anchor-split-dot {
     width: 3px;
@@ -3571,7 +3818,8 @@
     }
 
     .directory-routing-links-list a i {
-        display: none; /* Strips hover arrow indicators on touch devices viewport limits */
+        display: none;
+        /* Strips hover arrow indicators on touch devices viewport limits */
     }
 
     /* Balance lower baseline metrics layers symmetrically */
@@ -3589,8 +3837,9 @@
         flex-wrap: wrap;
         gap: 10px 14px;
     }
-    
+
     .anchor-split-dot {
-        display: none; /* Drop spacing dot masks over mobile to favor liquid grid wrappers blocks */
+        display: none;
+        /* Drop spacing dot masks over mobile to favor liquid grid wrappers blocks */
     }
 }

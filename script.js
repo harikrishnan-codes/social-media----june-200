@@ -1,12 +1,17 @@
+/**
+ * CURATOR.HUB INTERACTIVE NETWORKS
+ * Precision Dropdown Trigger and Mobile Canvas Controller
+ */
 document.addEventListener('DOMContentLoaded', () => {
     // Structural DOM node references acquisition arrays
     const globalHeader = document.getElementById('globalHeader');
     const hamburgerTrigger = document.getElementById('hamburgerTrigger');
     const navMenu = document.getElementById('navMenu');
+    const dropdownContainer = document.getElementById('homeDropdownContainer');
+    const dropdownTrigger = document.getElementById('dropdownTrigger');
 
     /**
      * 1. CINEMATIC SCROLL INTERACTION MANAGEMENT ENGINE
-     * Listens to scroll coordinates to toggle high-gloss morph states globally.
      */
     const handleScrollReflow = () => {
         if (window.scrollY > 30) {
@@ -20,40 +25,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * 2. INTERACTIVE HAMBURGER MATRIX OVERLAY CONTROLLER
-     * Manages overlay visibility states and accessibility properties smoothly.
      */
     const toggleMobileMenuSystem = () => {
         const menuExpandedStatus = hamburgerTrigger.getAttribute('aria-expanded') === 'true';
         
-        // Inverse property declaration keys fields bounds updates
         hamburgerTrigger.setAttribute('aria-expanded', !menuExpandedStatus);
         hamburgerTrigger.classList.toggle('active-cross-state');
         navMenu.classList.toggle('mobile-overlay-active-state');
 
-        // Prevent body layer scrolling background leakage while screen is locked open
         if (!menuExpandedStatus) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = '';
+            // Reset panel toggle state on mobile navigation drawer close out
+            if (dropdownContainer) {
+                dropdownContainer.classList.remove('dropdown-open-state');
+            }
         }
     };
 
-    hamburgerTrigger.addEventListener('click', toggleMobileMenuSystem);
+    if (hamburgerTrigger) {
+        hamburgerTrigger.addEventListener('click', toggleMobileMenuSystem);
+    }
 
     /**
-     * 3. AUTOMATIC LINK TERMINATION DECK CLOSURE
-     * Automatically clean-collapses overlays when inner routing triggers are engaged.
+     * 3. SYMMETRICAL PRESS ARKMASK DROPDOWN TOGGLE ENGINE
+     * Listens to explicitly toggle active classes on link / arrow pressed signals.
      */
-    const menuLinks = navMenu.querySelectorAll('.nav-link-token');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('mobile-overlay-active-state')) {
-                toggleMobileMenuSystem();
-            }
+    if (dropdownTrigger && dropdownContainer) {
+        dropdownTrigger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevents instant collision event bubble loops
+            dropdownContainer.classList.toggle('dropdown-open-state');
+            console.log("[SYS] Dropdown display view state changed.");
         });
-    });
-});
+    }
 
+    /**
+     * 4. APP-WIDE DISMISSAL EDGE HANDSHAKE
+     * Closes the interactive dropdown panel gracefully if the cursor selects peripheral space targets.
+     */
+    document.addEventListener('click', (event) => {
+        if (dropdownContainer && dropdownContainer.classList.contains('dropdown-open-state')) {
+            if (!dropdownContainer.contains(event.target)) {
+                dropdownContainer.classList.remove('dropdown-open-state');
+                console.log("[SYS] Panel dismissal safety check triggered.");
+            }
+        }
+    });
+
+    /**
+     * 5. AUTOMATIC LINK TERMINATION DECK CLOSURE
+     */
+    if (navMenu) {
+        const menuLinks = navMenu.querySelectorAll('.nav-link-token:not(.dropdown-trigger-bridge), .dropdown-text-stack li a');
+        
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('mobile-overlay-active-state')) {
+                    toggleMobileMenuSystem();
+                }
+            });
+        });
+    }
+});
 
 
 

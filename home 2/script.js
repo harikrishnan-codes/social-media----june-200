@@ -5,7 +5,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // 1. SILKY INTRO PRESENTATION EFFECT
-    // Triggers smooth CSS animation framework loop on navigation render
     const appHeaderNode = document.querySelector(".app-premium-header");
     if (appHeaderNode) {
         setTimeout(() => {
@@ -17,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // 2. RESPONSIVE CURTAIN SLATE MENU OPERATIONS
     const hamburgerBtn = document.getElementById("mobileHamburger");
     const navigationDeck = document.querySelector(".app-navigation-deck");
+    const dropdownWrapper = document.getElementById("homeDropdownWrapper");
+    const dropdownAnchor = document.getElementById("dropdownAnchor");
 
     if (hamburgerBtn && navigationDeck) {
         hamburgerBtn.addEventListener("click", (e) => {
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Close overlay menu automatically if an internal nav link receives a touch event
-        const trayLinks = document.querySelectorAll(".app-nav-link");
+        const trayLinks = document.querySelectorAll(".app-nav-link:not(#dropdownAnchor), .dropdown-leaf-link");
         trayLinks.forEach(link => {
             link.addEventListener("click", () => {
                 hamburgerBtn.classList.remove("hamburger-active");
@@ -44,8 +45,33 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-});
 
+    /**
+     * 3. PRESS ARKMASK DROPDOWN INTERACTIVE ENGINE
+     * Manages click triggers to cleanly toggle active open states on click bounds.
+     */
+    if (dropdownAnchor && dropdownWrapper) {
+        dropdownAnchor.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation(); // Prevents instant window bubble closure collisions
+            dropdownWrapper.classList.toggle("dropdown-visible-active");
+            console.log("[SYS] Premium home matrix dropdown canvas visibility mutated.");
+        });
+    }
+
+    /**
+     * 4. APP-WIDE DISMISSAL EDGE PROTECTION HANDSHAKE
+     * Closes the interactive dropdown panel window automatically if a user clicks outside the element frame.
+     */
+    document.addEventListener("click", (event) => {
+        if (dropdownWrapper && dropdownWrapper.classList.contains("dropdown-visible-active")) {
+            if (!dropdownWrapper.contains(event.target)) {
+                dropdownWrapper.classList.remove("dropdown-visible-active");
+                console.log("[SYS] Dropdown window safety dismissal active.");
+            }
+        }
+    });
+});
 
 
 

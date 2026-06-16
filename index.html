@@ -18,50 +18,57 @@
 
 <body>
 
-    <!-- ULTRA-PREMIUM NAVIGATION CANOPY TERMINAL -->
-    <header class="workspace-premium-navigation" id="globalHeader">
-        <div class="nav-container-wrapper">
+<header class="workspace-premium-navigation" id="globalHeader">
+    <div class="nav-container-wrapper">
 
-            <!-- Left Wing: Premium Identity Core Branding -->
-            <a href="./index.html" class="nav-branding-anchor">
-                <img src="./assets/dark red.webp" alt="Brand Logo" class="branding-logo" width="150px" height="50px">
+        <a href="./index.html" class="nav-branding-anchor">
+            <div class="branding-logo-pulse"></div>
+            <img src="./assets/dark red.webp" alt="Brand Logo" class="branding-logo" width="150px" height="50px">
+        </a>
+
+        <nav class="nav-navigation-menu-links-deck" id="navMenu">
+            <ul class="nav-links-list">
+                
+                <li class="nav-dropdown-item-container" id="homeDropdownContainer">
+                    <a href="javascript:void(0);" class="nav-link-token active-link-route dropdown-trigger-bridge" id="dropdownTrigger">
+                        Home <i class="fa-solid fa-chevron-down dropdown-arrow-vector"></i>
+                    </a>
+                    
+                    <div class="nav-matrix-dropdown-panel" id="dropdownPanel">
+                        <ul class="dropdown-text-stack">
+                            <li><a href="./home 2/index.html">Home Style 2</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="feed.html" class="nav-link-token">Feed</a></li>
+                <li><a href="reels.html" class="nav-link-token">Reels</a></li>
+                <li><a href="thread.html" class="nav-link-token">Threads</a></li>
+                <li><a href="valut.html" class="nav-link-token">Valut</a></li>
+            </ul>
+
+            <div class="mobile-menu-utility-deck">
+                <a href="./auth.html" class="btn-social-base btn-app-primary mobile-menu-btn">
+                    <span class="btn-content-track">Initialize Terminal</span>
+                </a>
+            </div>
+        </nav>
+
+        <div class="nav-actions-deck">
+            <a href="./home 2/log.html" class="btn-social-base btn-app-secondary nav-desktop-action-btn">
+                <span class="btn-content-track">Log In</span>
             </a>
 
-            <!-- Central Axis: Desktop Link arrays (Dissolves into Mobile Overlay Node) -->
-            <nav class="nav-navigation-menu-links-deck" id="navMenu">
-                <ul class="nav-links-list">
-                    <li><a href="./index.html" class="nav-link-token active-link-route">Home</a></li>
-                    <li><a href="feed.html" class="nav-link-token">Feed</a></li>
-                    <li><a href="reels.html" class="nav-link-token">Reels</a></li>
-                    <li><a href="thread.html" class="nav-link-token">Threads</a></li>
-                    <li><a href="valut.html" class="nav-link-token">Valut</a></li>
-                </ul>
-
-                <!-- Mobile Only: Supplemental Utility Triggers inside the Menu overlay -->
-                <div class="mobile-menu-utility-deck">
-                    <a href="./auth.html" class="btn-social-base btn-app-primary mobile-menu-btn">
-                        <span class="btn-content-track">Initialize Terminal</span>
-                    </a>
-                </div>
-            </nav>
-
-            <!-- Right Wing: System Access Trigger Actions -->
-            <div class="nav-actions-deck">
-                <a href="./home 2/log.html" class="btn-social-base btn-app-secondary nav-desktop-action-btn">
-                    <span class="btn-content-track">Log In</span>
-                </a>
-
-                <!-- Custom Micro-Animated Hamburger Core Trigger Node -->
-                <button class="luxury-hamburger-trigger" id="hamburgerTrigger"
-                    aria-label="Toggle Navigation Grid System" aria-expanded="false">
-                    <span class="hamburger-meat-line bar-top"></span>
-                    <span class="hamburger-meat-line bar-middle"></span>
-                    <span class="hamburger-meat-line bar-bottom"></span>
-                </button>
-            </div>
-
+            <button class="luxury-hamburger-trigger" id="hamburgerTrigger"
+                aria-label="Toggle Navigation Grid System" aria-expanded="false">
+                <span class="hamburger-meat-line bar-top"></span>
+                <span class="hamburger-meat-line bar-middle"></span>
+                <span class="hamburger-meat-line bar-bottom"></span>
+            </button>
         </div>
-    </header>
+
+    </div>
+</header>
 
 
 
