@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================================================
+   PREMIUM SOCIAL MEDIA DESIGN SYSTEM (VIBRANT & HYPER-MODERN)
+   ========================================================================== */
+
+:root {
+    /* --- Main Branding Core Tones --- */
+    --brand-vibrant: #ff304f;      /* Electric Neon Rose - Fires active likes, notifications, and primary accents */
+    --brand-royal: #4d38f3;        /* Hyper Blue - Drives interactive navigation links and direct messaging anchors */
+    --accent-glow: #00f2fe;        /* Cyan Pop - Secondary highlights, verified tickers, and live status states */
+    
+    /* --- Elite Content Canvas Surfaces (Light Mode Base) --- */
+    --canvas-white: #ffffff;       /* Pure Backdrop White - High-contrast light feeding container base */
+    --surface-light: #f7f9fa;      /* Ice Gray - Soft framing containers, input fields, and search tracking bars */
+    --border-light: #eff3f4;       /* Whispering Gray - Clean structural hairline post dividers and separators */
+    
+    /* --- High-End Midnight Surfaces (Strict Dark Mode Base) --- */
+    --canvas-dark: #000000;        /* Pure AMOLED Black - Ultimate energy-saving rich depth background backdrop */
+    --surface-dark: #121212;       /* Slate Obsidian - Floating post frames, message bubbles, and card layers */
+    --border-dark: #262626;        /* Subtle Charcoal - Dark hairline borders that match modern design layouts */
+    
+    /* --- Master Typographic Hierarchy Tones --- */
+    --text-primary: #0f1419;       /* Deep Jet Black - Intense readability for light mode post text copy */
+    --text-secondary: #536471;     /* Muted Graphite - Handles timestamps, follow tags, and icon summaries */
+    --text-dark-pure: #f7f9fa;     /* Crisp Silk White - Striking readability for high-contrast dark mode views */
+    
+    /* --- The Kinship Gradient Matrices (Story Rings & Active States) --- */
+    --story-gradient: linear-gradient(45deg, #f99f1b 0%, #e1306c 50%, #833ab4 100%); /* Instagram-Inspired Legacy Loop Glow */
+    --action-gradient: linear-gradient(135deg, #ff304f 0%, #4d38f3 100%);           /* Hyper-Modern Dynamic Transition Blur */
+    
+    /* --- Global Layout System Dimensions --- */
+    --p: 15px;                      /* Core caption body text font standard dimensions */
+    --radius-feed: 14px;            /* Sleek curved corner frame mask for feed cards and user media uploads */
+    --radius-avatar: 50%;           /* Circular mask matrix engine for profile identity avatar masks */
+}
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: var(--lh-body);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- Typography Styles --- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-header);
+    font-weight: 700;
+    line-height: var(--lh-heading);
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+p {
+    font-size: var(--fs-p);
+    margin-bottom: 1rem;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-smooth);
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   SOCIAL MEDIA APP BUTTON DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+    /* --- Main Branding Core Tones --- */
+    --brand-vibrant: #ff304f;      /* Electric Neon Rose */
+    --brand-royal: #4d38f3;        /* Hyper Blue */
+    --text-dark-pure: #f7f9fa;     /* Crisp Silk White */
+    --action-gradient: linear-gradient(135deg, #ff304f 0%, #4d38f3 100%);
+    
+    /* --- Dedicated Primary Button Tokens (High-Attention Actions) --- */
+    --btn-primary-bg: var(--action-gradient);            /* Vibrant dual-gradient fill background */
+    --btn-primary-text: var(--text-dark-pure);           /* Crisp white typography contrast */
+    --btn-primary-shadow: rgba(235, 48, 108, 0.25);      /* Soft neon ambient glow footprint */
+    --btn-primary-shadow-hover: rgba(77, 56, 243, 0.4);  /* Deepens blue when active hover fires */
+
+    /* --- Dedicated Secondary Button Tokens (Low-Attention Actions) --- */
+    /* Light Mode Variant Baseline */
+    --btn-secondary-bg: rgba(15, 20, 25, 0.05);          /* Translucent graphite slate overlay */
+    --btn-secondary-border: rgba(15, 20, 25, 0.08);      /* Subtle structural frame layout line */
+    --btn-secondary-text: #0f1419;                        /* Deep jet black text for high legibility */
+    
+    /* Dark Mode Variant Baseline (Swap to these variables inside your .dark-theme wrapper) */
+    --btn-secondary-bg-dark: rgba(255, 255, 255, 0.08);   /* Clean frosted light silk overlay */
+    --btn-secondary-border-dark: rgba(255, 255, 255, 0.1);/* Soft tracking border boundaries */
+    --btn-secondary-text-dark: #f7f9fa;                   /* White typography match */
+
+    /* --- Universal Button Geometry Rules --- */
+    --btn-radius: 30px;            /* Sleek curved modern app pill-shape layout */
+    --btn-font-weight: 700;        /* Bold weight metrics to emphasize structural drivers */
+    --btn-font-size: 14px;         /* Standard readable content size dimensions */
+}

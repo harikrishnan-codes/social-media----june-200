@@ -1,0 +1,3596 @@
+/* ==========================================================================
+   CINEMATIC NAV TERMINAL & INTERACTIVE GLASSMORPHISM HEADER SYSTEM
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid navigation scannability */
+.workspace-premium-navigation .branding-handle-text,
+.workspace-premium-navigation .nav-link-token,
+.mobile-menu-utility-deck p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.workspace-premium-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Executive structural navigation clearance boundary */
+    z-index: 9999; /* Forces absolute layer dominance over all scrolling canvas layouts */
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+    background-color: transparent;
+    /* Clean fluid transitions handling your scroll transformations instantly */
+    transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                backdrop-filter 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scroll Transformation Sub-Engine Injector Class */
+.workspace-premium-navigation.scrolled-navigation-state {
+    height: 70px; /* Elegantly compresses header footprint spacing on layout scroll */
+    background-color: rgba(11, 15, 19, 0.75); /* Mapped explicitly into your Midnight Slate */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-color: var(--border-dark);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* ==========================================================================
+   LEFT WING: BRANDING LOGO CORE WITH AMBIENT PULSE
+   ========================================================================== */
+.nav-branding-anchor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10001; /* Locks branding anchor on top layer stacks always */
+}
+
+.branding-logo-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: var(--brand-vibrant); /* Liquid Copper pulse core */
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px var(--brand-vibrant);
+}
+
+.branding-logo-pulse::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 1px solid var(--brand-vibrant);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: beaconPulse 2s infinite ease-in-out;
+}
+
+.branding-handle-text {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-dark-pure);
+    letter-spacing: -0.5px;
+}
+
+.branding-handle-text span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   CENTRAL AXIS: DESKTOP INLINE NAVIGATION LINKS DECK
+   ========================================================================== */
+.nav-navigation-menu-links-deck {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-link-token {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.2px;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link-token:hover,
+.nav-link-token.active-link-route {
+    color: var(--text-dark-pure);
+}
+
+/* Interactive Precision Slide Line Animation Underlays */
+.nav-link-token::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--action-gradient); /* Liquid Copper accent underline */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link-token:hover::after,
+.nav-link-token.active-link-route::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.mobile-menu-utility-deck {
+    display: none; /* Stripped from desktop configuration visibility rules fields */
+}
+
+/* ==========================================================================
+   RIGHT WING: BUTTON SYSTEM & LUXURY HAMBURGER ENGINE
+   ========================================================================== */
+.nav-actions-deck {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 10001;
+}
+
+.nav-desktop-action-btn {
+    padding: 10px 22px !important;
+    font-size: 13px !important;
+}
+
+/* Luxury Customizable Minimal Hamburger Mechanical Box */
+.luxury-hamburger-trigger {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    cursor: pointer;
+    display: none; /* Invisible on desktop screens */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.luxury-hamburger-trigger:hover {
+    border-color: rgba(255, 110, 64, 0.3);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.hamburger-meat-line {
+    width: 18px;
+    height: 1.5px;
+    background-color: var(--text-dark-pure);
+    border-radius: 2px;
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                background-color 0.4s ease, 
+                opacity 0.3s ease;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Fullscreen Terminal Overlay Drop)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .luxury-hamburger-trigger {
+        display: flex; /* Activates interactive panel controller icon safely */
+    }
+
+    .nav-desktop-action-btn {
+        display: none; /* Clears row elements layout footprint bloat on small touch screens */
+    }
+
+    /* Transform navigation menus link decks completely into an expansive full-screen drop mask layer overlay */
+    .nav-navigation-menu-links-deck {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #0b0f13; /* Full opaque high-status Midnight Slate canvas space lock */
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 120px 40px 60px 40px; /* Generous industrial clearing padding lines variables */
+        
+        /* Hardware accelerated translation offsets forcing hidden status parameters by default */
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                    opacity 0.6s ease,
+                    visibility 0.6s ease;
+    }
+
+    /* Active State Class Injection Triggered via Javascript Logic Hook */
+    .nav-navigation-menu-links-deck.mobile-overlay-active-state {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Pivot layout rows into high-contrast vertical stack pathways entries arrays */
+    .nav-links-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+        width: 100%;
+    }
+
+    .nav-link-token {
+        font-size: 24px; /* Dramatic elegant editorial font scaling properties mapping over touch grids */
+        font-family: 'Playfair Display', serif !important; /* Premium structural accent separation font */
+        font-weight: 700;
+        color: var(--text-dark-pure);
+        padding: 4px 0;
+        width: 100%;
+        display: block;
+    }
+
+    .nav-link-token::after {
+        display: none; /* Drops slider bars mechanism over mobile view targets screens */
+    }
+
+    /* Reveals custom lower actions dock inside mobile menus frames layer stack */
+    .mobile-menu-utility-deck {
+        display: block;
+        width: 100%;
+        margin-top: auto;
+        padding-top: 40px;
+        border-top: 1px solid var(--border-dark);
+    }
+
+    .mobile-menu-btn {
+        width: 100%;
+        text-align: center;
+        padding: 16px 0 !important;
+    }
+
+    /* ==========================================================================
+       HAMBURGER INTERACTION STATE SHIFTS MECHANICS SYSTEM HOOKS (TRIGGERS INVERSE TRANSFORMS)
+       ========================================================================== */
+    .luxury-hamburger-trigger.active-cross-state .bar-top {
+        transform: translateY(6.5px) rotate(45deg);
+        background-color: var(--brand-vibrant);
+    }
+
+    .luxury-hamburger-trigger.active-cross-state .bar-middle {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .luxury-hamburger-trigger.active-cross-state .bar-bottom {
+        transform: translateY(-6.5px) rotate(-45deg);
+        background-color: var(--brand-vibrant);
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL INFLUENCER PROFILE HERO CANOPY CSS
+   ========================================================================== */
+
+/* Typography Assignments: Clean modern sans architecture for fast platform scannability */
+.social-premium-hero-stage h1,
+.social-premium-hero-stage h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700;
+}
+
+/* Sans-serif pairing rules for actions text labels, metrics trackers, bios bodies, categories, and web links tokens */
+.profile-action-buttons-deck button,
+.metric-counter-cell span,
+.profile-category-tag-label,
+.profile-bio-description-text,
+.profile-anchor-hyperlink-token {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.social-premium-hero-stage {
+    background-color: var(--canvas-dark);
+    padding: 140px 0 60px 0; /* Expanded upper clearance safety bounds preventing scrolling navigation bugs */
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--border-dark);
+    overflow: hidden;
+}
+
+/* Deep Environmental Ambient Backlighting Overlay Mesh Flared Tracks */
+.profile-hero-ambient-mesh {
+    position: absolute;
+    top: -20%;
+    left: 10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 110, 64, 0.05) 0%, rgba(77, 56, 243, 0.02) 50%, transparent 75%);
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-profile-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to lock perfectly with standard high-status timeline grids */
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.profile-identity-canopy-grid {
+    display: grid;
+    /* Clean desktop distribution layout: avatar balancing the comprehensive metrics stack */
+    grid-template-columns: 290px 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   LEFT WING: AVATAR STORAGE CHASSIS WITH CHROMATIC STORY HALO REVOLVE
+   ========================================================================== */
+.profile-avatar-axis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Multi-layer Instagram-style glass gradient rotation halo boundary */
+.profile-avatar-story-halo {
+    width: 160px;
+    height: 160px;
+    border-radius: var(--radius-avatar);
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05); /* Stale/viewed state fallback boundary decoration */
+}
+
+.profile-avatar-story-halo.active-story-gradient {
+    background: linear-gradient(135deg, #ff6e40 0%, #ffab40 50%, #00e5ff 100%);
+    animation: storyHaloRotate 6s linear infinite;
+}
+
+.profile-avatar-black-gap {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    background-color: var(--canvas-dark); /* Protective dark offset separating image assets from color halo channels */
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-avatar-image-core {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    background-color: var(--surface-dark);
+}
+
+/* ==========================================================================
+   RIGHT WING: INSTAGRAM-STYLE COMPREHENSIVE DATA STACK METRIC FIELDS
+   ========================================================================== */
+.profile-details-axis {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Row 1 Layout Controls: Handles Titles and Triggers Group Base */
+.profile-handle-action-row {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.profile-handle-title-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-handle-action-row h2 {
+    font-size: 28px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.profile-verified-badge-copper {
+    color: var(--brand-vibrant); /* High contrast liquid copper identity verification mark */
+    font-size: 20px;
+    filter: drop-shadow(0 2px 10px rgba(255, 110, 64, 0.25));
+}
+
+.profile-action-buttons-deck {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-follow-btn,
+.profile-message-btn {
+    padding: 9px 24px !important;
+    font-size: 13px !important;
+    border-radius: 8px !important; /* Squaring targets slightly to isolate standard application visual cues */
+}
+
+.profile-utility-square-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    color: var(--text-dark-pure);
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.profile-utility-square-btn:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Row 2 Layout Controls: Telemetry Numerical Statistics Row Lists Tracks */
+.profile-telemetry-metrics-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 24px;
+}
+
+.metric-counter-cell span {
+    font-size: 15px;
+    color: var(--text-dark-pure);
+}
+
+.metric-counter-cell span strong {
+    font-weight: 700;
+    color: var(--text-dark-pure);
+}
+
+/* Row 3 Layout Controls: Biography Content & Structural Hyperlinks */
+.profile-bio-editorial-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-bio-editorial-block h1 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 2px 0;
+}
+
+.profile-category-tag-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.profile-bio-description-text {
+    font-size: 14.5px;
+    color: var(--text-dark-pure);
+    line-height: 1.5;
+    max-width: 540px;
+    margin: 0 0 12px 0;
+}
+
+.profile-anchor-hyperlink-token {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand-royal); /* Anchor deep links using your rich gold/amber support variables */
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.profile-anchor-hyperlink-token:hover {
+    color: var(--brand-vibrant);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .social-premium-hero-stage {
+        padding: 110px 0 40px 0; /* Compresses pad limits slightly over smaller monitors profiles */
+    }
+
+    /* Dissolve horizontal columns down into a unified responsive centered stack system */
+    .profile-identity-canopy-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .profile-avatar-story-halo {
+        width: 100px; /* Scales down footprint size safely over restricted mobile screen scopes */
+        height: 100px;
+    }
+
+    .profile-details-axis {
+        align-items: stretch;
+    }
+
+    .profile-handle-action-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .profile-handle-title-group {
+        width: 100%;
+    }
+
+    .profile-handle-action-row h2 {
+        font-size: 22px;
+    }
+
+    .profile-action-buttons-deck {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 40px; /* Spans buttons symmetrically wide-bleed over viewports */
+        gap: 8px;
+    }
+
+    .profile-follow-btn,
+    .profile-message-btn {
+        width: 100% !important;
+        padding: 10px 0 !important;
+        text-align: center;
+    }
+
+    /* Convert row links trackers layout fields into a distinct segmented timeline border grid container */
+    .profile-telemetry-metrics-row {
+        background-color: rgba(255, 255, 255, 0.01);
+        border-top: 1px solid var(--border-dark);
+        border-bottom: 1px solid var(--border-dark);
+        padding: 12px 0;
+        margin: 20px 0;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .metric-counter-cell {
+        text-align: center;
+    }
+
+    .metric-counter-cell span {
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--text-secondary);
+    }
+
+    .metric-counter-cell span strong {
+        font-size: 16px; /* Pops metric values numbers cleanly above description label tags */
+        margin-bottom: 2px;
+    }
+}
+
+/* Hardware Accelerated Story Halo Revolve Keyframe Animation Engines */
+@keyframes storyHaloRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL STORIES CONSOLE MATRIX MODULE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map directly onto section headings explicitly */
+.social-stories-matrix-stage h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for profile tracking handles and secondary data tags counters */
+.social-stories-matrix-stage span,
+.shard-profile-handle {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.social-stories-matrix-stage {
+    background-color: var(--canvas-dark);
+    padding: 40px 0 20px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.stories-layout-container {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Streamlined side-by-side desktop alignment: short titles tracking expansive sliders fields */
+    grid-template-columns: 240px 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+/* ==========================================================================
+   LEFT WING: LIVE TELEMETRY RADAR LABEL COMPONENT
+   ========================================================================== */
+.stories-tray-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.live-signal-cluster {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.live-beacon-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--brand-vibrant); /* Liquid Copper pulse core marker */
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--brand-vibrant);
+    animation: beaconPulse 1.8s infinite ease-in-out;
+}
+
+.stories-tray-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.stories-tray-header > span {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   RIGHT WING: SOCIAL SHARDS ACCELERATED HORIZONTAL RAIL TRACK
+   ========================================================================== */
+.stories-scroll-deck-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.story-shard-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: 12px;
+    padding: 10px;
+    height: 180px; /* Strong vertical smartphone layout capture balance profile weight dimensions */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.shard-image-mask {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.shard-background-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.45;
+    filter: grayscale(20%) brightness(0.8);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.shard-frosted-overlay-shutter {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(11, 15, 19, 0.95) 0%, rgba(11, 15, 19, 0.2) 100%);
+    z-index: 2;
+}
+
+/* User Identity Overlays Inside Content Shards */
+.shard-identity-badge-group {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.shard-avatar-ring {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-avatar);
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Colored verified identity validation loops tracking profile status channels */
+.active-broadcast-state .shard-avatar-ring { background: var(--action-gradient); }
+.verified-ring-copper { background: linear-gradient(135deg, #ff6e40 0%, #ffab40 100%); }
+.verified-ring-amber { background: linear-gradient(135deg, #ffab40 0%, #0b0f13 100%); }
+.verified-ring-cyan { background: linear-gradient(135deg, #00e5ff 0%, #0b0f13 100%); }
+
+.shard-mini-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark); /* Thick protective gap lifting image element assets cleanly */
+}
+
+.shard-profile-handle {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    letter-spacing: -0.1px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* DYNAMIC HOVER MATRIX POINTER ACTIONS EFFECT CAPTURES */
+.story-shard-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 110, 64, 0.3);
+}
+
+.story-shard-card:hover .shard-background-graphic {
+    transform: scale(1.06);
+    opacity: 0.65;
+}
+
+.story-shard-card:hover .shard-avatar-ring {
+    transform: scale(1.05) rotate(-4deg);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Touch Horizontal Carousel Slide)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Collapse desktop rows down into a unified responsive horizontal swiping grid track */
+    .stories-layout-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 100%;
+        padding-left: 5%; /* Shifts layouts to line up symmetrically with parent containers */
+    }
+
+    .stories-tray-header {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .stories-tray-header h3 {
+        font-size: 18px;
+    }
+
+    /* Convert native layout distributions grid lanes into an uninhibited single-line finger swipe lane track */
+    .stories-scroll-deck-track {
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none; /* Strips browser default UI tracking scroll bars blocks graphics */
+        padding-right: 5%; /* Appends clear trailing tail spacing paths bounds */
+        gap: 12px;
+    }
+
+    .stories-scroll-deck-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .story-shard-card {
+        flex-shrink: 0;
+        width: 115px; /* Perfect proportional mobile device aspect mapping size footprint */
+        height: 150px;
+        padding: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL INSTAGRAM FEED GRID ARCHITECTURE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Headings use the clean default sans stack for rapid stream reading density */
+.feed-instagram-card h4,
+.sidebar-current-user-card h4,
+.suggested-user-row-cell h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700;
+}
+
+/* Sans-serif pairing rules for captions details block paragraph texts, action tags counters, timestamps labels */
+.profile-name-stack span,
+.likes-metrics-counter,
+.card-caption-editorial-text,
+.view-comments-facade-btn,
+.post-timestamp-tracker,
+.sidebar-suggestions-section-title span,
+.sidebar-user-name-stack span,
+.sidebar-follow-trigger-action,
+.sidebar-platform-minimal-footer p,
+.sidebar-platform-minimal-footer span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.social-discovery-feed-stage {
+    background-color: var(--canvas-dark);
+    padding: 40px 0 100px 0;
+    width: 100%;
+    position: relative;
+}
+
+.feed-layout-container {
+    width: 92%;
+    max-width: 1000px; /* Aligned with standard narrow timeline focus dimensions for visual symmetry */
+    margin: 0 auto;
+    display: grid;
+    /* Split timeline track: core timeline stream dominating the left parameters field columns */
+    grid-template-columns: 1fr 340px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   1. LEFT AXIS CORE TIMELINE: HIGH-GLOSS SOCIAL DISCOVERY CARDS
+   ========================================================================= */
+.feed-stream-axis {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.feed-instagram-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Node Profile Information Bars */
+.card-profile-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.profile-identity-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-avatar-shield {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1.5px solid var(--border-dark);
+}
+
+.avatar-live-beacon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--brand-vibrant); /* Liquid Copper pulse update dot */
+    border-radius: 50%;
+    border: 2px solid var(--surface-dark);
+}
+
+.profile-name-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.handle-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.profile-name-stack h4 {
+    font-size: 14px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.1px;
+}
+
+.verification-badge-copper {
+    color: var(--brand-vibrant); /* Radiant liquid copper premium badge verification mark */
+    font-size: 12.5px;
+}
+
+.profile-name-stack span {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.card-utility-trigger {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-utility-trigger:hover { color: var(--text-dark-pure); }
+
+/* Main Picture Box Image Shield Frames Window System */
+.card-media-canvas-frame {
+    position: relative;
+    width: 100%;
+    height: 520px; /* High-fidelity smartphone display ratio standard capture box heights */
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-main-upload-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Double click cinematic heart pulse flash pop configuration layers */
+.double-tap-heart-pop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50__) scale(0);
+    font-size: 80px;
+    color: var(--text-dark-pure);
+    filter: drop-shadow(0 10px 30px rgba(255, 110, 64, 0.4));
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+}
+
+.double-tap-heart-pop.animate-pop-flash {
+    animation: heartPopFlashAnim 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Actions Toolbar Vector Controls Bars Deck Area */
+.card-actions-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px 10px 20px;
+}
+
+.left-action-vectors {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.vector-action-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-dark-pure);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.vector-action-btn:hover {
+    transform: scale(1.1);
+    color: var(--brand-vibrant);
+}
+
+/* Interaction toggle overrides classes */
+.vector-action-btn.liked-active-vector i {
+    font-weight: 900 !important;
+    color: var(--brand-vibrant) !important;
+}
+
+.vector-action-btn.bookmarked-active-vector i {
+    font-weight: 900 !important;
+    color: var(--brand-royal) !important;
+}
+
+/* Informational Captions Details Areas Stack */
+.card-details-content-stack {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.likes-metrics-counter {
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+}
+
+.likes-metrics-counter strong {
+    font-weight: 700;
+}
+
+.card-caption-editorial-text {
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+.card-caption-editorial-text strong {
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.caption-tags-links {
+    color: var(--brand-royal);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.view-comments-facade-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    padding: 4px 0 0 0;
+}
+
+.post-timestamp-tracker {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   2. RIGHT AXIS: SUGGESTIONS DESKTOP SIDEBAR GRID ASSETS
+   ========================================================================== */
+.feed-sidebar-suggestions-axis {
+    width: 100%;
+}
+
+.sidebar-sticky-en enclosure {
+    position: sticky;
+    top: 110px; /* Safe clearing lock track matching global scrolling headers view offsets */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-current-user-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.user-identity-profile-cell {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 78%;
+}
+
+.sidebar-user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1px solid var(--border-dark);
+}
+
+.sidebar-user-avatar.mini-avatar-modifier {
+    width: 36px;
+    height: 36px;
+}
+
+.sidebar-user-name-stack {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar-user-name-stack h4 {
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sidebar-user-name-stack span {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sidebar-switch-trigger-btn,
+.sidebar-see-all-trigger {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--brand-royal);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sidebar-suggestions-section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar-suggestions-section-title span {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.sidebar-see-all-trigger {
+    color: var(--text-dark-pure);
+}
+
+.suggestions-users-list-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.suggested-user-row-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-follow-trigger-action {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--brand-vibrant); /* High contrast liquid copper follow triggers action buttons */
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sidebar-platform-minimal-footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sidebar-platform-minimal-footer p {
+    font-size: 11px;
+    color: rgba(126, 139, 150, 0.5); /* Semi-transparent gunmetal slate legals footnotes text */
+    line-height: 1.5;
+    margin: 0;
+}
+
+.sidebar-platform-minimal-footer span {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(126, 139, 150, 0.4);
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Asymmetric Track Sidebar Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .social-discovery-feed-stage {
+        padding: 20px 0 60px 0;
+    }
+
+    /* Absolute timeline simplification: Safe-collapse right sidebar to isolate content streams */
+    .feed-layout-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0; /* Clear edge buffers completely to allow wide-bleed mobile content assets */
+    }
+
+    .feed-sidebar-suggestions-axis {
+        display: none; /* Safely hides suggestion bloat panel tracks over small device mobile targets screens */
+    }
+
+    .feed-instagram-card {
+        border-radius: 0; /* Installs full panoramic bleed parameters natively over touch frames viewports */
+        border-left: none;
+        border-right: none;
+    }
+
+    .card-media-canvas-frame {
+        height: 420px; /* Scales picture window bounds proportionally down on small responsive grids */
+    }
+}
+
+/* Hardware Accelerated Pop Animation Keyframe Matrices */
+@keyframes heartPopFlashAnim {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    30% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.9; }
+    50% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.9; }
+    80% { transform: translate(-50%, -50%) scale(1); opacity: 0.9; }
+    100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0; }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL MASONRY GRID EXPLORE TIMELINE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid profile tracking labels and overlay scores metrics */
+.switcher-tab-btn,
+.mask-metrics-row span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.social-explore-grid-stage {
+    background-color: var(--canvas-dark);
+    padding: 0 0 100px 0; /* Comprehensive baseline margins preceding footers transformations */
+    width: 100%;
+    position: relative;
+}
+
+.explore-layout-container {
+    width: 92%;
+    max-width: 935px; /* Symmetrically mirrors executive profile hero widths perfectly */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   1. PLATFORM NAVIGATION NAVIGATION SWITCHER COMPONENT
+   ========================================================================== */
+.explore-navigation-switcher {
+    border-top: 1px solid var(--border-dark);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.switcher-links-track {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.switcher-tab-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 18px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.switcher-tab-btn i {
+    font-size: 11px;
+}
+
+.switcher-tab-btn:hover,
+.switcher-tab-btn.active-tab-token {
+    color: var(--text-dark-pure);
+}
+
+/* Precision Sliding Line Anchor Indicators */
+.switcher-tab-btn::after {
+    content: '';
+    position: absolute;
+    top: -1px; /* Positions line accurately over the top border trace layout box rules */
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--text-dark-pure); /* Liquid copper gradients or absolute whites */
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.switcher-tab-btn.active-tab-token::after {
+    transform: scaleX(1);
+    background: var(--action-gradient); /* Locks onto high-status copper gradients */
+}
+
+/* ==========================================================================
+   2. HIGH-FIDELITY ASYMMETRICAL EXPLORE MOSAIC GRID TRACK
+   ========================================================================== */
+.explore-mosaic-grid-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px; /* High-end breathing grid margin parameters */
+}
+
+/* Elite Double-Height Asymmetrical Mosaic Modifier Grid Blocks */
+.mosaic-asset-card.feature-tall-node {
+    grid-row: span 2;
+}
+
+.mosaic-image-shield {
+    width: 100%;
+    position: relative;
+    background-color: var(--surface-dark);
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1 / 1; /* Enforces sharp uniform square parameters lines by default */
+    border: 1px solid var(--border-dark);
+}
+
+.mosaic-asset-card.feature-tall-node .mosaic-image-shield {
+    aspect-ratio: 1 / 2; /* Doubles vertical space weight for tall cinematic feature captures fluidly */
+}
+
+.mosaic-main-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hardware Accelerated Overlays Interactivity Masks Configuration Layers */
+.mosaic-interaction-mask {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(11, 15, 19, 0.6); /* Translucent Midnight Slate shutter */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 5;
+}
+
+.mask-metrics-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mask-metrics-row span {
+    color: var(--text-dark-pure);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mask-metrics-row span i {
+    font-size: 15px;
+}
+
+/* ACTIVE POINTER entry HOVER CONTEXT LOGIC */
+.mosaic-image-shield:hover .mosaic-main-graphic {
+    transform: scale(1.04);
+}
+
+.mosaic-image-shield:hover .mosaic-interaction-mask {
+    opacity: 1;
+}
+
+.mosaic-image-shield:hover .mask-metrics-row {
+    transform: scale(1);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stream Matrix)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .social-explore-grid-stage {
+        padding-bottom: 40px;
+    }
+
+    .explore-navigation-switcher {
+        margin-bottom: 4px;
+    }
+
+    .switcher-links-track {
+        gap: 0;
+        width: 100%;
+        justify-content: space-around; /* Distributes menu tabs evenly across device spans */
+    }
+
+    .switcher-tab-btn {
+        padding: 14px 0;
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    /* Dissolve intricate grid layers into tight mobile application parameters sheets */
+    .explore-mosaic-grid-track {
+        gap: 3px; /* Installs tight micro-groove borders exactly like premium mobile apps */
+        width: 100%;
+        padding: 0;
+    }
+
+    .mosaic-asset-card.feature-tall-node {
+        grid-row: auto; /* Drops double-height priorities seamlessly over tiny screens viewports */
+    }
+
+    .mosaic-asset-card.feature-tall-node .mosaic-image-shield {
+        aspect-ratio: 1 / 1; /* Forces all cards into flawless scannable squares uniformly */
+    }
+
+    /* Strip floating hover layer metrics overlay on touch devices to favor direct visual scans */
+    .mosaic-interaction-mask {
+        display: none; 
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL REELS CONTENT TRACK COMPONENT CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid data scanning fields */
+.platform-reels-matrix-stage h2,
+.platform-reels-matrix-stage h2 span,
+.reel-profile-footer-identity strong {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.reels-live-counter-tag,
+.reel-upper-meta-pill,
+.reel-metrics-interaction-stack span,
+.reel-profile-footer-identity p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-reels-matrix-stage {
+    background-color: var(--canvas-dark); /* Locked directly onto your AMOLED Black */
+    padding: 60px 0 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.reels-layout-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   REELS COMPONENT SECTION CONTROLLER HEADER
+   ========================================================================== */
+.reels-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.reels-title-cluster {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.reels-icon-vector {
+    font-size: 24px;
+    color: var(--brand-vibrant); /* Electric Neon Rose */
+}
+
+.reels-section-header h2 {
+    font-size: 26px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.reels-section-header h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.reels-live-counter-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background-color: var(--surface-dark);
+    padding: 6px 14px;
+    border-radius: 30px;
+    border: 1px solid var(--border-dark);
+}
+
+/* ==========================================================================
+   HIGH-CONTRAST FOUR-COLUMN VIDEO RUNWAY MATRIX
+   ========================================================================== */
+.reels-cards-grid-runway {
+    display: grid;
+    /* Implements high-end 9:16 vertical smartphone aspect layout distribution on desktop views */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.reel-video-card-node {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.reel-media-viewport-shield {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16; /* Clean uniform vertical mobile capture bounding boxes dimensions */
+    background-color: var(--surface-dark);
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.reel-fallback-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Upper Floating Real-time View Metrics Pill */
+.reel-upper-meta-pill {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Premium Dynamic Interactive Shutter Masks (Hyper Blue Matrix Backdrop) */
+.reel-hover-interaction-shutter {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(77, 56, 243, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%); /* Hyper Blue Alpha Shift Overlay */
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reel-metrics-interaction-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    transform: translateY(15px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reel-metrics-interaction-stack span {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Color Injections bound to your explicit color tokens */
+.color-rose-trigger { color: var(--brand-vibrant); filter: drop-shadow(0 0 8px var(--brand-vibrant)); }
+.color-cyan-trigger { color: var(--accent-glow); filter: drop-shadow(0 0 8px var(--accent-glow)); }
+
+/* Footer Metadata Account Handle Descriptors */
+.reel-profile-footer-identity {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 4px;
+}
+
+.reel-profile-footer-identity strong {
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+    letter-spacing: -0.1px;
+}
+
+.reel-profile-footer-identity p {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Safe constraints preventing multi-line caption blowouts */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ACTIVE CONTEXTUAL MOUSE POINTER INTERACTION STATES */
+.reel-video-card-node:hover .reel-media-viewport-shield {
+    transform: translateY(-4px);
+    border-color: var(--brand-vibrant); /* Electric Neon Rose Edge Pop */
+}
+
+.reel-video-card-node:hover .reel-fallback-cover { transform: scale(1.05); }
+.reel-video-card-node:hover .reel-hover-interaction-shutter { opacity: 1; }
+.reel-video-card-node:hover .reel-metrics-interaction-stack { transform: translateY(0); }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Mobile Touch Grid)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-reels-matrix-stage {
+        padding: 40px 0 60px 0;
+    }
+
+    .reels-section-header {
+        margin-bottom: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .reels-live-counter-tag {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Convert row grid configuration fields into a double column touch matrix for hand holding viewports */
+    .reels-cards-grid-runway {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .reel-media-viewport-shield {
+        border-radius: 10px;
+    }
+
+    /* Keep interaction parameters overlay visible natively over mobile devices view tracks */
+    .reel-hover-interaction-shutter {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+        opacity: 1;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 12px;
+    }
+
+    .reel-metrics-interaction-stack {
+        flex-direction: row;
+        gap: 14px;
+        transform: translateY(0);
+    }
+
+    .reel-metrics-interaction-stack span {
+        font-size: 12px;
+        gap: 4px;
+    }
+    
+    .reel-metrics-interaction-stack span i {
+        font-size: 11px;
+    }
+
+    .reel-profile-footer-identity strong {
+        font-size: 12.5px;
+    }
+
+    .reel-profile-footer-identity p {
+        font-size: 11.5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL ACTIVITY LEDGER & DIRECT MESSAGING CHANNEL CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant message legibility and alert text scanning */
+.platform-dialogue-ledger-stage h3,
+.chat-companion-name-stack h4,
+.message-text-content,
+.chat-facade-text-input,
+.chat-transmit-action-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700;
+}
+
+.ledger-micro-pill,
+.notification-text-details p,
+.notification-time-label,
+.chat-companion-name-stack span,
+.message-timestamp-label {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-dialogue-ledger-stage {
+    background-color: var(--canvas-dark); /* Pure AMOLED Black Background Base */
+    padding: 40px 0 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.dialogue-layout-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Split balance: equal column distribution runways across widescreen display formats */
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: stretch; /* Links row cell parameters borders height fields symmetrically */
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: LIVE SYSTEM NOTIFICATIONS LEDGER STREAM
+   ========================================================================== */
+.activity-ledger-deck {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.ledger-panel-header {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ledger-micro-pill {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-cyan-beacon {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-glow); /* Cyan Pop beacon pointer */
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-glow);
+    animation: beaconPulse 1.5s infinite ease-in-out;
+}
+
+.activity-ledger-deck h3 {
+    font-size: 20px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
+.activity-notifications-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.activity-notification-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+/* Custom Notification Ring Indication Mappings */
+.notifier-avatar-frame {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-avatar);
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+}
+
+.notifier-mini-img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark);
+}
+
+.notification-text-details {
+    flex-grow: 1;
+}
+
+.notification-text-details p {
+    font-size: 13px;
+    color: var(--text-dark-pure);
+    line-height: 1.45;
+    margin: 0;
+}
+
+.notification-text-details strong {
+    font-weight: 700;
+}
+
+.notification-time-label {
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-left: 4px;
+    font-weight: 500;
+}
+
+.notification-action-preview {
+    flex-shrink: 0;
+}
+
+.preview-target-graphic {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid var(--border-dark);
+    cursor: pointer;
+}
+
+.ledger-inline-btn {
+    padding: 6px 14px !important;
+    font-size: 11px !important;
+    border-radius: 6px !important;
+}
+
+/* ==========================================================================
+   RIGHT WING MODULE: DIRECT ENCRYPTED COMMUNICATION CHATS TUNNEL
+   ========================================================================== */
+.direct-chat-tunnel-deck {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.chat-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chat-user-target-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-header-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1px solid var(--border-dark);
+}
+
+.chat-companion-name-stack h4 {
+    font-size: 14px;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.chat-companion-name-stack span {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.network-status-icon-cyan {
+    font-size: 14px;
+    color: var(--accent-glow);
+    filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+/* Scrollable Core Chat Messages Bubble Area Viewport */
+.chat-message-viewport-canvas {
+    flex-grow: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 280px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.chat-message-viewport-canvas::-webkit-scrollbar { display: none; }
+
+.message-bubble-row {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    gap: 6px;
+}
+
+/* Incoming Bubble Specific Variables Mappings */
+.message-bubble-row.companion-bubble-type {
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.message-bubble-row.companion-bubble-type .message-text-content {
+    background-color: #1a1e22; /* Soft deep charcoal contrast backdrop tint */
+    color: var(--text-dark-pure);
+    border-radius: 4px 16px 16px 16px;
+}
+
+/* Outgoing Bubble Specific Variables Mappings (Hyper Blue Active Frame Link Injection) */
+.message-bubble-row.master-user-bubble-type {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.message-bubble-row.master-user-bubble-type .message-text-content {
+    background: var(--action-gradient); /* Electric Rose to Hyper Blue background line */
+    color: var(--text-dark-pure);
+    border-radius: 16px 4px 16px 16px;
+}
+
+.message-text-content {
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 12px 16px;
+    margin: 0;
+}
+
+.message-timestamp-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 0 4px;
+}
+
+/* Lower Form Message Input Submission Row Frame */
+.chat-input-toolbar-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.chat-toolbar-vector-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-dark-pure);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.chat-toolbar-vector-btn:hover { color: var(--brand-vibrant); }
+
+.chat-facade-text-input {
+    flex-grow: 1;
+    background-color: var(--canvas-dark);
+    border: 1px solid var(--border-dark);
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 12.5px;
+    color: var(--text-dark-pure);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.chat-facade-text-input:focus { border-color: rgba(255, 255, 255, 0.15); }
+
+.chat-transmit-action-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--brand-vibrant); /* Electric Neon Rose Triggers Send Button Text */
+    font-size: 13.5px;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.chat-transmit-action-btn:hover {
+    transform: scale(1.04);
+    color: var(--text-dark-pure);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Asymmetrical Row Split Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-dialogue-ledger-stage {
+        padding: 20px 0 60px 0;
+    }
+
+    /* Collapse dual side-by-side structures into a unified single column touch flow stream layout */
+    .dialogue-layout-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .activity-ledger-deck,
+    .direct-chat-tunnel-deck {
+        padding: 20px;
+    }
+
+    .chat-panel-header {
+        padding: 14px 16px;
+    }
+
+    .chat-message-viewport-canvas {
+        padding: 16px;
+        height: 240px;
+    }
+
+    .message-bubble-row {
+        max-width: 85%;
+    }
+
+    .chat-input-toolbar-row {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL LIVE BROADCAST THEATER COMPONENT CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid chat scannability and alert headers */
+.platform-broadcast-theater-stage h3,
+.broadcaster-meta-stack h4,
+.comment-body-text,
+.stream-facade-text-field {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700;
+}
+
+.live-indicator-pill,
+.viewer-count-pill,
+.broadcaster-meta-stack span,
+.commenter-handle {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-broadcast-theater-stage {
+    background-color: var(--canvas-dark); /* Strict AMOLED Black Base Lock */
+    padding: 40px 0 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.theater-layout-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Executive wide split setup: cinema viewport dominating layout allocations */
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 32px;
+    align-items: stretch;
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: CINEMA-RATIO VIEWPORT MONITOR
+   ========================================================================== */
+.theater-monitor-deck {
+    width: 100%;
+}
+
+.monitor-video-viewport {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Modern panoramic broadcast landscape bounding dimensions */
+    background-color: var(--surface-dark);
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.monitor-stream-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Upper Floating Control Overlay Badges */
+.monitor-upper-control-row {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 5;
+}
+
+.live-indicator-pill {
+    background-color: var(--brand-vibrant); /* Electric Neon Rose Status Pillar */
+    color: var(--text-dark-pure);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-beacon-rose {
+    width: 6px;
+    height: 6px;
+    background-color: var(--text-dark-pure);
+    border-radius: 50%;
+    animation: beaconPulse 1.4s infinite ease-in-out;
+}
+
+.viewer-count-pill {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-dark-pure);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Lower Shutter Metadata Broadcaster Description Bar Overlay */
+.monitor-lower-metadata-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 24px 20px 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+    z-index: 4;
+}
+
+.broadcaster-profile-identity {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.broadcaster-mini-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1.5px solid var(--brand-vibrant); /* High contrast ring tracker */
+}
+
+.broadcaster-meta-stack h4 {
+    font-size: 14.5px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.1px;
+}
+
+.broadcaster-meta-stack span {
+    font-size: 12px;
+    color: rgba(247, 249, 250, 0.8);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   RIGHT WING MODULE: AUDIENCE ENGAGEMENT REAL-TIME CHAT MATRIX
+   ========================================================================== */
+.theater-chat-ledger-deck {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.stream-ledger-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.stream-ledger-header h3 {
+    font-size: 15px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.network-pulse-icon-rose {
+    font-size: 14px;
+    color: var(--brand-vibrant); /* Electric Neon Rose Core Status Pointer */
+    filter: drop-shadow(0 0 6px var(--brand-vibrant));
+}
+
+/* Scrollable Comment List Box Configuration fields */
+.stream-messages-viewport-scroller {
+    flex-grow: 1;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 200px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.stream-messages-viewport-scroller::-webkit-scrollbar { display: none; }
+
+.stream-comment-row {
+    font-size: 13px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.commenter-handle {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+}
+
+/* Text color helper injections bound directly to your multi-color system */
+.commenter-handle.color-cyan-text { color: var(--accent-glow); }
+.commenter-handle.color-rose-text { color: var(--brand-vibrant); }
+
+.comment-body-text {
+    color: rgba(247, 249, 250, 0.9);
+    margin: 0;
+}
+
+/* Lower Private Input Submission Row Toolbar Frame */
+.stream-input-toolbar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.stream-facade-text-field {
+    flex-grow: 1;
+    background-color: var(--canvas-dark);
+    border: 1px solid var(--border-dark);
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--text-dark-pure);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.stream-facade-text-field:focus { border-color: rgba(255, 255, 255, 0.15); }
+
+.stream-heart-reaction-trigger-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--brand-vibrant); /* Fires Electric Neon Rose Heart Pop Indicator Vector */
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stream-heart-reaction-trigger-btn:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px var(--brand-vibrant));
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Screen Stack)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-broadcast-theater-stage {
+        padding: 20px 0 60px 0;
+    }
+
+    /* Convert wide row coordinates into a clean vertical flowing sequence for handheld touch targets screens */
+    .theater-layout-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .monitor-video-viewport {
+        aspect-ratio: 4 / 3; /* Compresses panoramic heights to prioritize reading depth values on screens */
+    }
+
+    .monitor-upper-control-row {
+        top: 12px;
+        left: 12px;
+    }
+
+    .monitor-lower-metadata-overlay {
+        padding: 20px 16px 12px 16px;
+    }
+
+    .theater-chat-ledger-deck {
+        height: 280px; /* Establishes fixed bounding heights for clean interface balances */
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL SEARCH CONSOLE & CAPABILITY FILTER CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid text scanning and console hint legibility */
+.platform-search-filter-canopy-stage .search-console-input-field,
+.filter-action-toggle-btn,
+.directory-tag-token,
+.search-hotkey-badge-hint {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700;
+}
+
+.stream-descriptor-label,
+.tag-live-count {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-search-filter-canopy-stage {
+    background-color: var(--canvas-dark); /* Strict AMOLED Black Base Lock */
+    padding: 40px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.search-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically mirrors explore timelines, profile headers, and milestone counters */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   CENTRAL SEARCH TERMINAL CONTAINER HOUSING ENGINE
+   ========================================================================== */
+.search-terminal-focal-box {
+    background-color: var(--surface-dark); /* Floating slate obsidian container platform */
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Row 1 Layout Controls: Primary Inputs and Section Toggles Deck Grid Base */
+.search-input-bar-row {
+    display: grid;
+    /* Desktop layout track dividing search entry fields from companion action filters buttons */
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Search Entry Box Frame Systems Architecture */
+.search-field-frame-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-inner-icon-cyan {
+    position: absolute;
+    left: 18px;
+    color: var(--accent-glow); /* Cyan Pop Indicator Vector */
+    font-size: 14px;
+    pointer-events: none;
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+.search-console-input-field {
+    width: 100%;
+    background-color: var(--canvas-dark); /* AMOLED black entry frame backdrop */
+    border: 1px solid var(--border-dark);
+    padding: 12px 60px 12px 46px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--text-dark-pure);
+    outline: none;
+    transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+.search-console-input-field:focus {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: #080808;
+}
+
+/* Floating Hotkey Command Prompt Badge Facade Indicator */
+.search-hotkey-badge-hint {
+    position: absolute;
+    right: 16px;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+}
+
+/* Filter Quick Action Toggle Control Buttons Row List */
+.search-filter-toggles-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.filter-action-toggle-btn {
+    background-color: var(--canvas-dark);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    font-size: 11.5px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.filter-action-toggle-btn i {
+    font-size: 11px;
+}
+
+.filter-action-toggle-btn:hover {
+    color: var(--text-dark-pure);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Color Injections bound safely to your multi-mode variables tokens active states matrices */
+.filter-action-toggle-btn.active-filter-rose {
+    background-color: rgba(255, 48, 79, 0.05);
+    border-color: rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant); /* Electric Neon Rose Status Injection */
+}
+
+/* ==========================================================================
+   ROW 2 LAYOUT CONTROLS: LOWER INSTAGRAM-STYLE INTERACTIVE DIRECTORY TAGS
+   ========================================================================== */
+.search-tags-parameter-stream-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.stream-descriptor-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.tags-overflow-scroll-track {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+.tags-overflow-scroll-track::-webkit-scrollbar { display: none; }
+
+.directory-tag-token {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    color: var(--text-dark-pure);
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 30px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tag-live-count {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background-color: var(--canvas-dark);
+    padding: 1px 6px;
+    border-radius: 20px;
+    border: 1px solid var(--border-dark);
+}
+
+.directory-tag-token:hover {
+    border-color: var(--brand-vibrant);
+    transform: translateY(-1px);
+}
+
+.directory-tag-token.link-active-blue {
+    background-color: rgba(77, 56, 243, 0.05);
+    border-color: rgba(77, 56, 243, 0.15);
+    color: var(--brand-royal); /* Hyper Blue Active State Injection */
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Search Stack Center)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-search-filter-canopy-stage {
+        padding: 20px 0;
+    }
+
+    /* Compresses overall internal card bounds footprints smoothly over touch grids */
+    .search-terminal-focal-box {
+        padding: 16px;
+        width: 90%;
+        margin: 0 auto;
+        gap: 16px;
+    }
+
+    /* Convert row distribution tracks into linear stacked vertical block rows sequences */
+    .search-input-bar-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .search-console-input-field {
+        padding: 12px 16px 12px 42px; /* Pulls right edge padding limits tight as hints dissolve */
+        font-size: 12.5px;
+    }
+
+    .search-inner-icon-cyan {
+        left: 14px;
+    }
+
+    .search-hotkey-badge-hint {
+        display: none; /* Strip keystroke combination labels entirely off touch layout boundaries screen scopes */
+    }
+
+    /* Distribute toggle choices wide bleed uniformly over handheld touch lines profiles */
+    .search-filter-toggles-group {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+
+    .filter-action-toggle-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+        font-size: 11px;
+    }
+
+    /* Reflow lower directory filters into a liquid fluid panoramic side-swipe track stream */
+    .search-tags-parameter-stream-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL NETWORKS MILESTONE STATS LEDGER CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant telemetry reading density */
+.platform-milestone-pulse-stage h3,
+.platform-milestone-pulse-stage h3 span,
+.metric-live-signal-tag {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-milestone-pulse-stage p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-milestone-pulse-stage {
+    background-color: var(--canvas-dark); /* Pure AMOLED Black Background Canvas Base */
+    padding: 60px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.milestone-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically mirrors conversion cards and explore layout headers */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   SYMMETRICAL DESKTOP MULTI-COLUMN TELEMETRY RAIL GRID
+   ========================================================================== */
+.milestone-counter-grid-rail {
+    display: grid;
+    /* Split balance layout distribution tracks dividing parameters fields evenly */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.milestone-counter-cell {
+    background-color: var(--surface-dark); /* Floating post slate obsidian container background */
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+/* Micro Push Interactions on Pointer Entries */
+.milestone-counter-cell:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.metric-icon-heading-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.metric-icon-heading-row i {
+    font-size: 14px;
+}
+
+/* Multicolor Core Injections mapping across your explicit branding vectors rules */
+.color-cyan-marker { color: var(--accent-glow); filter: drop-shadow(0 0 6px var(--accent-glow)); }
+.color-rose-marker { color: var(--brand-vibrant); filter: drop-shadow(0 0 6px var(--brand-vibrant)); }
+.color-blue-marker { color: var(--brand-royal); filter: drop-shadow(0 0 6px var(--brand-royal)); }
+
+.metric-live-signal-tag {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.milestone-counter-cell h3 {
+    font-size: 32px;
+    color: var(--text-dark-pure); /* Silk white intense readability heading */
+    margin: 0 0 6px 0;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.milestone-counter-cell h3 span {
+    color: var(--brand-vibrant); /* Accent cross-color pop indicators */
+}
+
+.milestone-counter-cell p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+}
+
+/* Lower Fluid Linear Progress Tuning Lines Bars Track */
+.metric-indicator-bar-track {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: auto; /* Forces elements downward to balance uneven copywriting scopes layout sizes */
+}
+
+.metric-indicator-fill {
+    height: 100%;
+    border-radius: 4px;
+    width: 0; /* Default collapsed properties updated via transition curves logs overrides */
+    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Colors bound to your explicit system tokens action matrices variables gradients */
+.fill-cyan-glow { background-color: var(--accent-glow); width: 85%; }
+.fill-rose-glow { background-color: var(--brand-vibrant); width: 92%; }
+.fill-blue-glow { background-color: var(--brand-royal); width: 78%; }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Quad Grid Matrix)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-milestone-pulse-stage {
+        padding: 40px 0;
+    }
+
+    /* Convert single row quad inline tracks into a tight touch-optimized 2x2 dashboard matrix block */
+    .milestone-counter-grid-rail {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .milestone-counter-cell {
+        padding: 20px 16px;
+        border-radius: 10px;
+    }
+
+    .milestone-counter-cell h3 {
+        font-size: 26px;
+    }
+
+    .milestone-counter-cell p {
+        font-size: 11.5px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL MEDIA INSTAGRAM CTA BLOCK CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid action scannability and title layouts */
+.platform-conversion-canopy-stage h2,
+.platform-conversion-canopy-stage h2 span,
+.cta-handle-badge-cluster h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-conversion-canopy-stage p,
+.cta-action-btn-primary,
+.cta-action-btn-secondary {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-conversion-canopy-stage {
+    background-color: var(--canvas-dark); /* Strict AMOLED Black Base Lock */
+    padding: 60px 0 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.cta-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically mirrors explore timelines and profile headers */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   HIGH-GLOSS FROSTED CENTRAL FOCAL CONTAINER DESIGN ENGINE
+   ========================================================================== */
+.cta-focal-card {
+    background: linear-gradient(135deg, rgba(18, 12, 18, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+/* Multi-Layer Hardware Accelerated Backlighting Ambient Mesh Glow Overlay */
+.cta-ambient-chromatic-mesh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.06) 0%, rgba(77, 56, 243, 0.04) 50%, transparent 75%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cta-content-structural-stack {
+    position: relative;
+    z-index: 5;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ==========================================================================
+   UPPER HEADER ROW: BRAND PROFILE HANDLE DECK WITH REVOLVING STORY GLOW
+   ========================================================================== */
+.cta-avatar-handshake-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 8px 20px 8px 10px;
+    border-radius: 40px;
+    border: 1px solid var(--border-dark);
+}
+
+.cta-story-halo-ring {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-avatar);
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Rotates your linear multi-color story tokens matrix automatically */
+.cta-story-halo-ring.active-story-gradient {
+    background: var(--story-gradient); /* Instagram Inspired Legacy Loop Curve */
+    animation: storyHaloRotate 8s linear infinite;
+}
+
+.cta-avatar-black-gap {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    background-color: #121212; /* Matches your Slate Obsidian surface background */
+    padding: 2px;
+}
+
+.cta-mini-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+}
+
+.cta-handle-badge-cluster {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cta-handle-badge-cluster h3 {
+    font-size: 14px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.1px;
+}
+
+.cta-verified-badge-cyan {
+    color: var(--accent-glow); /* Cyan Pop badge verification checkpoint */
+    font-size: 14px;
+    filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+/* Editorial Title Headlines Stack Options */
+.cta-content-structural-stack h2 {
+    font-size: 38px;
+    color: var(--text-dark-pure);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin: 0 0 16px 0;
+}
+
+.cta-content-structural-stack h2 span {
+    background: var(--action-gradient); /* Electric Rose to Hyper Blue gradient tracking */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.cta-content-structural-stack p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0 0 36px 0;
+}
+
+/* Integrated Actions Row Control Deck Grid */
+.cta-buttons-actions-deck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.cta-action-btn-primary,
+.cta-action-btn-secondary {
+    padding: 14px 30px !important;
+    font-size: 13.5px !important;
+    border-radius: 8px !important; /* Standard profile layout shape parameters fields */
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Touch Screen Center Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-conversion-canopy-stage {
+        padding: 40px 0;
+    }
+
+    /* Compresses inner space padding limits while fitting wide grid viewport boundaries */
+    .cta-focal-card {
+        padding: 45px 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cta-ambient-chromatic-mesh {
+        width: 300px;
+        height: 300px;
+    }
+
+    .cta-content-structural-stack h2 {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
+    .cta-content-structural-stack p {
+        font-size: 13.5px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    /* Transition layout horizontal actions rails straight into standard wide button blocks */
+    .cta-buttons-actions-deck {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 320px;
+    }
+
+    .cta-action-btn-primary,
+    .cta-action-btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL MASTER DIRECTORY FOOTER ARCHITECTURE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid directory index scannability and structural parameters status */
+.platform-master-directory-footer h5,
+.platform-master-directory-footer .footer-handle-text,
+.directory-routing-links-list a,
+.status-value-badge,
+.footer-baseline-copyright-row p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700;
+}
+
+.footer-brand-bio-copy,
+.hardware-status-token,
+.status-label-text,
+.footer-baseline-utility-anchors a {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-master-directory-footer {
+    background-color: var(--canvas-dark); /* Firmly anchored on your Pure AMOLED Black */
+    padding: 80px 0 40px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   REFACTORED BRAND MATRIX SOCIAL NETWORKS ROW LAYOUT
+   ========================================================================== */
+
+.footer-meta-brand-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px; /* Generous industrial breathing separation gap spacing */
+}
+
+.footer-branding-anchor {
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-branding-anchor:hover {
+    transform: scale(1.02);
+}
+
+.branding-logo {
+    object-fit: contain;
+    display: block;
+}
+
+/* Symmetrical Interactive Vector Track Box */
+.footer-social-networks-deck {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-vector-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px; /* Connected to premium squared social design paradigms */
+    background-color: var(--surface-dark); /* Slate Obsidian */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal */
+    color: var(--text-secondary); /* Muted Graphite */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.3s ease,
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   DYNAMIC MULTICOLOR HOVER INTERACTIONS MAPPING
+   ========================================================================== */
+.social-vector-link:hover {
+    transform: translateY(-3px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 1. Instagram & YouTube link onto Electric Neon Rose */
+.social-vector-link.rose-shutter-trigger:hover {
+    color: var(--brand-vibrant);
+    border-color: rgba(255, 48, 79, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 48, 79, 0.15);
+}
+
+/* 2. Threads links onto Hyper Blue */
+.social-vector-link.blue-shutter-trigger:hover {
+    color: var(--brand-royal);
+    border-color: rgba(77, 56, 243, 0.3);
+    box-shadow: 0 8px 20px rgba(77, 56, 243, 0.15);
+}
+
+/* 3. X Links onto Cyan Pop */
+.social-vector-link.cyan-shutter-trigger:hover {
+    color: var(--accent-glow);
+    border-color: rgba(0, 242, 254, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 242, 254, 0.15);
+}
+
+/* ==========================================================================
+   STRICT 768px MOBILE PROFILE REFLOW CENTER ALIGNMENT
+   ========================================================================== */
+@media (max-width: 768px) {
+    .footer-meta-brand-cell {
+        align-items: center; /* Symmetrically snaps entire core column elements to center */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-social-networks-deck {
+        justify-content: center;
+        width: 100%;
+        gap: 16px; /* Expands touch surface target separation space for fingers */
+    }
+    
+    .social-vector-link {
+        width: 44px; /* Scaled slightly larger for native application touch parity */
+        height: 44px;
+        font-size: 20px;
+    }
+}
+
+/* Micro-Thin Chromatic Top Edge Accent Accentuated Transition Path Line */
+.footer-chromatic-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--brand-vibrant) 0%, var(--brand-royal) 50%, var(--accent-glow) 100%);
+}
+
+.footer-layout-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-asymmetric-columns-grid {
+    display: grid;
+    /* desktop space weighting distribution: primary brand block maps wider footprint values arrays */
+    grid-template-columns: 1.3fr 0.8fr 0.8fr 1.1fr;
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+/* ==========================================================================
+   COLUMN WING ONE: BRAND IDENTITY TERMINAL SPECIFICATION CARDS
+   ========================================================================== */
+.footer-meta-brand-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.footer-branding-anchor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo-pulse-cyan {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-glow); /* Cyan Pop Indicator Core */
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.footer-handle-text {
+    font-size: 18px;
+    color: var(--text-dark-pure);
+    letter-spacing: -0.5px;
+}
+
+.footer-handle-text span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.footer-brand-bio-copy {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 320px;
+}
+
+.footer-system-hardware-badge {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.hardware-status-token {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hardware-status-token i {
+    color: var(--brand-royal);
+}
+
+/* ==========================================================================
+   COLUMNS TWO & THREE: DIRECTORY LINKS ROUTING LINKS ARRAYS
+   ========================================================================== */
+.footer-links-directory-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.platform-master-directory-footer h5 {
+    font-size: 13px;
+    color: var(--text-dark-pure);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.directory-routing-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.directory-routing-links-list a {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
+}
+
+.directory-routing-links-list a i {
+    font-size: 9px;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: all 0.3s ease;
+    color: var(--brand-vibrant); /* Electric Neon Rose Arrow pointers */
+}
+
+/* Subtle Link Push Interactivity Mechanics on Pointer Entry */
+.directory-routing-links-list a:hover {
+    color: var(--text-dark-pure);
+    transform: translateX(4px);
+}
+
+.directory-routing-links-list a:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ==========================================================================
+   COLUMN FOUR: ACTIVE SYSTEM NOTIFICATIONS & TELEMETRY LEDGERS
+   ========================================================================== */
+.footer-telemetry-status-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.telemetry-status-card-box {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 16px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.status-indicator-line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-label-text {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.status-value-badge {
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+/* Dynamic State Color Injections bound safely to your multi-color layout choices */
+.status-value-badge.badge-active-cyan { background-color: rgba(0, 229, 255, 0.06); border: 1px solid rgba(0, 229, 255, 0.15); color: var(--accent-glow); }
+.status-value-badge.badge-active-rose { background-color: rgba(255, 48, 79, 0.06); border: 1px solid rgba(255, 48, 79, 0.15); color: var(--brand-vibrant); }
+.status-value-badge.badge-active-blue { background-color: rgba(77, 56, 243, 0.06); border: 1px solid rgba(77, 56, 243, 0.15); color: var(--brand-royal); }
+
+/* ==========================================================================
+   LOWER SYSTEM BASELINE OPERATION COPYRIGHT ROW BLOCKS
+   ========================================================================== */
+.footer-baseline-copyright-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-baseline-copyright-row p {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    margin: 0;
+    letter-spacing: 0.2px;
+}
+
+.footer-baseline-utility-anchors {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-baseline-utility-anchors a {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-baseline-utility-anchors a:hover { color: var(--text-dark-pure); }
+
+.anchor-split-dot {
+    width: 3px;
+    height: 3px;
+    background-color: var(--border-dark);
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-master-directory-footer {
+        padding: 60px 0 30px 0;
+    }
+
+    /* Collapse the widescreen asymmetrical layout grid down into a linear single column alignment sequence */
+    .footer-asymmetric-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
+
+    .footer-meta-brand-cell,
+    .footer-links-directory-cell,
+    .footer-telemetry-status-cell {
+        align-items: center;
+        text-align: center;
+    }
+
+    .directory-routing-links-list {
+        align-items: center;
+    }
+
+    .directory-routing-links-list a i {
+        display: none; /* Strips hover arrow indicators on touch devices viewport limits */
+    }
+
+    /* Balance lower baseline metrics layers symmetrically */
+    .footer-baseline-copyright-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .footer-baseline-utility-anchors {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+    }
+    
+    .anchor-split-dot {
+        display: none; /* Drop spacing dot masks over mobile to favor liquid grid wrappers blocks */
+    }
+}

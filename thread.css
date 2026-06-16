@@ -1,0 +1,1441 @@
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL TEXT THREADS ARCHITECTURE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant narrative parsing */
+.platform-threads-matrix-stage h4,
+.panel-header-row h5,
+.tag-name-metrics-stack strong,
+.thread-post-dispatch-btn,
+.tag-quick-seek-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700;
+}
+
+.threads-inline-input,
+.thread-timestamp-label,
+.thread-editorial-body-copy,
+.metric-counter-label,
+.tag-name-metrics-stack span,
+.sidebar-minimal-meta-footer p,
+.sidebar-minimal-meta-footer span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-threads-matrix-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto your absolute AMOLED Black backdrop variable */
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 130px 0 80px 0; /* Comprehensive vertical buffer preventing global navigation header conflicts */
+    overflow: hidden;
+}
+
+/* Deep Spatial Background Environmental Light Flare Track */
+.threads-ambient-chromatic-mesh {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.04) 0%, rgba(255, 48, 79, 0.02) 50%, transparent 75%);
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.threads-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically balances line track widths parallel across your complete application architecture */
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.threads-workspace-split-grid {
+    display: grid;
+    /* Main stream conversation deck paired cleanly alongside right metadata discovery filter panels */
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: DISPATCH COMPOSER & TIMELINE THREAD LIST CHASSIS
+   ========================================================================== */
+.threads-primary-stream-axis {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Composer Panel Card Box Area */
+.thread-composer-chassis {
+    background-color: var(--surface-dark); /* Slate Obsidian floating card base background */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline line divider */
+    border-radius: var(--radius-feed);
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.composer-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.composer-avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1px solid var(--border-dark);
+}
+
+.composer-input-field-enclosure {
+    flex-grow: 1;
+}
+
+.threads-inline-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: var(--text-dark-pure); /* Crisp Silk White readability text strings inputs */
+}
+
+.composer-actions-bar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.composer-attachment-vectors-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.attachment-vector-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary); /* Muted Graphite vector shortcuts initial configurations */
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.attachment-vector-btn:hover {
+    color: var(--accent-glow); /* Cyan Pop active hovering indicator channel marker */
+}
+
+.thread-post-dispatch-btn {
+    padding: 8px 16px !important;
+    font-size: 12.5px !important;
+    border-radius: 6px !important; /* Premium profile shapes parameters adjustments rules matches pages layout options */
+}
+
+/* Timeline Thread Publication Identity Card Core */
+.thread-publication-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.thread-card-structural-layout {
+    display: flex;
+    gap: 14px;
+    width: 100%;
+}
+
+/* Left Avatar Column Tracking Interconnected Dialogue Connector Lines */
+.thread-left-avatar-track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.thread-curator-avatar-halo {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-avatar);
+    padding: 1.5px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thread-curator-avatar-halo.active-story-gradient { background: var(--story-gradient); }
+
+.thread-curator-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark);
+}
+
+.thread-interconnected-wire-line {
+    width: 2px;
+    flex-grow: 1;
+    background-color: var(--border-dark);
+    margin-top: 8px;
+    border-radius: 2px;
+    opacity: 0.5;
+}
+
+/* Right Content Column Description Blocks Group Metadata Stack */
+.thread-right-content-stack {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.thread-author-identity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.thread-handle-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.thread-handle-badge-group h4 {
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.verification-icon-cyan {
+    color: var(--accent-glow); /* Cyan Pop platform verified check token validation marker */
+    font-size: 12.5px;
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+.thread-upper-right-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.thread-timestamp-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.thread-options-trigger-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(142, 142, 142, 0.6);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 2px;
+    transition: color 0.3s ease;
+}
+
+.thread-options-trigger-btn:hover { color: var(--text-dark-pure); }
+
+.thread-editorial-body-copy {
+    font-size: 14px;
+    color: var(--text-dark-pure);
+    line-height: 1.55;
+    margin: 0 0 14px 0;
+}
+
+.thread-hyperlink-token {
+    color: var(--brand-royal); /* Hyper Blue custom reference link token variable highlights */
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Micro Action Toolbar Buttons Cluster Group Row */
+.thread-actions-toolbar-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 2px;
+}
+
+.thread-vector-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.thread-vector-btn:hover {
+    transform: scale(1.05);
+    color: var(--brand-vibrant); /* Electric Neon Rose Hover Trigger Base */
+}
+
+/* Active vector state overrides hooks */
+.thread-vector-btn.liked-active-vector {
+    color: var(--brand-vibrant) !important;
+    filter: drop-shadow(0 0 4px var(--brand-vibrant));
+}
+.thread-vector-btn.liked-active-vector i { font-weight: 900 !important; }
+
+.metric-counter-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.thread-vector-btn:hover .metric-counter-label { color: var(--text-dark-pure); }
+
+/* ==========================================================================
+   RIGHT WING MODULE: PERSISTENT ECOSYSTEM FILTRATION SIDEBAR
+   ========================================================================== */
+.threads-contextual-filter-sidebar {
+    width: 100%;
+}
+
+.sidebar-sticky-enclosure {
+    position: sticky;
+    top: 110px; /* Locked tracking offset bypass layout navigation header structures */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-filtration-panel-box {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 20px;
+}
+
+.panel-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.panel-header-row h5 { font-size: 12.5px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
+
+.telemetry-icon-cyan {
+    font-size: 13px;
+    color: var(--accent-glow); /* Cyan Pop system tracking marker vector */
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+.panel-trending-tags-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.trending-tag-line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag-name-metrics-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.tag-name-metrics-stack strong { font-size: 13.5px; color: var(--text-dark-pure); prefix: "#"; }
+.tag-name-metrics-stack strong::before { content: "#"; color: var(--text-secondary); margin-right: 1px; }
+.tag-name-metrics-stack span { font-size: 11px; color: var(--text-secondary); }
+
+.tag-quick-seek-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--brand-royal); /* Hyper Blue action selection triggers buttons link metrics */
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tag-quick-seek-btn:hover { color: var(--accent-glow); }
+.tag-quick-seek-btn.active-rose-filter { color: var(--brand-vibrant); }
+
+.sidebar-minimal-meta-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 4px;
+}
+
+.sidebar-minimal-meta-footer p {
+    font-size: 11px;
+    color: rgba(126, 139, 150, 0.35); /* Muted Graphite footprint footnotes string body text */
+    line-height: 1.5;
+    margin: 0;
+}
+
+.sidebar-minimal-meta-footer span {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(126, 139, 150, 0.25);
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Text Flow Stream)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-threads-matrix-stage {
+        padding: 90px 0 40px 0;
+    }
+
+    /* Dissolve the widescreen side-by-side grid down into a clean centralized touch conversation path sequence */
+    .threads-workspace-split-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0; /* Clear layout edge boundaries allowing full bleed mobile mapping profiles formats */
+    }
+
+    .threads-contextual-filter-sidebar {
+        display: none; /* Safely strips peripheral metadata cards clutter over tiny handheld device screens monitors */
+    }
+
+    .thread-composer-chassis,
+    .thread-publication-card {
+        border-radius: 0; /* Panoramic borderless presentation look matching mobile native apps */
+        border-left: none;
+        border-right: none;
+        padding: 16px;
+    }
+
+    .thread-editorial-body-copy {
+        font-size: 13.5px;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL THREADS LOWER ACTIVITY CANOPY CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant data density parsing */
+.platform-threads-activity-stage h2,
+.platform-threads-activity-stage h2 span,
+.invitation-glass-inner-stack h4,
+.invitation-micro-pill-cyan {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.activity-live-counter-tag,
+.activity-text-details-stack p,
+.activity-timestamp-string,
+.invitation-glass-inner-stack p,
+.invitation-trigger-action-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-threads-activity-stage {
+    background-color: var(--canvas-dark); /* Firmly locked onto your absolute AMOLED Black variable */
+    padding: 40px 0 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.threads-activity-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically balances line track widths parallel across your complete application architecture */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   ACTIVITY HUB CANOPY MAIN CONTROLLER HEADER BAR
+   ========================================================================== */
+.threads-activity-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.activity-title-cluster {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.activity-icon-vector-rose {
+    font-size: 18px;
+    color: var(--brand-vibrant); /* Electric Neon Rose Indicator Vector */
+    filter: drop-shadow(0 0 6px var(--brand-vibrant));
+}
+
+.threads-activity-section-header h2 {
+    font-size: 18px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.threads-activity-section-header h2 span {
+    background: var(--action-gradient); /* High contrast Electric Rose to Hyper Blue gradient link */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.activity-live-counter-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--surface-dark);
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-dark);
+}
+
+/* ==========================================================================
+   ASYMMETRICAL MAIN WORKSPACE SPLIT DECK ENGINE
+   ========================================================================== */
+.threads-activity-split-grid {
+    display: grid;
+    /* Primary activity ledger feed dominating width footprint mappings over right banners */
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.threads-activity-ledger-deck {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.activity-shard-row-cell {
+    background-color: var(--surface-dark); /* Slate Obsidian floating frames background card */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline line divider */
+    border-radius: var(--radius-feed);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+.activity-shard-row-cell:hover {
+    transform: translateX(4px);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Notification Ring Indication Mappings */
+.activity-avatar-frame {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-avatar);
+    padding: 1.5px;
+    background: rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+}
+
+.activity-avatar-frame.active-story-gradient { background: var(--story-gradient); }
+
+.activity-mini-img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark);
+}
+
+.activity-text-details-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.activity-text-details-stack p {
+    font-size: 13.5px;
+    color: var(--text-dark-pure); /* Silk White crisp text contrast readability */
+    line-height: 1.45;
+    margin: 0;
+}
+
+.activity-text-details-stack p strong { font-weight: 700; }
+
+.activity-quote-shutter {
+    color: var(--brand-royal); /* Hyper Blue sub-text block highlights string */
+    font-weight: 600;
+}
+
+.activity-timestamp-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: FROSTED GLASS CONVERSION CONSOLE FRAME UTILITIES
+   ========================================================================== */
+.threads-conversion-invitation-deck {
+    background: linear-gradient(135deg, rgba(18, 12, 18, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 30px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.invitation-glass-inner-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.invitation-micro-pill-cyan {
+    background-color: rgba(0, 242, 254, 0.04); /* Subdued Cyan Pop Shutter */
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    color: var(--accent-glow);
+    font-size: 9.5px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.invitation-glass-inner-stack h4 {
+    font-size: 18px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
+.invitation-glass-inner-stack p {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 6px 0;
+}
+
+.invitation-trigger-action-btn {
+    width: 100%;
+    padding: 12px 0 !important;
+    font-size: 12.5px !important;
+    border-radius: 6px !important; /* Premium profile container design shape configurations */
+    text-align: center;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Touch Clean Reflow)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-threads-activity-stage {
+        padding: 24px 0 60px 0;
+    }
+
+    .threads-activity-section-header {
+        margin-bottom: 24px;
+        width: 90%;
+        margin: 0 auto 20px auto;
+    }
+
+    /* Collapse the widescreen asymmetrical grid down into a single row continuous flow path sequence */
+    .threads-activity-split-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 0;
+    }
+
+    .threads-activity-ledger-deck {
+        gap: 12px;
+    }
+
+    .activity-shard-row-cell {
+        border-radius: 0; /* Pure borderless panoramic edge display tracking matching mobile timelines */
+        border-left: none;
+        border-right: none;
+        padding: 14px 5%;
+    }
+
+    .activity-shard-row-cell:hover {
+        transform: none; /* Strip horizontal shift values over mobile devices viewports to avoid twitching loops */
+    }
+
+    .activity-text-details-stack p {
+        font-size: 12.5px;
+        line-height: 1.4;
+    }
+
+    .threads-conversion-invitation-deck {
+        display: none; /* Safely purges static promotional content over small handheld touch screen interfaces */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM IMMERSIVE STORIES THEATRE STREAM CANVAS CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant narrative data scannability */
+.platform-stories-theatre-stage h3,
+.stories-handle-badge-group h4,
+.sticker-micro-badge,
+.interactive-polling-sticker-box h4,
+.sticker-poll-option-btn strong,
+.viewer-identity-stack strong {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.stories-handle-stack span,
+.ledger-live-pulse-badge,
+.vote-percent-label,
+.viewer-identity-stack span,
+.stories-facade-input-field {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-stories-theatre-stage {
+    background-color: var(--canvas-dark); /* Firmly locked onto your absolute AMOLED Black variable variables */
+    padding: 40px 0 80px 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Deep Environmental Ambient Backlighting Overlay Flare Track Matrix */
+.stories-theatre-ambient-mesh {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.04) 0%, rgba(77, 56, 243, 0.02) 50%, transparent 75%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.stories-theatre-layout-container {
+    width: 92%;
+    max-width: 935px; /* Symmetrically balances line track widths parallel across your templates grids */
+    margin: 0 auto;
+}
+
+.stories-theatre-split-chassis {
+    display: grid;
+    /* Desktop layout split metrics: cinema 9:16 portrait canvas window locked parallel directly alongside metadata boards */
+    grid-template-columns: 420px 1fr;
+    gap: 0; /* Snaps layout edges together flawlessly to form an absolute integrated theatre cockpit */
+    background-color: var(--surface-dark); /* Slate Obsidian floating baseline background card framing */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline line divider border line */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   LEFT COLUMN: TALL 9:16 PORTRAT IMERSIVE MEDIA VIEWPORT ARCHITECTURE
+   ========================================================================== */
+.stories-media-viewport-deck {
+    width: 100%;
+    position: relative;
+    background-color: #000000;
+    border-right: 1px solid var(--border-dark);
+}
+
+.stories-video-playback-container {
+    position: relative;
+    width: 100%;
+    height: 650px; /* Rigid vertical display framing box limit coordinates mapping metrics */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stories-playback-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.stories-video-dark-vignette-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 40%, transparent 70%, rgba(0, 0, 0, 0.75) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Top Linear Segmented Progress Tuning Timeline Bars Row */
+.stories-segmented-timeline-bar-row {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    gap: 6px;
+    z-index: 5;
+}
+
+.story-progress-segment {
+    flex-grow: 1;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.story-progress-fillfill {
+    width: 0%;
+    height: 100%;
+    background-color: var(--text-dark-pure); /* Silk white progression lines indicator vector */
+}
+
+.story-progress-segment.active-filled-fill .story-progress-fillfill { width: 100%; }
+.story-progress-segment.active-filling-fill .story-progress-fillfill {
+    animation: storySegmentProgressFill 5s linear forwards;
+}
+
+/* Floating Upper Header Profile Context Bars */
+.stories-video-upper-profile-row {
+    position: absolute;
+    top: 26px;
+    left: 0;
+    width: 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+}
+
+.stories-broadcaster-identity-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stories-mini-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1px solid var(--brand-vibrant); /* Electric Neon Rose Active Focus Halo Indicator Ring */
+}
+
+.stories-handle-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.stories-handle-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stories-handle-badge-group h4 {
+    font-size: 13px;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.verification-icon-cyan {
+    color: var(--accent-glow); /* Cyan Pop platform validation checkpoint token validation badge icon */
+    font-size: 12px;
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+.stories-handle-stack span {
+    font-size: 10.5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stories-upper-right-vectors-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.stories-header-vector-btn,
+.stories-header-vector-btnClose {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-dark-pure);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.stories-header-vector-btn:hover,
+.stories-header-vector-btnClose:hover { opacity: 1; color: var(--accent-glow); }
+.stories-header-vector-btnClose { font-size: 16px; }
+
+/* Floating Experiential Polling Sticker Layer Architecture Construction */
+.stories-floating-sticker-canvas-layer {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 280px;
+    z-index: 4;
+}
+
+.interactive-polling-sticker-box {
+    background: linear-gradient(135deg, rgba(18, 12, 18, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(25px) saturate(160%);
+    -webkit-backdrop-filter: blur(25px) saturate(160%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sticker-micro-badge {
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--accent-glow); /* Cyan Pop secondary accent chip indicators */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.interactive-polling-sticker-box h4 {
+    font-size: 14px;
+    color: var(--text-dark-pure);
+    line-height: 1.4;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.2px;
+}
+
+.sticker-polling-options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.sticker-poll-option-btn {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    outline: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.sticker-poll-option-btn:hover { border-color: rgba(255, 255, 255, 0.15); }
+
+.sticker-poll-option-btn .option-content-track {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.sticker-poll-option-btn strong { font-size: 12px; color: var(--text-dark-pure); }
+
+.vote-percent-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary); /* Muted Graphite tracking numbers indicators text variables */
+    opacity: 0; /* Hidden natively untill active interactive signals input script execution */
+    transition: opacity 0.4s ease;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: LIVE PEER CONNECTION TELEMETRY LEDGER TRACK
+   ========================================================================== */
+.stories-telemetry-ledger-deck {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.stories-ledger-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.stories-ledger-header-row h3 {
+    font-size: 14px;
+    color: var(--text-dark-pure);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.viewer-icon-rose {
+    font-size: 14px;
+    color: var(--brand-vibrant); /* Electric Neon Rose active visualization counter vector markers */
+    filter: drop-shadow(0 0 4px var(--brand-vibrant));
+}
+
+/* Scrollable Inner Peer Collection Track List Queue Base Layout */
+.stories-viewers-viewport-scroller {
+    flex-grow: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 480px; /* Symmetrically engineered to mirror parent left column theater boundaries grid heights box limits */
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.stories-viewers-viewport-scroller::-webkit-scrollbar { display: none; }
+
+.stories-viewer-row-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.viewer-avatar-housing {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-avatar);
+    padding: 1.5px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.viewer-avatar-housing.active-story-gradient { background: var(--story-gradient); }
+
+.viewer-mini-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark);
+}
+
+.viewer-identity-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.viewer-identity-stack strong { font-size: 13px; color: var(--text-dark-pure); }
+.viewer-identity-stack span { font-size: 11px; color: var(--text-secondary); }
+
+/* Lower Private Response Action Input Rows Fields Footer Bar Layout Bars */
+.stories-input-toolbar-action-row {
+    padding: 20px 24px;
+    border-top: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.stories-input-field-enclosure {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.stories-facade-input-field {
+    width: 100%;
+    background-color: var(--canvas-dark); /* AMOLED black deep entry hull field container */
+    border: 1px solid var(--border-dark);
+    padding: 12px 48px 12px 18px;
+    border-radius: 24px;
+    font-size: 12.5px;
+    color: var(--text-dark-pure);
+    outline: none;
+}
+
+.stories-reaction-vector-btn {
+    position: absolute;
+    right: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.stories-reaction-vector-btn:hover { transform: scale(1.1); color: var(--brand-vibrant); }
+
+/* Active action target toggle hooks overrides lines logs profiles */
+.stories-reaction-vector-btn.liked-active-vector {
+    color: var(--brand-vibrant) !important;
+    filter: drop-shadow(0 0 6px var(--brand-vibrant));
+}
+.stories-reaction-vector-btn.liked-active-vector i { font-weight: 900 !important; }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Absolute Fullscreen Mobile Story View)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-stories-theatre-stage {
+        padding: 0; /* Strips spacing buffers completely to snap frames flush directly against device screen limits */
+    }
+
+    .stories-theatre-layout-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Collapse wide grid layouts lanes straight down into a separate isolated standalone cinematic panel */
+    .stories-theatre-split-chassis {
+        grid-template-columns: 1fr;
+        border-radius: 0; /* Pure borderless edge configuration mapping matching native smartphone applications */
+        border-left: none;
+        border-right: none;
+    }
+
+    .stories-media-viewport-deck {
+        border-right: none;
+    }
+
+    .stories-video-playback-container {
+        height: 100vh; /* Demands full height real estate monitor parameters across handheld devices viewgrids */
+    }
+
+    .stories-floating-sticker-canvas-layer {
+        bottom: 50px; /* Elevates floating components up higher to dodge colliding with native phone safety home lines */
+    }
+
+    .stories-telemetry-ledger-deck {
+        display: none; /* Safely purges desktop peer view directories text lists columns over tiny screen monitors viewports */
+    }
+}
+
+/* Hardware Accelerated Linear Timeline Symmetrical Increments Progress Animations */
+@keyframes storySegmentProgressFill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   MODULE A: THREADS PERFORMANCE TELEMETRY CONSOLE CSS
+   ========================================================================== */
+.threads-analytics-telemetry-stage {
+    background-color: var(--canvas-dark);
+    padding: 20px 0;
+    width: 100%;
+}
+
+.analytics-layout-container {
+    width: 92%;
+    max-width: 935px;
+    margin: 0 auto;
+}
+
+.analytics-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.telemetry-metric-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.metric-header-axis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+}
+
+.metric-numerical-display {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-dark-pure);
+    margin: 12px 0 6px 0;
+    letter-spacing: -1px;
+}
+
+.metric-footnote-text {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.growth-pill-positive {
+    color: var(--accent-glow);
+    background-color: rgba(0, 242, 254, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.growth-pill-neutral {
+    color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 768px MEDIA QUERY REFLOW */
+@media (max-width: 768px) {
+    .analytics-dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .telemetry-metric-card {
+        padding: 16px;
+    }
+    
+    .metric-numerical-display {
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   MODULE B: CURATED SPACES INVITATION RUNWAY CSS
+   ========================================================================== */
+.threads-spaces-invitation-stage {
+    background-color: var(--canvas-dark);
+    padding: 30px 0 60px 0; /* Comprehensive vertical pads avoiding footer overlaps */
+    width: 100%;
+}
+
+.spaces-layout-container {
+    width: 92%;
+    max-width: 935px;
+    margin: 0 auto;
+}
+
+.spaces-panel-card-enclosure {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.spaces-info-wing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 500px;
+}
+
+.spaces-micro-pill {
+    background-color: rgba(0, 242, 254, 0.04);
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    color: var(--accent-glow);
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.spaces-info-wing h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-dark-pure);
+    margin: 0 0 10px 0;
+    letter-spacing: -0.5px;
+}
+
+.spaces-info-wing p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.spaces-action-wing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+/* Symmetrical Stacked Facepile Row Layout */
+.stacked-avatar-cluster-row {
+    display: flex;
+    align-items: center;
+}
+
+.stacked-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark);
+    margin-style: inline;
+    margin-right: -10px; /* Forces premium overlapping layout alignment */
+}
+
+.avatar-count-overflow-tag {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background-color: var(--canvas-dark);
+    border: 1px solid var(--border-dark);
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-avatar);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2px;
+}
+
+.spaces-join-trigger-btn {
+    padding: 12px 24px !important;
+    font-size: 12.5px !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+}
+
+/* 768px MEDIA QUERY REFLOW */
+@media (max-width: 768px) {
+    .spaces-panel-card-enclosure {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px;
+        gap: 24px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .spaces-info-wing {
+        align-items: center;
+    }
+
+    .spaces-info-wing h3 {
+        font-size: 18px;
+    }
+
+    .spaces-info-wing p {
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .spaces-action-wing {
+        align-items: center;
+        width: 100%;
+    }
+    
+    .spaces-join-trigger-btn {
+        width: 100%;
+    }
+}

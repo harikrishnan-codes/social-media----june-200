@@ -1,0 +1,2335 @@
+/* ==========================================================================
+   ULTRA-PREMIUM DIRECT MESSAGING HERO CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map explicitly onto major headline tracks and conversational card titles */
+.messaging-premium-hero .messaging-hero-title,
+.messaging-premium-hero .messaging-hero-title span,
+.glass-chat-identity-card .chat-card-metadata h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for micro badges labels, text descriptions, metrics strings, and time tracks */
+.messaging-hero-tag,
+.messaging-hero-description,
+.messaging-live-status-strip p,
+.chat-card-metadata p,
+.chat-time-tracker {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.messaging-premium-hero {
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--canvas-dark);
+    padding: 160px 0 60px 0; /* Strict clearance pad allocation below your pre-existing fixed navigation header bar */
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+/* Luxury Multi-Layer Radial Ambient Backdrop Illumination Glow Flare */
+.messaging-hero-ambient-mesh {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.14) 0%, rgba(255, 48, 79, 0.03) 50%, transparent 70%);
+    filter: blur(85px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.messaging-hero-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Clean desktop asymmetric grid distribution weighting more priority to the reading field */
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   LEFT WING: NARRATIVE TITLE STACKS & REAL-TIME STRIPS
+   ========================================================================== */
+.messaging-hero-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.messaging-hero-title {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--text-dark-pure);
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.messaging-hero-title span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.messaging-hero-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 35px;
+}
+
+/* Real-Time Connections Active Dashboard Indicator Strip */
+.messaging-live-status-strip {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.status-count-node {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-count-node p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.status-count-node p strong {
+    color: var(--text-dark-pure);
+    font-weight: 700;
+}
+
+.active-online-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #00e676; /* Vibrant active online green */
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+}
+
+.active-online-pulse::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: #00e676;
+    animation: beaconPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes beaconPulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+/* ==========================================================================
+   RIGHT WING: HARDWARE ACCELERATED FLOATING CONVERSATIONAL CARD CLUSTERS
+   ========================================================================== */
+.messaging-hero-visuals {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.conversational-clusters-container {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    height: 220px;
+}
+
+/* Frosted Glassmorphic Identity Micro-Cards Frame Layout Base Rigging */
+.glass-chat-identity-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 16px 20px;
+    border-radius: var(--radius-feed);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    width: 310px;
+    /* Native hardware acceleration floating rotation tracking sequences loops loop */
+    animation: luxuryChatCardFloat 6s ease-in-out infinite;
+}
+
+@keyframes luxuryChatCardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Parallax offset positioning variables curves */
+.chat-card-one {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+}
+
+.chat-card-two {
+    bottom: 0;
+    right: 0;
+    animation-delay: -3s; /* Perfectly inverted counter layout rhythm */
+}
+
+.chat-avatar-wrapper {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.chat-micro-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark);
+}
+
+.online-indicator-node {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00e676;
+    border: 2px solid var(--surface-dark);
+}
+
+.online-indicator-node.idle-amber-state {
+    background-color: #ffd600; /* Active live idle amber indicator node */
+}
+
+.chat-card-metadata {
+    flex-grow: 1;
+    max-width: 60%;
+}
+
+.chat-card-metadata h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 2px 0;
+}
+
+.chat-card-metadata p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Keeps data summary text strings clean and cropped */
+}
+
+.chat-time-tracker {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Stream)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .messaging-premium-hero {
+        min-height: auto;
+        padding: 130px 0 50px 0;
+    }
+
+    .messaging-hero-ambient-mesh {
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Collapse asymmetric desktop grid blocks cleanly into centralized vertical workspaces */
+    .messaging-hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .messaging-hero-narrative {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .messaging-hero-title {
+        font-size: 42px;
+        line-height: 1.2;
+    }
+
+    .messaging-hero-description {
+        font-size: 15px;
+        margin: 0 auto 25px auto;
+    }
+
+    .messaging-live-status-strip {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Convert floating side panels downward into uniform linear rows */
+    .messaging-hero-visuals {
+        margin-top: 5px;
+    }
+
+    .conversational-clusters-container {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .glass-chat-identity-card {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100%;
+        max-width: 340px;
+        animation: none; /* Strip floating loops calculation scripts to maintain processing weights over touch viewports */
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .messaging-hero-title {
+        font-size: 34px;
+    }
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM DIRECT MESSAGING CHAT SPLIT-PANEL SYSTEM STYLES
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map onto directory headers, conversational handles, and chat view titles */
+.messaging-workspace-canvas h3,
+.inbox-panel-header h3,
+.thread-title-row h4,
+.chat-viewport-header h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for message snippet copy, inputs text fields, timestamps, and utility badges */
+.messaging-workspace-canvas p,
+.messaging-workspace-canvas input,
+.active-rooms-badge,
+.thread-time,
+.thread-preview-text,
+.viewport-user-meta span,
+.bubble-timestamp {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.messaging-workspace-canvas {
+    background-color: var(--canvas-dark);
+    padding: 40px 0 80px 0; /* Clean margin transition flow directly below your hero canopy */
+    width: 100%;
+    position: relative;
+}
+
+.workspace-layout-track {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Implements an elite asymmetrical desktop balance mapping split view column hierarchies */
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 30px;
+    height: 700px; /* Fixed operational tracking field height box framework layout */
+}
+
+/* ==========================================================================
+   LEFT COMPONENT PANEL: ACTIVE INBOX CONTENT DIRECTORY FEED
+   ========================================================================== */
+.inbox-directory-panel {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.inbox-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 24px 16px 24px;
+}
+
+.inbox-panel-header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.active-rooms-badge {
+    background: var(--action-gradient);
+    color: var(--text-dark-pure);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.inbox-search-row {
+    position: relative;
+    padding: 0 24px 20px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.search-micro-vector {
+    position: absolute;
+    left: 40px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.inbox-search-field {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    padding: 12px 16px 12px 42px;
+    border-radius: 30px;
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.inbox-search-field:focus {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.directory-stream-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-grow: 1;
+    scrollbar-width: none;
+}
+
+.directory-stream-list::-webkit-scrollbar { display: none; }
+
+/* Thread Individual Selector Elements Rows Rigging */
+.thread-row-node {
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.thread-avatar-wrap {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.thread-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+}
+
+.thread-status-dot {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--surface-dark);
+}
+
+.thread-status-dot.online-pulse-green { background-color: #00e676; }
+.thread-status-dot.idle-pulse-amber { background-color: #ffd600; }
+
+.thread-meta-stack {
+    margin-left: 16px;
+    flex-grow: 1;
+    max-width: 75%;
+}
+
+.thread-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+
+.thread-title-row h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.thread-time {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.thread-preview-text {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thread-preview-text.unread-emphasis {
+    color: var(--text-dark-pure);
+    font-weight: 600;
+}
+
+/* Active Highlight Thread Injection Class States Link */
+.thread-row-node.active-selected-thread,
+.thread-row-node:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* ==========================================================================
+   RIGHT COMPONENT PANEL: ACTIVE CONVERSATION MESSAGES CHAT WINDOW
+   ========================================================================== */
+.chat-viewport-panel {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-viewport-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.header-user-badge {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.viewport-avatar-micro {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+}
+
+.viewport-user-meta h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 2px 0;
+}
+
+.viewport-user-meta span {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.viewport-utility-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.viewport-action-trigger {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 16px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.viewport-action-trigger:hover {
+    color: var(--text-dark-pure);
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Core Chat Messages Scrolling Canvas Track Area */
+.conversation-bubble-track {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    scrollbar-width: none;
+}
+
+.conversation-bubble-track::-webkit-scrollbar { display: none; }
+
+.message-bubble-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    max-width: 75%;
+}
+
+.bubble-avatar-nano {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    margin-bottom: 20px; /* Aligns with text footprint rows safely */
+}
+
+.message-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.text-bubble-block {
+    padding: 14px 20px;
+    border-radius: var(--radius-feed);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.text-bubble-block p { margin: 0; }
+
+.bubble-timestamp {
+    font-size: 10px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* Left Received State Architecture Colors Variants */
+.message-bubble-row.bubble-received-state {
+    align-self: flex-start;
+}
+
+.message-bubble-row.bubble-received-state .text-bubble-block {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    color: rgba(247, 249, 250, 0.95);
+    border-bottom-left-radius: 4px; /* Classy geometric speech bubble point design */
+}
+
+/* Right Sent State Architecture Colors Variants */
+.message-bubble-row.bubble-sent-state {
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+.message-bubble-row.bubble-sent-state .text-bubble-block {
+    background: var(--action-gradient);
+    color: var(--text-dark-pure);
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 15px rgba(255, 48, 79, 0.15);
+}
+
+.message-bubble-row.bubble-sent-state .bubble-timestamp {
+    align-self: flex-end;
+}
+
+/* Chat Input Message Composition Toolbar Desk Strip Frame */
+.chat-composition-footer-bar {
+    padding: 20px 28px;
+    border-top: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.input-compose-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    padding: 6px 8px 6px 16px;
+    border-radius: 50px;
+    gap: 10px;
+}
+
+.compose-action-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.compose-action-btn:hover { color: var(--text-dark-pure); }
+
+.compose-main-field-input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: var(--text-dark-pure);
+    padding: 8px 4px;
+}
+
+.compose-submit-trigger {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--text-dark-pure);
+    border: none;
+    color: var(--canvas-dark);
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.compose-submit-trigger:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Asymmetrical Split Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .messaging-workspace-canvas {
+        padding: 20px 0;
+    }
+
+    /* Convert split panel dual columns cleanly into a single fluid inbox column view */
+    .workspace-layout-track {
+        grid-template-columns: 1fr;
+        height: auto; /* Dissolves desktop fixed boundary box grids */
+        width: 100%;
+        gap: 0;
+    }
+
+    /* Collapse chat window view entirely on narrow viewport breakpoint configurations */
+    .chat-viewport-panel {
+        display: none !important; /* Hides chat screen pane, prioritizing full fluid list navigation tracks */
+    }
+
+    .inbox-directory-panel {
+        border-radius: 0; /* Full Horizontal App Bleed Box Layout Design */
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        background-color: transparent;
+    }
+
+    .inbox-panel-header {
+        padding: 20px 16px 12px 16px;
+    }
+
+    .inbox-search-row {
+        padding: 0 16px 16px 16px;
+    }
+
+    .search-micro-vector {
+        left: 32px;
+    }
+
+    /* Individual thread rows scale out horizontally seamlessly to emulate native touch apps */
+    .thread-row-node {
+        padding: 16px;
+    }
+
+    .thread-meta-stack {
+        max-width: 80%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM MOBILE-FIRST CONVERSATION SYSTEM MODULE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto username references and headers explicitly */
+.chat-active-viewport-canopy h4,
+.chat-timeline-divider-tag span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for message body blocks, timestamps, inputs, and duration counts */
+.chat-active-viewport-canopy p,
+.chat-active-viewport-canopy input,
+.active-name-stack span,
+.packet-timestamp-label,
+.voice-duration-label {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.chat-active-viewport-canopy {
+    background-color: var(--canvas-dark);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   1. VIEWPORT NAVIGATION HEADER STRIP FRAME
+   ========================================================================== */
+.chat-view-header-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(9, 9, 9, 0.95);
+    border-bottom: 1px solid var(--border-dark);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 10;
+}
+
+.header-left-back-dock {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chat-mobile-back-trigger {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 18px;
+    cursor: pointer;
+    display: none; /* Hidden on desktop view grids automatically */
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.chat-mobile-back-trigger:hover {
+    color: var(--text-dark-pure);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.active-identity-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar-status-frame {
+    position: relative;
+    width: 44px;
+    height: 44px;
+}
+
+.active-chat-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--border-dark);
+}
+
+.active-status-beacon-dot {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #090909;
+}
+.active-status-beacon-dot.online-pulse-core { background-color: #00e676; }
+
+.active-name-stack h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 2px 0;
+}
+
+.active-name-stack span {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.header-right-utilities {
+    display: flex;
+    gap: 8px;
+}
+
+.chat-utility-action-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.chat-utility-action-btn:hover {
+    color: var(--text-dark-pure);
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* ==========================================================================
+   2. CONVERSATION MESSAGES CHAT SCROLLING CORE CANVAS TRACK
+   ========================================================================== */
+.chat-bubbles-scroll-track {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    scrollbar-width: none;
+}
+.chat-bubbles-scroll-track::-webkit-scrollbar { display: none; }
+
+.chat-timeline-divider-tag {
+    text-align: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.chat-timeline-divider-tag span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    background-color: var(--canvas-dark);
+    padding: 4px 14px;
+    border-radius: 30px;
+    border: 1px solid var(--border-dark);
+    display: inline-block;
+}
+
+.chat-bubble-packet {
+    display: flex;
+    width: 100%;
+    max-width: 72%;
+}
+
+.packet-content-shield {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 20px;
+    border-radius: var(--radius-feed);
+    font-size: 14.5px;
+    line-height: 1.6;
+}
+.packet-content-shield p { margin: 0; }
+
+.packet-timestamp-label {
+    font-size: 10px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: 4px;
+    align-self: flex-end;
+}
+
+/* Received Bubbles Visual Configurations */
+.chat-bubble-packet.bubble-direction-received {
+    align-self: flex-start;
+}
+.chat-bubble-packet.bubble-direction-received .packet-content-shield {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    color: rgba(247, 249, 250, 0.95);
+    border-bottom-left-radius: 4px;
+}
+
+/* Sent Bubbles Visual Configurations */
+.chat-bubble-packet.bubble-direction-sent {
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+.chat-bubble-packet.bubble-direction-sent .packet-content-shield {
+    background: var(--action-gradient);
+    color: var(--text-dark-pure);
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 8px 24px rgba(255, 48, 79, 0.15);
+}
+.chat-bubble-packet.bubble-direction-sent .packet-timestamp-label {
+    color: rgba(9, 9, 9, 0.6);
+}
+
+/* High-Aesthetic Premium Video / Voice Token Note Sub-Engine Styles */
+.premium-voice-packet {
+    min-width: 260px;
+}
+
+.voice-player-interface-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+}
+
+.voice-play-trigger-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-dark);
+    color: var(--text-dark-pure);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+.voice-play-trigger-btn:hover {
+    background-color: var(--text-dark-pure);
+    color: var(--canvas-dark);
+}
+
+.voice-audio-wave-visualizer {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    flex-grow: 1;
+    height: 24px;
+}
+
+.v-wave-bar {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+}
+
+.voice-duration-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   3. PERSISTENT INTERACTIVE COMPOSITION DECK FOOTER BASELINE
+   ========================================================================== */
+.chat-input-composition-deck {
+    padding: 20px 30px;
+    border-top: 1px solid var(--border-dark);
+    background-color: rgba(9, 9, 9, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.composition-inner-capsule {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+}
+
+.composition-utility-btn {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-dark);
+    color: var(--text-dark-pure);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+.composition-utility-btn:hover { background-color: rgba(255, 255, 255, 0.08); }
+
+.composition-input-field-shield {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    border-radius: 50px;
+    padding: 0 16px;
+    position: relative;
+}
+
+.composition-main-input-box {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: var(--text-dark-pure);
+    padding: 12px 30px 12px 0;
+}
+
+.composition-emoji-trigger {
+    position: absolute;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+}
+.composition-emoji-trigger:hover { color: var(--text-dark-pure); }
+
+.composition-send-trigger-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--text-dark-pure);
+    border: none;
+    color: var(--canvas-dark);
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.composition-send-trigger-btn:hover { transform: scale(1.04); }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Absolute Viewport Mobile Shield)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .chat-active-viewport-canopy {
+        position: fixed;
+        inset: 0; /* Forced to take absolute full programmatic screen tracking bounds */
+        z-index: 9999; /* Higher priority overlay stack layer shielding background layers */
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .chat-mobile-back-trigger {
+        display: flex; /* Active routing trigger node visible for phone navigation touch fields */
+    }
+
+    .chat-view-header-strip {
+        padding: 12px 16px;
+    }
+
+    .active-name-stack h4 {
+        font-size: 15px;
+    }
+
+    .chat-bubbles-scroll-track {
+        padding: 20px 16px;
+        gap: 16px;
+    }
+
+    .chat-bubble-packet {
+        max-width: 85%; /* Expands size parameters to read comfortably over small device densities */
+    }
+
+    .packet-content-shield {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    .chat-input-composition-deck {
+        padding: 12px 16px;
+        padding-bottom: calc(12px + env(safe-area-inset-bottom)); /* Full Apple/Android software gesture safety pad compliance */
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SHARED CONVERSATION ASSET TRACER MODULE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map explicitly onto panel headers and asset title references */
+.chat-asset-library-stage .asset-panel-title,
+.asset-metadata-footer h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for tab controllers, file counts, sizes, extensions tags, and text copies */
+.asset-tab-btn,
+.asset-metadata-footer span,
+.document-extension-badge,
+.link-url-text {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.chat-asset-library-stage {
+    background-color: var(--canvas-dark);
+    padding: 60px 0 100px 0; /* Clear bottom spacing track flow allocation */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.asset-library-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   1. TAB CONTROLLERS CONTROL BAR STRUCTURE
+   ========================================================================== */
+.asset-library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-dark);
+    padding-bottom: 20px;
+}
+
+.asset-panel-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.asset-tab-triggers {
+    display: flex;
+    gap: 8px;
+}
+
+.asset-tab-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.asset-tab-btn:hover {
+    color: var(--text-dark-pure);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.asset-tab-btn.active-asset-tab {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: var(--border-dark);
+    color: var(--text-dark-pure);
+}
+
+/* ==========================================================================
+   2. SHARD DISCOVERY MEDIA PORTFOLIO MATRIX DASHBOARD
+   ========================================================================== */
+.asset-grid-runway {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Premium desktop symmetrical triple-column layout */
+    gap: 24px;
+}
+
+.asset-item-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.asset-preview-frame {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.asset-thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Glassmorphic Interaction Overlay Mask System handles */
+.asset-hover-mask {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(9, 9, 9, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.asset-action-link {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--text-dark-pure);
+    color: var(--canvas-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Fallback Architectural Containers for Non-Image Data Items Profiles */
+.document-preview-fallback,
+.link-preview-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.document-icon-shield,
+.link-icon-shield {
+    font-size: 44px;
+    color: var(--brand-royal);
+}
+
+.link-icon-shield { color: var(--accent-glow); }
+
+.document-extension-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-dark);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--text-secondary);
+}
+
+/* Metadata Footer Information Blocks Labels */
+.asset-metadata-footer {
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.asset-metadata-footer h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.asset-metadata-footer span,
+.link-url-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.link-url-text {
+    color: var(--accent-glow);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ACTIVE CONTEXTUAL HOVER DRIVERS INJECTIONS */
+.asset-item-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+.asset-item-card:hover .asset-hover-mask { opacity: 1; }
+.asset-item-card:hover .asset-action-link { transform: scale(1); }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Tablet Symmetrical Collapses Layout)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .chat-asset-library-stage {
+        padding: 40px 0;
+    }
+
+    .asset-library-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .asset-tab-triggers {
+        width: 100%;
+    }
+
+    .asset-tab-btn {
+        flex: 1;
+        justify-content: center;
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    /* Reflow architectural grid parameters into an adaptive double column layout asset matrix */
+    .asset-grid-runway {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .asset-grid-runway {
+        grid-template-columns: 1fr; /* Pure single linear stacked track flows mobile baseline fields */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM COMMUNICATIONS COMPLIANCE STRIP CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto cell headings explicitly */
+.chat-security-compliance-stage h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for tracking descriptors, metadata hashes, and metrics subtitles */
+.chat-security-compliance-stage span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.chat-security-compliance-stage {
+    background-color: var(--canvas-dark);
+    padding: 30px 0 70px 0; /* Weighted bottom spacing to anchor cleanly against your footer border */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.compliance-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Symmetrical layout grids columns mapping across three equal metrics bands */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ==========================================================================
+   INDIVIDUAL DATA TELEMETRY SUB-NODE COMPONENT RIGGING
+   ========================================================================== */
+.compliance-node {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    border-radius: 14px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.compliance-node:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.compliance-icon-wrap {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(255, 48, 79, 0.08);
+    color: var(--brand-vibrant);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* Alternative color variables modifiers assignments mapping semantic indicators nodes */
+.compliance-icon-wrap.core-green-modifier {
+    background-color: rgba(0, 230, 118, 0.08);
+    color: #00e676;
+}
+
+.compliance-icon-wrap.core-cyan-modifier {
+    background-color: rgba(0, 242, 254, 0.08);
+    color: var(--accent-glow);
+}
+
+.compliance-data-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.compliance-data-stack h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.2px;
+}
+
+.compliance-data-stack span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Clean Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .chat-security-compliance-stage {
+        padding: 20px 0 40px 0;
+    }
+
+    /* Convert standard desktop row grids directly into narrow linear layout tracking lines stacks */
+    .compliance-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .compliance-node {
+        padding: 16px 20px;
+    }
+    
+    .compliance-data-stack h4 {
+        font-size: 14px;
+    }
+
+    .compliance-data-stack span {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM ACTIVITY WORKSPACE MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto group titles and metrics explicitly */
+.activity-workspace-stage h3,
+.activity-workspace-stage h3 span,
+.activity-deck-header h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for tracking timestamps, details text, values, and description copy */
+.activity-counter-pill,
+.activity-details-stack p,
+.activity-time-stamp,
+.analytics-micro-tag,
+.progress-title-text,
+.progress-value-text {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.activity-workspace-stage {
+    background-color: var(--canvas-dark);
+    padding: 60px 0 100px 0; /* Balanced vertical pacing clearances variables */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.activity-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Clean asymmetric grid footprint dividing notification weight from metrics blocks */
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   LEFT COMPONENT PANEL: LIVE NOTIFICATIONS LOG SYSTEM
+   ========================================================================== */
+.activity-log-deck {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.activity-deck-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.activity-deck-header h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.activity-counter-pill {
+    background-color: rgba(255, 48, 79, 0.1);
+    border: 1px solid rgba(255, 48, 79, 0.2);
+    color: var(--brand-vibrant);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.activity-stream-track {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Base Notification Linear Row Element */
+.activity-row-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid transparent;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+.activity-row-card:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    transform: translateX(4px);
+}
+
+/* Active Highlight Variant Modifier tracking unread states items */
+.activity-row-card.unread-activity-card {
+    background-color: rgba(255, 48, 79, 0.02);
+    border-color: rgba(255, 48, 79, 0.06);
+}
+
+.activity-vector-badge {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.activity-vector-badge.vector-vibrant { background-color: rgba(255, 48, 79, 0.1); color: var(--brand-vibrant); }
+.activity-vector-badge.vector-royal { background-color: rgba(77, 56, 243, 0.1); color: var(--brand-royal); }
+.activity-vector-badge.vector-cyan { background-color: rgba(0, 242, 254, 0.1); color: var(--accent-glow); }
+
+.activity-details-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.activity-details-stack p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.activity-details-stack p strong {
+    color: var(--text-dark-pure);
+    font-weight: 700;
+}
+
+.activity-details-stack em {
+    color: var(--accent-glow);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.activity-time-stamp {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   RIGHT COMPONENT PANEL: ANALSIST METRIC SHIELD CARD
+   ========================================================================== */
+.activity-analytics-deck {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.analytics-card-glow {
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.1) 0%, transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+}
+
+.analytics-inner-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.analytics-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-royal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.activity-analytics-deck h3 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--text-dark-pure);
+    margin: 0 0 35px 0;
+    letter-spacing: -0.5px;
+}
+
+.activity-analytics-deck h3 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.metric-progress-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.metric-progress-node {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.progress-title-text {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-dark-pure);
+}
+
+.progress-value-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #00e676;
+}
+
+.progress-track-line {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill-node {
+    height: 100%;
+    background: var(--action-gradient);
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .activity-workspace-stage {
+        padding: 40px 0;
+    }
+
+    /* Convert row grid configuration into a single linear stacked list flow layout */
+    .activity-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .activity-log-deck,
+    .activity-analytics-deck {
+        padding: 24px;
+    }
+
+    .activity-deck-header h3 {
+        font-size: 20px;
+    }
+
+    .activity-analytics-deck h3 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .activity-row-card {
+        padding: 14px;
+        gap: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM NETWORKING DRAWER COMPONENT CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map onto section headings and titles explicitly */
+.network-drawer-header h3,
+.network-drawer-header h3 span,
+.network-user-meta h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details text, metrics badges, buttons, and summary text labels */
+.network-micro-pill,
+.network-volume-badge,
+.network-user-meta span,
+.network-user-bio,
+.micro-network-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.activity-networking-drawer {
+    background-color: var(--canvas-dark);
+    padding: 40px 0 100px 0; /* Weighted base creates clean margin breathing spacing before footer */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.network-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   SUBSECTION CONTROLS ROW SUB-ENGINE STYLES
+   ========================================================================== */
+.network-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--border-dark);
+    padding-bottom: 20px;
+}
+
+.network-header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.network-micro-pill {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-royal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.network-drawer-header h3 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.network-drawer-header h3 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.network-volume-badge {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    padding: 6px 14px;
+    border-radius: 30px;
+    letter-spacing: 0.2px;
+}
+
+/* ==========================================================================
+   CONNECTION CARDS DASHBOARD ROW RUNWAY MAPPING
+   ========================================================================== */
+.network-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Premium dual column configuration bounds */
+    gap: 24px;
+}
+
+.network-user-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.network-user-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+.network-user-identity {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.network-avatar-frame {
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.network-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--border-dark);
+}
+
+.network-verified-tag {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+    background-color: var(--surface-dark);
+    color: var(--brand-vibrant);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--border-dark);
+    box-shadow: 0 2px 6px rgba(255, 48, 79, 0.2);
+}
+
+.network-verified-tag.cyan-tag-modifier {
+    color: var(--accent-glow);
+    box-shadow: 0 2px 6px rgba(0, 242, 254, 0.2);
+}
+
+.network-user-meta h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 2px 0;
+}
+
+.network-user-meta span {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.network-user-bio {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin: 0 0 24px 0;
+}
+
+.network-action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.micro-network-btn {
+    flex: 1;
+    padding: 10px 0 !important;
+    font-size: 13px !important;
+    text-align: center;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .activity-networking-drawer {
+        padding: 30px 0;
+    }
+
+    .network-drawer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 25px;
+    }
+
+    .network-drawer-header h3 {
+        font-size: 26px;
+    }
+
+    .network-volume-badge {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* Convert row grid distribution completely into full-width stacked linear tracking modules */
+    .network-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .network-user-card {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM ECOSYSTEM CONVERSION ARENA (CTA) CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto major display titles explicitly */
+.app-conversion-arena h2,
+.app-conversion-arena h2 span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details text copy, micro-tags, and buttons triggers labels */
+.app-conversion-arena p,
+.conversion-micro-tag,
+.conversion-primary-btn,
+.conversion-secondary-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-conversion-arena {
+    background-color: var(--canvas-dark);
+    padding: 60px 0 80px 0; /* Tailored compression pacing to slide cleanly into the master footer */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.conversion-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   HIGH-GLOSS FROSTED FOCAL CARD DESIGN ENGINE
+   ========================================================================== */
+.conversion-focal-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Deep Architectural Radial Neon Ambient Glow Mesh Layer */
+.conversion-card-glow-mesh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.08) 0%, rgba(77, 56, 243, 0.03) 50%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.conversion-content-stack {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conversion-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.conversion-content-stack h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin: 0;
+}
+
+.conversion-content-stack h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.conversion-line-separator {
+    width: 60px;
+    height: 2px;
+    background: var(--action-gradient);
+    margin: 30px 0;
+    border-radius: 2px;
+}
+
+.conversion-content-stack p {
+    font-size: 15.5px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin: 0 0 40px 0;
+}
+
+/* Integrated Button Row Grid Alignment Track */
+.conversion-action-deck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.conversion-primary-btn,
+.conversion-secondary-btn {
+    padding: 14px 32px !important;
+    font-size: 14px !important;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Touch Optimizations)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-conversion-arena {
+        padding: 40px 0;
+    }
+
+    .conversion-focal-card {
+        padding: 50px 24px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .conversion-card-glow-mesh {
+        width: 320px;
+        height: 320px;
+    }
+
+    .conversion-content-stack h2 {
+        font-size: 32px;
+    }
+
+    .conversion-content-stack p {
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 30px;
+    }
+
+    /* Convert horizontal action rows buttons into full-width tap lists stacked */
+    .conversion-action-deck {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 320px; /* Constrains growth to keep interaction points classy on mobile screens */
+    }
+
+    .conversion-primary-btn,
+    .conversion-secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .conversion-content-stack h2 {
+        font-size: 28px;
+    }
+}

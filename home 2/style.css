@@ -1,0 +1,2864 @@
+/* ==========================================================================
+   ULTRA-PREMIUM & LUXURIOUS HEADER CORE MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map onto your luxury corporate branding explicitly */
+.app-premium-header .app-logo-title,
+.app-premium-header .app-logo-title span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for crisp, scannable interactive navigation tracks */
+.app-premium-header .app-nav-link,
+.app-premium-header .btn-social-base {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-premium-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0; 
+    transform: translateY(-15px);
+    /* Accelerated hardware transition sequence executing on runtime load */
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Glassmorphic Fluid Layer Base Frame Alignment */
+.header-glass-backdrop {
+    background: rgba(18, 18, 18, 0.75); /* Deep midnight slate frosted canvas overlay */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-bottom: 1px solid var(--border-dark);
+    padding: 16px 0;
+    transition: background-color 0.4s ease, padding 0.4s ease;
+}
+
+.header-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Symmetrical Typography Kerning Weights */
+.app-logo-title {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.app-logo-title span {
+    color: var(--brand-vibrant);
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   NAVIGATION CODES & DYNAMIC UNDERLINE INDICATOR MATRICES
+   ========================================================================== */
+.app-navigation-deck {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.app-nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    position: relative;
+    transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.app-nav-link i {
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+/* Modern Minimalist Gradient Action Underline Trace */
+.app-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--btn-primary-bg);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.app-nav-link:hover,
+.app-nav-link.active-link-token {
+    color: var(--text-dark-pure);
+}
+
+.app-nav-link:hover::after,
+.app-nav-link.active-link-token::after {
+    transform: scaleX(1);
+}
+
+/* ==========================================================================
+   UTILITY ACTION DESK BUTTON INJECTIONS
+   ========================================================================== */
+.app-action-desk {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.btn-social-base {
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
+    padding: 10px 22px;
+    border-radius: var(--btn-radius);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+    user-select: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-app-primary {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    box-shadow: 0 6px 20px var(--btn-primary-shadow);
+}
+
+.btn-app-primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 24px var(--btn-primary-shadow-hover);
+}
+
+.btn-app-secondary {
+    background-color: var(--btn-secondary-bg-dark);
+    border-color: var(--btn-secondary-border-dark);
+    color: var(--btn-secondary-text-dark);
+}
+
+.btn-app-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   HAMBURGER RIGID BAR LINE PACK MECHANICS
+   ========================================================================== */
+.mobile-menu-hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    z-index: 1100;
+}
+
+.burger-bar-line {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-dark-pure);
+    display: block;
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Curtain Slate Open Panel)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .mobile-menu-hamburger {
+        display: flex; /* Activate toggle vector engine visibility */
+    }
+
+    /* Convert standard track options list into a gorgeous full screen slide curtain layout */
+    .app-navigation-deck {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: rgba(14, 14, 14, 0.98); /* Rich midnight matte canvas surface */
+        backdrop-filter: blur(35px);
+        -webkit-backdrop-filter: blur(35px);
+        border-left: 1px solid var(--border-dark);
+        padding: 120px 40px 40px 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 32px;
+        transition: right 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Triggered state layer driven directly via core script commands toggles */
+    .app-navigation-deck.mobile-tray-active {
+        right: 0;
+        box-shadow: -30px 0 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .app-nav-link {
+        font-size: 18px; /* Scaled touch row heights for micro mobile actions */
+        width: 100%;
+        padding: 4px 0;
+    }
+
+    /* Hide horizontal button groups to keep viewport density clean */
+    .btn-app-secondary,
+    .btn-app-primary {
+        display: none;
+    }
+
+    /* High-Status Cross Shape Adaptations for Open States Menu */
+    .mobile-menu-hamburger.hamburger-active .burger-bar-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: var(--brand-vibrant);
+    }
+    
+    .mobile-menu-hamburger.hamburger-active .burger-bar-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-hamburger.hamburger-active .burger-bar-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--brand-vibrant);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM & LUXURIOUS HERO STAGE MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map onto large editorial heading tracks explicitly */
+.app-premium-hero .hero-title,
+.app-premium-hero .hero-title span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for description copy, action tags, and micro badges */
+.app-premium-hero .hero-micro-tag,
+.app-premium-hero .hero-description,
+.app-premium-hero .hero-floating-badge-glass span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-premium-hero {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--canvas-dark);
+    padding: 160px 0 100px 0; /* Clear clearance beneath your fixed navigation bar layer */
+    overflow: hidden;
+}
+
+/* Luxury Multi-Layer Radial Backdrop Mesh Engine */
+.hero-atmospheric-glow {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.18) 0%, rgba(255, 48, 79, 0.04) 50%, transparent 70%);
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Perfectly weighted asymmetrical distribution track */
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   LEFT PANEL EDITORIAL TEXT STYLING SYSTEM
+   ========================================================================== */
+.hero-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--text-dark-pure);
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero-title span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 530px;
+    margin-bottom: 45px;
+}
+
+.hero-action-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Override padding configurations on button system layout components for Hero status spacing */
+.hero-action-row .btn-social-base {
+    padding: 14px 32px;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   RIGHT PANEL MOCKUP & HARDWARE ACCELERATED FLOAT SYSTEM
+   ========================================================================== */
+.hero-visual-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mockup-frame-container {
+    position: relative;
+    display: inline-block;
+}
+
+.floating-ui-frame {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 40px 70px rgba(0, 0, 0, 0.65));
+    /* Native hardware-accelerated smooth floating rendering loop */
+    animation: luxuryFloatCycle 5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes luxuryFloatCycle {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-16px) rotate(1deg); }
+}
+
+/* High-Gloss Glassmorphic Layer Floating Over The Interface Graphic */
+.hero-floating-badge-glass {
+    position: absolute;
+    bottom: 50px;
+    left: -40px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 12px 22px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+.hero-floating-badge-glass span {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Micro Glowing Live Pulse Indicator Component */
+.badge-pulse-node {
+    width: 8px;
+    height: 8px;
+    background-color: #00e676; /* Active Live Green Tones */
+    border-radius: var(--radius-avatar);
+    position: relative;
+}
+
+.badge-pulse-node::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-avatar);
+    background-color: #00e676;
+    animation: beaconPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes beaconPulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Stream)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-premium-hero {
+        padding: 130px 0 80px 0;
+    }
+
+    .hero-atmospheric-glow {
+        width: 450px;
+        height: 450px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Collapse split grid column into a beautiful single row linear layout stream */
+    .hero-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .hero-title {
+        font-size: 48px;
+        line-height: 1.15;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        margin: 0 auto 35px auto;
+    }
+
+    .hero-action-row {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero-action-row .btn-social-base {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .floating-ui-frame {
+        max-width: 290px;
+    }
+
+    /* Shift glass overlay configuration beautifully to the layout baseline node grid on small screens */
+    .hero-floating-badge-glass {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 38px;
+    }
+    
+    .hero-action-row {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    .hero-action-row .btn-social-base {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM & LUXURIOUS STORIES CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Sans-serif pairings for user text labels explicitly to ensure perfect legibility */
+.app-premium-stories .story-user-name {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-premium-stories {
+    background-color: var(--canvas-dark);
+    padding: 35px 0;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--border-dark);
+    z-index: 10;
+}
+
+.stories-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.stories-container {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 6px 4px;
+    /* Hide system standard scrollbar tracks natively across web layout configurations */
+    scrollbar-width: none; /* Firefox override */
+    -ms-overflow-style: none; /* IE/Edge override */
+}
+
+.stories-container::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera override */
+}
+
+/* Individual Segment Card Mechanics */
+.story-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevents item compression inside flex horizontal tracks */
+    user-select: none;
+}
+
+/* ==========================================================================
+   THE SIGNATURE GRADIATED STORY RING ENGINE
+   ========================================================================== */
+.user-story-ring {
+    width: 74px;
+    height: 74px;
+    border-radius: var(--radius-avatar);
+    background: var(--story-gradient);
+    padding: 3px; /* Creates the beautiful thickness line space separation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.user-story-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-avatar);
+    border: 3px solid var(--canvas-dark); /* Keeps a crisp dark separation ring */
+    background-color: var(--surface-dark);
+}
+
+/* Creator Profile Personal Add Icon Modification Decorator */
+.user-story-ring.creator-add-state {
+    background: none;
+    border: 2px dashed var(--border-dark);
+    padding: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.create-badge-plus {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 22px;
+    height: 22px;
+    background: var(--action-gradient);
+    border-radius: var(--radius-avatar);
+    border: 2px solid var(--canvas-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark-pure);
+    font-size: 10px;
+    box-shadow: 0 4px 10px rgba(255, 48, 79, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.story-user-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.1px;
+    transition: color 0.3s ease;
+}
+
+/* ==========================================================================
+   MICRO INTERACTIVE ACTIVE INTERACTIONS
+   ========================================================================== */
+.story-node:hover .user-story-ring {
+    transform: scale(1.04) rotate(3deg);
+}
+
+.story-node:hover .user-story-ring.creator-add-state {
+    transform: scale(1.04) rotate(0deg);
+    border-color: var(--brand-vibrant);
+}
+
+.story-node:hover .create-badge-plus {
+    transform: scale(1.1);
+}
+
+.story-node:hover .story-user-name {
+    color: var(--text-dark-pure);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Mobile Optimized Grid Spans)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-premium-stories {
+        padding: 24px 0;
+    }
+
+    .stories-container {
+        gap: 20px; /* Tighter mobile micro-spacing dimensions */
+    }
+
+    .user-story-ring {
+        width: 64px;
+        height: 64px;
+        padding: 2.5px;
+    }
+    
+    .user-story-ring img {
+        border-width: 2.5px;
+    }
+
+    .user-story-ring.creator-add-state {
+        padding: 3.5px;
+    }
+
+    .create-badge-plus {
+        width: 19px;
+        height: 19px;
+        font-size: 9px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM & LUXURIOUS FEED COMPONENT CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto author names and emphasis counts explicitly */
+.app-feed-card .identity-meta h4,
+.app-feed-card .likes-count-tracking span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for captions, details, micro-buttons, and timestamps */
+.app-feed-card p,
+.app-feed-card span,
+.app-feed-card strong,
+.timestamp-tracking-node {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-feed-matrix {
+    background-color: var(--canvas-dark);
+    padding: 60px 0;
+    width: 100%;
+    position: relative;
+}
+
+.feed-layout-track {
+    width: 92%;
+    max-width: 620px; /* Perfectly weighted elegant narrow frame to anchor single content focus */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* Premium Card Structural Framework Box */
+.app-feed-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Identity Row Layout Alignment */
+.card-identity-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 22px;
+}
+
+.miniature-ring-state {
+    width: 44px;
+    height: 44px;
+    padding: 2px;
+}
+
+.miniature-ring-state img {
+    border-width: 2px;
+}
+
+.identity-meta {
+    margin-left: 14px;
+}
+
+.identity-meta h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin-bottom: 2px;
+}
+
+.identity-meta span {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.card-utility-trigger {
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    transition: color 0.3s ease;
+}
+
+.card-utility-trigger:hover {
+    color: var(--text-dark-pure);
+}
+
+/* ==========================================================================
+   CORE IMAGE CANVAS DISPLAY & ANIMATION BASES
+   ========================================================================== */
+.card-media-display {
+    position: relative;
+    width: 100%;
+    background-color: #050505;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main-uploaded-media {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Hidden Center Heart Double-Tap Gesture Overlay Structure */
+.center-heart-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: var(--brand-vibrant);
+    font-size: 86px;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+    text-shadow: 0 10px 30px rgba(255, 48, 79, 0.4);
+}
+
+/* Interactive Control Desk Row Grid */
+.card-interaction-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px 12px 24px;
+}
+
+.left-actions-group {
+    display: flex;
+    gap: 22px;
+}
+
+.interaction-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-dark-pure);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease;
+}
+
+.interaction-btn:hover {
+    color: var(--brand-vibrant);
+    transform: scale(1.12);
+}
+
+.bookmark-btn:hover {
+    color: var(--accent-glow);
+}
+
+/* Liked State Icon Class Injection Rules Hook */
+.interaction-btn.liked-active-state i {
+    font-weight: 900;
+    color: var(--brand-vibrant);
+    animation: likeBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes likeBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* Caption Narrative Details Module Typography Layout */
+.card-caption-deck {
+    padding: 0 24px 24px 24px;
+}
+
+.likes-count-tracking {
+    font-size: 13px;
+    color: var(--text-dark-pure);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.likes-count-tracking span {
+    font-weight: 700;
+}
+
+.caption-text-body {
+    font-size: 14px;
+    color: rgba(247, 249, 250, 0.9);
+    line-height: 1.65;
+    margin-bottom: 12px;
+}
+
+.caption-text-body strong {
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin-right: 6px;
+}
+
+.caption-text-body span {
+    color: var(--brand-royal);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.timestamp-tracking-node {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Full Bleed Fluid Mobile Frame)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-feed-matrix {
+        padding: 25px 0;
+    }
+
+    .feed-layout-track {
+        width: 100%; /* Spans full horizontal bleed to look like a high-end native app view */
+        gap: 20px;
+    }
+
+    .app-feed-card {
+        border-radius: 0; /* Boxy modern editorial design signature matching elite app products */
+        border-left: none;
+        border-right: none;
+    }
+
+    .card-identity-header {
+        padding: 14px 16px;
+    }
+
+    .card-interaction-bar {
+        padding: 14px 18px 10px 18px;
+    }
+
+    .card-caption-deck {
+        padding: 0 18px 18px 18px;
+    }
+
+    .interaction-btn {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   CLASSY & STYLISH DISCOVER GRID MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto primary section headers and creator titles explicitly */
+.app-discover-canvas h2,
+.app-discover-canvas h2 span,
+.creator-name-stack h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for overlay summaries, button tags, and system descriptions */
+.app-discover-canvas p,
+.discover-micro-tag,
+.creator-name-stack span,
+.micro-btn-token {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-discover-canvas {
+    background-color: var(--canvas-dark);
+    padding: 140px 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border-dark);
+}
+
+/* ==========================================================================
+   PERFECTLY CENTERED LUXURY HEADER DECK SYSTEM
+   ========================================================================== */
+.discover-header-deck {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.discover-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.discover-header-deck h2 {
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.discover-header-deck h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.discover-line-separator {
+    width: 60px;
+    height: 2px;
+    background: var(--action-gradient);
+    margin: 25px 0;
+    border-radius: 2px;
+}
+
+.discover-header-deck p {
+    font-size: var(--p);
+    color: var(--text-secondary);
+    max-width: 580px;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   ASYMMETRIC LUXURY GRID COMPONENT LAYOUT TRACK
+   ========================================================================== */
+.discover-grid-matrix {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 280px;
+    gap: 24px;
+}
+
+/* Base Discovery Box Frame Structural Construction */
+.discover-grid-item {
+    position: relative;
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+
+/* Asymmetric Span Rules to achieve luxury balance breakups */
+.discover-grid-item.feature-large-item {
+    grid-column: span 2;
+    grid-row: span 2; /* Doubles vertical & horizontal footprint size */
+}
+
+.discover-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Classy Frosted Glass Interactive Card Overlay Mask */
+.discover-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 30px;
+    opacity: 0;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Profile Metadata Block Row Alignment */
+.creator-badge-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.creator-avatar-micro {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--text-dark-pure);
+}
+
+.creator-name-stack h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin-bottom: 2px;
+}
+
+.creator-name-stack span {
+    font-size: 11px;
+    color: rgba(247, 249, 250, 0.6);
+    font-weight: 500;
+    display: block;
+}
+
+/* Micro-token adjustment overrides for global primary button variable */
+.micro-btn-token {
+    padding: 8px 18px !important;
+    font-size: 12px !important;
+}
+
+/* ==========================================================================
+   DYNAMIC INTERACTIVE ACTIVE HOVER DRIVERS
+   ========================================================================== */
+.discover-grid-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+.discover-grid-item:hover .discover-media {
+    transform: scale(1.04);
+}
+
+.discover-grid-item:hover .discover-card-overlay {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   STRICT 768px MEDIA QUERY (Symmetrical Matrix Fluid Reflow)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-discover-canvas {
+        padding: 90px 0;
+    }
+
+    .discover-header-deck {
+        width: 88%;
+        margin-bottom: 55px;
+    }
+
+    .discover-header-deck h2 {
+        font-size: 42px;
+        line-height: 1.2;
+    }
+
+    /* Flatten grid architecture completely into double-columns stacking streams */
+    .discover-grid-matrix {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 240px;
+        gap: 16px;
+        width: 90%;
+    }
+
+    /* Force larger featured block to scale proportionally on small viewports */
+    .discover-grid-item.feature-large-item {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    /* Force interaction tray visibility active permanently on touch interfaces */
+    .discover-card-overlay {
+        opacity: 1;
+        padding: 20px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 70%, transparent 100%);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .discover-header-deck h2 {
+        font-size: 34px;
+    }
+
+    .discover-grid-matrix {
+        grid-template-columns: 1fr; /* Single column stack baseline on mobile fields */
+        grid-auto-rows: 260px;
+    }
+
+    .discover-grid-item.feature-large-item {
+        grid-column: span 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   CLASSY & STYLISH CONNECT MESSAGING APP HUB CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto primary panel headers and sender titles explicitly */
+.app-messaging-canvas .messaging-panel-title,
+.inbox-message-row .message-text-metadata h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for content summaries, timestamps, text indicators, and tags */
+.app-messaging-canvas p,
+.connection-user-tag,
+.unread-requests-badge,
+.message-snippet-text,
+.message-timestamp {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-messaging-canvas {
+    background-color: var(--canvas-dark);
+    padding: 80px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.messaging-layout-wrapper {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; /* Asymmetric grid column weight distributions */
+    gap: 40px;
+}
+
+.messaging-panel-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================================================
+   LEFT WING: ONLINE ACTIVE CONNECTIONS CAROUSEL TRACK
+   ========================================================================== */
+.active-connections-deck {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.connections-scroll-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 5px;
+}
+
+.connections-scroll-track::-webkit-scrollbar { display: none; }
+
+.connection-status-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    min-width: 65px;
+}
+
+.avatar-status-wrapper {
+    position: relative;
+    width: 56px;
+    height: 56px;
+}
+
+.status-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--border-dark);
+    transition: border-color 0.3s ease;
+}
+
+.connection-status-node:hover .status-avatar {
+    border-color: var(--brand-vibrant);
+}
+
+/* Dynamic Live Online Status Indicators Nodes */
+.status-indicator-dot {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-avatar);
+    border: 2px solid var(--surface-dark);
+}
+
+.status-indicator-dot.online-state { background-color: #00e676; } /* Active Live Online Green */
+.status-indicator-dot.away-state { background-color: #ffd600; }   /* Active Live Idle Amber */
+
+.connection-user-tag {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   RIGHT WING: DIRECT MESSAGE STREAM TRACK
+   ========================================================================== */
+.inbox-preview-deck {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inbox-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unread-requests-badge {
+    background: var(--action-gradient);
+    color: var(--text-dark-pure);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(255, 48, 79, 0.2);
+}
+
+.inbox-stream-track {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+/* Base Direct Message Row Bar Element */
+.inbox-message-row {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: var(--radius-feed);
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.inbox-sender-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+}
+
+.message-text-metadata {
+    margin-left: 16px;
+    max-width: 70%;
+}
+
+.message-text-metadata h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin-bottom: 4px;
+}
+
+.message-snippet-text {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Forces text truncation smoothly over data elements layout bounds */
+}
+
+.message-metrics-node {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.message-timestamp {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Dynamic Unread Status Highlights Hooks */
+.inbox-message-row.unread-message-state {
+    background-color: rgba(255, 48, 79, 0.04);
+    border-color: rgba(255, 48, 79, 0.1);
+}
+
+.inbox-message-row.unread-message-state .message-snippet-text {
+    color: var(--text-dark-pure);
+    font-weight: 600;
+}
+
+.unread-attention-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--brand-vibrant);
+    border-radius: var(--radius-avatar);
+    box-shadow: 0 0 10px var(--brand-vibrant);
+}
+
+/* DYNAMIC HOVER STATES INTERACTIONS */
+.inbox-message-row:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(4px);
+    border-color: var(--border-dark);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Vertical Panel Linear Stack)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-messaging-canvas {
+        padding: 40px 0;
+    }
+
+    /* Collapse split grid layout columns into a balanced vertical stack structure */
+    .messaging-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        width: 90%;
+    }
+
+    .active-connections-deck,
+    .inbox-preview-deck {
+        padding: 22px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   CLASSY & STYLISH CREATOR SHOWCASE COMPONENT CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto the primary handle name element explicitly */
+.bio-name-stack h2,
+.metric-counter-node strong {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for bio detail links, numbers tags, captions, and statistics headers */
+.app-profile-showcase span,
+.app-profile-showcase button,
+.bio-curator-title,
+.hover-metric-row span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-profile-showcase {
+    background-color: var(--canvas-dark);
+    padding: 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.profile-layout-wrapper {
+    width: 92%;
+    max-width: 950px; /* Optimized narrow width container profile matrix grids */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   CREATOR IDENTITY DECK GRAPHIC HOOKS
+   ========================================================================== */
+.creator-bio-deck {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.bio-identity-row {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    position: relative;
+}
+
+.bio-avatar-large {
+    width: 110px;
+    height: 110px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 3px solid var(--border-dark);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.bio-name-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.name-verified-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name-verified-row h2 {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.verified-badge-icon {
+    color: var(--accent-glow);
+    font-size: 18px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+.bio-curator-title {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Specific floating override for profile component buttons context */
+.bio-follow-btn {
+    margin-left: auto;
+    padding: 10px 28px !important;
+    font-size: 13px !important;
+}
+
+/* Symmetrical Counter Row Layout Grid */
+.bio-stats-counter-row {
+    display: flex;
+    gap: 50px;
+    padding-left: 145px; /* Perfect baseline column alignment directly beneath the bio text stack */
+}
+
+.metric-counter-node {
+    font-size: 15px;
+    color: var(--text-dark-pure);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.metric-counter-node strong {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.metric-counter-node span {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   MINIMALIST PORTFOLIO FEED NAVIGATION BAR TABS
+   ========================================================================== */
+.profile-feed-nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 30px 0 45px 0;
+}
+
+.tab-trigger-link {
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tab-trigger-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-dark-pure);
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tab-trigger-link:hover,
+.tab-trigger-link.active-tab-token {
+    color: var(--text-dark-pure);
+}
+
+.tab-trigger-link.active-tab-token::after {
+    transform: scaleX(1);
+}
+
+/* ==========================================================================
+   THE PORTFOLIO METRIC GALLERY THUMBNAIL MATRIX GRID
+   ========================================================================== */
+.profile-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* High-End baseline architectural structure grid columns */
+    gap: 20px;
+}
+
+.portfolio-grid-item {
+    position: relative;
+    aspect-ratio: 1 / 1; /* Forces perfect geometric grid uniformity */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    cursor: pointer;
+}
+
+.portfolio-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Luxury Interactive Glass Overlay Shadow Mask */
+.portfolio-hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.hover-metric-row {
+    display: flex;
+    gap: 25px;
+}
+
+.hover-metric-row span {
+    color: var(--text-dark-pure);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* DYNAMIC ACTIVE INTERACTION HANDLERS */
+.portfolio-grid-item:hover .portfolio-media { transform: scale(1.05); }
+.portfolio-grid-item:hover .portfolio-hover-overlay { opacity: 1; }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Mobile Grid Adaptation Tracks)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-profile-showcase {
+        padding: 60px 0;
+    }
+
+    .creator-bio-deck {
+        gap: 25px;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Convert row layout orientation stream into a balanced centered vertical alignment stack block */
+    .bio-identity-row {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .bio-avatar-large {
+        width: 90px;
+        height: 90px;
+    }
+
+    .name-verified-row {
+        justify-content: center;
+    }
+
+    .name-verified-row h2 {
+        font-size: 24px;
+    }
+
+    .bio-follow-btn {
+        margin-left: 0; /* Center button comfortably beneath identity parameters text fields info elements */
+        width: 100%;
+        max-width: 220px;
+    }
+
+    /* Pull counter grids back into standard alignment bounds without large desktop offset pads */
+    .bio-stats-counter-row {
+        padding-left: 0;
+        justify-content: center;
+        gap: 35px;
+        width: 100%;
+    }
+
+    .profile-feed-nav-tabs {
+        gap: 30px;
+        margin: 25px 0 30px 0;
+    }
+
+    .tab-trigger-link {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Reflow architectural grid format from triple to double layout streaming column matrices */
+    .profile-portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .bio-stats-counter-row {
+        gap: 20px;
+    }
+    
+    .metric-counter-node {
+        font-size: 13px;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .profile-portfolio-grid {
+        grid-template-columns: 1fr; /* Full single stacked layouts configuration baseline mobile fields */
+        gap: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM LIVE EVENTS SHOWCASE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto heading tracks and calendar tags explicitly */
+.app-events-showcase h2,
+.app-events-showcase h2 span,
+.event-calendar-badge .calendar-day,
+.event-stream-card .event-display-title {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details headers, count summaries, button pills, and text copy */
+.app-events-showcase p,
+.events-micro-tag,
+.calendar-month,
+.event-meta-top span,
+.event-speaker-bio,
+.attendee-count-label,
+.event-reserve-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-events-showcase {
+    background-color: var(--canvas-dark);
+    padding: 100px 0 40px 0; /* Maintains clean vertical pacing directly into your Audio Canvas block lower tiers */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.events-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Grid Styling Configuration Controls */
+.events-header-deck {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.events-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.events-header-deck h2 {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.events-header-deck h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.events-line-separator {
+    width: 60px;
+    height: 2px;
+    background: var(--action-gradient);
+    margin: 25px 0;
+    border-radius: 2px;
+}
+
+.events-header-deck p {
+    font-size: var(--p);
+    color: var(--text-secondary);
+    max-width: 540px;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   LINEAR STREAM TRACK ROW COMPONENT STYLES
+   ========================================================================== */
+.events-stream-track {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-stream-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.event-stream-card:hover {
+    transform: translateX(6px); /* Classy horizontal shift instead of standard vertical lifts */
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   LEFT COMPONENT WING: CALENDAR DATE TOKEN METRICS
+   ========================================================================== */
+.event-calendar-badge {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    border-radius: 12px;
+    width: 80px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.calendar-month {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+
+.calendar-day {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    line-height: 1;
+}
+
+/* ==========================================================================
+   CENTER COMPONENT WING: NARRATIVE DETAILS LAYOUT BLOCKS
+   ========================================================================== */
+.event-details-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.event-meta-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.event-time-tag {
+    font-size: 12px;
+    color: var(--text-dark-pure);
+    font-weight: 600;
+}
+
+.event-time-tag i {
+    margin-right: 4px;
+    color: var(--brand-royal);
+}
+
+.event-seats-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--brand-vibrant);
+    background-color: rgba(255, 48, 79, 0.08);
+    padding: 2px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.event-seats-tag.verified-seats {
+    color: var(--accent-glow);
+    background-color: rgba(0, 242, 254, 0.08);
+}
+
+.event-display-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
+.event-speaker-bio {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.event-speaker-bio strong {
+    color: var(--text-dark-pure);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   RIGHT COMPONENT WING: ACTIONS & REGISTRATIONS DECK
+   ========================================================================== */
+.event-action-deck {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.registered-users-avatars {
+    display: flex;
+    align-items: center;
+}
+
+.attendee-micro {
+    width: 26px;
+    height: 26px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark);
+    margin-right: -8px;
+}
+
+.attendee-count-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-left: 16px;
+}
+
+.event-reserve-btn {
+    padding: 10px 24px !important;
+    font-size: 13px !important;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-events-showcase {
+        padding: 60px 0 40px 0;
+    }
+
+    .events-header-deck h2 {
+        font-size: 38px;
+    }
+
+    .events-stream-track {
+        width: 90%;
+        margin: 0 auto;
+        gap: 16px;
+    }
+
+    /* Convert row components into structured vertical cards */
+    .event-stream-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        gap: 25px;
+    }
+
+    .event-stream-card:hover {
+        transform: translateY(-4px); /* Convert to standard vertical lift on mobile layout */
+    }
+
+    .event-calendar-badge {
+        width: 65px;
+        height: 75px;
+    }
+
+    .calendar-day {
+        font-size: 26px;
+    }
+
+    .event-display-title {
+        font-size: 18px;
+    }
+
+    .event-action-deck {
+        align-items: flex-start;
+        width: 100%;
+        border-top: 1px solid var(--border-dark);
+        padding-top: 20px;
+    }
+
+    .event-reserve-btn {
+        width: 100%; /* Spans full operational footprint row boundaries on touch devices */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM LIVE TRENDING AUDIO SHOWCASE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto heading tracks explicitly */
+.app-audio-showcase h2,
+.app-audio-showcase h2 span,
+.audio-grid-card .audio-room-title {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details headers, counts, button tokens, and descriptions */
+.app-audio-showcase p,
+.audio-micro-tag,
+.live-status-pill,
+.listener-count-tag,
+.speaker-summary-text,
+.audio-duration-meta {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-audio-showcase {
+    background-color: var(--canvas-dark);
+    padding: 100px 0 60px 0; /* Flows seamlessly directly into your CTA setup boundaries below */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.audio-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Grid Styling Configuration Controls */
+.audio-header-deck {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.audio-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.audio-header-deck h2 {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.audio-header-deck h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.audio-line-separator {
+    width: 60px;
+    height: 2px;
+    background: var(--action-gradient);
+    margin: 25px 0;
+    border-radius: 2px;
+}
+
+.audio-header-deck p {
+    font-size: var(--p);
+    color: var(--text-secondary);
+    max-width: 540px;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   AUDIO CARD GRID MATRIX LAYOUT TRACKS
+   ========================================================================== */
+.audio-grid-matrix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Balanced structural dual column tracks layout */
+    gap: 24px;
+}
+
+.audio-grid-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.audio-grid-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+}
+
+/* Accent highlight modifier wrapper specifically tracking live states elements */
+.audio-grid-card.live-room-active {
+    background: linear-gradient(180deg, var(--surface-dark) 0%, rgba(255, 48, 79, 0.02) 100%);
+    border-color: rgba(255, 48, 79, 0.15);
+}
+
+.audio-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.live-status-pill {
+    background-color: rgba(255, 48, 79, 0.1);
+    border: 1px solid rgba(255, 48, 79, 0.2);
+    color: var(--brand-vibrant);
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.5px;
+}
+
+.live-status-pill .pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--brand-vibrant);
+    border-radius: 50%;
+    display: inline-block;
+    animation: microPulseEffect 1.5s infinite ease-in-out;
+}
+
+@keyframes microPulseEffect {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.6); opacity: 0.4; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.live-status-pill.offline-pill {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-color: var(--border-dark);
+    color: var(--text-secondary);
+}
+
+.listener-count-tag {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.listener-count-tag i {
+    margin-right: 4px;
+}
+
+.audio-room-title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-dark-pure);
+    margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   SPEAKER ROW STRIPS AVATAR OVERLAP LAYOUT STACK
+   ========================================================================== */
+.audio-speakers-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.speaker-avatar-stack {
+    display: flex;
+    align-items: center;
+}
+
+.speaker-img {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark); /* Crisp cut frame lines overlap layer separation spacing */
+    margin-right: -10px; /* Pulls images neatly over each other */
+    transition: transform 0.3s ease;
+}
+
+.audio-grid-card:hover .speaker-img {
+    transform: translateX(-2px);
+}
+
+.speaker-summary-text {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.audio-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.audio-duration-meta {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.audio-duration-meta i {
+    margin-right: 4px;
+}
+
+.micro-join-btn {
+    padding: 8px 20px !important;
+    font-size: 12px !important;
+}
+
+/* ==========================================================================
+   NATIVE CSS AUDIO EQUALIZER VISUAL INDICATORS
+   ========================================================================== */
+.equalizer-wave-wrap {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 18px;
+}
+
+.eq-bar {
+    width: 2.5px;
+    height: 100%;
+    background-color: var(--brand-vibrant);
+    border-radius: 1px;
+    transform-origin: bottom;
+    animation: eqAnimateCurve 1.2s ease-in-out infinite alternate;
+}
+
+/* Stagger bar timelines loops to generate realistic fluid audio rendering shapes */
+.eq-bar:nth-child(1) { animation-delay: 0.1s; animation-duration: 0.8s; }
+.eq-bar:nth-child(2) { animation-delay: 0.4s; animation-duration: 1.2s; }
+.eq-bar:nth-child(3) { animation-delay: 0.2s; animation-duration: 0.9s; }
+.eq-bar:nth-child(4) { animation-delay: 0.6s; animation-duration: 1.1s; }
+.eq-bar:nth-child(5) { animation-delay: 0.3s; animation-duration: 0.7s; }
+
+@keyframes eqAnimateCurve {
+    0% { transform: scaleY(0.2); }
+    100% { transform: scaleY(1); }
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Cards Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-audio-showcase {
+        padding: 60px 0 40px 0;
+    }
+
+    .audio-header-deck {
+        margin-bottom: 40px;
+    }
+
+    .audio-header-deck h2 {
+        font-size: 38px;
+    }
+
+    /* Flatten out dual track grid format into clean single streaming stack structures */
+    .audio-grid-matrix {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .audio-grid-card {
+        padding: 25px;
+        min-height: 260px;
+    }
+
+    .audio-room-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM PLATFORM CTA COMPONENT CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto heading tracks explicitly */
+.app-platform-cta-stage h2,
+.app-platform-cta-stage h2 span,
+.platform-counter-card .counter-data-stack h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for description summaries, button pills, and metadata metrics */
+.app-platform-cta-stage p,
+.cta-micro-pill,
+.premium-upgrade-btn,
+.counter-data-stack span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-platform-cta-stage {
+    background-color: var(--canvas-dark);
+    padding: 80px 0 100px 0; /* Weighted bottom padding creates breathing room before footer border */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-layout-wrapper {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   THE FROSTED GLASS HIGH-STATUS FRAME CONTAINER
+   ========================================================================== */
+.cta-glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: 24px;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* Glowing Neon Backdrop Flare Layer */
+.cta-atmospheric-blur {
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.12) 0%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cta-content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Asymmetric balance layout columns tracking */
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   LEFT WING: ACTION DECK TEXT NARRATIVES
+   ========================================================================== */
+.cta-micro-pill {
+    background: rgba(255, 48, 79, 0.1);
+    border: 1px solid rgba(255, 48, 79, 0.2);
+    color: var(--brand-vibrant);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.cta-narrative-block h2 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--text-dark-pure);
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.cta-narrative-block h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.cta-summary-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    max-width: 490px;
+    margin-bottom: 35px;
+}
+
+.cta-button-group {
+    display: flex;
+    gap: 16px;
+}
+
+/* Luxury button dimensions adaptations scale constraints */
+.cta-button-group .btn-social-base {
+    padding: 12px 28px;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   RIGHT WING: MICRO LIVE METRICS PACK CARDS
+   ========================================================================== */
+.cta-metrics-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.platform-counter-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.platform-counter-card:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.counter-icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-avatar);
+    background-color: rgba(77, 56, 243, 0.1);
+    color: var(--brand-royal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Swap background fill for second card item icon node framework */
+.platform-counter-card:nth-child(2) .counter-icon-wrap {
+    background-color: rgba(0, 242, 254, 0.1);
+    color: var(--accent-glow);
+}
+
+.counter-data-stack h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 2px 0;
+}
+
+.counter-data-stack span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Cards Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-platform-cta-stage {
+        padding: 50px 0 60px 0;
+    }
+
+    .cta-glass-card {
+        padding: 45px 35px;
+        border-radius: 20px;
+    }
+
+    /* Convert row layout orientation split into clean linear stacked list flow panels */
+    .cta-content-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .cta-narrative-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-narrative-block h2 {
+        font-size: 34px;
+    }
+
+    .cta-summary-text {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .cta-button-group {
+        width: 100%;
+        max-width: 380px;
+        justify-content: center;
+    }
+    
+    .cta-button-group .btn-social-base {
+        flex: 1; /* Symmetrical split width spacing across small viewport profiles buttons */
+    }
+
+    .cta-metrics-showcase {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    .platform-counter-card {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .cta-button-group .btn-social-base {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM & LUXURIOUS FOOTER DECK MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto the brand logo and title blocks explicitly */
+.app-premium-footer .footer-logo-override,
+.app-premium-footer .footer-logo-override span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for links, group labels, descriptions, and baseline utility items */
+.app-premium-footer p,
+.app-premium-footer a,
+.app-premium-footer h4,
+.app-premium-footer span,
+.app-premium-footer button {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-premium-footer {
+    background-color: #090909; /* Deep matte absolute pitch black canvas foundation */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+    padding: 90px 0 0 0; /* Leaves baseline padding clear for the legal bar block layout */
+    z-index: 10;
+}
+
+.footer-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Clean asymmetric weight separating the brand summary from link list grids */
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 50px;
+    padding-bottom: 70px;
+}
+
+/* ==========================================================================
+   LEFT BRAND PANEL COLUMN STYLING SYSTEM
+   ========================================================================== */
+.footer-logo-override {
+    font-size: 28px;
+    display: inline-block;
+    margin-bottom: 22px;
+}
+
+.footer-brand-summary {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 320px;
+    margin-bottom: 30px;
+}
+
+.footer-social-vectors-row {
+    display: flex;
+    gap: 18px;
+}
+
+.social-vector-link {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-avatar);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-vector-link:hover {
+    color: var(--text-dark-pure);
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   NAVIGATION COLUMN DIRECTORY LINKS TRACKS
+   ========================================================================== */
+.footer-group-title {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--text-dark-pure);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.footer-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links-list li a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links-list li a:hover {
+    color: var(--text-dark-pure);
+    transform: translateX(3px); /* Elegant slide trace micro interactive animation */
+}
+
+/* ==========================================================================
+   SYMMETRICAL COPYRIGHT BASELINE HORIZONTAL STRIP
+   ========================================================================== */
+.footer-baseline-bar {
+    border-top: 1px solid var(--border-dark);
+    padding: 28px 0;
+    background-color: #050505;
+}
+
+.baseline-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-legal-text {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.baseline-utility-row {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-utility-trigger {
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-utility-trigger:hover {
+    color: var(--text-dark-pure);
+}
+
+.footer-utility-trigger i {
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Structural Centering)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-premium-footer {
+        padding: 60px 0 0 0;
+    }
+
+    /* Convert row grid configuration into a balanced single column list flow layout */
+    .footer-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+        justify-items: center;
+        padding-bottom: 55px;
+        width: 90%;
+    }
+
+    .footer-brand-summary {
+        margin: 0 auto 25px auto;
+    }
+
+    .footer-social-vectors-row {
+        justify-content: center;
+    }
+
+    .footer-group-title {
+        margin-bottom: 18px;
+    }
+
+    /* Compress the baseline structural strip links items into clean vertical stacks */
+    .baseline-layout-wrapper {
+        flex-direction: column-reverse;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .baseline-utility-row {
+        justify-content: center;
+        gap: 30px;
+    }
+}

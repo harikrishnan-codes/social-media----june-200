@@ -1,0 +1,1540 @@
+/* ==========================================================================
+   ULTRA-PREMIUM CREATOR PROFILE HERO CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto major username strings and numerical metrics scores explicitly */
+.profile-premium-hero-stage h1,
+.profile-metrics-dashboard-grid h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for bio descriptors text layouts copy, action triggers, tier labels, and metrics titles */
+.profile-premium-hero-stage p,
+.profile-tier-pill,
+.profile-cta-btn,
+.metric-data-cell span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.profile-premium-hero-stage {
+    background-color: var(--canvas-dark);
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+/* ==========================================================================
+   1. UPPER TIER: CINEMATIC COVER RUNWAY BACKGROUND BANNER
+   ========================================================================== */
+.profile-cover-runway {
+    width: 100%;
+    height: 280px; /* High-end desktop aspect banner space footprint parameter */
+    position: relative;
+    overflow: hidden;
+    background-color: #121212;
+}
+
+.profile-cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.6; /* Soft muted presentation depth allowing text colors to track easily */
+}
+
+.profile-cover-mesh-flare {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, var(--canvas-dark) 100%),
+                radial-gradient(circle at top right, rgba(255, 48, 79, 0.1) 0%, transparent 60%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   2. LOWER TIER: FOCAL DETAILS FRAME IDENTITY GRID ARCHITECTURE
+   ========================================================================== */
+.profile-hero-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.profile-identity-deck {
+    display: grid;
+    /* Clean desktop asymmetric layout split distribution mapping structural content elements */
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    margin-top: -80px; /* Forces avatar framing box to break the background cover boundary beautifully */
+    position: relative;
+    z-index: 5;
+}
+
+/* Left Axis Module Component Layout Styles */
+.identity-avatar-axis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.main-avatar-shield {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    border-radius: var(--radius-avatar);
+}
+
+.profile-avatar-core {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 4px solid var(--canvas-dark); /* Thick perimeter space cleanly lifting frame elements */
+    background-color: var(--surface-dark);
+}
+
+.profile-live-status-beacon-dot {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid var(--canvas-dark);
+}
+.profile-live-status-beacon-dot.live-sync-green { background-color: #00e676; }
+
+.profile-action-triggers-deck {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.profile-cta-btn {
+    flex-grow: 1;
+    padding: 12px 0 !important;
+    font-size: 13px !important;
+    text-align: center;
+}
+
+.profile-utility-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-avatar);
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-utility-btn:hover {
+    color: var(--text-dark-pure);
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Right Axis Module Component Layout Styles */
+.identity-metadata-axis {
+    padding-top: 90px; /* Coordinates desktop baseline spacing rows relative to cover breakdown line bounds */
+}
+
+.metadata-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.name-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.identity-metadata-axis h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.profile-verified-badge {
+    color: var(--brand-vibrant); /* Radiant system pink verified validation accent */
+    font-size: 18px;
+    filter: drop-shadow(0 2px 8px rgba(255, 48, 79, 0.3));
+}
+
+.profile-tier-pill {
+    background-color: rgba(77, 56, 243, 0.08);
+    border: 1px solid rgba(77, 56, 243, 0.2);
+    color: var(--brand-royal);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-curator-bio {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 680px;
+    margin: 0 0 35px 0;
+}
+
+/* Numerical Telemetry Metrics Hub Rows Configuration Track */
+.profile-metrics-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-top: 1px solid var(--border-dark);
+    padding-top: 30px;
+    max-width: 580px;
+}
+
+.metric-data-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.metric-data-cell h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.metric-data-cell span {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Stream)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .profile-cover-runway {
+        height: 180px; /* Compresses image scale allocations over narrow device monitors */
+    }
+
+    .profile-identity-deck {
+        grid-template-columns: 1fr; /* Collapses dual column grids safely down into vertical streams */
+        gap: 30px;
+        margin-top: -70px;
+        text-align: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .identity-avatar-axis {
+        align-items: center;
+    }
+
+    .main-avatar-shield {
+        width: 130px;
+        height: 130px;
+    }
+
+    .profile-action-triggers-deck {
+        max-width: 320px; /* Prevents button arrays from stretching past balanced target sizes */
+        justify-content: center;
+    }
+
+    .identity-metadata-axis {
+        padding-top: 0; /* Clear desktop height padding alignments */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .metadata-name-row {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .name-badge-group {
+        justify-content: center;
+    }
+
+    .identity-metadata-axis h1 {
+        font-size: 28px;
+    }
+
+    .profile-curator-bio {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .profile-metrics-dashboard-grid {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 24px;
+        gap: 12px;
+    }
+
+    .metric-data-cell h3 {
+        font-size: 20px;
+    }
+
+    .metric-data-cell span {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .identity-metadata-axis h1 {
+        font-size: 24px;
+    }
+    
+    .profile-metrics-dashboard-grid {
+        background-color: rgba(255, 255, 255, 0.01);
+        border: 1px solid var(--border-dark);
+        border-radius: 12px;
+        padding: 16px 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM PORTFOLIO FILTER TRACKER MODULAR CSS
+   ========================================================================== */
+
+/* Sans-serif pairing rules for interactive tabs labels, text strings input field variables, and micro buttons */
+.profile-tab-btn,
+.profile-filter-input {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.profile-feed-control-bar {
+    background-color: var(--canvas-dark);
+    padding: 30px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.profile-filter-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Desktop layout prioritizes the horizontal scrolling tabs view over the search track */
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ==========================================================================
+   1. LEFT WING: HORIZONTAL SEGMENTED CAROUSEL SCROLL TRACK
+   ========================================================================== */
+.profile-tabs-carousel {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tabs-scroll-shield {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Strips browser scrollbar graphics architecture */
+    padding: 2px;
+}
+
+.tabs-scroll-shield::-webkit-scrollbar { display: none; }
+
+.profile-tab-btn {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-tab-btn i {
+    font-size: 12px;
+}
+
+.profile-tab-btn:hover {
+    color: var(--text-dark-pure);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.profile-tab-btn.active-tab-token {
+    background-color: var(--text-dark-pure);
+    color: var(--canvas-dark);
+    border-color: transparent;
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================================================
+   2. RIGHT WING: MINIMAL LOG CONSOLE LOOKUP INPUT POD
+   ========================================================================== */
+.profile-search-pod {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-inner-vector {
+    position: absolute;
+    left: 20px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.profile-filter-input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    padding: 12px 20px 12px 48px;
+    border-radius: 50px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-dark-pure);
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-filter-input:focus {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: var(--surface-dark);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Reflow)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .profile-feed-control-bar {
+        padding: 20px 0;
+    }
+
+    /* Collapse asymmetric columns down into single centered alignment vertical blocks rows */
+    .profile-filter-wrapper {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .profile-tabs-carousel {
+        order: 1; /* Retains tab dominance structure over the input fields lookups layout */
+    }
+
+    .tabs-scroll-shield {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .profile-tab-btn {
+        padding: 10px 20px;
+        font-size: 12.5px;
+    }
+
+    .profile-search-pod {
+        order: 2;
+    }
+
+    .profile-filter-input {
+        padding: 11px 20px 11px 44px;
+        font-size: 13px;
+    }
+
+    .search-inner-vector {
+        left: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM CREATOR PORTFOLIO GRID SHOWCASE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped explicitly onto asset card text headers */
+.portfolio-grid-wrapper h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for view scores metrics, tags variables, and description rows */
+.asset-meta-title-stack span,
+.asset-metric-tag {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.profile-portfolio-grid-stage {
+    background-color: var(--canvas-dark);
+    padding: 20px 0 100px 0; /* Clear bottom spacing track flow allocation before the CTA runway */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.portfolio-grid-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Implements a high-end asymmetrical mosaic rhythm grid mapping on desktop layouts */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Elite Double-Width Mosaic Modifiers Alignment Engine Hooks */
+.portfolio-asset-card.double-width-node {
+    grid-column: span 2;
+}
+
+/* ==========================================================================
+   INDIVIDUAL PORTFOLIO DISPLAY ASSET CARD CORE COMPONENT
+   ========================================================================== */
+.portfolio-asset-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.asset-graphic-shield {
+    width: 100%;
+    height: 320px; /* Strong uniform proportional clearance window parameter box framework */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.asset-main-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hardware Accelerated Frosted Mask Overlay Mechanics System */
+.asset-interaction-mask {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(9, 9, 9, 0.8) 0%, rgba(9, 9, 9, 0.2) 100%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mask-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transform: translateY(15px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mask-vector-btn,
+.mask-download-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mask-vector-btn:hover,
+.mask-download-link:hover {
+    background-color: var(--text-dark-pure);
+    color: var(--canvas-dark);
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+/* Informational Card Meta Footers Track Layout */
+.asset-informational-footer {
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.asset-meta-title-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 75%;
+}
+
+.asset-informational-footer h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.asset-meta-title-stack span {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.asset-live-badge-group {
+    flex-shrink: 0;
+}
+
+.asset-metric-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ACTIVE CONTEXTUAL INTERACTION DRIVER TRIGGERS */
+.portfolio-asset-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+.portfolio-asset-card:hover .asset-main-graphic { transform: scale(1.04); }
+.portfolio-asset-card:hover .asset-interaction-mask { opacity: 1; }
+.portfolio-asset-card:hover .mask-action-buttons { transform: translateY(0); }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Single Column Collapse Layout)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .profile-portfolio-grid-stage {
+        padding: 10px 0 60px 0;
+    }
+
+    /* Dissolve layout grid columns configurations into a singular full-width mobile stream list flow */
+    .portfolio-grid-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .portfolio-asset-card.double-width-node {
+        grid-column: auto; /* Drops mosaic priority override classes over touch monitors */
+    }
+
+    .portfolio-asset-card {
+        padding: 14px;
+    }
+
+    .asset-graphic-shield {
+        height: 240px; /* Scales down container heights to keep layouts scannable on mobile viewports */
+    }
+
+    /* Uncover and lock interaction trays by default for touch screens to enhance user control access */
+    .asset-interaction-mask {
+        background: linear-gradient(to top, rgba(9, 9, 9, 0.5) 0%, transparent 60%);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        opacity: 1;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 12px;
+    }
+
+    .mask-action-buttons {
+        transform: translateY(0);
+        gap: 8px;
+    }
+
+    .mask-vector-btn,
+    .mask-download-link {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+        background-color: rgba(9, 9, 9, 0.85); /* Ensures high clear contrast visibility natively over dynamic assets */
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM PROFILE TELEMETRY & COMPETENCY CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map explicitly onto section block panel titles and sub-headings */
+.profile-telemetry-insights-stage h3,
+.profile-telemetry-insights-stage h3 span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for tracking statistics, details summaries, tags, tokens, and percentage readouts */
+.telemetry-micro-pill,
+.progress-title-text,
+.progress-value-text,
+.competency-micro-tag,
+.competency-description-copy,
+.competency-tag-token {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.profile-telemetry-insights-stage {
+    background-color: var(--canvas-dark);
+    padding: 40px 0 100px 0; /* Clear bottom spacing track flow allocation before final transitions */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.telemetry-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Executive asymmetrical desktop layout assignment splitting panels scales weights */
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.telemetry-deck-header {
+    margin-bottom: 30px;
+}
+
+.telemetry-micro-pill {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.profile-telemetry-insights-stage h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================================================
+   LEFT WING PANEL: INTERCONNECTED ACCOUNT METRICS TIMELINE NODES
+   ========================================================================== */
+.telemetry-growth-deck {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.telemetry-progress-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.telemetry-progress-node {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.progress-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-title-text {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-dark-pure);
+}
+
+.progress-value-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--brand-vibrant);
+}
+
+.progress-track-line {
+    width: 100%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill-node {
+    height: 100%;
+    background: var(--action-gradient);
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   RIGHT WING PANEL: ECOSYSTEM COMPETENCY SHIELD DECK CARD
+   ========================================================================== */
+.telemetry-competency-deck {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.competency-card-glow-mesh {
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.1) 0%, transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+}
+
+.competency-inner-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.competency-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-royal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.telemetry-competency-deck h3 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--text-dark-pure);
+    margin: 0 0 16px 0;
+    letter-spacing: -0.5px;
+}
+
+.telemetry-competency-deck h3 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.competency-description-copy {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Premium Tags Infrastructure Matrix Area Handles */
+.competency-tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.competency-tag-token {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    color: rgba(247, 249, 250, 0.9);
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 12.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.competency-tag-token i {
+    font-size: 11px;
+    color: var(--brand-royal);
+}
+
+.competency-tag-token:hover {
+    color: var(--text-dark-pure);
+    border-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.04);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Column Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .profile-telemetry-insights-stage {
+        padding: 30px 0;
+    }
+
+    /* Convert row grid configuration fields into a unified stacked linear flow list layout */
+    .telemetry-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .telemetry-growth-deck,
+    .telemetry-competency-deck {
+        padding: 24px;
+    }
+
+    .telemetry-competency-deck h3 {
+        font-size: 24px;
+    }
+    
+    .competency-tag-token {
+        padding: 8px 14px;
+        font-size: 12px;
+        width: 100%; /* Spans 100% full parameters fields comfortably over mobile screen targets */
+        justify-content: flex-start;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM CREATOR ECOSYSTEM ENDORSEMENTS MATRIX CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map explicitly onto layout node headers and text titles */
+.connection-voucher-card .endorser-meta-stack h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details summaries, parameters copies, hash numbers, and skill labels */
+.endorser-meta-stack span,
+.voucher-testimonial-copy,
+.verification-hash-token,
+.verified-skill-tag {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.profile-connections-ledger-stage {
+    background-color: var(--canvas-dark);
+    padding: 20px 0 100px 0; /* Aligned bottom track clearance bounds preceding the footer transformation entries */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.ledger-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Premium triple-column symmetrical distribution architecture runway setup */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch; /* Enforces uniform visual balance and equal box boundaries across cells fluidly */
+}
+
+/* ==========================================================================
+   INDIVIDUAL ACTIVE CONNECTION VOUCHER COMPONENT RIGGING
+   ========================================================================== */
+.connection-voucher-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.connection-voucher-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+.voucher-head-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.endorser-identity {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.endorser-avatar-img {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1.5px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.endorser-meta-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.endorser-meta-stack h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.endorser-meta-stack span {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.voucher-verified-badge {
+    font-size: 14px;
+    color: var(--brand-vibrant);
+    filter: drop-shadow(0 2px 6px rgba(255, 48, 79, 0.2));
+    margin-top: 4px;
+}
+
+/* Alternate security badge style configuration variations */
+.voucher-verified-badge.cyan-badge-modifier { color: var(--accent-glow); filter: drop-shadow(0 2px 6px rgba(0, 242, 254, 0.2)); }
+.voucher-verified-badge.royal-badge-modifier { color: var(--brand-royal); filter: drop-shadow(0 2px 6px rgba(77, 56, 243, 0.2)); }
+
+.voucher-testimonial-copy {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-style: italic;
+    margin: 0 0 25px 0;
+    flex-grow: 1;
+}
+
+/* Lower Data Validation Badge Array Elements Group */
+.voucher-footer-tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    gap: 12px;
+}
+
+.verification-hash-token {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.verified-skill-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--brand-royal);
+    background-color: rgba(77, 56, 243, 0.06);
+    border: 1px solid rgba(77, 56, 243, 0.12);
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .profile-connections-ledger-stage {
+        padding: 20px 0 60px 0;
+    }
+
+    /* Transition horizontal column spreads into a vertical stacked linear layout sequence grid flow */
+    .ledger-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .connection-voucher-card {
+        padding: 24px;
+        min-height: auto;
+    }
+    
+    .voucher-testimonial-copy {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM PROFILE COMPOSER TRANSITION PANEL CSS
+   ========================================================================== */
+
+/* Sans-serif pairing rules for interactive tool text descriptors, prompts copy labels, and action badges */
+.facade-placeholder-text,
+.composer-tool-btn span,
+.composer-submit-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.profile-composer-trigger-stage {
+    background-color: var(--canvas-dark);
+    padding: 20px 0 80px 0; /* Weighted baseline spacing creates a fluid margins shift into final CTAs */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.composer-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   FROSTED MEDIA WORKSPACE INPUT CORES RIGGING ENGINE
+   ========================================================================== */
+.composer-entry-pod {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.composer-entry-pod:hover {
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.composer-avatar-anchor {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.composer-mini-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1.5px solid var(--border-dark);
+}
+
+/* Simulated Content Editable Container Window */
+.composer-action-facade {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-dark);
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.composer-action-facade:hover {
+    background-color: rgba(255, 255, 255, 0.01);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.facade-placeholder-text {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Symmetrical Utility Shortcuts Action Group Bar */
+.composer-tools-array {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.composer-tool-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 30px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.composer-tool-btn i {
+    color: var(--brand-royal);
+    font-size: 13px;
+}
+
+.composer-tool-btn:hover {
+    color: var(--text-dark-pure);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.composer-submit-btn {
+    padding: 10px 22px !important;
+    font-size: 13px !important;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .profile-composer-trigger-stage {
+        padding: 15px 0 40px 0;
+    }
+
+    /* Collapse structural horizontal row bars down into high-contrast single vertical panels block tracks */
+    .composer-entry-pod {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .composer-avatar-anchor {
+        display: none; /* Safely drop image bounds over small screens to enhance reading density scopes */
+    }
+
+    .composer-action-facade {
+        width: 100%;
+        padding: 14px 18px;
+    }
+
+    .facade-placeholder-text {
+        font-size: 13px;
+    }
+
+    /* Distribute tools utilities items evenly row-mapped natively under mobile gesture touch scopes */
+    .composer-tools-array {
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.03);
+        gap: 8px;
+    }
+
+    .composer-tool-btn {
+        padding: 8px 10px;
+    }
+
+    .composer-tool-btn span {
+        display: none; /* Hide wide text descriptions parameters to isolate clean icons actions keys */
+    }
+
+    .composer-tool-btn i {
+        font-size: 16px; /* Scales icons heights slightly to retain responsive touch targets clarity guidelines */
+    }
+
+    .composer-submit-btn {
+        flex-grow: 1;
+        text-align: center;
+        padding: 11px 0 !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM PROFILE TRANSITION CTA COMPONENT CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto editorial headline copy tracks explicitly */
+.profile-final-cta-stage h2,
+.profile-final-cta-stage h2 span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details paragraphs, tracking tags, and buttons triggers labels */
+.profile-final-cta-stage p,
+.cta-micro-tag,
+.cta-primary-btn,
+.cta-secondary-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.profile-final-cta-stage {
+    background-color: var(--canvas-dark);
+    padding: 60px 0 100px 0; /* Symmetrical breathing track clearances pacing metrics */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.cta-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   HIGH-GLOSS FROSTED CENTRAL FOCAL CARD DESIGN ENGINE
+   ========================================================================== */
+.cta-focal-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Deep Multi-Layer Radial Ambient Glow Mesh Layer Overlays */
+.cta-focal-card .cta-card-ambient-mesh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.07) 0%, rgba(77, 56, 243, 0.03) 55%, transparent 75%);
+    filter: blur(65px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cta-content-stack {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.cta-content-stack h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin: 0;
+}
+
+.cta-content-stack h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.cta-line-separator {
+    width: 60px;
+    height: 2px;
+    background: var(--action-gradient);
+    margin: 28px 0;
+    border-radius: 2px;
+}
+
+.cta-content-stack p {
+    font-size: 15.5px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin: 0 0 40px 0;
+}
+
+/* Integrated Button Row Grid Alignment Track */
+.cta-action-deck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.cta-primary-btn,
+.cta-secondary-btn {
+    padding: 14px 32px !important;
+    font-size: 14px !important;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Touch Optimizations)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .profile-final-cta-stage {
+        padding: 40px 0;
+    }
+
+    /* Compress padding parameters while forcing an elegant full horizontal bleed block alignment */
+    .cta-focal-card {
+        padding: 50px 24px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cta-focal-card .cta-card-ambient-mesh {
+        width: 340px;
+        height: 340px;
+    }
+
+    .cta-content-stack h2 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .cta-content-stack p {
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 35px;
+    }
+
+    /* Convert horizontal deck controls smoothly into stacked single tap lanes blocks */
+    .cta-action-deck {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 300px; /* Limits growth to maintain an elegant editorial aspect ratio over mobile viewports */
+    }
+
+    .cta-primary-btn,
+    .cta-secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-content-stack h2 {
+        font-size: 28px;
+    }
+}

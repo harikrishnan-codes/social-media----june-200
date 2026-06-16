@@ -1,0 +1,1830 @@
+/* ==========================================================================
+   ULTRA-PREMIUM EXPLORE HERO CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto editorial title tracks and metric headers explicitly */
+.explore-premium-hero .explore-hero-title,
+.explore-premium-hero .explore-hero-title span,
+.glass-trend-metric-card h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for input text, tracking tags, descriptions, and metric sub-labels */
+.explore-hero-tag,
+.explore-hero-description,
+.pod-search-input,
+.metric-trend-meta span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.explore-premium-hero {
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--canvas-dark);
+    padding: 160px 0 60px 0; /* Clear clearance padding beneath your fixed navigation header bar */
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+/* Luxury Multi-Layer Radial Ambient Backdrop Light Mesh */
+.explore-hero-glow-backdrop {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.15) 0%, rgba(255, 48, 79, 0.03) 50%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.explore-hero-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Clean asymmetric grid split layout providing rich reading widths */
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   LEFT WING: NARRATIVE TITLE & SEARCH POD RIGGING
+   ========================================================================== */
+.explore-hero-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.explore-hero-title {
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--text-dark-pure);
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.explore-hero-title span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.explore-hero-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    max-width: 540px;
+    margin-bottom: 40px;
+}
+
+/* The High-Gloss Integrated Search Pod Containment Frame */
+.explore-hero-search-pod {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+}
+
+.pod-search-vector {
+    position: absolute;
+    left: 24px;
+    color: var(--text-secondary);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.pod-search-input {
+    width: 100%;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    padding: 18px 70px 18px 60px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-dark-pure);
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pod-search-input:focus {
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: #161616;
+}
+
+.pod-filter-trigger {
+    position: absolute;
+    right: 8px;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-avatar);
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid transparent;
+    color: var(--text-dark-pure);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pod-filter-trigger:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--brand-vibrant);
+}
+
+/* ==========================================================================
+   RIGHT WING: HARDWARE ACCELERATED FLOATING TREND METRICS
+   ========================================================================== */
+.explore-hero-visuals {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.trend-clusters-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: 200px;
+}
+
+/* Premium Frosted Glassmorphic Data Micro-Cards Base */
+.glass-trend-metric-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 16px 24px;
+    border-radius: var(--radius-feed);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    width: 280px;
+    /* Native hardware acceleration floating rotation tracking sequences loops */
+    animation: luxuryHeroFloat 6s ease-in-out infinite;
+}
+
+@keyframes luxuryHeroFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Stagger positions and float timelines curves to build immersive parallax fields offsets */
+.metric-card-one {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+}
+
+.metric-card-two {
+    bottom: 0;
+    right: 0;
+    animation-delay: -3s; /* Perfectly inverted counter float cadence pacing loop */
+}
+
+.metric-trend-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-avatar);
+    background-color: rgba(255, 48, 79, 0.1);
+    color: var(--brand-vibrant);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.metric-trend-icon.icon-blue-modifier {
+    background-color: rgba(77, 56, 243, 0.1);
+    color: var(--brand-royal);
+}
+
+.metric-trend-meta h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 2px 0;
+}
+
+.metric-trend-meta span {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Stream)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .explore-premium-hero {
+        min-height: auto;
+        padding: 130px 0 60px 0;
+    }
+
+    .explore-hero-glow-backdrop {
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Collapse asymmetric columns cleanly into a unified centered vertical workspace */
+    .explore-hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .explore-hero-narrative {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .explore-hero-title {
+        font-size: 44px;
+        line-height: 1.15;
+    }
+
+    .explore-hero-description {
+        font-size: 15px;
+        margin: 0 auto 30px auto;
+    }
+
+    .explore-hero-search-pod {
+        max-width: 100%; /* Spans full operational horizontal parameters touch fields safely */
+    }
+
+    /* Shift right side data clusters downward into a clean, uniform row arrangement */
+    .explore-hero-visuals {
+        margin-top: 10px;
+    }
+
+    .trend-clusters-container {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .glass-trend-metric-card {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100%;
+        max-width: 340px;
+        animation: none; /* Strip floating loops over touch profiles screen densities to save processing power */
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-hero-title {
+        font-size: 34px;
+    }
+
+    .pod-search-input {
+        padding: 16px 60px 16px 50px;
+        font-size: 14px;
+    }
+
+    .pod-search-vector {
+        left: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM TRENDING REELS CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto heading parameters fields explicitly */
+.reels-section-header h3,
+.reels-section-header h3 span,
+.reel-metadata-caption-deck h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for tracking statistics counters, summaries text, pills, and links */
+.reels-view-all-link,
+.reels-micro-pill,
+.reel-metric-pill,
+.reel-metadata-caption-deck p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.explore-reels-matrix {
+    background-color: var(--canvas-dark);
+    padding: 60px 0 100px 0; /* Clear layout track pacing padding boundaries */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.reels-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   SUBSECTION HEADER ROW DIRECTORY CODES
+   ========================================================================== */
+.reels-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.reels-micro-pill {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.reels-section-header h3 {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.reels-section-header h3 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.reels-view-all-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.reels-view-all-link:hover {
+    color: var(--text-dark-pure);
+}
+
+/* ==========================================================================
+   ASYMMETRIC COMPONENT GRID LAYOUT BLOCK FRAMES
+   ========================================================================== */
+.reels-asymmetric-grid {
+    display: grid;
+    /* Spans an asymmetric configuration: 1 massive vertical column alongside 2 stacked rows */
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: repeat(2, 260px);
+    gap: 24px;
+}
+
+.reel-grid-item {
+    position: relative;
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.5s ease;
+}
+
+.reel-grid-item.feature-vertical-reel {
+    grid-row: span 2; /* Extends fully across both vertical row bounds scales layers */
+}
+
+.reel-thumbnail-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Floating Metrics Micro-Tags Overlays */
+.reel-live-metrics-bar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 4;
+}
+
+.reel-metric-pill {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 6px 14px;
+    border-radius: 50px;
+    color: var(--text-dark-pure);
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.2px;
+}
+
+.reel-metric-pill.live-badge {
+    background: rgba(255, 48, 79, 0.15);
+    border-color: rgba(255, 48, 79, 0.3);
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+}
+
+.pulse-ring-node {
+    width: 6px;
+    height: 6px;
+    background-color: var(--brand-vibrant);
+    border-radius: 50%;
+    animation: beaconPulse 1.6s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   GLASSMORPHIC REEL FOOTER CONTENT DECK PANELS
+   ========================================================================== */
+.reel-metadata-caption-deck {
+    position: absolute;
+    inset: auto 0 0 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 70%, transparent 100%);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.curator-identity-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.curator-micro-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1.5px solid var(--text-dark-pure);
+}
+
+.curator-identity-wrap h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.reel-metadata-caption-deck p {
+    font-size: 13px;
+    color: rgba(247, 249, 250, 0.7);
+    margin: 0;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Smooth layout text truncation boundaries fields */
+}
+
+/* DYNAMIC HOVER DRIVERS SYSTEM COMPONENT INTERACTIVE LINKS */
+.reel-grid-item:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+}
+
+.reel-grid-item:hover .reel-thumbnail-media { transform: scale(1.03); }
+.reel-grid-item:hover .reel-metadata-caption-deck { opacity: 1; transform: translateY(0); }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Stream)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .explore-reels-matrix {
+        padding: 40px 0;
+    }
+
+    .reels-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 25px;
+    }
+
+    .reels-section-header h3 {
+        font-size: 28px;
+    }
+
+    /* Convert asymmetric dual-column grid format into a clean double column vertical stack flow layout */
+    .reels-asymmetric-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 250px);
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Overrule vertical expansions elements to balance row layouts on tablet profiles screens */
+    .reel-grid-item.feature-vertical-reel {
+        grid-row: span 1; /* Squashes layout back into standard block bounds safely */
+    }
+
+    /* Force captions info details overlay system panels to stay visible on touch displays interface fields */
+    .reel-metadata-caption-deck {
+        opacity: 1;
+        transform: translateY(0);
+        padding: 16px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 80%, transparent 100%);
+    }
+
+    .reel-live-metrics-bar {
+        top: 14px;
+        left: 14px;
+    }
+
+    .reel-metric-pill {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reels-asymmetric-grid {
+        grid-template-columns: 1fr; /* Pure single linear row layout stack mobile baseline fields */
+        grid-template-rows: repeat(3, 260px);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM VERIFIED SPOTLIGHT CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto title components and creator handles explicitly */
+.spotlight-section-header h3,
+.spotlight-section-header h3 span,
+.creator-spotlight-card h4,
+.stat-mini-node strong {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for tracking parameters labels, specialty subtitles, and button metrics */
+.spotlight-micro-tag,
+.creator-specialty-tag,
+.stat-mini-node span,
+.spotlight-action-btn,
+.premium-discover-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.explore-creators-spotlight {
+    background-color: var(--canvas-dark);
+    padding: 80px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.spotlight-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   SECTION HEADER GRID FLEX DIRECTORY CODES
+   ========================================================================== */
+.spotlight-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.spotlight-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.spotlight-section-header h3 {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.spotlight-section-header h3 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.premium-discover-btn {
+    padding: 10px 24px !important;
+    font-size: 13px !important;
+}
+
+/* ==========================================================================
+   CREATOR IDENTITY GLASS SPOTLIGHT CARD MATRIX LAYOUT
+   ========================================================================== */
+.spotlight-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Premium desktop standard triple column layouts */
+    gap: 24px;
+}
+
+.creator-spotlight-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.5s ease;
+}
+
+.card-backdrop-banner {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    position: relative;
+    background-color: #0d0d0d;
+}
+
+.banner-blur-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    filter: blur(4px) scale(1.05); /* Soft premium banner depth background element */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.card-identity-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -45px; /* Pulls avatar image smoothly overlaying the banner zone space */
+    position: relative;
+    z-index: 5;
+    padding: 0 20px;
+}
+
+.spotlight-avatar-wrap {
+    position: relative;
+    width: 86px;
+    height: 86px;
+    margin-bottom: 16px;
+}
+
+.spotlight-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 3px solid var(--surface-dark);
+    background-color: var(--surface-dark);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.spotlight-badge-icon {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    color: var(--accent-glow);
+    font-size: 16px;
+    background-color: var(--surface-dark);
+    border-radius: var(--radius-avatar);
+    padding: 2px;
+    box-shadow: 0 2px 8px rgba(0, 242, 254, 0.3);
+}
+
+.creator-spotlight-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 6px 0;
+    letter-spacing: -0.3px;
+}
+
+.creator-specialty-tag {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Symmetrical Stat Counters Split Strip */
+.card-statistics-row {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    width: 100%;
+    margin: 25px 0;
+    padding: 16px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.stat-mini-node {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stat-mini-node strong {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    line-height: 1;
+}
+
+.stat-mini-node span {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spotlight-action-btn {
+    width: calc(100% - 50px);
+    padding: 10px 0 !important;
+    font-size: 13px !important;
+}
+
+/* DYNAMIC HOVER DRIVERS SYSTEM INTERACTIVE MATRIX LINK HOOKS */
+.creator-spotlight-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.5);
+}
+
+.creator-spotlight-card:hover .banner-blur-img {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Stream)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .explore-creators-spotlight {
+        padding: 40px 0;
+    }
+
+    .spotlight-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 30px;
+    }
+
+    .spotlight-section-header h3 {
+        font-size: 28px;
+    }
+
+    .premium-discover-btn {
+        width: 100%;
+    }
+
+    /* Convert standard horizontal blocks row into uniform stacked linear track flows layout */
+    .spotlight-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .creator-spotlight-card {
+        padding-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM TRENDING TOPIC MATRIX CANVASES MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto global section headings and trend titles explicitly */
+.explore-trending-hub h2,
+.explore-trending-hub h2 span,
+.trend-topic-row .trend-meta-left h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for description summaries, volume metrics, pill trackers, and button text */
+.trending-micro-tag,
+.trending-description,
+.trend-category-tag,
+.trend-volume-counter,
+.global-trends-btn,
+.micro-join-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.explore-trending-hub {
+    background-color: var(--canvas-dark);
+    padding: 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.trending-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Clean asymmetric grid split assigning distinct breathing weights to both blocks */
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* ==========================================================================
+   LEFT WING: EDITORIAL NARRATIVE HEADLINE BLOCK
+   ========================================================================== */
+.trending-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 22px;
+}
+
+.trending-narrative-deck h2 {
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.trending-narrative-deck h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.trending-line-separator {
+    width: 60px;
+    height: 2px;
+    background: var(--action-gradient);
+    margin: 25px 0;
+    border-radius: 2px;
+}
+
+.trending-description {
+    font-size: var(--p);
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: 35px;
+}
+
+.global-trends-btn {
+    padding: 12px 28px !important;
+    font-size: 14px !important;
+}
+
+/* ==========================================================================
+   RIGHT WING: TOPIC REGISTRATION LINEAR TRACK PIPELINES
+   ========================================================================== */
+.trending-topics-deck {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.trending-stream-track {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Base Trend Metric Row Frame Element */
+.trend-topic-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid transparent;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.trend-meta-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 75%;
+}
+
+.trend-category-tag {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.trend-topic-row .trend-meta-left h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    letter-spacing: -0.3px;
+    margin: 0;
+}
+
+.trend-volume-counter {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.micro-join-btn {
+    padding: 8px 18px !important;
+    font-size: 12px !important;
+}
+
+/* DYNAMIC HOVER DRIVERS SYSTEM COMPONENT INTERACTIONS */
+.trend-topic-row:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    transform: translateX(4px);
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Accent highlight modifier wrapper tracking first spot item specifically */
+.trend-topic-row:nth-child(1) {
+    background-color: rgba(255, 48, 79, 0.02);
+    border-color: rgba(255, 48, 79, 0.08);
+}
+.trend-topic-row:nth-child(1):hover {
+    background-color: rgba(255, 48, 79, 0.04);
+    border-color: rgba(255, 48, 79, 0.15);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Clean Layout Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .explore-trending-hub {
+        padding: 60px 0;
+    }
+
+    /* Collapse asymmetric desktop columns cleanly into a single unified workspace vertical stack */
+    .trending-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .trending-narrative-deck {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .trending-narrative-deck h2 {
+        font-size: 38px;
+    }
+
+    .trending-description {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .global-trends-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .trending-topics-deck {
+        padding: 24px;
+    }
+
+    .trend-topic-row {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .trend-topic-row .trend-meta-left h4 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trend-topic-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .trend-meta-left {
+        max-width: 100%;
+    }
+
+    .micro-join-btn {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM VISUAL MOODBOARD CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto heading tracks explicitly */
+.explore-moodboard-stage h2,
+.explore-moodboard-stage h2 span,
+.moodboard-card h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for creator tags, counter metadata, pills, and descriptions */
+.explore-moodboard-stage p,
+.moodboard-micro-tag,
+.moodboard-live-pulse,
+.moodboard-creator-badge,
+.moodboard-assets-count,
+.micro-action-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.explore-moodboard-stage {
+    background-color: var(--canvas-dark);
+    padding: 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.moodboard-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Config Array Tacks */
+.moodboard-header-deck {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.moodboard-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.moodboard-header-deck h2 {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.moodboard-header-deck h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.moodboard-line-separator {
+    width: 60px;
+    height: 2px;
+    background: var(--action-gradient);
+    margin: 25px 0;
+    border-radius: 2px;
+}
+
+.moodboard-header-deck p {
+    font-size: var(--p);
+    color: var(--text-secondary);
+    max-width: 540px;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   MOODBOARD CARD MATRIX GRID TRACK
+   ========================================================================== */
+.moodboard-grid-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Elegant symmetrical dual-column setup */
+    gap: 28px;
+}
+
+.moodboard-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.moodboard-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+}
+
+.moodboard-preview-frame {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #0d0d0d;
+}
+
+.moodboard-hero-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.8;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.moodboard-card:hover .moodboard-hero-art {
+    transform: scale(1.03);
+}
+
+/* Floating Real-Time Status Indicators Overlays */
+.moodboard-live-pulse {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(255, 48, 79, 0.15);
+    border: 1px solid rgba(255, 48, 79, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 6px 14px;
+    border-radius: 30px;
+    color: var(--brand-vibrant);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.2px;
+}
+
+.moodboard-live-pulse .pulse-core {
+    width: 6px;
+    height: 6px;
+    background-color: var(--brand-vibrant);
+    border-radius: 50%;
+    animation: beaconPulse 1.6s infinite ease-in-out;
+}
+
+.moodboard-live-pulse.offline-pulse {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+}
+
+/* Card Data Details Stack Layer */
+.moodboard-details-deck {
+    padding: 20px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.moodboard-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 16px;
+}
+
+.moodboard-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.moodboard-creator-badge {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Chromatic Hex Color Block Swatches Grid Matrix Track */
+.chromatic-swatch-matrix {
+    display: flex;
+    gap: 8px;
+}
+
+.swatch-node {
+    flex: 1;
+    height: 38px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: help;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.swatch-node:hover {
+    transform: scaleY(1.08);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Footer Utility Actions Desk Bar Row */
+.moodboard-footer-action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+}
+
+.moodboard-assets-count {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.moodboard-assets-count i {
+    margin-right: 4px;
+}
+
+.micro-action-btn {
+    padding: 8px 18px !important;
+    font-size: 12px !important;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Vertical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .explore-moodboard-stage {
+        padding: 60px 0;
+    }
+
+    .moodboard-header-deck h2 {
+        font-size: 38px;
+    }
+
+    /* Convert row distribution tracks into linear stacked single block layers stream */
+    .moodboard-grid-track {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .moodboard-card {
+        padding: 18px;
+    }
+
+    .moodboard-preview-frame {
+        height: 150px;
+    }
+
+    .moodboard-card h3 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SEARCH FORECASTING HUB MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto the section panel titles explicitly */
+.explore-forecasting-hub .forecast-panel-title,
+.explore-forecasting-hub .insight-card-title,
+.explore-forecasting-hub .insight-card-title span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for tracking labels, numbers metrics, button tokens, and descriptions */
+.explore-forecasting-hub p,
+.explore-forecasting-hub span,
+.explore-forecasting-hub button,
+.progress-label,
+.progress-percentage {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.explore-forecasting-hub {
+    background-color: var(--canvas-dark);
+    padding: 80px 0 120px 0; /* Clear bottom spacing to lead perfectly into the footer system boundary */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.forecast-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Clean, asymmetrical grid footprint mapping distinct visual weights to both wings */
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* ==========================================================================
+   LEFT PANEL: TELEMETRY TRACK METRICS PROGRESS STACKS
+   ========================================================================== */
+.forecast-metrics-deck {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.forecast-micro-pill {
+    background-color: rgba(77, 56, 243, 0.1);
+    border: 1px solid rgba(77, 56, 243, 0.2);
+    color: var(--brand-royal);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.forecast-panel-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin-bottom: 35px;
+    letter-spacing: -0.5px;
+}
+
+.forecast-bars-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.forecast-progress-node {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark-pure);
+}
+
+.progress-percentage {
+    font-size: 12px;
+    font-weight: 700;
+    color: #00e676; /* Positive Green Metrics */
+}
+
+.progress-bar-track {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill-line {
+    height: 100%;
+    background: var(--action-gradient); /* High-status gradient injection line */
+    border-radius: 10px;
+    transform-origin: left;
+}
+
+/* ==========================================================================
+   RIGHT PANEL: GLOSSMORPHIC FORECASTING INSIGHT CARD FRAME
+   ========================================================================== */
+.forecast-insight-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 45px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.insight-glow-mesh {
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 242, 254, 0.1) 0%, transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+}
+
+.insight-content-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.insight-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.insight-card-title {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--text-dark-pure);
+    margin: 0 0 16px 0;
+    letter-spacing: -1px;
+}
+
+.insight-card-title span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.insight-description-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.forecast-action-btn {
+    width: 100%;
+    padding: 12px 0 !important;
+    font-size: 13px !important;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .explore-forecasting-hub {
+        padding: 50px 0 60px 0;
+    }
+
+    /* Convert asymmetric layout grids columns cleanly into uniform vertical tracks stream */
+    .forecast-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .forecast-metrics-deck,
+    .forecast-insight-card {
+        padding: 24px;
+    }
+
+    .forecast-panel-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .insight-card-title {
+        font-size: 28px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SEARCH MATRIX INSIGHTS CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto cell headers explicitly */
+.explore-matrix-insights .node-display-title {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details summaries, text parameters, tags, and micro-labels */
+.explore-matrix-insights p,
+.explore-matrix-insights span,
+.node-status-pill,
+.node-timestamp,
+.micro-hash-token {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.explore-matrix-insights {
+    background-color: var(--canvas-dark);
+    padding: 40px 0 80px 0; /* Tightened upper padding to flow smoothly under your tracking bars */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.matrix-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Clean desktop triple-column distribution track */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ==========================================================================
+   INDIVIDUAL MATRIX CELL COMPONENT RIGGING
+   ========================================================================== */
+.insight-matrix-node {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.insight-matrix-node:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+.node-meta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.node-status-pill {
+    background-color: rgba(255, 48, 79, 0.08);
+    border: 1px solid rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant);
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.5px;
+}
+
+.pulse-core-glow {
+    width: 5px;
+    height: 5px;
+    background-color: var(--brand-vibrant);
+    border-radius: 50%;
+    animation: beaconPulse 1.4s infinite ease-in-out;
+}
+
+/* Alternate color tokens overrides for semantic visual separation */
+.node-status-pill.dynamic-blue-pill {
+    background-color: rgba(77, 56, 243, 0.08);
+    border-color: rgba(77, 56, 243, 0.15);
+    color: var(--brand-royal);
+}
+
+.node-status-pill.dynamic-cyan-pill {
+    background-color: rgba(0, 242, 254, 0.08);
+    border-color: rgba(0, 242, 254, 0.15);
+    color: var(--accent-glow);
+}
+
+.node-timestamp {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.node-display-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.3px;
+}
+
+.node-summary-copy {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0 0 25px 0;
+    flex-grow: 1;
+}
+
+.node-summary-copy strong {
+    color: var(--text-dark-pure);
+    font-weight: 700;
+}
+
+.node-summary-copy em {
+    color: var(--brand-vibrant);
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Micro-hash utility items labels rows mapping tags layout bounds */
+.node-footer-tags {
+    display: flex;
+    gap: 8px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.micro-hash-token {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 3px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.micro-hash-token:hover {
+    color: var(--text-dark-pure);
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .explore-matrix-insights {
+        padding: 20px 0 40px 0;
+    }
+
+    /* Convert row distribution tracking blocks into linear stacked columns stream */
+    .matrix-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .insight-matrix-node {
+        padding: 24px;
+        min-height: 220px;
+    }
+
+    .node-display-title {
+        font-size: 18px;
+    }
+}

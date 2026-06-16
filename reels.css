@@ -1,0 +1,1514 @@
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL REELS HERO CANOPY CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant data scanning streams */
+.reels-hero-canopy-stage h1,
+.reels-hero-canopy-stage h1 span,
+.audio-details-stack strong,
+.reels-creator-mini-profile span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.reels-telemetry-pill,
+.reels-live-counter,
+.reels-hero-canopy-stage p,
+.audio-details-stack span,
+.reels-action-views-badge {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.reels-hero-canopy-stage {
+    background-color: var(--canvas-dark); /* Firmly locked onto your absolute AMOLED Black variable */
+    padding: 140px 0 60px 0; /* Expanded upper clearance fields preventing navigation collision bugs */
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--border-dark);
+    overflow: hidden;
+}
+
+/* Deep Environmental Backlighting Overlay Flare Track */
+.reels-hero-ambient-mesh {
+    position: absolute;
+    top: -20%;
+    right: -5%;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.05) 0%, rgba(255, 48, 79, 0.02) 50%, transparent 75%);
+    filter: blur(85px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.reels-hero-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to stay inline with all parent grid timelines */
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.reels-hero-canopy-grid {
+    display: grid;
+    /* Clean desktop distribution layout split columns */
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: EDITORIAL DESCRIPTION & AUDIO METRICS TELEMETRY
+   ========================================================================== */
+.reels-welcome-axis {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.reels-status-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.reels-telemetry-pill {
+    background-color: rgba(255, 48, 79, 0.04); /* Subdued Electric Neon Rose Shutter */
+    border: 1px solid rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-rose-beacon {
+    width: 6px;
+    height: 6px;
+    background-color: var(--brand-vibrant);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--brand-vibrant);
+    animation: beaconPulse 1.4s infinite ease-in-out;
+}
+
+.reels-live-counter {
+    background-color: rgba(0, 242, 254, 0.06); /* Cyan Pop Active Status Counter */
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    color: var(--accent-glow);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.reels-hero-canopy-grid h1 {
+    font-size: 38px;
+    color: var(--text-dark-pure); /* Silk White intense readability headline typography */
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin: 0 0 16px 0;
+}
+
+.reels-hero-canopy-grid h1 span {
+    background: var(--action-gradient); /* Electric Rose to Hyper Blue gradient tracking line */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.reels-welcome-axis p {
+    font-size: 14.5px;
+    color: var(--text-secondary); /* Muted Graphite description copy text */
+    line-height: 1.65;
+    margin: 0 0 32px 0;
+}
+
+/* Trending Audio Component Layout */
+.reels-audio-sync-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--surface-dark); /* Slate Obsidian */
+    border: 1px solid var(--border-dark);
+    padding: 16px 20px;
+    border-radius: var(--radius-feed);
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Audio Kinetic Wave Animation Bar Bars Array Engine */
+.audio-wave-vector-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 24px;
+    width: 24px;
+}
+
+.wave-bar {
+    width: 3px;
+    height: 100%;
+    background-color: var(--accent-glow); /* Cyan Pop audio indicators bars vector */
+    border-radius: 4px;
+    transform-origin: bottom;
+}
+
+.bar-animate-1 { animation: waveKineticPulse 1.2s infinite ease-in-out alternate; }
+.bar-animate-2 { animation: waveKineticPulse 0.8s infinite ease-in-out alternate; animation-delay: 0.2s; }
+.bar-animate-3 { animation: waveKineticPulse 1.4s infinite ease-in-out alternate; animation-delay: 0.4s; }
+.bar-animate-4 { animation: waveKineticPulse 1.0s infinite ease-in-out alternate; animation-delay: 0.1s; }
+
+.audio-details-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.audio-details-stack strong { font-size: 12.5px; color: var(--text-dark-pure); letter-spacing: -0.1px; }
+.audio-details-stack span { font-size: 11px; color: var(--text-secondary); }
+
+/* ==========================================================================
+   RIGHT WING MODULE: IMMERSIVE PORTRAT VIDEO PREVIEW VIEWPORT
+   ========================================================================== */
+.reels-showcase-graphic-axis {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.reels-portrait-enclosure-frame {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Rigid smartphone vertical ratio aspect viewport limits scaling boundaries */
+}
+
+.reels-main-portrait-shield {
+    width: 100%;
+    height: 440px; /* High status 9:16 portrait canvas framing box */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    position: relative;
+    background-color: var(--surface-dark);
+}
+
+.reels-featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.reels-gradient-lower-shutter {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Floating Internal Metadata Overlay Details Bar */
+.reels-floating-metadata-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.reels-creator-mini-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.reels-mini-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1px solid var(--brand-vibrant); /* Electric Neon Rose halo ring boundary lock */
+}
+
+.reels-creator-mini-profile span {
+    font-size: 12px;
+    color: var(--text-dark-pure);
+}
+
+.reels-action-views-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .reels-hero-canopy-stage {
+        padding: 100px 0 40px 0;
+    }
+
+    /* Collapse the horizontal workspace layout split lanes down into a unified continuous column row path sequence */
+    .reels-hero-canopy-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .reels-welcome-axis {
+        align-items: center;
+        text-align: center;
+    }
+
+    .reels-status-badge-row {
+        justify-content: center;
+    }
+
+    .reels-hero-canopy-grid h1 {
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+
+    .reels-welcome-axis p {
+        font-size: 13.5px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    .reels-audio-sync-card {
+        padding: 14px 16px;
+        justify-content: center;
+    }
+
+    /* Presentation Graphic Alignment Reset Layers Over Mobile Touch Monitors Screen Displays */
+    .reels-showcase-graphic-axis {
+        justify-content: center;
+    }
+
+    .reels-portrait-enclosure-frame {
+        max-width: 260px; /* Compresses viewport size bounds slightly over small hand interfaces devices viewgrids */
+    }
+
+    .reels-main-portrait-shield {
+        height: 380px;
+    }
+}
+
+/* Hardware Accelerated Linear Progress Tuning Oscillations Animation Engines Keyframes */
+@keyframes waveKineticPulse {
+    0% { transform: scaleY(0.25); }
+    100% { transform: scaleY(1.1); }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL REELS DUAL-VIEWPORT THEATER STREAM CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant data scanning fields */
+.reels-theater-stage h3,
+.reels-live-indicator-pill,
+.reels-audio-sync-badge,
+.reels-handle-badge-cluster h4,
+.rail-metric-counter {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.reels-meta-title-stack span,
+.ledger-live-pulse-badge,
+.comment-body-text-stack p,
+.comment-time-stamp,
+.reels-facade-input-field {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-reels-theater-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto absolute AMOLED Black background */
+    padding: 40px 0 80px 0;
+    width: 100%;
+    position: relative;
+}
+
+.reels-theater-layout-container {
+    width: 92%;
+    max-width: 935px; /* Symmetrically balanced tracking line widths rules across pages */
+    margin: 0 auto;
+}
+
+.reels-theater-split-chassis {
+    display: grid;
+    /* Desktop layout split parameters: modern 9:16 tall video card locked alongside telemetry chat boxes */
+    grid-template-columns: 400px 1fr;
+    gap: 0; /* Snaps borders together flawlessly to form an absolute integrated theater cockpit */
+    background-color: var(--surface-dark); /* Slate Obsidian floating baseline background */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline separator line border */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   LEFT COLUMN: TALL 9:16 VIDEO CINEMA VIEWPORT STAGE ARCHITECTURE
+   ========================================================================== */
+.reels-media-viewport-deck {
+    width: 100%;
+    position: relative;
+    background-color: #000000;
+    border-right: 1px solid var(--border-dark);
+}
+
+.reels-video-playback-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Rigid tall aspect spatial display framing height box limit */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reels-playback-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.reels-video-dark-vignette-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Floating Upper Pill Status Chips Overlaid Context Panels */
+.reels-video-upper-pills-row {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 4;
+}
+
+.reels-live-indicator-pill {
+    background-color: var(--brand-vibrant); /* Electric Neon Rose Status Shutter */
+    color: var(--text-dark-pure);
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-beacon-rose {
+    width: 5px;
+    height: 5px;
+    background-color: var(--text-dark-pure);
+    border-radius: 50%;
+    animation: beaconPulse 1.4s infinite ease-in-out;
+}
+
+.reels-audio-sync-badge {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-dark-pure);
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Lower Embedded Overlay Handle Identity Clusters */
+.reels-video-lower-meta-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0 75px 0 20px; /* Keeps right boundaries empty to dodge colliding into floating overlay rails buttons */
+    z-index: 4;
+}
+
+.reels-broadcaster-profile-identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reels-avatar-halo {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-avatar);
+    padding: 1.5px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.reels-avatar-halo.active-story-gradient { background: var(--story-gradient); }
+
+.reels-broadcaster-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid #000000;
+}
+
+.reels-meta-title-stack {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.reels-handle-badge-cluster {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.reels-handle-badge-cluster h4 {
+    font-size: 13.5px;
+    color: var(--text-dark-pure); /* Silk white readability text header */
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.verification-icon-cyan {
+    color: var(--accent-glow); /* Cyan Pop badge validation marker vector icon */
+    font-size: 12px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+.reels-meta-title-stack span {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.4;
+    margin-top: 2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   FLOATING ACTION VERTICAL INTERACTION RAILS OVERLAY NODES
+   ========================================================================== */
+.reels-floating-action-vertical-rail {
+    position: absolute;
+    bottom: 20px;
+    right: 16px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.reels-rail-vector-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-dark-pure); /* Crisp high contrast icon strings */
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.reels-rail-vector-btn:hover {
+    transform: scale(1.1);
+}
+
+.rail-metric-counter {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Interaction recovery state overrides rules */
+.reels-rail-vector-btn.liked-active-vector {
+    color: var(--brand-vibrant) !important; /* Electric Neon Rose Active Pulse */
+    filter: drop-shadow(0 0 8px var(--brand-vibrant));
+}
+
+.reels-rail-vector-btn.bookmarked-active-vector {
+    color: var(--brand-royal) !important; /* Hyper Blue Archive Sync Node */
+    filter: drop-shadow(0 0 8px var(--brand-royal));
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: REAL-TIME STREAM CONVERSATION LEDGER SCROLLER
+   ========================================================================== */
+.reels-telemetry-ledger-deck {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.reels-ledger-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ledger-title-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.reels-ledger-header-row h3 {
+    font-size: 14px;
+    color: var(--text-dark-pure);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.ledger-live-pulse-badge {
+    font-size: 10.5px;
+    color: var(--text-secondary);
+}
+
+.telemetry-icon-cyan {
+    font-size: 14px;
+    color: var(--accent-glow); /* Cyan Pop system diagnostic accent link tracking */
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+/* Scrolling Inner Messages Thread Bounding Area */
+.reels-comments-viewport-scroller {
+    flex-grow: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 440px; /* Matches layout proportions parameters vertically across splits columns frames */
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.reels-comments-viewport-scroller::-webkit-scrollbar { display: none; }
+
+.reels-comment-row-cell {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.commenter-mini-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1px solid var(--border-dark);
+    flex-shrink: 0;
+}
+
+.comment-body-text-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.comment-body-text-stack p {
+    font-size: 13px;
+    color: var(--text-dark-pure);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.comment-body-text-stack p strong {
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.comment-time-stamp {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Lower Private Signal Message Action Inputs Row Footer Fields */
+.reels-input-toolbar-action-row {
+    padding: 20px 24px;
+    border-top: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.reels-input-field-enclosure {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.reels-facade-input-field {
+    width: 100%;
+    background-color: var(--canvas-dark); /* Pure AMOLED deep black entry hull field */
+    border: 1px solid var(--border-dark);
+    padding: 12px 48px 12px 18px;
+    border-radius: 24px;
+    font-size: 12.5px;
+    color: var(--text-dark-pure);
+    outline: none;
+    transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reels-facade-input-field:focus { border-color: rgba(255, 255, 255, 0.15); }
+
+.reels-emoji-trigger-btn {
+    position: absolute;
+    right: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.3s ease;
+}
+
+.reels-emoji-trigger-btn:hover { color: var(--text-dark-pure); }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Absolute Mobile Immersive Screen)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-reels-theater-stage {
+        padding: 0; /* Strips vertical padding fields entirely over mobile screens to mimic native applications */
+    }
+
+    .reels-theater-layout-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    /* Convert wide horizontal row frameworks down into a seamless standalone video container track card */
+    .reels-theater-split-chassis {
+        grid-template-columns: 1fr;
+        border-radius: 0; /* Pure panoramic edge layout matching native interface matrices */
+        border-left: none;
+        border-right: none;
+    }
+
+    .reels-media-viewport-deck {
+        border-right: none;
+    }
+
+    .reels-video-playback-container {
+        height: calc(100vh - 60px); /* Matches exact viewport scaling lines on hand screens dimensions logs */
+    }
+
+    /* Floating control parameters adjust spaces symmetrically over smartphone display touch targets */
+    .reels-video-upper-pills-row {
+        top: 16px;
+        left: 16px;
+    }
+
+    .reels-video-lower-meta-overlay {
+        bottom: 16px;
+        left: 16px;
+        padding-right: 70px;
+    }
+
+    .reels-floating-action-vertical-rail {
+        bottom: 16px;
+        right: 12px;
+        gap: 16px;
+    }
+
+    .reels-rail-vector-btn {
+        font-size: 24px; /* Expands interaction targets for thumbs entry points records */
+    }
+
+    .reels-telemetry-ledger-deck {
+        display: none; /* Safely purges desktop companion text thread lists blocks over tiny mobile screens viewport bounds */
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL CREATOR PROFILE PORTFOLIO GRID CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant data scanning fields */
+.shard-metrics-overlay-stack span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-profile-media-grid-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto absolute AMOLED Black background */
+    padding: 28px 0 100px 0; /* Comprehensive clearance pad preventing global footer overlaps loops */
+    width: 100%;
+    position: relative;
+}
+
+.grid-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to remain perfectly parallel with profile header boundaries */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   HIGH-CONTRAST THREE-COLUMN PORTFOLIO MATRIX RUNWAY ENGINE
+   ========================================================================== */
+.profile-portfolio-3x3-matrix {
+    display: grid;
+    /* Desktop 3-column architecture layout configuration */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px; /* Industrial high-contrast grid spacing clearance tracking line */
+}
+
+.media-shard-cell-box {
+    width: 100%;
+    position: relative;
+}
+
+.media-shard-viewport {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Pure symmetrical square box framing geometry lock */
+    background-color: var(--surface-dark); /* Slate Obsidian floating baseline card backdrops */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline perimeter border line separator */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transform: translateZ(0);
+}
+
+.media-shard-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Premium Interaction Shutter Mask Overlay Layer (Subdued Alpha Shadow Depth) */
+.media-shard-hover-shutter {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* High contrast overlay veil mask layer */
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shard-metrics-overlay-stack {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transform: scale(0.95) translateY(8px);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shard-metrics-overlay-stack span {
+    font-size: 16px;
+    color: var(--text-dark-pure); /* Crisp Silk White readability text content */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shard-metrics-overlay-stack span i {
+    font-size: 17px;
+}
+
+/* Color vectors highlights safely mapping your multi-color layout allocations codes */
+.pop-vector-rose { color: var(--brand-vibrant); filter: drop-shadow(0 0 6px var(--brand-vibrant)); }
+.pop-vector-cyan { color: var(--accent-glow); filter: drop-shadow(0 0 6px var(--accent-glow)); }
+
+/* POINTER INTERACTION RECOVERY LOG STATES MAPPINGS */
+.media-shard-cell-box:hover .media-shard-graphic {
+    transform: scale(1.03);
+}
+
+.media-shard-cell-box:hover .media-shard-hover-shutter {
+    opacity: 1;
+}
+
+.media-shard-cell-box:hover .shard-metrics-overlay-stack {
+    transform: scale(1) translateY(0);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Native Smartphone Grid Layout)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-profile-media-grid-stage {
+        padding: 0 0 40px 0; /* Strips upper padding fields entirely to mount tabs row flush against grid items */
+    }
+
+    .grid-layout-wrapper {
+        width: 100%; /* Spans grid canvas wide to capture full screen real estate bounds */
+    }
+
+    /* Convert wide horizontal row spacing rules down into a razor thin 3-column micro line divider look */
+    .profile-portfolio-3x3-matrix {
+        gap: 3px; /* Minimal, liquid platform lines borders spacing exactly like high status applications */
+    }
+
+    .media-shard-viewport {
+        border-radius: 0; /* Pure panoramic layout bleed matching native profile grids */
+        border: none;
+        box-shadow: none;
+    }
+
+    /* Suppress complex desktop hover masks animations to maintain high fluid touch screen scroll frames */
+    .media-shard-hover-shutter {
+        display: none; /* Safely purges overlay interaction bloat off handheld device monitors targets */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM COMMUNICATIONS CHANNELS WORKSPACE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid profile data density scanning */
+.platform-messages-ledger-stage h3,
+.rail-status-pill,
+.thread-identity-row h4,
+.alerts-counter-badge,
+.alert-action-btn-shortcut {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.thread-time-label,
+.thread-latest-snippet-text,
+.alert-description-text-stack p,
+.alert-timestamp-string {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-messages-ledger-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto your absolute AMOLED Black backdrop variable */
+    padding: 130px 0 80px 0; /* Comprehensive clearance pad preventing header section collisions rows */
+    width: 100%;
+    position: relative;
+}
+
+.messages-layout-container {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to track parallel with your profile headers timelines precisely */
+    margin: 0 auto;
+}
+
+.messages-split-workspace-chassis {
+    display: grid;
+    /* Desktop layout split metrics: direct messages sidebar mapped flush directly next to active ledger logs arrays */
+    grid-template-columns: 350px 1fr;
+    gap: 0; /* Snaps column borders together flawlessly to eliminate loose floating tracking blocks layouts */
+    background-color: var(--surface-dark); /* Slate Obsidian floating baseline background card framing */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline line divider */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: DIRECT SOCKET CHANNELS NAVIGATION TRACK
+   ========================================================================== */
+.messages-threads-navigation-rail {
+    border-right: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.threads-rail-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.rail-title-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.threads-rail-header-row h3 {
+    font-size: 15px;
+    color: var(--text-dark-pure); /* Silk White clean title scannability text */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.rail-status-pill {
+    font-size: 9px;
+    color: var(--accent-glow); /* Cyan Pop active status notification badge badge */
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pulse-cyan-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--accent-glow);
+    animation: beaconPulse 1.5s infinite ease-in-out;
+}
+
+.rail-compose-trigger {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-dark-pure);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.rail-compose-trigger:hover { color: var(--brand-vibrant); }
+
+/* Scrollable Socket Nodes List Runway Box */
+.threads-scroller-track-hull {
+    height: 480px; /* Rigid vertical display framing box limit parameters mapping */
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.threads-scroller-track-hull::-webkit-scrollbar { display: none; }
+
+.thread-line-item-cell {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 24px;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.005);
+    transition: background-color 0.3s ease;
+}
+
+.thread-line-item-cell:hover { background-color: rgba(255, 255, 255, 0.01); }
+
+/* Unread Notification State Multipliers Context Overrides */
+.thread-line-item-cell.active-unread-thread-state { background-color: rgba(255, 48, 79, 0.01); }
+
+.thread-avatar-housing { flex-shrink: 0; }
+
+.thread-story-halo {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-avatar);
+    padding: 1.5px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thread-story-halo.active-story-gradient { background: var(--story-gradient); }
+
+.thread-mini-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark);
+}
+
+.thread-meta-preview-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    flex-grow: 1;
+}
+
+.thread-identity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thread-identity-row h4 {
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.thread-time-label { font-size: 11px; color: var(--text-secondary); }
+
+.thread-latest-snippet-text {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.thread-line-item-cell.active-unread-thread-state .thread-latest-snippet-text {
+    color: var(--text-dark-pure);
+    font-weight: 700;
+}
+
+.unread-beacon-dot-rose {
+    width: 8px;
+    height: 8px;
+    background-color: var(--brand-vibrant); /* Electric Neon Rose message unread dot indicator */
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px var(--brand-vibrant);
+}
+
+/* ==========================================================================
+   RIGHT WING MODULE: INBOUND ACTIVITY ALERTS LEDGER STREAM PANEL
+   ========================================================================== */
+.messages-activity-alerts-panel {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.alerts-panel-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.messages-activity-alerts-panel h3 {
+    font-size: 15px;
+    color: var(--text-dark-pure);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.alerts-counter-badge {
+    font-size: 10px;
+    color: var(--brand-vibrant);
+    background-color: rgba(255, 48, 79, 0.04);
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 48, 79, 0.1);
+}
+
+.alerts-stream-stack-hull {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: 480px; /* Symmetrically line locked parallel across internal column splits parameters views */
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.alerts-stream-stack-hull::-webkit-scrollbar { display: none; }
+
+.alert-action-line-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.alert-action-line-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.alert-profile-img {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1px solid var(--border-dark);
+    flex-shrink: 0;
+}
+
+.alert-description-text-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.alert-description-text-stack p {
+    font-size: 13px;
+    color: var(--text-dark-pure);
+    line-height: 1.45;
+    margin: 0;
+}
+
+.alert-description-text-stack p strong { font-weight: 700; }
+
+.alert-timestamp-string {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.alert-action-btn-shortcut {
+    padding: 6px 14px !important;
+    font-size: 11.5px !important;
+    border-radius: 4px !important; /* Unified mini action shape parameters adjustments */
+    flex-shrink: 0;
+}
+
+.alert-target-media-preview-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border-dark);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.alert-preview-graphic { width: 100%; height: 100%; object-fit: cover; }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Single Socket Thread Track Focus)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-messages-ledger-stage {
+        padding: 90px 0 40px 0;
+    }
+
+    /* Collapse wide grid layouts lanes down into a clean centralized messaging tracking track node */
+    .messages-split-workspace-chassis {
+        grid-template-columns: 1fr;
+        border-radius: 10px;
+    }
+
+    .messages-threads-navigation-rail {
+        border-right: none;
+    }
+
+    .threads-scroller-track-hull {
+        height: auto; /* Dissolves desktop fixed dimensions constraints to allow liquid variable heights flows */
+        max-height: 400px;
+    }
+
+    .messages-activity-alerts-panel {
+        display: none; /* Safely purges peripheral notification panels text lists over small smartphone viewports monitors bounds */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL REELS STREAM COMPLETION GATEWAY CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant data scanning fields */
+.platform-reels-completion-stage h3,
+.reels-completion-micro-pill,
+.reels-refresh-trigger,
+.reels-return-trigger {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-reels-completion-stage p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-reels-completion-stage {
+    background-color: var(--canvas-dark); /* Strict adherence to your Pure AMOLED Black variable */
+    padding: 60px 0 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.reels-completion-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to mirror theater chassis split boundaries */
+    margin: 0 auto;
+}
+
+.reels-completion-focal-box {
+    background: linear-gradient(135deg, rgba(18, 12, 18, 0.6) 0%, rgba(0, 0, 0, 0.9) 100%);
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline separator border line */
+    border-radius: var(--radius-feed);
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Internal Hardware Accelerated Ambient Backlighting Mesh Flare Tracking */
+.reels-completion-ambient-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(0, 242, 254, 0.05) 0%, rgba(255, 48, 79, 0.02) 50%, transparent 75%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.reels-completion-content-stack {
+    position: relative;
+    z-index: 5;
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ==========================================================================
+   MODULE 1: REVOLVING VELOCITY CORE HALO INDICATOR
+   ========================================================================== */
+.reels-completion-icon-wrapper {
+    margin-bottom: 24px;
+}
+
+.reels-completion-story-halo {
+    width: 76px;
+    height: 76px;
+    border-radius: var(--radius-avatar);
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Integrates your multi-color legacy story loops gradient token vector and sets linear speed motion loops */
+.reels-completion-story-halo.active-story-gradient {
+    background: var(--story-gradient);
+    animation: storyHaloRotate 12s linear infinite;
+}
+
+.reels-completion-icon-wrapper .avatar-black-gap {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    background-color: #121212; /* Connected to slate obsidian post panel surface backdrops */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.core-loop-icon-cyan {
+    font-size: 22px;
+    color: var(--accent-glow); /* Cyan Pop action status vector icon highlight */
+    filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+/* ==========================================================================
+   MODULE 2: CONFIRMATION EDITORIAL TYPOGRAPHY GRAPHICS STACK
+   ========================================================================== */
+.reels-completion-diagnostic-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.reels-completion-badge-row {
+    margin-bottom: 16px;
+}
+
+.reels-completion-micro-pill {
+    background-color: rgba(255, 48, 79, 0.04); /* Subdued Electric Neon Rose Shutter */
+    border: 1px solid rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-rose-beacon {
+    width: 6px;
+    height: 6px;
+    background-color: var(--brand-vibrant);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--brand-vibrant);
+    animation: beaconPulse 1.4s infinite ease-in-out;
+}
+
+.reels-completion-diagnostic-text h3 {
+    font-size: 24px;
+    color: var(--text-dark-pure); /* Silk white intense text contrast readability heading */
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
+}
+
+.reels-completion-diagnostic-text p {
+    font-size: 13.5px;
+    color: var(--text-secondary); /* Muted Graphite description labels text block */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   MODULE 3: LOWER INTEGRATED ACTIONS CONSOLE RAIL TRIGGER BUTTONS
+   ========================================================================== */
+.reels-completion-actions-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.reels-refresh-trigger,
+.reels-return-trigger {
+    padding: 12px 26px !important;
+    font-size: 13px !important;
+    border-radius: 8px !important; /* Premium profile shapes parameters adjustments rules matches pages layout options */
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-reels-completion-stage {
+        padding: 20px 0 40px 0;
+    }
+
+    /* Compress internal space padding footprints over handheld devices screens monitors */
+    .reels-completion-focal-box {
+        padding: 40px 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .reels-completion-diagnostic-text h3 {
+        font-size: 20px;
+    }
+
+    .reels-completion-diagnostic-text p {
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+
+    /* Convert horizontal action rails straight into touch-safe full-width rows blocks buttons */
+    .reels-completion-actions-row {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 320px;
+    }
+
+    .reels-refresh-trigger,
+    .reels-return-trigger {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+

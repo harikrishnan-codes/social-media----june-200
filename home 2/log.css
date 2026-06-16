@@ -1,0 +1,265 @@
+/* ==========================================================================
+   ULTRA-PREMIUM AUTHENTICATED UNIFIED AUTHS MATRIX CONSOLE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map explicitly onto layout block section headlines views */
+.auth-panel-header h2,
+.auth-panel-header h2 span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details captions, parameters text inputs fields fields, tags labels, links */
+.auth-micro-tag,
+.auth-panel-header p,
+.auth-input-group label,
+.auth-link-trigger,
+.auth-field-input,
+.auth-submit-btn,
+.auth-panel-footer p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.auth-matrix-stage {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--canvas-dark);
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+/* Deep Environmental Radial Glow Flash Matrix Backing Background Vector Lines Layout */
+.auth-stage-ambient-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.08) 0%, rgba(77, 56, 243, 0.03) 50%, transparent 75%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.auth-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* ==========================================================================
+   HIGH-GLOSS AUTHENTICATION CONTAINER STRUCTURAL HOUSING
+   ========================================================================== */
+.auth-focal-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 50px 45px;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* Unified Panel Switching Mechanics Engine Hidden Layers Layout Rules */
+.auth-view-panel {
+    display: none;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* State Driver Injections Mapping Active View Targets Configurations fields */
+.auth-focal-card.state-login .panel-login { display: block; opacity: 1; transform: translateY(0); }
+.auth-focal-card.state-signup .panel-signup { display: block; opacity: 1; transform: translateY(0); }
+.auth-focal-card.state-forgot .panel-forgot { display: block; opacity: 1; transform: translateY(0); }
+
+/* ==========================================================================
+   FORM COMPONENT CONTROLS ARCHITECTURE MAPPINGS LABELS
+   ========================================================================== */
+.auth-panel-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.auth-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-royal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.auth-panel-header h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin: 0 0 10px 0;
+}
+
+.auth-panel-header h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.auth-panel-header p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.auth-form-engine {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.auth-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.auth-input-group label {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+}
+
+.label-split-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Input Fields Box Frames Structure System Configuration */
+.input-field-frame {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.field-inner-icon {
+    position: absolute;
+    left: 18px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.auth-field-input {
+    width: 100%;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    padding: 14px 20px 14px 46px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.auth-field-input:focus {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: #161616;
+}
+
+/* Button & Active Text Link Intermediary Hooks */
+.auth-link-trigger {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.auth-link-trigger:hover {
+    color: var(--text-dark-pure);
+}
+
+.auth-link-trigger.highlight-trigger {
+    color: var(--brand-vibrant);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.auth-submit-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0 !important;
+    font-size: 14px !important;
+    margin-top: 10px;
+}
+
+.auth-panel-footer {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    padding-top: 20px;
+}
+
+.auth-panel-footer p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Target)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .auth-matrix-stage {
+        padding: 60px 0;
+    }
+
+    .auth-stage-ambient-glow {
+        width: 350px;
+        height: 350px;
+    }
+
+    /* Compresses overall card profile values space parameters to lay cleanly over touch bounds */
+    .auth-focal-card {
+        padding: 35px 24px;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: var(--radius-feed);
+    }
+
+    .auth-panel-header h2 {
+        font-size: 26px;
+    }
+
+    .auth-field-input {
+        padding: 12px 18px 12px 42px;
+        font-size: 13px;
+    }
+
+    .field-inner-icon {
+        left: 16px;
+    }
+}

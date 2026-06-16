@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+    /* --- Main Branding Core Tones --- */
+    --brand-vibrant: #ff304f;      /* Electric Neon Rose - Fires active likes, notifications, and primary accents */
+    --brand-royal: #4d38f3;        /* Hyper Blue - Drives interactive navigation links and direct messaging anchors */
+    --accent-glow: #00f2fe;        /* Cyan Pop - Secondary highlights, verified tickers, and live status states */
+    
+    /* --- Elite Content Canvas Surfaces (Light Mode Base) --- */
+    --canvas-white: #ffffff;       /* Pure Backdrop White - High-contrast light feeding container base */
+    --surface-light: #f7f9fa;      /* Ice Gray - Soft framing containers, input fields, and search tracking bars */
+    --border-light: #eff3f4;       /* Whispering Gray - Clean structural hairline post dividers and separators */
+    
+    /* --- High-End Midnight Surfaces (Strict Dark Mode Base) --- */
+    --canvas-dark: #000000;        /* Pure AMOLED Black - Ultimate energy-saving rich depth background backdrop */
+    --surface-dark: #121212;       /* Slate Obsidian - Floating post frames, message bubbles, and card layers */
+    --border-dark: #262626;        /* Subtle Charcoal - Dark hairline borders that match modern design layouts */
+    
+    /* --- Master Typographic Hierarchy Tones --- */
+    --text-primary: #0f1419;       /* Deep Jet Black - Intense readability for light mode post text copy */
+    --text-secondary: #536471;     /* Muted Graphite - Handles timestamps, follow tags, and icon summaries */
+    --text-dark-pure: #f7f9fa;     /* Crisp Silk White - Striking readability for high-contrast dark mode views */
+    
+    /* --- The Kinship Gradient Matrices (Story Rings & Active States) --- */
+    --story-gradient: linear-gradient(45deg, #f99f1b 0%, #e1306c 50%, #833ab4 100%); /* Instagram-Inspired Legacy Loop Glow */
+    --action-gradient: linear-gradient(135deg, #ff304f 0%, #4d38f3 100%);           /* Hyper-Modern Dynamic Transition Blur */
+
+    /* --- System Dynamic Layout Tokens --- */
+    --p: 15px;                     /* Core caption body text font standard dimensions */
+    --radius-feed: 14px;           /* Sleek curved corner frame mask for social grid rows */
+    --radius-avatar: 50%;          /* Circular avatar framing system clip properties */
+    
+    /* --- Button Specific Element Color Mapping Triggers --- */
+    --btn-primary-bg: var(--action-gradient);
+    --btn-primary-text: var(--text-dark-pure);
+    --btn-primary-shadow: rgba(255, 48, 79, 0.25);
+    --btn-primary-hover-shadow: rgba(77, 56, 243, 0.4);
+
+    --btn-secondary-bg: rgba(18, 12, 18, 0.5);
+    --btn-secondary-border: var(--border-dark);
+    --btn-secondary-text: var(--text-dark-pure);
+    --btn-secondary-hover-border: var(--brand-vibrant);
+    --btn-secondary-hover-bg: #121212;
+
+    /* --- Universal Typography Metric Baselines --- */
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-p: var(--p);
+    --lh-body: 1.6;
+    --lh-heading: 1.2;
+    --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--canvas-dark); /* Strict AMOLED Black Base Lock */
+    color: var(--text-dark-pure);
+    font-family: 'Inter', sans-serif;
+    line-height: var(--lh-body);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Typography Core Bindings --- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark-pure);
+    font-weight: 700;
+    line-height: var(--lh-heading);
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+p { font-size: var(--fs-p); margin-bottom: 1rem; color: var(--text-secondary); }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+ul { list-style: none; }
+
+/* ==========================================================================
+   MULTI-COLOR PREMIUM MASTER BUTTON CONFIGURATION ENGINE
+   ========================================================================== */
+.btn-social-base {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: translateZ(0);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.btn-social-base:hover { transform: translateY(-2px); }
+.btn-social-base:active { transform: translateY(0); }
+
+.btn-content-track {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Primary Button Implementation (Electric Rose to Hyper Blue Flow) */
+.btn-app-primary {
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    border: 1px solid transparent;
+    box-shadow: 0 10px 25px var(--btn-primary-shadow);
+}
+
+.btn-app-primary:hover {
+    box-shadow: 0 15px 35px var(--btn-primary-hover-shadow);
+}
+
+/* Secondary Button Implementation (Slate Obsidian Glass with Crimson Hover Link) */
+.btn-app-secondary {
+    background-color: var(--btn-secondary-bg);
+    border: 1px solid var(--btn-secondary-border);
+    color: var(--btn-secondary-text);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: var(--transition-smooth);
+}
+
+.btn-app-secondary:hover {
+    border-color: var(--btn-secondary-hover-border);
+    background-color: var(--btn-secondary-hover-bg);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW
+   ========================================================================== */
+@media (max-width: 768px) {
+    .btn-social-base {
+        width: 100%;
+        padding: 16px 24px;
+        font-size: 14.5px;
+    }
+    .btn-content-track {
+        justify-content: center;
+    }
+}

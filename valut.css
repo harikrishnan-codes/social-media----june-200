@@ -1,0 +1,1779 @@
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL SECURED ASSET VAULT HUB CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant narrative parsing */
+.platform-vault-matrix-stage h3,
+.vault-secure-pill,
+.vault-item-count-tag,
+.vault-grid-header-row h5,
+.vault-filter-trigger-btn,
+.vault-vector-badge {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-vault-matrix-stage p,
+.vault-telemetry-sync-status span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-vault-matrix-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto absolute AMOLED Black variables */
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 130px 0 80px 0; /* Comprehensive vertical pads avoiding header section collisions loops */
+    overflow: hidden;
+}
+
+/* Deep Spatial Background Environmental Light Flare Blur Track Matrix */
+.vault-ambient-chromatic-mesh {
+    position: absolute;
+    top: -20%;
+    right: 10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.04) 0%, rgba(0, 242, 254, 0.02) 50%, transparent 75%);
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.vault-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to stay perfectly parallel with standard profile layouts */
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.vault-workspace-split-grid {
+    display: grid;
+    /* Primary master showcase card tracking alongside responsive double columns secondary asset feeds */
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: CHASSIS WINDOW MATRICES FEATURED ARCHIVE COVER
+   ========================================================================== */
+.vault-master-showcase-axis {
+    width: 100%;
+}
+
+.vault-featured-card {
+    background-color: var(--surface-dark); /* Slate Obsidian floating frames background card base */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline line divider border line */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.vault-featured-viewport {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.vault-featured-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Upper Floating Security Status Badge Chip Indicator */
+.vault-secure-pill {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 4;
+    background-color: rgba(10, 6, 10, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-dark-pure);
+    font-size: 9.5px;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.vault-secure-pill i {
+    color: var(--brand-vibrant); /* Electric Neon Rose focus node pointer icon */
+}
+
+/* Description Text Blocks Group Metadata Stack Content */
+.vault-featured-editorial-stack {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vault-meta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.vault-meta-header h3 {
+    font-size: 18px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.3px;
+}
+
+.vault-item-count-tag {
+    font-size: 11px;
+    color: var(--accent-glow); /* Cyan Pop metrics counter variables tag highlights strings */
+    background-color: rgba(0, 242, 254, 0.04);
+    border: 1px solid rgba(0, 242, 254, 0.12);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.vault-featured-editorial-stack p {
+    font-size: 13px;
+    color: var(--text-secondary); /* Muted Graphite description text copy */
+    line-height: 1.55;
+    margin: 0;
+}
+
+.vault-telemetry-sync-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+    font-size: 11.5px;
+    color: var(--text-secondary);
+}
+
+.pulse-cyan-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--accent-glow);
+    animation: beaconPulse 1.5s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: ASYMMETRICAL PORTFOLIO GRID WINDOW CELLS RUNWAY
+   ========================================================================== */
+.vault-secondary-timeline-axis {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.vault-grid-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.vault-grid-header-row h5 {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.vault-filter-trigger-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--brand-royal); /* Hyper Blue contextual activation link hook */
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.vault-filter-trigger-btn:hover { color: var(--text-dark-pure); }
+
+.vault-asymmetrical-grid-runway {
+    display: grid;
+    /* Symmetrical double columns media grid allocation formats across large screens */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.vault-matrix-item-box {
+    width: 100%;
+}
+
+.vault-item-viewport-shield {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Premium horizontal layout card proportion landscape windows */
+    border-radius: var(--radius-feed);
+    border: 1px solid var(--border-dark);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateZ(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.vault-grid-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Interactive Hover Veil Shutter Mask Overlay (Hyper Blue Shading Depth) */
+.vault-item-hover-shutter {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(77, 56, 243, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vault-vector-badge {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-dark-pure);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transform: translateY(8px);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vault-vector-badge i {
+    color: var(--accent-glow); /* Cyan Pop inner decorative vector indicator token */
+}
+
+/* POINTER SELECTION ENTRY MATRIX OVERRIDES LOGS */
+.vault-matrix-item-box:hover .vault-item-viewport-shield {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+.vault-matrix-item-box:hover .vault-grid-graphic { transform: scale(1.02); }
+.vault-matrix-item-box:hover .vault-item-hover-shutter { opacity: 1; }
+.vault-matrix-item-box:hover .vault-vector-badge { transform: translateY(0); }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-vault-matrix-stage {
+        padding: 90px 0 40px 0;
+    }
+
+    /* Convert wide horizontal row workspace configurations down into a single column row path sequence */
+    .vault-workspace-split-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .vault-featured-card {
+        border-radius: 10px;
+    }
+
+    .vault-featured-editorial-stack {
+        padding: 20px;
+    }
+
+    .vault-grid-header-row {
+        padding-bottom: 10px;
+    }
+
+    /* Convert double media columns down to stack uniformly underneath master cover box frames natively */
+    .vault-asymmetrical-grid-runway {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .vault-item-viewport-shield {
+        border-radius: 10px;
+        aspect-ratio: 16 / 10; /* Adjusts landscape box proportions perfectly over mobile screens viewports monitors */
+    }
+
+    /* Keep indicators layers active natively over mobile touch displays view grids */
+    .vault-item-hover-shutter {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 60%);
+        opacity: 1;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 16px;
+    }
+
+    .vault-vector-badge {
+        font-size: 11px;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL VAULT DIAGNOSTIC TERMINAL CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant data scannability */
+.platform-vault-diagnostic-stage h4,
+.diagnostic-micro-pill-rose,
+.diagnostic-telemetry-tag,
+.vault-export-trigger-btn,
+.vault-sync-trigger-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-vault-diagnostic-stage p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-vault-diagnostic-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto absolute AMOLED Black variable */
+    padding: 20px 0 100px 0; /* Comprehensive vertical pads avoiding footer overlaps */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark); /* Standard charcoal hairline separator line grid */
+}
+
+.diagnostic-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to mirror master portfolio grids parallel boundaries exactly */
+    margin: 0 auto;
+}
+
+.vault-diagnostic-panel-chassis {
+    background-color: var(--surface-dark); /* Slate Obsidian floating baseline background card framing */
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 32px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.diagnostic-panel-inner-stack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 5;
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: EDITORIAL HARDWARE DIAGNOSTICS TEXTS
+   ========================================================================== */
+.diagnostic-metadata-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 520px;
+}
+
+.diagnostic-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.diagnostic-micro-pill-rose {
+    background-color: rgba(255, 48, 79, 0.04); /* Subdued Electric Neon Rose Shutter */
+    border: 1px solid rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant);
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-rose-beacon {
+    width: 5px;
+    height: 5px;
+    background-color: var(--brand-vibrant);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--brand-vibrant);
+    animation: beaconPulse 1.4s infinite ease-in-out;
+}
+
+.diagnostic-telemetry-tag {
+    font-size: 10.5px;
+    color: var(--text-secondary); /* Muted Graphite description context labels text string */
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.diagnostic-metadata-cell h4 {
+    font-size: 20px;
+    color: var(--text-dark-pure); /* Silk White crisp text contrast readability heading */
+    margin: 0 0 8px 0;
+    letter-spacing: -0.4px;
+}
+
+.diagnostic-metadata-cell p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RIGHT WING MODULE: CORE BULK ACTION KEYS DECK RUNWAY
+   ========================================================================== */
+.diagnostic-controls-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.vault-export-trigger-btn,
+.vault-sync-trigger-btn {
+    padding: 12px 22px !important;
+    font-size: 12.5px !important;
+    border-radius: 6px !important; /* Premium profile container design shape configurations */
+}
+
+/* Kinetic spin feedback variable state utility injection loop rule */
+.vault-sync-trigger-btn.active-indexing-spin i {
+    animation: diagnosticIconSpin 1s linear infinite;
+    color: var(--accent-glow) !important;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-vault-diagnostic-stage {
+        padding: 16px 0 40px 0;
+    }
+
+    /* Convert spacious desktop horizontal tracking panel layout into tight mobile columns stacking row blocks */
+    .vault-diagnostic-panel-chassis {
+        padding: 24px 20px;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .diagnostic-panel-inner-stack {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .diagnostic-metadata-cell {
+        align-items: center;
+    }
+
+    .diagnostic-badge-row {
+        justify-content: center;
+    }
+
+    .diagnostic-metadata-cell h4 {
+        font-size: 18px;
+    }
+
+    .diagnostic-metadata-cell p {
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    .diagnostic-controls-cell {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .vault-export-trigger-btn,
+    .vault-sync-trigger-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Linear Diagnostic Kinetic Spinning Keyframes Loop */
+@keyframes diagnosticIconSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL NOTIFICATIONS LEDGER STREAM CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid profile data density scanning */
+.platform-notifications-matrix-stage h5,
+.filter-pill-trigger,
+.alert-text-copy strong,
+.security-line-item strong,
+.alert-action-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.alert-text-copy,
+.alert-timestamp-string,
+.security-line-item span,
+.sidebar-minimal-meta-footer p,
+.sidebar-minimal-meta-footer span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-notifications-matrix-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto absolute AMOLED Black background */
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 130px 0 80px 0; /* Comprehensive vertical pads avoiding header section collisions rows */
+    overflow: hidden;
+}
+
+/* Deep Spatial Background Environmental Light Flare Blur Track Matrix */
+.notifications-ambient-chromatic-mesh {
+    position: absolute;
+    top: -15%;
+    left: 10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.04) 0%, rgba(0, 242, 254, 0.02) 50%, transparent 75%);
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.notifications-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to track parallel with standard profile timelines */
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.notifications-workspace-split-grid {
+    display: grid;
+    /* Primary notification alert ledger stack paired cleanly alongside right status cards panels */
+    grid-template-columns: 1fr 310px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: CATEGORY TOOLBARS & ALERT ITEM FILTERS RUNWAY
+   ========================================================================== */
+.notifications-primary-stream-axis {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.notifications-filter-toolbar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.filter-pill-trigger {
+    background-color: var(--surface-dark); /* Slate Obsidian */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline perimeter line */
+    color: var(--text-secondary);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-pill-trigger:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-dark-pure);
+}
+
+.filter-pill-trigger.active-rose-shutter {
+    background-color: rgba(255, 48, 79, 0.05);
+    border-color: rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant); /* Electric Neon Rose Active System Token Hook */
+}
+
+/* Timeline Notification Card Chassis Container Box Window */
+.notification-alert-chassis {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.alert-structural-layout {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Left Indicator Sub-Axis Column Layout Configuration */
+.alert-left-avatar-cell {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.alert-avatar-story-halo {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-avatar);
+    padding: 1.5px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-avatar-story-halo.active-story-gradient { background: var(--story-gradient); }
+
+.alert-curator-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark);
+}
+
+/* Mini Action Vector Category Badge Badges Indicator Icon Overlays */
+.alert-vector-badge-icon {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    color: var(--text-dark-pure);
+    border: 2px solid var(--surface-dark);
+    z-index: 5;
+}
+
+.alert-vector-badge-icon.badge-theme-cyan { background-color: var(--accent-glow); }
+.alert-vector-badge-icon.badge-theme-rose { background-color: var(--brand-vibrant); }
+
+/* Right Descriptive Stack Column Details Items Area */
+.alert-right-content-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.alert-editorial-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+}
+
+.alert-text-copy {
+    font-size: 13.5px;
+    color: var(--text-dark-pure); /* Silk White crisp contrast text readability copy */
+    line-height: 1.5;
+    margin: 0;
+}
+
+.alert-text-copy strong { font-weight: 700; }
+
+.alert-timestamp-string {
+    font-size: 12px;
+    color: var(--text-secondary); /* Muted Graphite tracking metrics labels copy text */
+    flex-shrink: 0;
+}
+
+.alert-action-triggers-deck {
+    display: flex;
+    align-items: center;
+}
+
+.alert-action-btn {
+    padding: 6px 16px !important;
+    font-size: 12px !important;
+    border-radius: 4px !important; /* Premium profile container design shape configurations */
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: CONTEXTUAL DEVICE SECURITY & PULSE DIAGNOSTIC SIDEBAR
+   ========================================================================== */
+.notifications-contextual-sidebar {
+    width: 100%;
+}
+
+.sidebar-sticky-enclosure {
+    position: sticky;
+    top: 110px; /* Locked tracking offset bypass layout navigation header structures */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-diagnostic-panel-box {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 20px;
+}
+
+.panel-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.panel-header-row h5 { font-size: 12.5px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
+
+.pulse-cyan-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--accent-glow);
+    animation: beaconPulse 1.5s infinite ease-in-out;
+}
+
+.panel-security-metrics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.security-line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+}
+
+.security-line-item span {
+    color: var(--text-dark-pure);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.color-cyan-vector { color: var(--accent-glow); }
+.color-rose-vector { color: var(--brand-vibrant); }
+
+.security-line-item strong { font-size: 11px; letter-spacing: 0.5px; }
+.status-string-verified { color: var(--accent-glow); }
+.status-string-warn { color: #ffab40; } /* Supporting amber metrics warn indicator strings codes */
+
+.sidebar-minimal-meta-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 4px;
+}
+
+.sidebar-minimal-meta-footer p {
+    font-size: 11px;
+    color: rgba(126, 139, 150, 0.35); /* Muted Graphite legal footprints footnotes body text */
+    line-height: 1.5;
+    margin: 0;
+}
+
+.sidebar-minimal-meta-footer span {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(126, 139, 150, 0.25);
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-notifications-matrix-stage {
+        padding: 90px 0 40px 0;
+    }
+
+    /* Convert spacious desktop horizontal splits down into a tight single column vertical stack stream */
+    .notifications-workspace-split-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0;
+    }
+
+    .notifications-contextual-sidebar {
+        display: none; /* Safely purges static administrative diagnostic boxes over small mobile interfaces */
+    }
+
+    .notifications-filter-toolbar-row {
+        width: 90%;
+        margin: 0 auto 12px auto;
+        justify-content: flex-start;
+    }
+
+    .notification-alert-chassis {
+        border-radius: 0; /* Pure borderless panoramic display look matching mobile timelines layouts */
+        border-left: none;
+        border-right: none;
+        padding: 16px 5%;
+    }
+
+    .alert-editorial-meta-row {
+        gap: 10px;
+    }
+
+    .alert-text-copy {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL CONTENT CATEGORY EXPLORER ENGINE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant narrative parsing */
+.platform-category-matrix-stage h3,
+.sidebar-header-row h3,
+.directory-filter-btn,
+.badge-count-dark,
+.category-metrics-overlay-stack span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-category-matrix-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto your absolute AMOLED Black backdrop variable */
+    padding: 40px 0 100px 0; /* Comprehensive vertical buffer preventing layout overlaps loops */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.category-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically balanced line tracking widths parallel across your complete templates */
+    margin: 0 auto;
+}
+
+.category-workspace-split-grid {
+    display: grid;
+    /* Main categorical directory list on left pinned beside the high contrast photo grid showcase */
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: INTERACTIVE FILTRATION CONTROL DIRECTORY SIDEBAR
+   ========================================================================== */
+.category-filtration-control-sidebar {
+    width: 100%;
+}
+
+.sidebar-sticky-enclosure {
+    position: sticky;
+    top: 110px; /* Locked tracking offset bypass navigation header structures fields */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.sidebar-header-row h3 {
+    font-size: 13px;
+    color: var(--text-secondary); /* Muted Graphite description labels text block */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.telemetry-icon-cyan {
+    font-size: 13px;
+    color: var(--accent-glow); /* Cyan Pop platform status tracking vector marker icon */
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+.filter-directory-buttons-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.directory-filter-btn {
+    width: 100%;
+    background-color: var(--surface-dark); /* Slate Obsidian floating baseline background card */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline separator line border */
+    color: var(--text-dark-pure); /* Crisp Silk White contrast text readability label strings */
+    font-size: 13px;
+    padding: 12px 16px;
+    border-radius: var(--radius-feed);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.directory-filter-btn:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateX(2px);
+}
+
+.directory-filter-btn.active-rose-shutter {
+    background-color: rgba(255, 48, 79, 0.04);
+    border-color: rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant); /* Electric Neon Rose active token filter highlights string */
+}
+
+.badge-count-dark {
+    font-size: 11px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.directory-filter-btn.active-rose-shutter .badge-count-dark {
+    color: var(--brand-vibrant);
+    border-color: rgba(255, 48, 79, 0.15);
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: ASYMMETRICAL PORTFOLIO GRID WINDOW MATRIX TRACK
+   ========================================================================== */
+.category-primary-stream-axis {
+    width: 100%;
+}
+
+.category-portfolio-3x3-matrix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Clean responsive double columns media allocation format */
+    gap: 20px;
+}
+
+.category-media-card-node {
+    width: 100%;
+}
+
+.category-item-viewport-shield {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Pure symmetrical square box framing geometry lock lines profiles */
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transform: translateZ(0);
+}
+
+.category-grid-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Premium Interaction Shutter Mask Overlay Layer (Subdued Alpha Shadow Depth) */
+.category-item-hover-shutter {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-metrics-overlay-stack {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    transform: scale(0.95) translateY(6px);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-metrics-overlay-stack span {
+    font-size: 14.5px;
+    color: var(--text-dark-pure);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pop-vector-rose { color: var(--brand-vibrant); filter: drop-shadow(0 0 4px var(--brand-vibrant)); }
+.pop-vector-cyan { color: var(--accent-glow); filter: drop-shadow(0 0 4px var(--accent-glow)); }
+
+/* POINTER INTERACTION RECOVERY LOG STATES MAPPINGS */
+.category-media-card-node:hover .category-grid-graphic { transform: scale(1.03); }
+.category-media-card-node:hover .category-item-hover-shutter { opacity: 1; }
+.category-media-card-node:hover .category-metrics-overlay-stack { transform: scale(1) translateY(0); }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Liquid Touch Control Runway Segment)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-category-matrix-stage {
+        padding: 24px 0 60px 0;
+    }
+
+    /* Collapse wide horizontal row splitting lanes down into a singular stacked mobile touch target stream */
+    .category-workspace-split-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /* Convert structural vertical button sidebars straight into an app-native sliding category horizontal control lane track */
+    .category-filtration-control-sidebar {
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .sidebar-sticky-enclosure {
+        position: static;
+        gap: 0;
+    }
+
+    .sidebar-header-row {
+        display: none; /* Purges static descriptive sidebar texts labels to create spatial bounds overhead clearance */
+    }
+
+    .filter-directory-buttons-stack {
+        flex-direction: row;
+        overflow-x: auto;
+        scrollbar-width: none; /* Hides raw desktop scrollbar tracking trails on touch targets displays monitors */
+        padding-bottom: 4px;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .filter-directory-buttons-stack::-webkit-scrollbar { display: none; }
+
+    .directory-filter-btn {
+        width: auto;
+        flex-shrink: 0;
+        padding: 8px 14px;
+        font-size: 12px;
+        border-radius: 20px; /* Converts rigid card boxes straight into soft organic mobile micro-capsules */
+        gap: 8px;
+    }
+
+    .directory-filter-btn:hover { transform: none; } /* Deactivates desktop horizontal translation drifts offsets on click inputs screens */
+
+    .badge-count-dark {
+        font-size: 10px;
+        padding: 1px 6px;
+    }
+
+    /* Media Showcase Component Adjustments Layers Over Mobile Viewports */
+    .category-primary-stream-axis {
+        padding: 0 5%;
+    }
+
+    .category-portfolio-3x3-matrix {
+        gap: 12px; /* Tight liquid line spacing dividers parameters matching your home grid profiles patterns precisely */
+    }
+
+    .category-item-viewport-shield {
+        border-radius: 8px;
+    }
+
+    /* Suppress complex desktop hover veils to maximize scroll rendering processing speed natively over mobile hand frames */
+    .category-item-hover-shutter {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM PROFILE CONFIGURATION TERMINAL CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant quantitative metrics parsing */
+.platform-settings-terminal-stage h3,
+.rail-version-badge,
+.settings-node-link span,
+.form-panel-header-row h4,
+.form-status-indicator-cyan,
+.form-field-title-string,
+.toggle-meta-description strong,
+.reset-variables-trigger,
+.save-variables-trigger {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.settings-facade-input,
+.toggle-meta-description span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-settings-terminal-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto your absolute AMOLED Black backdrop variable */
+    padding: 40px 0 100px 0; /* Comprehensive clearance pad preventing global footer overflows */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.settings-layout-container {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to sit inline with explore timelines and feed panels precisely */
+    margin: 0 auto;
+}
+
+.settings-split-workspace-chassis {
+    display: grid;
+    /* Desktop layout split: left structural tree menu matched with deep responsive data entry cells */
+    grid-template-columns: 280px 1fr;
+    gap: 0; /* Snaps layout borders together perfectly to create a unified dashboard deck footprint */
+    background-color: var(--surface-dark); /* Slate Obsidian floating baseline background card framing */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline line grid separator */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: GLASSMORPHIC TREE CONTROLS NAVIGATION SIDEBAR
+   ========================================================================= */
+.settings-tree-navigation-rail {
+    border-right: 1px solid var(--border-dark);
+    background-color: rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-rail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.settings-rail-header h3 {
+    font-size: 13px;
+    color: var(--text-dark-pure); /* Silk White intense headline text readability */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.rail-version-badge {
+    font-size: 10px;
+    color: var(--text-secondary); /* Muted Graphite description labels text string */
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.settings-tree-nodes-stack {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 12px;
+    gap: 4px;
+}
+
+.settings-node-link {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.settings-node-link i {
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+}
+
+.settings-node-link span { font-size: 13px; }
+
+.settings-node-link:hover {
+    background-color: rgba(255, 255, 255, 0.01);
+    color: var(--text-dark-pure);
+}
+
+.settings-node-link.active-rose-shutter {
+    background-color: rgba(255, 48, 79, 0.04);
+    color: var(--brand-vibrant); /* Electric Neon Rose focus highlight alert accent */
+}
+
+/* Color vectors highlights safely tracking your layout allocations codes */
+.color-rose-vector { color: var(--brand-vibrant); }
+.color-cyan-vector { color: var(--accent-glow); }
+
+/* ==========================================================================
+   RIGHT WING MODULE: FORM PANEL PARAMETER VARIABLES CONTROLLER
+   ========================================================================== */
+.settings-form-content-deck {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-panel-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.form-panel-header-row h4 {
+    font-size: 15px;
+    color: var(--text-dark-pure);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.form-status-indicator-cyan {
+    font-size: 10.5px;
+    color: var(--accent-glow); /* Cyan Pop active status ticker indicator */
+}
+
+.settings-interactive-form-hull {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-input-parameter-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.form-field-title-string {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-field-input-enclosure {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.settings-facade-input {
+    width: 100%;
+    background-color: var(--canvas-dark); /* Pure AMOLED deep black entry hull field */
+    border: 1px solid var(--border-dark);
+    padding: 12px 44px 12px 16px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.settings-facade-input:focus { border-color: rgba(255, 255, 255, 0.15); }
+.settings-facade-input[readonly] { opacity: 0.6; cursor: not-allowed; }
+
+.form-decorator-vector {
+    position: absolute;
+    right: 16px;
+    font-size: 14px;
+    color: rgba(126, 139, 150, 0.5);
+    pointer-events: none;
+}
+
+/* Hardware Configuration Sliding Toggle Custom Switches Options */
+.form-toggle-switch-field-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-dark);
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 6px;
+    gap: 30px;
+}
+
+.toggle-meta-description {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.toggle-meta-description strong { font-size: 13px; color: var(--text-dark-pure); }
+.toggle-meta-description span { font-size: 11.5px; color: var(--text-secondary); line-height: 1.4; }
+
+.system-hardware-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.system-hardware-toggle-switch input { opacity: 0; width: 0; height: 0; }
+
+.toggle-slider-canvas {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--canvas-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: 24px;
+    transition: .3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toggle-slider-canvas::before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--text-secondary);
+    border-radius: 50%;
+    transition: .3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Checked hardware overlay transformations mapping vectors */
+.system-hardware-toggle-switch input:checked + .toggle-slider-canvas {
+    background-color: rgba(0, 242, 254, 0.05);
+    border-color: var(--accent-glow); /* Cyan Pop toggle activation state indicator */
+}
+
+.system-hardware-toggle-switch input:checked + .toggle-slider-canvas::before {
+    transform: translateX(20px);
+    background-color: var(--accent-glow);
+    box-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* Footer Control Toolbar Stripe Row */
+.form-actions-toolbar-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-dark);
+}
+
+.reset-variables-trigger,
+.save-variables-trigger {
+    padding: 12px 20px !important;
+    font-size: 12.5px !important;
+    border-radius: 6px !important;
+}
+
+/* Real-time synchronization loading keyframe shift */
+.save-variables-trigger.active-sync-indexing i {
+    animation: diagnosticIconSpin 1s linear infinite;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-settings-terminal-stage {
+        padding: 24px 0 60px 0;
+    }
+
+    /* Collapse wide horizontal split structures straight into an application continuous single column timeline */
+    .settings-split-workspace-chassis {
+        grid-template-columns: 1fr;
+        border-radius: 10px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .settings-tree-navigation-rail {
+        border-right: none;
+        border-bottom: 1px solid var(--border-dark);
+    }
+
+    .settings-rail-header {
+        padding: 16px 20px;
+    }
+
+    /* Convert vertical configuration menus into a rapid swipe left horizontal icon tray track */
+    .settings-tree-nodes-stack {
+        flex-direction: row;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding: 12px 20px;
+        gap: 8px;
+    }
+
+    .settings-tree-nodes-stack::-webkit-scrollbar { display: none; }
+
+    .settings-node-link {
+        width: auto;
+        flex-shrink: 0;
+        padding: 8px 14px;
+        border-radius: 20px; /* Shifts sharp cards into smooth touch-capsules */
+    }
+
+    .settings-node-link span { display: none; } /* Safely strips long text blocks strings to run clear icon grids */
+    .settings-node-link i { font-size: 16px; width: auto; }
+
+    .form-panel-header-row {
+        padding: 16px 20px;
+    }
+
+    .settings-interactive-form-hull {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .form-toggle-switch-field-row {
+        gap: 16px;
+        padding: 14px;
+    }
+
+    .toggle-meta-description span {
+        font-size: 11px;
+    }
+
+    /* Convert horizontal execution tools into stacked, full-bleed touch targets buttons rows */
+    .form-actions-toolbar-footer-row {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .reset-variables-trigger,
+    .save-variables-trigger {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@keyframes diagnosticIconSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM GLOBAL CONVERSION HUB MATRIX CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant data scanning fields */
+.platform-final-cta-stage h2,
+.platform-final-cta-stage h2 span,
+.cta-micro-pill-cyan,
+.cta-hardware-metrics-badge span,
+.cta-primary-trigger,
+.cta-secondary-trigger {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-final-cta-stage p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-final-cta-stage {
+    background-color: var(--canvas-dark); /* Strict commitment locked onto your absolute AMOLED Black backdrop variable */
+    padding: 60px 0 100px 0; /* Comprehensive clearance pad preventing global footer overlaps */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark); /* Subtle Charcoal hairline line divider */
+    overflow: hidden;
+}
+
+/* Deep Spatial Background Environmental Light Flare Blur Track Matrix */
+.cta-ambient-chromatic-mesh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.05) 0%, rgba(77, 56, 243, 0.02) 50%, transparent 75%);
+    filter: blur(85px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cta-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically balances line track widths parallel across your complete templates */
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.cta-focal-panel-chassis {
+    background: linear-gradient(135deg, rgba(18, 12, 18, 0.6) 0%, rgba(0, 0, 0, 0.95) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 48px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.cta-panel-inner-split {
+    display: grid;
+    /* Desktop layout split: left editorial copy blocks matched alongside right target keys deck */
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: CONVERSION EDITORIAL TYPOGRAPHY COPY STACK
+   ========================================================================== */
+.cta-editorial-axis {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cta-badge-row {
+    margin-bottom: 16px;
+}
+
+.cta-micro-pill-cyan {
+    background-color: rgba(0, 242, 254, 0.04); /* Subdued Cyan Pop Shutter */
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    color: var(--accent-glow);
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-cyan-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 6px var(--accent-glow);
+    animation: beaconPulse 1.5s infinite ease-in-out;
+}
+
+.cta-editorial-axis h2 {
+    font-size: 28px;
+    color: var(--text-dark-pure); /* Silk White intense text contrast readability */
+    line-height: 1.25;
+    letter-spacing: -0.8px;
+    margin: 0 0 12px 0;
+}
+
+.cta-editorial-axis h2 span {
+    background: var(--action-gradient); /* High contrast Electric Rose to Hyper Blue gradient injection */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.cta-editorial-axis p {
+    font-size: 14px;
+    color: var(--text-secondary); /* Muted Graphite description labels text block */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: INTERACTIVE CONTROL ENGINE ACTIONS CHANNEL KEYS
+   ========================================================================== */
+.cta-actions-axis {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 18px;
+    width: 100%;
+}
+
+.cta-hardware-metrics-badge {
+    font-size: 11px;
+    color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.color-cyan-vector { color: var(--accent-glow); }
+
+.cta-buttons-deck-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.cta-primary-trigger,
+.cta-secondary-trigger {
+    width: 100%;
+    padding: 14px 0 !important;
+    font-size: 13px !important;
+    border-radius: 6px !important; /* Premium unified portfolio squared dashboard shape alignments */
+    text-align: center;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-final-cta-stage {
+        padding: 40px 0 60px 0;
+    }
+
+    /* Collapse wide horizontal workspace grids directly down into a single card column runway */
+    .cta-focal-panel-chassis {
+        padding: 32px 20px;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .cta-panel-inner-split {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .cta-editorial-axis {
+        align-items: center;
+    }
+
+    .cta-badge-row {
+        justify-content: center;
+    }
+
+    .cta-editorial-axis h2 {
+        font-size: 22px;
+        line-height: 1.3;
+        letter-spacing: -0.5px;
+    }
+
+    .cta-editorial-axis p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .cta-actions-axis {
+        align-items: center;
+        gap: 16px;
+    }
+}

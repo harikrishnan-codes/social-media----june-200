@@ -1,0 +1,1812 @@
+/* ==========================================================================
+   ULTRA-PREMIUM ACTIVITY HERO CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map explicitly onto major display headlines and metric card titles */
+.activity-premium-hero .activity-hero-title,
+.activity-premium-hero .activity-hero-title span,
+.glass-activity-metric-card .activity-card-metadata h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for tracking tags, details descriptions, status updates, and counters metrics */
+.activity-hero-tag,
+.activity-hero-description,
+.activity-live-telemetry-strip p,
+.activity-card-metadata span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.activity-premium-hero {
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--canvas-dark);
+    padding: 160px 0 60px 0; /* Strict clearance margin allocation beneath your pre-existing fixed header navigation bar */
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+/* Luxury Multi-Layer Radial Ambient Backdrop Illumination Glow Flare */
+.activity-hero-ambient-glow {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.12) 0%, rgba(77, 56, 243, 0.04) 50%, transparent 70%);
+    filter: blur(85px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.activity-hero-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Clean desktop asymmetric grid split tracking high-status reading fields proportion variables */
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   LEFT WING: EDITORIAL CONTENT PLACEMENT & REAL-TIME STRIPS
+   ========================================================================== */
+.activity-hero-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.activity-hero-title {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--text-dark-pure);
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.activity-hero-title span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.activity-hero-description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 35px;
+}
+
+/* Real-Time Algorithmic Connections Active Sync Indicator Strip Frame */
+.activity-live-telemetry-strip {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.telemetry-node {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.telemetry-node p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.telemetry-node p strong {
+    color: var(--text-dark-pure);
+    font-weight: 700;
+}
+
+.active-sync-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: var(--brand-vibrant); /* Radiant system notification vibrant rose red */
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+}
+
+.active-sync-pulse::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: var(--brand-vibrant);
+    animation: beaconPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes beaconPulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+/* ==========================================================================
+   RIGHT WING: HARDWARE ACCELERATED FLOATING INTERACTION METRIC BADGES
+   ========================================================================== */
+.activity-hero-visuals {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.activity-clusters-container {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    height: 220px;
+}
+
+/* Frosted Glassmorphic Interaction Micro-Cards Base Structural System Design */
+.glass-activity-metric-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 18px 24px;
+    border-radius: var(--radius-feed);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    width: 290px;
+    /* Native hardware acceleration floating rotation tracking sequences loops loop */
+    animation: luxuryActivityCardFloat 6s ease-in-out infinite;
+}
+
+@keyframes luxuryActivityCardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Parallax offset positioning parameters curves */
+.activity-card-one {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+}
+
+.activity-card-two {
+    bottom: 0;
+    right: 0;
+    animation-delay: -3s; /* Perfectly inverted counter layout rhythm grid pacing */
+}
+
+.activity-icon-shield {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-avatar);
+    background-color: rgba(77, 56, 243, 0.1);
+    color: var(--brand-royal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.activity-icon-shield.pink-shield-modifier {
+    background-color: rgba(255, 48, 79, 0.1);
+    color: var(--brand-vibrant);
+}
+
+.activity-card-metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.activity-card-metadata h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.activity-card-metadata span {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Stream)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .activity-premium-hero {
+        min-height: auto;
+        padding: 130px 0 50px 0;
+    }
+
+    .activity-hero-ambient-glow {
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Collapse asymmetric desktop layout blocks cleanly into centralized vertical workspaces */
+    .activity-hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .activity-hero-narrative {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activity-hero-title {
+        font-size: 42px;
+        line-height: 1.2;
+    }
+
+    .activity-hero-description {
+        font-size: 15px;
+        margin: 0 auto 25px auto;
+    }
+
+    .activity-live-telemetry-strip {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Convert floating side status metrics panels downward into uniform linear rows */
+    .activity-hero-visuals {
+        margin-top: 5px;
+    }
+
+    .activity-clusters-container {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .glass-activity-metric-card {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        width: 100%;
+        max-width: 340px;
+        animation: none; /* Strip floating calculations scripts to preserve graphics rendering weights over touch screens */
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-hero-title {
+        font-size: 34px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM ACTIVITY SEARCH TRACKER MODULAR CSS
+   ========================================================================== */
+
+/* Sans-serif pairing rules for form text fields, query parameters, and tab selection pills labels */
+.tracker-search-input,
+.activity-filter-pill {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.activity-control-tracker-bar {
+    background-color: var(--canvas-dark);
+    padding: 30px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.tracker-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Balanced asymmetrical layout pairing the search box with the category pill tracks */
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ==========================================================================
+   1. LEFT WING: LUXURY INTEGRATED INPUT FILTER POD
+   ========================================================================== */
+.tracker-search-pod {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-inner-icon {
+    position: absolute;
+    left: 20px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.tracker-search-input {
+    width: 100%;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    padding: 14px 20px 14px 48px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark-pure);
+    outline: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tracker-search-input:focus {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: #161616;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   2. RIGHT WING: HORIZONTAL SCROLLING CATEGORY PILLS
+   ========================================================================== */
+.tracker-pill-carousel {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carousel-scroll-shield {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Disables standard ugly horizontal scroll lines */
+    padding: 2px;
+}
+
+.carousel-scroll-shield::-webkit-scrollbar { display: none; }
+
+.activity-filter-pill {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.activity-filter-pill i {
+    font-size: 11px;
+    transition: transform 0.3s ease;
+}
+
+.activity-filter-pill:hover {
+    color: var(--text-dark-pure);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.activity-filter-pill.active-pill-token {
+    background: var(--action-gradient);
+    color: var(--text-dark-pure);
+    border-color: transparent;
+    box-shadow: 0 6px 16px var(--btn-primary-shadow);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Vertical Stack Reflow)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .activity-control-tracker-bar {
+        padding: 20px 0;
+    }
+
+    /* Collapse the two-column grid structure into a clean mobile layout row stack */
+    .tracker-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .tracker-search-input {
+        padding: 12px 20px 12px 44px;
+        font-size: 13.5px;
+    }
+
+    .search-inner-icon {
+        left: 18px;
+    }
+
+    .tracker-pill-carousel {
+        justify-content: flex-start;
+    }
+
+    /* Shift filters into an independent left-aligned horizontal sweep track over touch gestures */
+    .carousel-scroll-shield {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    
+    .activity-filter-pill {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SECURITY LOGS & MILESTONES SYSTEM MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map explicitly onto section block panel titles and node headers */
+.activity-security-milestones h3,
+.log-timeline-node .node-content-stack h4,
+.reward-meta-stack h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for tracking timestamps, details text logs copy, micro pills, and indicators */
+.panel-micro-tag,
+.node-time-stamp,
+.log-timeline-node p,
+.reward-meta-stack p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.activity-security-milestones {
+    background-color: var(--canvas-dark);
+    padding: 40px 0 100px 0; /* Aligned upper tracking clearances variables fields bounds */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.security-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Executive asymmetrical layout columns mapping distinct structural weights proportions fields */
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.panel-header-deck {
+    margin-bottom: 30px;
+}
+
+.panel-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.activity-security-milestones h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================================================
+   LEFT WING PANEL: INTERCONNECTED LOG TIMELINE NODES
+   ========================================================================== */
+.logs-timeline-track {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+/* Base Timeline Thread Segment Link Node */
+.log-timeline-node {
+    display: flex;
+    gap: 18px;
+    padding: 20px 24px;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.log-timeline-node:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.node-icon-indicator {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Semantic Indicator Override Tones Variables Fields */
+.log-timeline-node.warning-alert-state { border-left: 3px solid #ffd600; }
+.log-timeline-node.warning-alert-state .node-icon-indicator { background-color: rgba(255, 214, 0, 0.08); color: #ffd600; }
+
+.log-timeline-node.success-alert-state { border-left: 3px solid #00e676; }
+.log-timeline-node.success-alert-state .node-icon-indicator { background-color: rgba(0, 230, 118, 0.08); color: #00e676; }
+
+.node-content-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+}
+
+.node-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.log-timeline-node .node-content-stack h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.node-time-stamp {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.log-timeline-node p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RIGHT WING PANEL: ECOSYSTEM MILESTONES DATA CARDS
+   ========================================================================== */
+.rewards-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.reward-micro-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.reward-micro-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.reward-visual-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: rgba(255, 48, 79, 0.08);
+    color: var(--brand-vibrant);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.reward-visual-badge.badge-blue-modifier {
+    background-color: rgba(77, 56, 243, 0.08);
+    color: var(--brand-royal);
+}
+
+.reward-meta-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.reward-meta-stack h4 {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.reward-meta-stack p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.reward-meta-stack p strong {
+    color: var(--text-dark-pure);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .activity-security-milestones {
+        padding: 30px 0;
+    }
+
+    /* Collapse asymmetric desktop dual-columns layout cleanly into uniform stacked vertical linear channels */
+    .security-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .log-timeline-node,
+    .reward-micro-card {
+        padding: 16px;
+    }
+
+    .node-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .node-time-stamp {
+        margin-top: 2px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SECURITY SESSION LEDGER CANVAS MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto cell location headers explicitly */
+.activity-session-ledger-stage .session-display-title {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for detail summaries, parameters text, IP tokens, and status pills */
+.activity-session-ledger-stage p,
+.activity-session-ledger-stage span,
+.session-status-pill,
+.session-os-tag,
+.micro-ip-badge,
+.session-action-trigger-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.activity-session-ledger-stage {
+    background-color: var(--canvas-dark);
+    padding: 20px 0 80px 0; /* Compressed upper clearance padding to line up perfectly right below system milestones */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.ledger-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Clean desktop triple-column distribution track layout track */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ==========================================================================
+   INDIVIDUAL ACTIVE SESSION BLOCK CELL COMPONENT RIGGING
+   ========================================================================== */
+.session-ledger-node {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.session-ledger-node:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+}
+
+.session-meta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.session-status-pill {
+    background-color: rgba(0, 230, 118, 0.08);
+    border: 1px solid rgba(0, 230, 118, 0.15);
+    color: #00e676;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.5px;
+}
+
+.pulse-beacon-green {
+    width: 5px;
+    height: 5px;
+    background-color: #00e676;
+    border-radius: 50%;
+    animation: beaconPulse 1.4s infinite ease-in-out;
+}
+
+/* Alternate color tokens overrides for semantic status separation management */
+.session-status-pill.warm-amber-pill {
+    background-color: rgba(255, 214, 0, 0.08);
+    border-color: rgba(255, 214, 0, 0.15);
+    color: #ffd600;
+}
+
+.session-status-pill.muted-slate-pill {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+}
+
+.session-os-tag {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.session-display-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    line-height: 1.3;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.3px;
+}
+
+.session-summary-copy {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0 0 25px 0;
+    flex-grow: 1;
+}
+
+/* Session Footer Metadata Actions Rows Mapping Layout Bounds */
+.session-footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    gap: 12px;
+}
+
+.micro-ip-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border-dark);
+}
+
+.session-action-trigger-btn {
+    background-color: transparent;
+    border: 1px solid rgba(255, 48, 79, 0.2);
+    color: var(--brand-vibrant);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.session-action-trigger-btn:hover:not(.disabled-state) {
+    background-color: var(--brand-vibrant);
+    color: var(--text-dark-pure);
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(255, 48, 79, 0.2);
+}
+
+.session-action-trigger-btn.disabled-state {
+    border-color: var(--border-dark);
+    color: var(--text-secondary);
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .activity-session-ledger-stage {
+        padding: 20px 0 40px 0;
+    }
+
+    /* Convert row distribution tracking arrays cleanly into individual linear columns stacked flows */
+    .ledger-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .session-ledger-node {
+        padding: 24px;
+        min-height: 220px;
+    }
+
+    .session-display-title {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM CONSOLE SETTINGS & TOKEN SYSTEM MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map explicitly onto layout block headings and preference titles */
+.settings-configuration-stage h3,
+.settings-configuration-stage h3 span,
+.preference-details h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details summaries, parameters strings, copy logs, and micro labels */
+.settings-micro-pill,
+.preference-details p,
+.token-micro-tag,
+.token-description-copy,
+.token-hash-string,
+.token-security-disclaimer {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.settings-configuration-stage {
+    background-color: var(--canvas-dark);
+    padding: 60px 0 100px 0; /* Balanced clearance padding bounds */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.settings-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Executive asymmetrical desktop layout assignment grids splitting blocks scales weights */
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.settings-deck-header {
+    margin-bottom: 30px;
+}
+
+.settings-micro-pill {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.settings-configuration-stage h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================================================
+   LEFT WING PANEL: EXCLUSIVE PREMIUM INTERACTION TOGGLE CARDS
+   ========================================================================== */
+.toggles-stream-track {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.preference-toggle-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.preference-toggle-card:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.preference-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 80%;
+}
+
+.preference-details h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0;
+}
+
+.preference-details p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Luxury Minimal Toggle Switch Track Sub-Engine */
+.luxury-switch-node {
+    width: 44px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-dark);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.switch-handle-core {
+    width: 16px;
+    height: 16px;
+    background-color: var(--text-secondary);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+/* Active State Configurations injections */
+.luxury-switch-node.active-switch-state {
+    background-color: rgba(255, 48, 79, 0.1);
+    border-color: rgba(255, 48, 79, 0.3);
+}
+
+.luxury-switch-node.active-switch-state .switch-handle-core {
+    transform: translateX(18px);
+    background-color: var(--brand-vibrant);
+    box-shadow: 0 0 8px rgba(255, 48, 79, 0.4);
+}
+
+/* ==========================================================================
+   RIGHT WING PANEL: SECURE TOKEN INFRASTRUCTURE SHIELD BOX
+   ========================================================================== */
+.token-generation-deck {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.token-card-glow-mesh {
+    position: absolute;
+    bottom: -20%;
+    right: -10%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.1) 0%, transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+}
+
+.token-inner-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.token-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-royal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.token-generation-deck h3 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--text-dark-pure);
+    margin: 0 0 16px 0;
+    letter-spacing: -0.5px;
+}
+
+.token-generation-deck h3 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.token-description-copy {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Micro Cryptographic Code Display Window */
+.secure-token-display-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-dark);
+    padding: 14px 18px;
+    border-radius: 8px;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.token-hash-string {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.5px;
+}
+
+.token-copy-trigger {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.token-copy-trigger:hover {
+    color: var(--text-dark-pure);
+}
+
+.token-security-disclaimer {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.token-security-disclaimer i {
+    font-size: 12px;
+    color: var(--brand-royal);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Column Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .settings-configuration-stage {
+        padding: 40px 0;
+    }
+
+    /* Collapse asymmetric columns setup down into single stacked mobile-ready lanes */
+    .settings-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .preference-toggle-card,
+    .token-generation-deck {
+        padding: 24px;
+    }
+
+    .token-generation-deck h3 {
+        font-size: 24px;
+    }
+    
+    .preference-details {
+        max-width: 75%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM AUTHENTICATED SESSION LEDGER MODULE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs map onto display titles explicitly */
+.session-node-card h4 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for pills, IP hashes, and status data */
+.session-pill-status,
+.session-ip-hash,
+.session-data-body p,
+.btn-revoke-inline {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.settings-sessions-ledger-stage {
+    background-color: var(--canvas-dark);
+    padding: 20px 0 100px 0; /* Aligned bottom clearance for final footer transition */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.ledger-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Balanced triple-grid distribution footprint */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ==========================================================================
+   SESSION NODE COMPONENT RIGGING
+   ========================================================================== */
+.session-node-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.session-node-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.session-head-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.session-pill-status {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-dark);
+    color: var(--text-secondary);
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.session-pill-status.active-pill {
+    background-color: rgba(0, 230, 118, 0.08);
+    border-color: rgba(0, 230, 118, 0.15);
+    color: #00e676;
+}
+
+.beacon-pulse {
+    width: 6px;
+    height: 6px;
+    background-color: #00e676;
+    border-radius: 50%;
+    animation: beaconPulse 1.8s infinite ease-in-out;
+}
+
+.session-os-icon {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.session-data-body h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 10px 0;
+}
+
+.session-data-body p {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 25px 0;
+}
+
+.session-foot-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.session-ip-hash {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.btn-revoke-inline {
+    background: transparent;
+    border: 1px solid rgba(255, 48, 79, 0.2);
+    color: var(--brand-vibrant);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-revoke-inline:hover:not(.disabled-state) {
+    background-color: var(--brand-vibrant);
+    color: var(--text-dark-pure);
+    border-color: transparent;
+}
+
+.btn-revoke-inline.disabled-state {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-color: var(--border-dark);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .settings-sessions-ledger-stage {
+        padding: 30px 0 60px 0;
+    }
+
+    /* Convert desktop 3-col grid into full-width vertical stack checklist */
+    .ledger-layout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .session-node-card {
+        padding: 24px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM CONSOLE DATA MANAGEMENT & SCRUB CANVASES MODULAR CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto group block headings explicitly */
+.settings-data-management-stage h3 {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for descriptive copy, metadata tags, micro titles, and triggers buttons labels */
+.management-micro-tag,
+.management-description,
+.archive-meta-text,
+.export-trigger-btn,
+.purge-destructive-trigger-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.settings-data-management-stage {
+    background-color: var(--canvas-dark);
+    padding: 40px 0 100px 0; /* Clear bottom spacing track flow allocation before the CTA runway */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.data-management-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Elegant symmetrical desktop dual-column layout configuration */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: stretch; /* Forces both blocks to match heights fluidly */
+}
+
+/* ==========================================================================
+   SHARED PORTABILITY & ARCHIVE CARD BASE STYLES
+   ========================================================================== */
+.data-export-card,
+.account-purge-card {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.data-export-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Red Danger Zone Modifier Block Rules */
+.account-purge-card {
+    background: linear-gradient(135deg, var(--surface-dark) 0%, rgba(255, 48, 79, 0.01) 100%);
+    border-color: rgba(255, 48, 79, 0.1);
+}
+
+.account-purge-card:hover {
+    border-color: rgba(255, 48, 79, 0.2);
+    box-shadow: 0 20px 45px rgba(255, 48, 79, 0.04);
+}
+
+.management-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-royal);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.management-micro-tag.danger-tag-modifier {
+    color: var(--brand-vibrant);
+}
+
+.settings-data-management-stage h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark-pure);
+    margin: 0 0 16px 0;
+    letter-spacing: -0.5px;
+}
+
+.management-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0 0 35px 0;
+    flex-grow: 1;
+}
+
+/* ==========================================================================
+   LOWER UTILITY ACTIONS ACTIONS DECK ALIGNMENTS
+   ========================================================================== */
+.management-action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.02);
+    gap: 16px;
+    width: 100%;
+}
+
+.archive-meta-text {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.archive-meta-text i {
+    color: var(--brand-royal);
+}
+
+.archive-meta-text.danger-meta-text i {
+    color: var(--brand-vibrant);
+}
+
+.export-trigger-btn {
+    padding: 10px 22px !important;
+    font-size: 13px !important;
+}
+
+/* Custom Destructive Vibrant Button Configuration System */
+.purge-destructive-trigger-btn {
+    background-color: transparent;
+    border: 1px solid var(--brand-vibrant);
+    color: var(--brand-vibrant);
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.purge-destructive-trigger-btn:hover {
+    background-color: var(--brand-vibrant);
+    color: var(--text-dark-pure);
+    box-shadow: 0 6px 16px rgba(255, 48, 79, 0.25);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .settings-data-management-stage {
+        padding: 30px 0;
+    }
+
+    /* Collapse side-by-side desktop display tracks cleanly into a vertical linear card stream */
+    .data-management-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .data-export-card,
+    .account-purge-card {
+        padding: 24px;
+    }
+
+    /* Convert inner action lines row properties into structured vertical mobile touch arrays */
+    .management-action-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .export-trigger-btn,
+    .purge-destructive-trigger-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0 !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM GLOBAL CONVERSION CTA COMPONENT CSS
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto editorial headline copy tracks explicitly */
+.app-global-cta-stage h2,
+.app-global-cta-stage h2 span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for details paragraphs, tracking tags, and buttons triggers labels */
+.app-global-cta-stage p,
+.cta-micro-tag,
+.cta-primary-btn,
+.cta-secondary-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.app-global-cta-stage {
+    background-color: var(--canvas-dark);
+    padding: 80px 0 100px 0; /* Symmetrical breathing track clearances pacing metrics */
+    width: 100%;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.cta-layout-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   HIGH-GLOSS FROSTED CENTRAL FOCAL CARD DESIGN ENGINE
+   ========================================================================== */
+.cta-focal-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 90px 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Deep Multi-Layer Radial Ambient Glow Mesh Layer Overlays */
+.cta-card-ambient-mesh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.07) 0%, rgba(77, 56, 243, 0.03) 55%, transparent 75%);
+    filter: blur(65px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cta-content-stack {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.cta-content-stack h2 {
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--text-dark-pure);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin: 0;
+}
+
+.cta-content-stack h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.cta-line-separator {
+    width: 60px;
+    height: 2px;
+    background: var(--action-gradient);
+    margin: 28px 0;
+    border-radius: 2px;
+}
+
+.cta-content-stack p {
+    font-size: 15.5px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin: 0 0 40px 0;
+}
+
+/* Integrated Button Row Grid Alignment Track */
+.cta-action-deck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.cta-primary-btn,
+.cta-secondary-btn {
+    padding: 14px 32px !important;
+    font-size: 14px !important;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Touch Optimizations)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .app-global-cta-stage {
+        padding: 50px 0;
+    }
+
+    /* Compress padding parameters while forcing an elegant full horizontal bleed block alignment */
+    .cta-focal-card {
+        padding: 60px 24px;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: var(--radius-feed);
+    }
+
+    .cta-card-ambient-mesh {
+        width: 340px;
+        height: 340px;
+    }
+
+    .cta-content-stack h2 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .cta-content-stack p {
+        font-size: 14px;
+        line-height: 1.65;
+        margin-bottom: 35px;
+    }
+
+    /* Convert horizontal deck controls smoothly into stacked single tap lanes blocks */
+    .cta-action-deck {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 300px; /* Limits growth to maintain an elegant editorial aspect ratio over mobile viewports */
+    }
+
+    .cta-primary-btn,
+    .cta-secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-content-stack h2 {
+        font-size: 30px;
+    }
+}

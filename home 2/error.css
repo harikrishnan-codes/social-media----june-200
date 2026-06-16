@@ -1,0 +1,205 @@
+/* ==========================================================================
+   ULTRA-PREMIUM & LUXURIOUS 404 ERROR CANVAS STYLES
+   ========================================================================== */
+
+/* Typography Assignments: Serifs mapped onto the large status layout keys explicitly */
+.error-canvas-isolated .error-giant-code,
+.error-canvas-isolated h2,
+.error-canvas-isolated h2 span {
+    font-family: 'Playfair Display', serif !important;
+}
+
+/* Sans-serif pairing rules for recovery links labels, tags, summaries, and sub-headers */
+.error-canvas-isolated p,
+.error-canvas-isolated span,
+.error-canvas-isolated .btn-social-base {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* Isolated body variant hook overrides to generate absolute fullscreen viewports fields */
+.error-canvas-isolated {
+    background-color: var(--canvas-dark) !important;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.error-layout-wrapper {
+    width: 92%;
+    max-width: 680px; /* Kept narrow for premium editorial focus symmetry */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* ==========================================================================
+   HIGH-END NEON BACKGROUND ATMOSPHERIC RADIAL MESH
+   ========================================================================== */
+.error-atmospheric-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.08) 0%, rgba(77, 56, 243, 0.04) 40%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Giant Status Numeric Block Layout Frame tracking metrics */
+.error-giant-code {
+    font-size: 180px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -6px;
+    color: var(--text-dark-pure);
+    margin: 0 0 10px 0;
+    text-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    user-select: none;
+}
+
+.error-giant-code span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+    display: inline-block;
+    animation: luxuryGlowPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes luxuryGlowPulse {
+    0% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+    100% { transform: scale(1.03) rotate(2deg); opacity: 1; }
+}
+
+/* ==========================================================================
+   NARRATIVE CONTENT TEXT SYSTEMS
+   ========================================================================== */
+.error-micro-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-vibrant);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.error-narrative-deck h2 {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--text-dark-pure);
+    letter-spacing: -1.5px;
+    margin: 0;
+}
+
+.error-narrative-deck h2 span {
+    background: var(--action-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.error-line-separator {
+    width: 60px;
+    height: 2px;
+    background: var(--action-gradient);
+    margin: 25px auto;
+    border-radius: 2px;
+}
+
+.error-description-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 520px;
+    margin: 0 auto 40px auto;
+}
+
+/* ==========================================================================
+   ACTION ROW CONSTRAINTS BUTTON MATRIX PACK
+   ========================================================================== */
+.error-actions-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.error-actions-group .btn-social-base {
+    padding: 12px 28px;
+    font-size: 14px;
+    gap: 10px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Mobile Adaptations)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .error-layout-wrapper {
+        width: 88%;
+    }
+
+    .error-atmospheric-glow {
+        width: 400px;
+        height: 400px;
+    }
+
+    .error-giant-code {
+        font-size: 130px;
+        letter-spacing: -4px;
+    }
+
+    .error-narrative-deck h2 {
+        font-size: 38px;
+    }
+
+    .error-description-text {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 35px;
+    }
+
+    /* Keep actions grouped balanced across tablets rows profiles */
+    .error-actions-group {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-giant-code {
+        font-size: 100px;
+    }
+
+    .error-narrative-deck h2 {
+        font-size: 32px;
+    }
+
+    /* Convert row distribution lists into stacked single lines tracks mobile */
+    .error-actions-group {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .error-actions-group .btn-social-base {
+        width: 100%;
+    }
+}

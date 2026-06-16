@@ -1,0 +1,2141 @@
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL FEED HERO CANOPY CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid platform scanning typography */
+.feed-hero-canopy-stage h1,
+.feed-hero-canopy-stage h1 span,
+.broadcasters-axis-header h5 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.feed-telemetry-pill,
+.feed-unread-counter,
+.feed-hero-canopy-stage p,
+.live-counter-tag,
+.broadcaster-handle-label {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.feed-hero-canopy-stage {
+    background-color: var(--canvas-dark); /* Locked to your absolute AMOLED Black untill you say */
+    padding: 130px 0 50px 0; /* Clear space buffer preventing global navigation layout bugs */
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--border-dark);
+    overflow: hidden;
+}
+
+/* Deep Atmospheric Background Backlighting Mesh Flare Track */
+.feed-hero-ambient-mesh {
+    position: absolute;
+    top: -30%;
+    right: 5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(77, 56, 243, 0.05) 0%, rgba(255, 48, 79, 0.02) 50%, transparent 75%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.feed-hero-layout-wrapper {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.feed-hero-canopy-grid {
+    display: grid;
+    /* Desktop asymmetrical layout split: content updates pane guiding the horizontal story deck */
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: CURATED EDITORIAL WELCOME BLOCKS
+   ========================================================================== */
+.feed-welcome-axis {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.feed-status-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.feed-telemetry-pill {
+    background-color: rgba(0, 242, 254, 0.04); /* Subdued Cyan Pop Shutter */
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    color: var(--accent-glow);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-cyan-beacon {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-glow);
+    animation: beaconPulse 1.5s infinite ease-in-out;
+}
+
+.feed-unread-counter {
+    background-color: rgba(255, 48, 79, 0.06); /* Electric Neon Rose Alert Badge */
+    border: 1px solid rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.feed-hero-canopy-grid h1 {
+    font-size: 38px;
+    color: var(--text-dark-pure); /* Silk White high contrast text readability */
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin: 0 0 16px 0;
+}
+
+.feed-hero-canopy-grid h1 span {
+    background: var(--action-gradient); /* Electric Rose to Hyper Blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.feed-welcome-axis p {
+    font-size: 14px;
+    color: var(--text-secondary); /* Muted graphite body copy descriptions text */
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RIGHT WING MODULE: HORIZONTAL ACTIVE BROADCASTERS DECK RAIL
+   ========================================================================== */
+.feed-broadcasters-axis {
+    background-color: var(--surface-dark); /* Slate Obsidian floating card frame backgrounds */
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.broadcasters-axis-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.broadcasters-axis-header h5 {
+    font-size: 12px;
+    color: var(--text-dark-pure);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.live-counter-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--brand-vibrant); /* Electric Neon Rose active notifications highlights */
+    background-color: rgba(255, 48, 79, 0.04);
+    padding: 2px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 48, 79, 0.1);
+}
+
+.broadcasters-scroller-deck {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Strips browser default scrollbar graphics layout blocks */
+    width: 100%;
+}
+
+.broadcasters-scroller-deck::-webkit-scrollbar { display: none; }
+
+.broadcaster-bubble-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.broadcaster-avatar-halo {
+    width: 68px;
+    height: 68px;
+    border-radius: var(--radius-avatar);
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Integrates your legacy multi-color story loop gradient variable tracker cleanly */
+.broadcaster-avatar-halo.active-story-gradient {
+    background: var(--story-gradient);
+}
+
+.broadcaster-avatar-halo:hover {
+    transform: scale(1.05) rotate(4deg);
+}
+
+.broadcaster-img-core {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 3px solid var(--surface-dark); /* Dark gap separating avatar asset from color halos link */
+}
+
+.broadcaster-handle-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    max-width: 76px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.broadcaster-bubble-cell:hover .broadcaster-handle-label {
+    color: var(--text-dark-pure);
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Mobile Stack)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .feed-hero-canopy-stage {
+        padding: 100px 0 30px 0;
+    }
+
+    /* Collapse the widescreen rows elements into a centralized continuous sequence */
+    .feed-hero-canopy-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .feed-welcome-axis {
+        align-items: center;
+        text-align: center;
+    }
+
+    .feed-status-badge-row {
+        justify-content: center;
+    }
+
+    .feed-hero-canopy-grid h1 {
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+
+    .feed-welcome-axis p {
+        font-size: 13.5px;
+        line-height: 1.6;
+    }
+
+    /* Convert broadcaster panel into a wide swipe runway for touch interfaces */
+    .feed-broadcasters-axis {
+        padding: 16px;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .broadcaster-avatar-halo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .broadcaster-handle-label {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM CORE FEED TIMELINE STREAM ARCHITECTURE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid data scanning streams */
+.feed-post-chassis h4,
+.sidebar-user-node-anchor h4,
+.tag-name-metrics-stack strong,
+.panel-header-row h5 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700;
+}
+
+.post-handle-stack span,
+.likes-metrics-counter-label,
+.post-caption-body-copy,
+.facade-view-threads-btn,
+.post-telemetry-timestamp,
+.sidebar-user-name-stack span,
+.sidebar-action-switch-btn,
+.panel-see-all-btn,
+.tag-name-metrics-stack span,
+.tag-quick-filter-btn,
+.sidebar-minimal-meta-footer p,
+.sidebar-minimal-meta-footer span {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-feed-stream-stage {
+    background-color: var(--canvas-dark); /* Strict adherence to your AMOLED Black variable */
+    padding: 40px 0 100px 0;
+    width: 100%;
+    position: relative;
+}
+
+.stream-layout-container {
+    width: 92%;
+    max-width: 935px; /* Symmetrically balanced tracking line widths rules */
+    margin: 0 auto;
+    display: grid;
+    /* Primary timeline distribution lane paired with persistent discovery filter menus columns */
+    grid-template-columns: 1fr 320px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: TIMELINE POST CHASSIS WINDOW MATRICES
+   ========================================================================== */
+.feed-main-timeline-axis {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+}
+
+.feed-post-chassis {
+    background-color: var(--surface-dark); /* Slate Obsidian floating frames background */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline line */
+    border-radius: var(--radius-feed);
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Post Header Block Identity Bar */
+.post-header-identity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.post-curator-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-avatar-halo {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-avatar);
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Integrates your multi-color legacy story loops gradient array automatically */
+.post-avatar-halo.active-story-gradient {
+    background: var(--story-gradient);
+}
+
+.post-mini-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2px solid var(--surface-dark); /* Dark gap lifting image cleanly */
+}
+
+.post-handle-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-handle-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post-handle-badge-group h4 {
+    font-size: 13.5px;
+    color: var(--text-dark-pure); /* Crisp Silk White readability heading text */
+    margin: 0;
+}
+
+.verification-icon-cyan {
+    color: var(--accent-glow); /* Cyan Pop verified token indicator markers */
+    font-size: 12.5px;
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+.post-handle-stack span {
+    font-size: 11px;
+    color: var(--text-secondary); /* Muted Graphite trackers label strings */
+}
+
+.post-options-trigger-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.post-options-trigger-btn:hover { color: var(--text-dark-pure); }
+
+/* Main Picture Window System Media Frame */
+.post-media-viewport-box {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.post-upload-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Interactive Double Tap Overlay Layer Pulse Animations */
+.double-tap-heart-pop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50__) scale(0);
+    font-size: 80px;
+    color: var(--text-dark-pure);
+    filter: drop-shadow(0 10px 30px rgba(255, 48, 79, 0.4)); /* Electric Neon Rose shadow casting */
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+}
+
+.double-tap-heart-pop.animate-pop-flash {
+    animation: heartPopFlashAnim 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Actions Toolbar Vector Controls Bars Deck Area */
+.post-actions-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px 10px 20px;
+}
+
+.left-vectors-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.action-vector-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-dark-pure);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.action-vector-btn:hover {
+    transform: scale(1.1);
+    color: var(--brand-vibrant); /* Electric Neon Rose Hover Trigger Base */
+}
+
+/* Active vector state overrides hooks */
+.action-vector-btn.liked-active-vector i {
+    font-weight: 900 !important;
+    color: var(--brand-vibrant) !important;
+    filter: drop-shadow(0 0 6px var(--brand-vibrant));
+}
+
+.action-vector-btn.bookmarked-active-vector i {
+    font-weight: 900 !important;
+    color: var(--brand-royal) !important; /* Hyper Blue Collect Anchor */
+    filter: drop-shadow(0 0 6px var(--brand-royal));
+}
+
+/* Informational Details Descriptions Blocks Area */
+.post-details-editorial-stack {
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.likes-metrics-counter-label {
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+}
+
+.likes-metrics-counter-label strong { font-weight: 700; }
+
+.post-caption-body-copy {
+    font-size: 13.5px;
+    color: var(--text-dark-pure);
+    line-height: 1.55;
+    margin: 0;
+}
+
+.post-caption-body-copy strong { margin-right: 6px; font-weight: 700; }
+
+.caption-hyperlink-tokens {
+    color: var(--brand-royal); /* Hyper Blue hashtag tokens link */
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.facade-view-threads-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    padding: 4px 0 0 0;
+}
+
+.post-telemetry-timestamp {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: PERSISTENT ECOSYSTEM FILTRATION SIDEBAR
+   ========================================================================== */
+.feed-contextual-filter-sidebar {
+    width: 100%;
+}
+
+.sidebar-sticky-enclosure {
+    position: sticky;
+    top: 110px; /* Locked tracking offset bypass layout navigation header structures */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-user-node-anchor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.sidebar-user-profile-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-avatar-img {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 1px solid var(--border-dark);
+}
+
+.sidebar-user-name-stack h4 { font-size: 13.5px; color: var(--text-dark-pure); margin: 0; }
+.sidebar-user-name-stack span { font-size: 11.5px; color: var(--text-secondary); }
+
+.sidebar-action-switch-btn,
+.panel-see-all-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--brand-royal); /* Hyper Blue interaction hooks */
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.panel-see-all-btn { color: var(--text-dark-pure); }
+
+.sidebar-filtration-panel-box {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 20px;
+}
+
+.panel-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.panel-header-row h5 { font-size: 12.5px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
+
+.panel-trending-tags-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.trending-tag-line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag-meta-identity-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tag-hash-symbol-prefix {
+    width: 28px;
+    height: 28px;
+    background-color: var(--canvas-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: 6px;
+    color: var(--text-dark-pure);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag-name-metrics-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.tag-name-metrics-stack strong { font-size: 13px; color: var(--text-dark-pure); }
+.tag-name-metrics-stack span { font-size: 10.5px; color: var(--text-secondary); }
+
+.tag-quick-filter-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--accent-glow); /* Cyan Pop secondary selection tags filters buttons triggers */
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tag-quick-filter-btn.active-rose-filter {
+    color: var(--brand-vibrant); /* Electric Neon Rose override context marker */
+}
+
+.sidebar-minimal-meta-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.sidebar-minimal-meta-footer p {
+    font-size: 11px;
+    color: rgba(126, 139, 150, 0.4); /* Muted Graphite legals footprints notes link text */
+    line-height: 1.5;
+    margin: 0;
+}
+
+.sidebar-minimal-meta-footer span {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(126, 139, 150, 0.3);
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Bleed Timeline)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-feed-stream-stage {
+        padding: 20px 0;
+    }
+
+    /* Dissolve layout grid lanes down into a singular touch stream focusing media items exclusively */
+    .stream-layout-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0; /* Clear edge buffer lines allowing full mobile bleed screen mapping */
+    }
+
+    .feed-contextual-filter-sidebar {
+        display: none; /* Safely strips peripheral metadata bloat over tiny handheld displays viewports */
+    }
+
+    .feed-post-chassis {
+        border-radius: 0; /* Implements full wide panoramic bleed lines exactly like high-status apps */
+        border-left: none;
+        border-right: none;
+    }
+
+    .post-media-viewport-box {
+        height: 400px; /* Scales picture box parameters down proportionally over mobile device targets */
+    }
+}
+
+/* Hardware Accelerated Double Click Pop Flare Animation Matrices Keyframes */
+@keyframes heartPopFlashAnim {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    30% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.9; }
+    50% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.9; }
+    80% { transform: translate(-50%, -50%) scale(1); opacity: 0.9; }
+    100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0; }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL SPONSORED SPOTLIGHT MATRICES CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant data scanning fields */
+.platform-sponsored-spotlight-stage h2,
+.platform-sponsored-spotlight-stage h2 span,
+.spotlight-content-editorial-stack h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.spotlight-verification-tag,
+.spotlight-upper-floating-badge,
+.spotlight-upper-floating-badge-blue,
+.spotlight-brand-identity-row strong,
+.spotlight-brand-identity-row span,
+.spotlight-content-editorial-stack p,
+.spotlight-action-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-sponsored-spotlight-stage {
+    background-color: var(--canvas-dark); /* Firmly anchored on your Pure AMOLED Black */
+    padding: 60px 0 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.spotlight-layout-container {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to mirror parent timeline limits precisely */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   SPOTLIGHT SECTION MASTER CONTROLLER HEADER
+   ========================================================================== */
+.spotlight-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-dark);
+}
+
+.spotlight-title-cluster {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.spotlight-icon-vector-cyan {
+    font-size: 20px;
+    color: var(--accent-glow); /* Cyan Pop Indicator Vector */
+    filter: drop-shadow(0 0 6px var(--accent-glow));
+}
+
+.spotlight-section-header h2 {
+    font-size: 22px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.spotlight-section-header h2 span {
+    background: var(--action-gradient); /* Electric Rose to Hyper Blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.spotlight-verification-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--surface-dark);
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-dark);
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-COLUMN SIDE-BY-SIDE PANELS CORES
+   ========================================================================== */
+.spotlight-asymmetric-deck-grid {
+    display: grid;
+    /* desktop balance parameters lane dividing components equally layout formats */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.spotlight-display-card-box {
+    background-color: var(--surface-dark); /* Slate Obsidian floating card base background */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline line */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.spotlight-display-card-box:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.spotlight-image-shield-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10; /* Modern horizontal landscape display parameters ratios window */
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.spotlight-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spotlight-display-card-box:hover .spotlight-main-img {
+    transform: scale(1.03);
+}
+
+/* Upper Floating Metadata Badge Chips */
+.spotlight-upper-floating-badge,
+.spotlight-upper-floating-badge-blue {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 4;
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--text-dark-pure);
+}
+
+.spotlight-upper-floating-badge {
+    background-color: var(--brand-vibrant); /* Electric Neon Rose Status Shutter */
+    box-shadow: 0 4px 12px rgba(255, 48, 79, 0.3);
+}
+
+.spotlight-upper-floating-badge-blue {
+    background-color: var(--brand-royal); /* Hyper Blue Status Shutter */
+    box-shadow: 0 4px 12px rgba(77, 56, 243, 0.3);
+}
+
+/* Internal Editorial Description Typography Components */
+.spotlight-content-editorial-stack {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.spotlight-brand-identity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spotlight-brand-identity-row strong {
+    font-size: 13.5px;
+    color: var(--text-dark-pure); /* Silk white readability string */
+    letter-spacing: -0.1px;
+}
+
+.spotlight-brand-identity-row span {
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Color anchors mapped explicitly to your multicolor preferences values */
+.spotlight-link-vector-rose { color: var(--brand-vibrant); }
+.spotlight-link-vector-blue { color: var(--accent-glow); }
+
+.spotlight-content-editorial-stack h4 {
+    font-size: 15.5px;
+    color: var(--text-dark-pure);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.spotlight-content-editorial-stack p {
+    font-size: 12.5px;
+    color: var(--text-secondary); /* Muted Graphite description text block copy */
+    line-height: 1.55;
+    margin: 0 0 10px 0;
+}
+
+.spotlight-action-btn {
+    width: 100%;
+    padding: 11px 0 !important;
+    font-size: 12.5px !important;
+    border-radius: 6px !important; /* Premium profile design shape configurations matching */
+    text-align: center;
+    margin-top: auto; /* Stabilizes layouts alignment bounds perfectly */
+}
+
+.spotlight-action-btn i {
+    font-size: 10px;
+    margin-left: 4px;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Card Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-sponsored-spotlight-stage {
+        padding: 40px 0 60px 0;
+    }
+
+    .spotlight-section-header {
+        margin-bottom: 24px;
+    }
+
+    /* Convert side-by-side split lanes straight into single horizontal flow stacked sequences */
+    .spotlight-asymmetric-deck-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .spotlight-display-card-box {
+        border-radius: 10px;
+    }
+
+    .spotlight-content-editorial-stack {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .spotlight-content-editorial-stack h4 {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SUGGESTED CURATORS CAROUSEL TIMELINE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant telemetry data scannability */
+.platform-recommendations-matrix-stage h2,
+.platform-recommendations-matrix-stage h2 span,
+.curator-handle-badge-row strong {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.recommendations-see-all-trigger,
+.curator-meta-details-stack span,
+.curator-meta-details-stack p,
+.curator-follow-trigger-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-recommendations-matrix-stage {
+    background-color: var(--canvas-dark); /* Locked directly onto your AMOLED Black variable */
+    padding: 40px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.recommendations-layout-container {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to stay perfectly inline with parent metrics */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   SUGGESTIONS SECTION MAIN CONTROLLER HEADER BAR
+   ========================================================================== */
+.recommendations-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.recommendations-title-cluster {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recommendation-icon-vector-blue {
+    font-size: 16px;
+    color: var(--brand-royal); /* Hyper Blue Indicator Vector */
+    filter: drop-shadow(0 0 6px var(--brand-royal));
+}
+
+.recommendations-section-header h2 {
+    font-size: 14px;
+    color: var(--text-secondary); /* Muted Graphite descriptive row line */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.recommendations-section-header h2 span {
+    background: var(--action-gradient); /* Electric Rose to Hyper Blue gradient injection */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+}
+
+.recommendations-see-all-trigger {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--brand-royal); /* Hyper Blue action link */
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.recommendations-see-all-trigger:hover {
+    color: var(--text-dark-pure);
+}
+
+/* ==========================================================================
+   HORIZONTAL SCROLL RUNWAY & PROFILE SHARD WINDOW MATRIX
+   ========================================================================== */
+.recommendations-scroller-runway {
+    display: grid;
+    /* Clean horizontal quad row layout distribution blocks across large displays views */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.curator-suggestion-card {
+    background-color: var(--surface-dark); /* Slate Obsidian card frame backdrops */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline perimeter rules */
+    border-radius: var(--radius-feed);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.curator-suggestion-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Right Upper Dismiss Target Cross */
+.curator-dismiss-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(142, 142, 142, 0.5);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.3s ease;
+    z-index: 5;
+}
+
+.curator-dismiss-btn:hover { color: var(--text-dark-pure); }
+
+/* Avatar Base Placement Parameters Hull */
+.curator-avatar-axis {
+    margin-bottom: 16px;
+}
+
+.curator-avatar-story-halo {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-avatar);
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Connects your legacy story gradient curve tracker natively */
+.curator-avatar-story-halo.active-story-gradient {
+    background: var(--story-gradient);
+}
+
+.curator-img-core {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-avatar);
+    object-fit: cover;
+    border: 2.5px solid var(--surface-dark); /* Dark spacer separating portrait from colors halo channel */
+}
+
+/* Description Text Blocks Group Metadata Stack */
+.curator-meta-details-stack {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.curator-handle-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-width: 100%;
+}
+
+.curator-handle-badge-row strong {
+    font-size: 13.5px;
+    color: var(--text-dark-pure); /* Silk White clean readability */
+    letter-spacing: -0.1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.validation-icon-cyan {
+    color: var(--accent-glow); /* Cyan Pop verified mark indicator badges */
+    font-size: 12px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 4px var(--accent-glow));
+}
+
+.curator-meta-details-stack span {
+    font-size: 11.5px;
+    color: var(--text-secondary); /* Muted Graphite subtitle notes labels */
+    display: block;
+}
+
+.curator-meta-details-stack p {
+    font-size: 11px;
+    color: rgba(126, 139, 150, 0.6);
+    line-height: 1.4;
+    margin: 4px 0 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Caps clipping bounds line tightly preventing overflow breakdown loops */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Symmetrical Adaptive Action Follow Trigger Button */
+.curator-follow-trigger-btn {
+    width: 100%;
+    padding: 8px 0 !important;
+    font-size: 12px !important;
+    border-radius: 6px !important; /* Premium unified squared dashboard shape parameters */
+    text-align: center;
+}
+
+/* Follow active confirmation toggle color parameters variables */
+.curator-follow-trigger-btn.following-active-state {
+    background: var(--surface-dark) !important;
+    border: 1px solid var(--border-dark) !important;
+    color: var(--text-secondary) !important;
+    box-shadow: none !important;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Horizontal Swipe Touch Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-recommendations-matrix-stage {
+        padding: 24px 0;
+    }
+
+    .recommendations-section-header {
+        width: 90%;
+        margin: 0 auto 16px auto;
+    }
+
+    /* Convert structural quad grids into a smooth fluid panorama side-swipe slide lane for touch screens */
+    .recommendations-scroller-runway {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        overflow-x: auto;
+        scrollbar-width: none; /* Strips browser default overlay scrolling metrics */
+        width: 100%;
+        padding: 0 5%; /* Aligns carousel nodes nicely inside device viewport boundaries edges */
+    }
+
+    .recommendations-scroller-runway::-webkit-scrollbar { display: none; }
+
+    .curator-suggestion-card {
+        width: 150px; /* Locks solid scannable grid block scaling bounds across small hand screens */
+        flex-shrink: 0;
+        padding: 18px 12px;
+        border-radius: 10px;
+    }
+    
+    .curator-avatar-story-halo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .curator-handle-badge-row strong {
+        font-size: 12.5px;
+    }
+
+    .curator-meta-details-stack p {
+        display: none; /* Safely hides lowest description string over mobile screens to balance container sizing */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL EXPLORE ASYMMETRIC GRID ARCHITECTURE CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid quantitative metrics reading */
+.explore-matrix-metrics-stack span,
+.explore-matrix-upper-pill-overlay {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-explore-matrix-stage {
+    background-color: var(--canvas-dark); /* Firmly locked onto your absolute AMOLED Black variable */
+    padding: 30px 0;
+    width: 100%;
+    position: relative;
+}
+
+.explore-matrix-layout-container {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to stay inline with all core content timelines precisely */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   HIGH-CONTRAST ASYMMETRICAL DESKTOP GRID RUNWAY ENGINE
+   ========================================================================== */
+.explore-matrix-asymmetric-cluster {
+    display: grid;
+    /* High-end 3-column architecture layout blueprint creating structured grid panels */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 290px; /* Establishes a rigid uniform row baseline grid */
+    gap: 28px; /* Industrial high-contrast structural spacing clearance footprint */
+}
+
+.explore-matrix-card-node {
+    width: 100%;
+    height: 100%;
+}
+
+/* Forces targeted feature container to stretch symmetrically down across double grid layers rows */
+.explore-matrix-card-node.node-span-double-vertical {
+    grid-column: 3;
+    grid-row: span 2;
+}
+
+.explore-matrix-viewport-shield {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--surface-dark); /* Slate Obsidian floating card base background */
+    border: 1px solid var(--border-dark); /* Subtle Charcoal hairline line grid separator */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.explore-matrix-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Upper Floating Feature Token Badge Chip */
+.explore-matrix-upper-pill-overlay {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 10.5px;
+    letter-spacing: 0.5px;
+    color: var(--text-dark-pure);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.explore-matrix-upper-pill-overlay i {
+    color: var(--accent-glow); /* Cyan Pop accent indicator core */
+}
+
+/* Premium Interaction Shutter Mask Layer (Hyper Blue Backlighting Depth) */
+.explore-matrix-hover-shutter {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(77, 56, 243, 0.75) 0%, rgba(0, 0, 0, 0.25) 100%); /* Hyper Blue Alpha Overlay shift */
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.explore-matrix-metrics-stack {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    transform: translateY(12px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.explore-matrix-metrics-stack span {
+    font-size: 16px;
+    color: var(--text-dark-pure); /* Silk white readability metrics string labels */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Color vector highlights safely tracking your multi-color layout allocations codes */
+.color-rose-vector { color: var(--brand-vibrant); filter: drop-shadow(0 0 6px var(--brand-vibrant)); }
+.color-cyan-vector { color: var(--accent-glow); filter: drop-shadow(0 0 6px var(--accent-glow)); }
+
+/* POINTER INTERACTION RECOVERY LOG STATES MAPPINGS */
+.explore-matrix-card-node:hover .explore-matrix-viewport-shield {
+    transform: translateY(-4px);
+    border-color: var(--brand-vibrant); /* Electric Neon Rose Border Ring Pop */
+}
+
+.explore-matrix-card-node:hover .explore-matrix-graphic { transform: scale(1.04); }
+.explore-matrix-card-node:hover .explore-matrix-hover-shutter { opacity: 1; }
+.explore-matrix-card-node:hover .explore-matrix-metrics-stack { transform: translateY(0); }
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Mobile Masonry Grid)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-explore-matrix-stage {
+        padding: 16px 0;
+    }
+
+    /* Convert complex desktop asymmetric quadrants into a clean mobile two-column touch lane track layout */
+    .explore-matrix-asymmetric-cluster {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 170px; /* Scales card sizing square bounding boxes down over touch device screens */
+        gap: 12px; /* Tight, liquid spacing matrix fields */
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Dissolve layout vertical spans blocks to balance flow symmetrically over smartphone viewports monitors */
+    .explore-matrix-card-node.node-span-double-vertical {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .explore-matrix-viewport-shield {
+        border-radius: 10px;
+    }
+
+    .explore-matrix-upper-pill-overlay {
+        top: 10px;
+        left: 10px;
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+
+    /* Keep engagement metrics layers visible natively over mobile touch displays view grids */
+    .explore-matrix-hover-shutter {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+        opacity: 1;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 12px;
+    }
+
+    .explore-matrix-metrics-stack {
+        gap: 12px;
+        transform: translateY(0);
+    }
+
+    .explore-matrix-metrics-stack span {
+        font-size: 11.5px;
+        gap: 4px;
+    }
+
+    .explore-matrix-metrics-stack span i {
+        font-size: 10.5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL TIMELINE FEED COMPLETION GATEWAY CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for rapid status tracking readability */
+.platform-feed-completion-stage h3,
+.completion-micro-pill,
+.completion-facade-anchor-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.platform-feed-completion-stage p {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.platform-feed-completion-stage {
+    background-color: var(--canvas-dark); /* Strict commitment to your Pure AMOLED Black variable untill you say */
+    padding: 60px 0 100px 0;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid var(--border-dark);
+}
+
+.completion-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically mirrors explore timelines, profile headers, and filter bars */
+    margin: 0 auto;
+}
+
+.completion-focal-axis {
+    background-color: var(--surface-dark); /* Floating post slate obsidian container backdrop base */
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-feed);
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   MODULE 1: CINEMATIC HARDWARE-ACCELERATED HALO ENGINE
+   ========================================================================== */
+.completion-vector-halo-shield {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.completion-halo-inner-gap {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-avatar);
+    background-color: var(--canvas-dark); /* Dark spacer separating core vector from color halo tracking paths */
+    border: 1px solid var(--border-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    position: relative;
+}
+
+.core-pulse-icon-rose {
+    font-size: 20px;
+    color: var(--brand-vibrant); /* Electric Neon Rose focal tracking node icon */
+    filter: drop-shadow(0 0 8px var(--brand-vibrant));
+}
+
+/* Multi-Axis Orbiting Satellite Ring Indicators */
+.satellite-orbit-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-avatar);
+    border: 1px dashed transparent;
+    z-index: 3;
+}
+
+.satellite-orbit-ring.ring-source-cyan {
+    border-top-color: var(--accent-glow); /* Cyan Pop active satellite ring path */
+    border-bottom-color: var(--accent-glow);
+    animation: orbitSpinClockwise 8s linear infinite;
+}
+
+.satellite-orbit-ring.ring-source-blue {
+    border-left-color: var(--brand-royal); /* Hyper Blue active satellite ring path */
+    border-right-color: var(--brand-royal);
+    animation: orbitSpinCounterClockwise 6s linear infinite;
+    transform: scale(0.85);
+}
+
+/* ==========================================================================
+   MODULE 2: CONFIRMATION TYPOGRAPHY ARCHITECTURE COPY STACK
+   ========================================================================== */
+.completion-status-text-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+    max-width: 540px;
+}
+
+.completion-badge-row {
+    margin-bottom: 16px;
+}
+
+.completion-micro-pill {
+    background-color: rgba(0, 242, 254, 0.04); /* Subdued Cyan Pop Shutter */
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    color: var(--accent-glow);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-cyan-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-glow);
+    animation: beaconPulse 1.6s infinite ease-in-out;
+}
+
+.completion-status-text-stack h3 {
+    font-size: 24px;
+    color: var(--text-dark-pure); /* Silk white clean title readability */
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
+}
+
+.completion-status-text-stack p {
+    font-size: 13.5px;
+    color: var(--text-secondary); /* Muted Graphite descriptive body string copy */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   MODULE 3: LOWER CONTEXTUAL RECOVERY NAVIGATION TRIGGER DECK
+   ========================================================================== */
+.completion-history-utility-deck {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.completion-facade-anchor-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-secondary);
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+}
+
+.completion-facade-anchor-btn i {
+    font-size: 11.5px;
+}
+
+.completion-facade-anchor-btn:hover {
+    color: var(--text-dark-pure);
+}
+
+.completion-facade-anchor-btn.link-theme-blue {
+    color: var(--brand-royal); /* Hyper Blue custom active channel link injection */
+}
+
+.completion-facade-anchor-btn.link-theme-blue:hover {
+    color: var(--accent-glow);
+}
+
+.utility-divider-dot {
+    width: 3px;
+    height: 3px;
+    background-color: var(--border-dark);
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Touch Collapse)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .platform-feed-completion-stage {
+        padding: 20px 0 40px 0;
+    }
+
+    /* Compress padding footprint variables tightly over smartphone device screen monitors */
+    .completion-focal-axis {
+        padding: 40px 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .completion-status-text-stack h3 {
+        font-size: 20px;
+    }
+
+    .completion-status-text-stack p {
+        font-size: 12.5px;
+        line-height: 1.55;
+    }
+
+    /* Convert horizontal links runway lines cleanly into vertically stacked touch rows sequences */
+    .completion-history-utility-deck {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .completion-facade-anchor-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+        background-color: var(--canvas-dark); /* AMOLED black backing container box rows over mobile viewports */
+        border: 1px solid var(--border-dark);
+        border-radius: 6px;
+        font-size: 12px;
+    }
+
+    .utility-divider-dot {
+        display: none; /* Safely strips divider indicators off layout wrapper boxes logs */
+    }
+}
+
+/* Hardware Accelerated Linear Rotating Kinetic Spin Cycles Keyframes */
+@keyframes orbitSpinClockwise {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes orbitSpinCounterClockwise {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ULTRA-PREMIUM SOCIAL EXPLORE HERO CANOPY CSS
+   ========================================================================== */
+
+/* Typography Assignments: Plus Jakarta Sans for instant data scanning fields */
+.explore-hero-canopy-stage h1,
+.explore-hero-canopy-stage h1 span,
+.explore-floating-metric-glass-card h3,
+.shortcut-prefix-label {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 800;
+}
+
+.explore-telemetry-pill,
+.explore-trending-counter,
+.explore-hero-canopy-stage p,
+.shortcut-token-btn,
+.glass-card-micro-tag,
+.glass-card-footer-label {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.explore-hero-canopy-stage {
+    background-color: var(--canvas-dark); /* Firmly anchored on your Pure AMOLED Black untill you say */
+    padding: 140px 0 60px 0; /* Expanded upper clearance safety boundaries preventing header bugs */
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid var(--border-dark);
+    overflow: hidden;
+}
+
+/* Deep Environmental Ambient Backlighting Overlay Mesh Flared Tracks */
+.explore-hero-ambient-mesh {
+    position: absolute;
+    top: -20%;
+    left: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 48, 79, 0.05) 0%, rgba(0, 242, 254, 0.02) 50%, transparent 75%);
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.explore-hero-layout-wrapper {
+    width: 92%;
+    max-width: 935px; /* Symmetrically engineered to lock perfectly with standard timeline grids */
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.explore-hero-canopy-grid {
+    display: grid;
+    /* Clean desktop distribution layout asymmetric split columns */
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* ==========================================================================
+   LEFT WING MODULE: EDITORIAL WELCOME DESCRIPTION ENGINE
+   ========================================================================== */
+.explore-welcome-axis {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.explore-status-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.explore-telemetry-pill {
+    background-color: rgba(0, 242, 254, 0.04); /* Subdued Cyan Pop Shutter */
+    border: 1px solid rgba(0, 242, 254, 0.15);
+    color: var(--accent-glow);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pulse-cyan-beacon {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-glow);
+    animation: beaconPulse 1.5s infinite ease-in-out;
+}
+
+.explore-trending-counter {
+    background-color: rgba(255, 48, 79, 0.06); /* Electric Neon Rose Alert Badge */
+    border: 1px solid rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.explore-hero-canopy-grid h1 {
+    font-size: 38px;
+    color: var(--text-dark-pure); /* Crisp Silk White readability heading text */
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin: 0 0 16px 0;
+}
+
+.explore-hero-canopy-grid h1 span {
+    background: var(--action-gradient); /* Electric Rose to Hyper Blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+
+.explore-welcome-axis p {
+    font-size: 14.5px;
+    color: var(--text-secondary); /* Muted Graphite description text copy */
+    line-height: 1.65;
+    margin: 0 0 32px 0;
+}
+
+/* Lower Quick Search Shortcut Buttons Tags Bars Row */
+.explore-quick-action-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-dark);
+    width: 100%;
+}
+
+.shortcut-prefix-label {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.shortcut-buttons-deck {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shortcut-token-btn {
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    color: var(--text-dark-pure);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shortcut-token-btn:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.shortcut-token-btn.active-rose-shutter {
+    background-color: rgba(255, 48, 79, 0.05);
+    border-color: rgba(255, 48, 79, 0.15);
+    color: var(--brand-vibrant); /* Electric Neon Rose Active Filter Token Hook */
+}
+
+/* ==========================================================================
+   RIGHT WING MODULE: CINEMATIC GRAPHIC SHOWCASE VIEWPORT
+   ========================================================================== */
+.explore-showcase-graphic-axis {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.explore-graphic-enclosure-frame {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+}
+
+.explore-main-image-shield {
+    width: 100%;
+    height: 340px; /* Sharp landscape cinematic viewport box frame dimensions */
+    border-radius: var(--radius-feed);
+    overflow: hidden;
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    background-color: var(--surface-dark);
+}
+
+.explore-featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85);
+    animation: imageSubtleDrift 10s infinite alternate ease-in-out;
+}
+
+.explore-gradient-lower-shutter {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Floating Frosted Glass Card Architecture Layer Construction */
+.explore-floating-metric-glass-card {
+    position: absolute;
+    bottom: -20px;
+    left: -30px; /* Breaks bounding box framing lines layouts alignments fields elegantly */
+    width: 260px;
+    background: linear-gradient(135deg, rgba(18, 12, 18, 0.7) 0%, rgba(0, 0, 0, 0.85) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+}
+
+.glass-card-inner-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.glass-card-micro-tag {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--accent-glow); /* Cyan Pop secondary telemetry badge chip */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.explore-floating-metric-glass-card h3 {
+    font-size: 28px;
+    color: var(--text-dark-pure);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.glass-sparkline-bar-track {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.glass-sparkline-fillfill-rose {
+    width: 74%;
+    height: 100%;
+    background-color: var(--brand-vibrant); /* Electric Neon Rose active filling progress line vector */
+    border-radius: 4px;
+}
+
+.glass-card-footer-label {
+    font-size: 11px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Symmetrical Stack Mobile Core)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .explore-hero-canopy-stage {
+        padding: 100px 0 40px 0;
+    }
+
+    /* Dissolve horizontal columns down into a single row vertical stack stream */
+    .explore-hero-canopy-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .explore-welcome-axis {
+        align-items: center;
+        text-align: center;
+    }
+
+    .explore-status-badge-row {
+        justify-content: center;
+    }
+
+    .explore-hero-canopy-grid h1 {
+        font-size: 30px;
+        letter-spacing: -1px;
+    }
+
+    .explore-welcome-axis p {
+        font-size: 13.5px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    .explore-quick-action-row {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 14px;
+    }
+
+    .shortcut-buttons-deck {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Graphics Components Reset Adjustment Field Layers */
+    .explore-showcase-graphic-axis {
+        justify-content: center;
+    }
+
+    .explore-graphic-enclosure-frame {
+        max-width: 100%;
+    }
+
+    .explore-main-image-shield {
+        height: 260px; /* Compresses image display window height over mobile viewports monitors */
+    }
+
+    /* Frame floating glass component context layers directly inside mobile monitors frames natively */
+    .explore-floating-metric-glass-card {
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 32px);
+        max-width: 280px;
+        padding: 16px;
+    }
+}
+
+/* Hardware Accelerated Micro Easing Slide Animations */
+@keyframes imageSubtleDrift {
+    0% { transform: scale(1) translateY(0); }
+    100% { transform: scale(1.04) translateY(-4px); }
+}
+
+
+
+
+
+
+
+
+
+

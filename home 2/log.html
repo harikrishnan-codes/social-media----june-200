@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media</title>
+  <link rel="icon" href="../assets/bg remove.webp">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="log.css">
+  <link rel="stylesheet" href="./root.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <!-- ULTRA-PREMIUM UNIFIED AUTHENTICATION CONSOLE LAYER -->
+<section class="auth-matrix-stage">
+    <!-- Deep Atmospheric Backlighting Mesh Blur Flare -->
+    <div class="auth-stage-ambient-glow"></div>
+
+    <div class="auth-layout-wrapper">
+        
+        <!-- Interactive Multi-State Auth Focal Box Container -->
+        <!-- States managed via classes: 'state-login' (Default), 'state-signup', 'state-forgot' -->
+        <div class="auth-focal-card state-login" id="authCard" data-aos="zoom-in" data-aos-duration="1200">
+            
+            <!-- ==========================================
+               SUB-MODULE 1: SECURE CANVAS LOGIN VIEW
+               ========================================== -->
+            <div class="auth-view-panel panel-login">
+                <div class="auth-panel-header">
+                    <span class="auth-micro-tag"><i class="fa-solid fa-shield-halved"></i> Terminal Access</span>
+                    <h2>Welcome <span>Back.</span></h2>
+                    <p>Initialize secure session link to resume asset tracking grid arrays.</p>
+                </div>
+
+                <form class="auth-form-engine" onsubmit="return handleAuthValidation(event)">
+                    <div class="auth-input-group">
+                        <label for="loginEmail">Secure Routing Identifier</label>
+                        <div class="input-field-frame">
+                            <i class="fa-solid fa-fingerprint field-inner-icon"></i>
+                            <input type="email" id="loginEmail" placeholder="Enter secure login email..." required class="auth-field-input">
+                        </div>
+                    </div>
+
+                    <div class="auth-input-group">
+                        <div class="label-split-row">
+                            <label for="loginPassword">Access Key Phrase</label>
+                            <button type="button" class="auth-link-trigger" onclick="switchAuthState('state-forgot')">Forgot Route Key?</button>
+                        </div>
+                        <div class="input-field-frame">
+                            <i class="fa-solid fa-key field-inner-icon"></i>
+                            <input type="password" id="loginPassword" placeholder="Enter session pass token..." required class="auth-field-input">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-social-base btn-app-primary auth-submit-btn">Authorize Session</button>
+                </form>
+
+                <div class="auth-panel-footer">
+                    <p>New to the curator ecosystem matrix? <button class="auth-link-trigger highlight-trigger" onclick="switchAuthState('state-signup')">Request Allocation Key</button></p>
+                </div>
+            </div>
+
+            <!-- ==========================================
+               SUB-MODULE 2: CRYPTOGRAPHIC SIGNUP REGISTRATION VIEW
+               ========================================== -->
+            <div class="auth-view-panel panel-signup">
+                <div class="auth-panel-header">
+                    <span class="auth-micro-tag"><i class="fa-solid fa-circle-nodes"></i> Allocation Matrix</span>
+                    <h2>Claim Your <span>Handle.</span></h2>
+                    <p>Register terminal parameters to anchor your custom visual canvas node.</p>
+                </div>
+
+                <form class="auth-form-engine" onsubmit="return handleAuthValidation(event)">
+                    <div class="auth-input-group">
+                        <label for="signupHandle">Custom Core Handle</label>
+                        <div class="input-field-frame">
+                            <i class="fa-solid fa-at field-inner-icon"></i>
+                            <input type="text" id="signupHandle" placeholder="e.g., alexander.design" required class="auth-field-input">
+                        </div>
+                    </div>
+
+                    <div class="auth-input-group">
+                        <label for="signupEmail">Secure Contact Identity</label>
+                        <div class="input-field-frame">
+                            <i class="fa-solid fa-envelope field-inner-icon"></i>
+                            <input type="email" id="signupEmail" placeholder="Enter secure registration email..." required class="auth-field-input">
+                        </div>
+                    </div>
+
+                    <div class="auth-input-group">
+                        <label for="signupPassword">Generate Master Passphrase</label>
+                        <div class="input-field-frame">
+                            <i class="fa-solid fa-lock field-inner-icon"></i>
+                            <input type="password" id="signupPassword" placeholder="Initialize master access token..." required class="auth-field-input">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-social-base btn-app-primary auth-submit-btn">Initialize Allocation</button>
+                </form>
+
+                <div class="auth-panel-footer">
+                    <p>Already secure in our workspace arrays? <button class="auth-link-trigger highlight-trigger" onclick="switchAuthState('state-login')">Resume Session Route</button></p>
+                </div>
+            </div>
+
+            <!-- ==========================================
+               SUB-MODULE 3: EPHEMERAL FORGOT PASSWORD RECOVERY VIEW
+               ========================================== -->
+            <div class="auth-view-panel panel-forgot">
+                <div class="auth-panel-header">
+                    <span class="auth-micro-tag"><i class="fa-solid fa-arrow-rotate-left"></i> Re-Key Protocol</span>
+                    <h2>Rotate <span>Access.</span></h2>
+                    <p>Inject your secure validation coordinate email token to rotate stale passphrases.</p>
+                </div>
+
+                <form class="auth-form-engine" onsubmit="return handleAuthValidation(event)">
+                    <div class="auth-input-group">
+                        <label for="forgotEmail">Registered Target Node Route</label>
+                        <div class="input-field-frame">
+                            <i class="fa-solid fa-paper-plane field-inner-icon"></i>
+                            <input type="email" id="forgotEmail" placeholder="Enter verified session email..." required class="auth-field-input">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-social-base btn-app-primary auth-submit-btn">Transmit Recovery Link</button>
+                </form>
+
+                <div class="auth-panel-footer">
+                    <p>Recall your secure synchronization credentials? <button class="auth-link-trigger highlight-trigger" onclick="switchAuthState('state-login')">Abort & Login</button></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <script src="script.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 900,
+      easing: 'ease-in-out',
+      once: true,
+    });
+
+    // data-aos="fade-up"
+    // fade-up, fade-down, fade-left, fade-right, zoom-in,	slide-up, flip-left	
+
+  </script>
+
+  <script>
+
+/**
+ * Active Authentication Form Panel Interface State Controller
+ * Updates container classes dynamically to activate hidden layout view frames.
+ * @param {string} targetState - Expected inputs: 'state-login', 'state-signup', 'state-forgot'
+ */
+function switchAuthState(targetState) {
+    const cardContainer = document.getElementById('authCard');
+    if (!cardContainer) return;
+
+    // Flush current state declarations vectors fields bounds safely
+    cardContainer.classList.remove('state-login', 'state-signup', 'state-forgot');
+
+    // Inject next requested matrix parameters
+    cardContainer.classList.add(targetState);
+}
+
+/**
+ * Unified Session Validation Interceptor 
+ * Executes browser intercept, confirms validation success loops, and pushes user to error.html
+ * @param {Event} event - Native browser event sequence parameter block hook
+ */
+function handleAuthValidation(event) {
+    event.preventDefault(); // Prevents standard browser reload loops
+
+    // Trigger hardware validation simulation success logs routines here
+    // Forward directly onto your existing fallback workspace mesh landing harbor
+    window.location.href = "./error.html";
+    
+    return false;
+}
+
+  </script>
+
+    
+</body>
+</html>
