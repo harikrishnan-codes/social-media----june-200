@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT solutions</title>
+  <title>Social Media</title>
   <link rel="icon" href="../assets/bg remove.webp">
 
   <link rel="stylesheet" href="style.css">
@@ -88,7 +88,7 @@
                 
                 <div class="glass-chat-identity-card chat-card-one">
                     <div class="chat-avatar-wrapper">
-                        <img src="./avatar2.webp" alt="Victoria Sterling Profile" class="chat-micro-avatar">
+                        <img src="../assets/w8.webp" alt="Victoria Sterling Profile" class="chat-micro-avatar">
                         <div class="online-indicator-node"></div>
                     </div>
                     <div class="chat-card-metadata">
@@ -100,7 +100,7 @@
 
                 <div class="glass-chat-identity-card chat-card-two">
                     <div class="chat-avatar-wrapper">
-                        <img src="./avatar4.webp" alt="Elena Roshova Profile" class="chat-micro-avatar">
+                        <img src="../assets/w2.webp" alt="Elena Roshova Profile" class="chat-micro-avatar">
                         <div class="online-indicator-node idle-amber-state"></div>
                     </div>
                     <div class="chat-card-metadata">
@@ -144,7 +144,7 @@
                 <!-- Thread Node 1 (Active/Selected State) -->
                 <div class="thread-row-node active-selected-thread">
                     <div class="thread-avatar-wrap">
-                        <img src="./avatar2.webp" alt="Victoria Sterling Profile" class="thread-avatar">
+                        <img src="../assets/w8.webp" alt="Victoria Sterling Profile" class="thread-avatar">
                         <span class="thread-status-dot online-pulse-green"></span>
                     </div>
                     <div class="thread-meta-stack">
@@ -159,7 +159,7 @@
                 <!-- Thread Node 2 -->
                 <div class="thread-row-node">
                     <div class="thread-avatar-wrap">
-                        <img src="./avatar4.webp" alt="Elena Roshova Profile" class="thread-avatar">
+                        <img src="../assets/w2.webp" alt="Elena Roshova Profile" class="thread-avatar">
                         <span class="thread-status-dot online-pulse-green"></span>
                     </div>
                     <div class="thread-meta-stack">
@@ -174,7 +174,7 @@
                 <!-- Thread Node 3 -->
                 <div class="thread-row-node">
                     <div class="thread-avatar-wrap">
-                        <img src="./avatar3.webp" alt="Marcus Vance Profile" class="thread-avatar">
+                        <img src="../assets/m3.webp" alt="Marcus Vance Profile" class="thread-avatar">
                         <span class="thread-status-dot idle-pulse-amber"></span>
                     </div>
                     <div class="thread-meta-stack">
@@ -194,16 +194,16 @@
             <!-- Chat Active User Title Row -->
             <div class="chat-viewport-header">
                 <div class="header-user-badge">
-                    <img src="./avatar2.webp" alt="Victoria Sterling Profile" class="viewport-avatar-micro">
+                    <img src="../assets/w8.webp" alt="Victoria Sterling Profile" class="viewport-avatar-micro">
                     <div class="viewport-user-meta">
                         <h4>victoria.sterling</h4>
                         <span>Active Stream // Live encrypted channel</span>
                     </div>
                 </div>
                 <div class="viewport-utility-actions">
-                    <button class="viewport-action-trigger" aria-label="Start Call"><i class="fa-solid fa-phone"></i></button>
-                    <button class="viewport-action-trigger" aria-label="Start Video"><i class="fa-solid fa-video"></i></button>
-                    <button class="viewport-action-trigger" aria-label="Thread Info"><i class="fa-solid fa-circle-info"></i></button>
+                    <button class="viewport-action-trigger" onclick="window.location.href='error.html'" aria-label="Start Call"><i class="fa-solid fa-phone"></i></button>
+                    <button class="viewport-action-trigger" onclick="window.location.href='error.html'" aria-label="Start Video"><i class="fa-solid fa-video"></i></button>
+                    <button class="viewport-action-trigger" onclick="window.location.href='error.html'" aria-label="Thread Info"><i class="fa-solid fa-circle-info"></i></button>
                 </div>
             </div>
 
@@ -212,7 +212,7 @@
                 
                 <!-- Received Message Bubble Block -->
                 <div class="message-bubble-row bubble-received-state">
-                    <img src="./avatar2.webp" alt="Victoria Sterling" class="bubble-avatar-nano">
+                    <img src="../assets/w8.webp" alt="Victoria Sterling" class="bubble-avatar-nano">
                     <div class="message-content-wrapper">
                         <div class="text-bubble-block">
                             <p>Hey! Did you have a chance to look over the new glassmorphic dark-mode asset matrices I uploaded to the layout runway?</p>
@@ -235,12 +235,12 @@
 
             <!-- Interactive Message Composition Toolbar Desk Baseline -->
             <div class="chat-composition-footer-bar">
-                <div class="input-compose-wrapper">
+                <form class="input-compose-wrapper" action="error.html" method="GET">
                     <button class="compose-action-btn" aria-label="Attach File"><i class="fa-solid fa-paperclip"></i></button>
-                    <input type="text" placeholder="Write an encrypted message..." class="compose-main-field-input">
+                    <input type="text" placeholder="Write an encrypted message..." class="compose-main-field-input" required>
                     <button class="compose-action-btn" aria-label="Insert Emoji"><i class="fa-regular fa-face-smile"></i></button>
                     <button class="compose-submit-trigger" aria-label="Send Message"><i class="fa-solid fa-arrow-up"></i></button>
-                </div>
+                </form>
             </div>
 
         </div>
@@ -263,12 +263,12 @@
     <div class="chat-view-header-strip">
         <div class="header-left-back-dock">
             <!-- Back trigger node optimized directly for responsive mobile tab routing -->
-            <button onclick="window.history.back()" class="chat-mobile-back-trigger" aria-label="Return to Inbox List">
+            <button onclick="window.location.href='error.html'" class="chat-mobile-back-trigger" aria-label="Return to Inbox List">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
             <div class="active-identity-profile">
                 <div class="avatar-status-frame">
-                    <img src="./avatar2.webp" alt="Victoria Sterling Portrait" class="active-chat-avatar">
+                    <img src="../assets/w8.webp" alt="Victoria Sterling Portrait" class="active-chat-avatar">
                     <span class="active-status-beacon-dot online-pulse-core"></span>
                 </div>
                 <div class="active-name-stack">
@@ -279,14 +279,14 @@
         </div>
         
         <div class="header-right-utilities">
-            <button class="chat-utility-action-btn" aria-label="Voice Call"><i class="fa-solid fa-phone"></i></button>
-            <button class="chat-utility-action-btn" aria-label="Video Call"><i class="fa-solid fa-video"></i></button>
-            <button class="chat-utility-action-btn" aria-label="Chat Settings"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            <button class="chat-utility-action-btn" onclick="window.location.href='error.html'" aria-label="Voice Call"><i class="fa-solid fa-phone"></i></button>
+            <button class="chat-utility-action-btn" onclick="window.location.href='error.html'" aria-label="Video Call"><i class="fa-solid fa-video"></i></button>
+            <button class="chat-utility-action-btn" onclick="window.location.href='error.html'" aria-label="Chat Settings"><i class="fa-solid fa-ellipsis-vertical"></i></button>
         </div>
     </div>
 
     <!-- Scrollable Conversation Logs Canopy Track -->
-    <div class="chat-bubbles-scroll-track">
+    <form class="chat-bubbles-scroll-track">
         
         <!-- Timeline System Separator Marker -->
         <div class="chat-timeline-divider-tag">
@@ -310,10 +310,10 @@
         </div>
 
         <!-- Message Block: Received Premium Voice Token Note Layout -->
-        <div class="chat-bubble-packet bubble-direction-received" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <!-- <div class="chat-bubble-packet bubble-direction-received" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <div class="packet-content-shield premium-voice-packet">
                 <div class="voice-player-interface-row">
-                    <button class="voice-play-trigger-btn" aria-label="Play Voice Memo"><i class="fa-solid fa-play"></i></button>
+                    <button class="voice-play-trigger-btn" onclick="window.location.href='error.html'" aria-label="Play Voice Memo"><i class="fa-solid fa-play"></i></button>
                     <div class="voice-audio-wave-visualizer">
                         <span class="v-wave-bar" style="height: 40%;"></span>
                         <span class="v-wave-bar" style="height: 70%;"></span>
@@ -326,21 +326,21 @@
                 </div>
                 <span class="packet-timestamp-label">11:50 AM</span>
             </div>
-        </div>
+        </div> -->
 
-    </div>
+    </form>
 
     <!-- Persistent Floating Composition Baseline Bar -->
-    <div class="chat-input-composition-deck">
+    <form class="chat-input-composition-deck" action="error.html" method="GET">
         <div class="composition-inner-capsule">
             <button class="composition-utility-btn" aria-label="Add Media Asset"><i class="fa-solid fa-plus"></i></button>
             <div class="composition-input-field-shield">
-                <input type="text" placeholder="Type encrypted message..." class="composition-main-input-box">
+                <input type="text" placeholder="Type encrypted message..." class="composition-main-input-box" required>
                 <button class="composition-emoji-trigger" aria-label="Insert Emoji"><i class="fa-regular fa-face-smile"></i></button>
             </div>
             <button class="composition-send-trigger-btn" aria-label="Transmit Message"><i class="fa-solid fa-arrow-up"></i></button>
         </div>
-    </div>
+    </form>
 
 </section>
 
@@ -360,9 +360,9 @@
         <div class="asset-library-header" data-aos="fade-up" data-aos-duration="1000">
             <h3 class="asset-panel-title">Shared Core Workspace</h3>
             <div class="asset-tab-triggers">
-                <button class="asset-tab-btn active-asset-tab"><i class="fa-solid fa-image"></i> Media</button>
-                <button class="asset-tab-btn"><i class="fa-solid fa-file-code"></i> Documents</button>
-                <button class="asset-tab-btn"><i class="fa-solid fa-link"></i> Links</button>
+                <button class="asset-tab-btn active-asset-tab" onclick="window.location.href='error.html'"><i class="fa-solid fa-image"></i> Media</button>
+                <button class="asset-tab-btn" onclick="window.location.href='error.html'"><i class="fa-solid fa-file-code"></i> Documents</button>
+                <button class="asset-tab-btn" onclick="window.location.href='error.html'"><i class="fa-solid fa-link"></i> Links</button>
             </div>
         </div>
 
@@ -372,9 +372,9 @@
             <!-- Asset Node 1: High-Fidelity Design Thumbnail -->
             <div class="asset-item-card media-type-node" data-aos="zoom-in" data-aos-duration="800">
                 <div class="asset-preview-frame">
-                    <img src="./discover-asset1.webp" alt="Shared Layout Asset File" class="asset-thumbnail-img">
+                    <img src="../assets/post 1.webp" alt="Shared Layout Asset File" class="asset-thumbnail-img">
                     <div class="asset-hover-mask">
-                        <a href="./discover-asset1.webp" download class="asset-action-link"><i class="fa-solid fa-arrow-down-to-line"></i></a>
+                        <a href="../assets/w8.webp" download class="asset-action-link"><i class="fa-solid fa-arrow-down-to-line"></i></a>
                     </div>
                 </div>
                 <div class="asset-metadata-footer">
@@ -568,7 +568,7 @@
             <div class="network-user-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <div class="network-user-identity">
                     <div class="network-avatar-frame">
-                        <img src="./avatar4.webp" alt="Zenith Reels Profile" class="network-avatar-img">
+                        <img src="../assets/w10.webp" alt="Zenith Reels Profile" class="network-avatar-img">
                         <i class="fa-solid fa-bolt network-verified-tag"></i>
                     </div>
                     <div class="network-user-meta">
@@ -578,8 +578,8 @@
                 </div>
                 <p class="network-user-bio">Generative motion curator specializing in spatial 4K video streams.</p>
                 <div class="network-action-buttons">
-                    <button class="btn-social-base btn-app-primary micro-network-btn">Accept</button>
-                    <button class="btn-social-base btn-app-secondary micro-network-btn">Decline</button>
+                    <button class="btn-social-base btn-app-primary micro-network-btn" onclick="window.location.href='error.html'">Accept</button>
+                    <button class="btn-social-base btn-app-secondary micro-network-btn" onclick="window.location.href='error.html'">Decline</button>
                 </div>
             </div>
 
@@ -587,7 +587,7 @@
             <div class="network-user-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="network-user-identity">
                     <div class="network-avatar-frame">
-                        <img src="./avatar1.webp" alt="Studio Minimal Profile" class="network-avatar-img">
+                        <img src="../assets/m6.webp" alt="Studio Minimal Profile" class="network-avatar-img">
                         <i class="fa-solid fa-circle-check network-verified-tag cyan-tag-modifier"></i>
                     </div>
                     <div class="network-user-meta">
@@ -597,8 +597,8 @@
                 </div>
                 <p class="network-user-bio">Editorial typography house mapping monolithic dark canvas themes.</p>
                 <div class="network-action-buttons">
-                    <button class="btn-social-base btn-app-primary micro-network-btn">Accept</button>
-                    <button class="btn-social-base btn-app-secondary micro-network-btn">Decline</button>
+                    <button class="btn-social-base btn-app-primary micro-network-btn" onclick="window.location.href='error.html'">Accept</button>
+                    <button class="btn-social-base btn-app-secondary micro-network-btn" onclick="window.location.href='error.html'">Decline</button>
                 </div>
             </div>
 
@@ -633,8 +633,8 @@
 
                 <!-- Dual Action Trigger Buttons Deck -->
                 <div class="conversion-action-deck" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                    <a href="#" class="btn-social-base btn-app-primary conversion-primary-btn">Initialize Free Account</a>
-                    <a href="#" class="btn-social-base btn-app-secondary conversion-secondary-btn">Explore Premium Tiers</a>
+                    <a href="error.html" class="btn-social-base btn-app-primary conversion-primary-btn">Initialize Free Account</a>
+                    <a href="error.html" class="btn-social-base btn-app-secondary conversion-secondary-btn">Explore Premium Tiers</a>
                 </div>
             </div>
         </div>
