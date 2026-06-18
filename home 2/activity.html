@@ -19,34 +19,47 @@
 
 <body>
 
-    <!-- PREMIUM LUXURY APPLICATION NAVIGATION CANVAS -->
     <header class="app-premium-header">
         <div class="header-glass-backdrop">
             <div class="header-layout-wrapper">
 
-                <!-- Luxury Branding Anchor -->
                 <div class="app-logo-node">
                     <a href="index.html" class="app-logo-title">
                         <img src="../assets/pink.webp" alt="logo" width="150px" height="50px">
+
                     </a>
                 </div>
 
-                <!-- Central Navigation Path Matrix -->
                 <nav class="app-navigation-deck">
-                    <a href="index.html" class="app-nav-link active-link-token"><i class="fa-solid fa-house"></i>
-                        Home</a>
+
+                    <div class="app-nav-dropdown-wrapper" id="homeDropdownWrapper">
+                        <a href="index.html" class="app-nav-link active-link-token" id="homeMainLink">
+                            Home
+                        </a>
+                        <span class="dropdown-trigger-icon" id="dropdownAnchor">
+                            <i class="fa-solid fa-chevron-down dropdown-arrow-indicator"></i>
+                        </span>
+
+                        <div class="app-nav-dropdown-panel">
+                            <ul class="dropdown-text-stack">
+                                <li><a href="../index.html" class="dropdown-leaf-link">Home Style 1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <a href="explore.html" class="app-nav-link"><i class="fa-solid fa-compass"></i> Explore</a>
                     <a href="message.html" class="app-nav-link"><i class="fa-solid fa-paper-plane"></i> Messages</a>
                     <a href="activity.html" class="app-nav-link"><i class="fa-solid fa-heart"></i> Activity</a>
                     <a href="profile.html" class="app-nav-link"><i class="fa-solid fa-circle-user"></i> Profile</a>
+
+                    <a href="log.html" class="btn-social-base btn-app-secondary mobile-only-auth">Log In</a>
+                    <a href="log.html" class="btn-social-base btn-app-primary mobile-only-auth">Sign Up</a>
                 </nav>
 
-                <!-- Right Profile Utility & Call-To-Actions Desk -->
                 <div class="app-action-desk">
-                    <a href="log.html" class="btn-social-base btn-app-secondary">Log In</a>
-                    <a href="log.html" class="btn-social-base btn-app-primary">Sign Up</a>
+                    <a href="log.html" class="btn-social-base btn-app-secondary desktop-only-auth">Log In</a>
+                    <a href="log.html" class="btn-social-base btn-app-primary desktop-only-auth">Sign Up</a>
 
-                    <!-- Modern Minimalist Mobile Menu Toggle Vector Button -->
                     <button class="mobile-menu-hamburger" id="mobileHamburger" aria-label="Toggle App Navigation Menu">
                         <span class="burger-bar-line"></span>
                         <span class="burger-bar-line"></span>
@@ -57,6 +70,7 @@
             </div>
         </div>
     </header>
+
 
 
 
@@ -213,7 +227,8 @@
                         <div class="reward-meta-stack">
                             <h4>Elite Circle Privilege</h4>
                             <p>Your platform reach velocity metrics have placed your custom handle in the top
-                                <strong>2%</strong> of global visual curators this week.</p>
+                                <strong>2%</strong> of global visual curators this week.
+                            </p>
                         </div>
                     </div>
 
@@ -255,7 +270,8 @@
                 </p>
                 <div class="session-footer-meta">
                     <span class="micro-ip-badge">IP: 184.22.109.X</span>
-                    <button class="session-action-trigger-btn disabled-state" onclick="window.location.href='error.html'">Secure Anchor</button>
+                    <button class="session-action-trigger-btn disabled-state"
+                        onclick="window.location.href='error.html'">Secure Anchor</button>
                 </div>
             </div>
 
@@ -272,7 +288,8 @@
                 </p>
                 <div class="session-footer-meta">
                     <span class="micro-ip-badge">IP: 92.45.210.X</span>
-                    <button class="session-action-trigger-btn" onclick="window.location.href='error.html'">Revoke Access</button>
+                    <button class="session-action-trigger-btn" onclick="window.location.href='error.html'">Revoke
+                        Access</button>
                 </div>
             </div>
 
@@ -289,7 +306,8 @@
                 </p>
                 <div class="session-footer-meta">
                     <span class="micro-ip-badge">IP: 142.8.55.X</span>
-                    <button class="session-action-trigger-btn" onclick="window.location.href='error.html'">Revoke Access</button>
+                    <button class="session-action-trigger-btn" onclick="window.location.href='error.html'">Revoke
+                        Access</button>
                 </div>
             </div>
 
@@ -362,8 +380,8 @@
                     <!-- Secure Hash Box Display Node -->
                     <div class="secure-token-display-box">
                         <code class="token-hash-string">stk_live_2026_92x78_alpha_mesh_secure</code>
-                        <button class="token-copy-trigger" onclick="window.location.href='error.html'" aria-label="Copy Secret Key to Clipboard"><i
-                                class="fa-solid fa-copy"></i></button>
+                        <button class="token-copy-trigger" onclick="window.location.href='error.html'"
+                            aria-label="Copy Secret Key to Clipboard"><i class="fa-solid fa-copy"></i></button>
                     </div>
 
                     <span class="token-security-disclaimer"><i class="fa-solid fa-circle-info"></i> Tunnels rotate
@@ -397,7 +415,8 @@
                 </div>
                 <div class="session-foot-row">
                     <span class="session-ip-hash">IP: 184.22.109.X</span>
-                    <button class="btn-revoke-inline disabled-state" onclick="window.location.href='error.html'">Secure</button>
+                    <button class="btn-revoke-inline disabled-state"
+                        onclick="window.location.href='error.html'">Secure</button>
                 </div>
             </div>
 
@@ -455,7 +474,8 @@
                 </p>
                 <div class="management-action-row">
                     <span class="archive-meta-text"><i class="fa-solid fa-cube"></i> Compiled Format: JSON / ZIP</span>
-                    <button class="btn-social-base btn-app-secondary export-trigger-btn" onclick="window.location.href='error.html'">Request Archive</button>
+                    <button class="btn-social-base btn-app-secondary export-trigger-btn"
+                        onclick="window.location.href='error.html'">Request Archive</button>
                 </div>
             </div>
 
@@ -469,7 +489,8 @@
                 <div class="management-action-row">
                     <span class="archive-meta-text danger-meta-text"><i class="fa-solid fa-triangle-exclamation"></i>
                         Scrub Matrix Instantly</span>
-                    <button class="btn-social-base purge-destructive-trigger-btn" onclick="window.location.href='error.html'">De-authorize Grid</button>
+                    <button class="btn-social-base purge-destructive-trigger-btn"
+                        onclick="window.location.href='error.html'">De-authorize Grid</button>
                 </div>
             </div>
 
@@ -504,8 +525,10 @@
                     </p>
 
                     <div class="cta-action-deck" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                        <a href="error.html" class="btn-social-base btn-app-primary cta-primary-btn">Claim Your Handle</a>
-                        <a href="error.html" class="btn-social-base btn-app-secondary cta-secondary-btn">View VIP Tiers</a>
+                        <a href="error.html" class="btn-social-base btn-app-primary cta-primary-btn">Claim Your
+                            Handle</a>
+                        <a href="error.html" class="btn-social-base btn-app-secondary cta-secondary-btn">View VIP
+                            Tiers</a>
                     </div>
                 </div>
             </div>

@@ -20,43 +20,58 @@
 
     
 
-<!-- PREMIUM LUXURY APPLICATION NAVIGATION CANVAS -->
 <header class="app-premium-header">
-    <div class="header-glass-backdrop">
-        <div class="header-layout-wrapper">
-            
-            <!-- Luxury Branding Anchor -->
-            <div class="app-logo-node">
-                <a href="index.html" class="app-logo-title">
+  <div class="header-glass-backdrop">
+    <div class="header-layout-wrapper">
+        
+      <div class="app-logo-node">
+        <a href="index.html" class="app-logo-title">
                     <img src="../assets/pink.webp" alt="logo" width="150px" height="50px">
-                </a>
-            </div>
 
-            <!-- Central Navigation Path Matrix -->
-            <nav class="app-navigation-deck">
-                <a href="index.html" class="app-nav-link active-link-token"><i class="fa-solid fa-house"></i> Home</a>
-                <a href="explore.html" class="app-nav-link"><i class="fa-solid fa-compass"></i> Explore</a>
-                <a href="message.html" class="app-nav-link"><i class="fa-solid fa-paper-plane"></i> Messages</a>
-                <a href="activity.html" class="app-nav-link"><i class="fa-solid fa-heart"></i> Activity</a>
-                <a href="profile.html" class="app-nav-link"><i class="fa-solid fa-circle-user"></i> Profile</a>
-            </nav>
+        </a>
+      </div>
 
-            <!-- Right Profile Utility & Call-To-Actions Desk -->
-            <div class="app-action-desk">
-                <a href="log.html" class="btn-social-base btn-app-secondary">Log In</a>
-                <a href="log.html" class="btn-social-base btn-app-primary">Sign Up</a>
-                
-                <!-- Modern Minimalist Mobile Menu Toggle Vector Button -->
-                <button class="mobile-menu-hamburger" id="mobileHamburger" aria-label="Toggle App Navigation Menu">
-                    <span class="burger-bar-line"></span>
-                    <span class="burger-bar-line"></span>
-                    <span class="burger-bar-line"></span>
-                </button>
-            </div>
-
+      <nav class="app-navigation-deck">
+        
+        <div class="app-nav-dropdown-wrapper" id="homeDropdownWrapper">
+          <a href="index.html" class="app-nav-link active-link-token" id="homeMainLink">
+            Home
+          </a>
+          <span class="dropdown-trigger-icon" id="dropdownAnchor">
+            <i class="fa-solid fa-chevron-down dropdown-arrow-indicator"></i>
+          </span>
+          
+          <div class="app-nav-dropdown-panel">
+            <ul class="dropdown-text-stack">
+              <li><a href="../index.html" class="dropdown-leaf-link">Home Style 1</a></li>
+            </ul>
+          </div>
         </div>
+
+        <a href="explore.html" class="app-nav-link"><i class="fa-solid fa-compass"></i> Explore</a>
+        <a href="message.html" class="app-nav-link"><i class="fa-solid fa-paper-plane"></i> Messages</a>
+        <a href="activity.html" class="app-nav-link"><i class="fa-solid fa-heart"></i> Activity</a>
+        <a href="profile.html" class="app-nav-link"><i class="fa-solid fa-circle-user"></i> Profile</a>
+
+        <a href="log.html" class="btn-social-base btn-app-secondary mobile-only-auth">Log In</a>
+        <a href="log.html" class="btn-social-base btn-app-primary mobile-only-auth">Sign Up</a>
+      </nav>
+
+      <div class="app-action-desk">
+        <a href="log.html" class="btn-social-base btn-app-secondary desktop-only-auth">Log In</a>
+        <a href="log.html" class="btn-social-base btn-app-primary desktop-only-auth">Sign Up</a>
+        
+        <button class="mobile-menu-hamburger" id="mobileHamburger" aria-label="Toggle App Navigation Menu">
+          <span class="burger-bar-line"></span>
+          <span class="burger-bar-line"></span>
+          <span class="burger-bar-line"></span>
+        </button>
+      </div>
+
     </div>
+  </div>
 </header>
+
 
 
 

@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
             navigationDeck.classList.toggle("mobile-tray-active");
         });
 
-        // Close overlay menu automatically if an internal nav link receives a touch event
-        const trayLinks = document.querySelectorAll(".app-nav-link:not(#dropdownAnchor), .dropdown-leaf-link");
+        // Close overlay menu automatically if any normal nav link or duplicated mobile button is clicked
+        const trayLinks = document.querySelectorAll(".app-nav-link, .dropdown-leaf-link, .mobile-only-auth");
         trayLinks.forEach(link => {
             link.addEventListener("click", () => {
                 hamburgerBtn.classList.remove("hamburger-active");
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // Outside Click Safe Boundary Protection Trap Logic
+        // Outside Click Safe Dismissal Trap Boundary Implementation
         document.addEventListener("click", (event) => {
             if (window.innerWidth <= 768 && navigationDeck.classList.contains("mobile-tray-active")) {
                 if (!navigationDeck.contains(event.target) && !hamburgerBtn.contains(event.target)) {
@@ -46,23 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /**
-     * 3. PRESS ARKMASK DROPDOWN INTERACTIVE ENGINE
-     * Manages click triggers to cleanly toggle active open states on click bounds.
-     */
+    // 3. SEPARATED DROPDOWN ARROW TOGGLE TRIGGER MODULE
     if (dropdownAnchor && dropdownWrapper) {
         dropdownAnchor.addEventListener("click", (event) => {
             event.preventDefault();
-            event.stopPropagation(); // Prevents instant window bubble closure collisions
+            event.stopPropagation(); // Block main window safety close event bubbling
+            
             dropdownWrapper.classList.toggle("dropdown-visible-active");
-            console.log("[SYS] Premium home matrix dropdown canvas visibility mutated.");
+            console.log("[SYS] Split action: Home dropdown panel visibility toggled via arrow icon click.");
         });
     }
 
-    /**
-     * 4. APP-WIDE DISMISSAL EDGE PROTECTION HANDSHAKE
-     * Closes the interactive dropdown panel window automatically if a user clicks outside the element frame.
-     */
+    // 4. DROPDOWN SAFELOCKED DISMISSAL TRIGGER HANDSHAKE
     document.addEventListener("click", (event) => {
         if (dropdownWrapper && dropdownWrapper.classList.contains("dropdown-visible-active")) {
             if (!dropdownWrapper.contains(event.target)) {
@@ -72,9 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
-
-
 
 
 

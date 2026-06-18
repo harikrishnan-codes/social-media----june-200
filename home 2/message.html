@@ -18,42 +18,55 @@
 <body>
     
     
-<!-- PREMIUM LUXURY APPLICATION NAVIGATION CANVAS -->
 <header class="app-premium-header">
-    <div class="header-glass-backdrop">
-        <div class="header-layout-wrapper">
-            
-            <!-- Luxury Branding Anchor -->
-            <div class="app-logo-node">
-                <a href="index.html" class="app-logo-title">
-                    <img src="../assets/pink.webp" alt="logo" width="150px" height="50px">
-                </a>
-            </div>
+  <div class="header-glass-backdrop">
+    <div class="header-layout-wrapper">
+        
+      <div class="app-logo-node">
+        <a href="index.html" class="app-logo-title">
+          <img src="../assets/pink.webp" alt="logo" width="150px" height="50px">
+        </a>
+      </div>
 
-            <!-- Central Navigation Path Matrix -->
-            <nav class="app-navigation-deck">
-                <a href="index.html" class="app-nav-link active-link-token"><i class="fa-solid fa-house"></i> Home</a>
-                <a href="explore.html" class="app-nav-link"><i class="fa-solid fa-compass"></i> Explore</a>
-                <a href="message.html" class="app-nav-link"><i class="fa-solid fa-paper-plane"></i> Messages</a>
-                <a href="activity.html" class="app-nav-link"><i class="fa-solid fa-heart"></i> Activity</a>
-                <a href="profile.html" class="app-nav-link"><i class="fa-solid fa-circle-user"></i> Profile</a>
-            </nav>
-
-            <!-- Right Profile Utility & Call-To-Actions Desk -->
-            <div class="app-action-desk">
-                <a href="log.html" class="btn-social-base btn-app-secondary">Log In</a>
-                <a href="log.html" class="btn-social-base btn-app-primary">Sign Up</a>
-                
-                <!-- Modern Minimalist Mobile Menu Toggle Vector Button -->
-                <button class="mobile-menu-hamburger" id="mobileHamburger" aria-label="Toggle App Navigation Menu">
-                    <span class="burger-bar-line"></span>
-                    <span class="burger-bar-line"></span>
-                    <span class="burger-bar-line"></span>
-                </button>
-            </div>
-
+      <nav class="app-navigation-deck">
+        
+        <div class="app-nav-dropdown-wrapper" id="homeDropdownWrapper">
+          <a href="index.html" class="app-nav-link active-link-token" id="homeMainLink">
+            Home
+          </a>
+          <span class="dropdown-trigger-icon" id="dropdownAnchor">
+            <i class="fa-solid fa-chevron-down dropdown-arrow-indicator"></i>
+          </span>
+          
+          <div class="app-nav-dropdown-panel">
+            <ul class="dropdown-text-stack">
+              <li><a href="../index.html" class="dropdown-leaf-link">Home Style 1</a></li>
+            </ul>
+          </div>
         </div>
+
+        <a href="explore.html" class="app-nav-link"><i class="fa-solid fa-compass"></i> Explore</a>
+        <a href="message.html" class="app-nav-link"><i class="fa-solid fa-paper-plane"></i> Messages</a>
+        <a href="activity.html" class="app-nav-link"><i class="fa-solid fa-heart"></i> Activity</a>
+        <a href="profile.html" class="app-nav-link"><i class="fa-solid fa-circle-user"></i> Profile</a>
+
+        <a href="log.html" class="btn-social-base btn-app-secondary mobile-only-auth">Log In</a>
+        <a href="log.html" class="btn-social-base btn-app-primary mobile-only-auth">Sign Up</a>
+      </nav>
+
+      <div class="app-action-desk">
+        <a href="log.html" class="btn-social-base btn-app-secondary desktop-only-auth">Log In</a>
+        <a href="log.html" class="btn-social-base btn-app-primary desktop-only-auth">Sign Up</a>
+        
+        <button class="mobile-menu-hamburger" id="mobileHamburger" aria-label="Toggle App Navigation Menu">
+          <span class="burger-bar-line"></span>
+          <span class="burger-bar-line"></span>
+          <span class="burger-bar-line"></span>
+        </button>
+      </div>
+
     </div>
+  </div>
 </header>
 
 
@@ -256,14 +269,11 @@
 
 
 
-<!-- ULTRA-PREMIUM ACTIVE MOBILE-FIRST CONVERSATION HUBS -->
-<section class="chat-active-viewport-canopy">
+ <!-- <section class="chat-active-viewport-canopy">
     
-    <!-- Header Stream Bar Track -->
-    <div class="chat-view-header-strip">
+     <div class="chat-view-header-strip">
         <div class="header-left-back-dock">
-            <!-- Back trigger node optimized directly for responsive mobile tab routing -->
-            <button onclick="window.location.href='error.html'" class="chat-mobile-back-trigger" aria-label="Return to Inbox List">
+             <button onclick="window.location.href='error.html'" class="chat-mobile-back-trigger" aria-label="Return to Inbox List">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
             <div class="active-identity-profile">
@@ -285,53 +295,31 @@
         </div>
     </div>
 
-    <!-- Scrollable Conversation Logs Canopy Track -->
-    <form class="chat-bubbles-scroll-track">
+     <form class="chat-bubbles-scroll-track">
         
-        <!-- Timeline System Separator Marker -->
-        <div class="chat-timeline-divider-tag">
+         <div class="chat-timeline-divider-tag">
             <span>Today // June 15, 2026</span>
         </div>
 
-        <!-- Message Block: Received State -->
-        <div class="chat-bubble-packet bubble-direction-received" data-aos="fade-up" data-aos-duration="600">
+         <div class="chat-bubble-packet bubble-direction-received" data-aos="fade-up" data-aos-duration="600">
             <div class="packet-content-shield">
                 <p>I just updated the prototype design specifications root files on the main repository canvas. Can you check how the responsive glassmorphism layer renders over the 768px tracks?</p>
                 <span class="packet-timestamp-label">11:46 AM</span>
             </div>
         </div>
 
-        <!-- Message Block: Sent State -->
-        <div class="chat-bubble-packet bubble-direction-sent" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
+         <div class="chat-bubble-packet bubble-direction-sent" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
             <div class="packet-content-shield">
                 <p>Reviewing now. The hardware-accelerated animations run seamlessly at 120Hz. The black and pink aesthetics pop beautifully against the dark canvas layer!</p>
                 <span class="packet-timestamp-label">11:49 AM</span>
             </div>
         </div>
 
-        <!-- Message Block: Received Premium Voice Token Note Layout -->
-        <!-- <div class="chat-bubble-packet bubble-direction-received" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <div class="packet-content-shield premium-voice-packet">
-                <div class="voice-player-interface-row">
-                    <button class="voice-play-trigger-btn" onclick="window.location.href='error.html'" aria-label="Play Voice Memo"><i class="fa-solid fa-play"></i></button>
-                    <div class="voice-audio-wave-visualizer">
-                        <span class="v-wave-bar" style="height: 40%;"></span>
-                        <span class="v-wave-bar" style="height: 70%;"></span>
-                        <span class="v-wave-bar" style="height: 50%;"></span>
-                        <span class="v-wave-bar" style="height: 85%;"></span>
-                        <span class="v-wave-bar" style="height: 60%;"></span>
-                        <span class="v-wave-bar" style="height: 30%;"></span>
-                    </div>
-                    <span class="voice-duration-label">0:14</span>
-                </div>
-                <span class="packet-timestamp-label">11:50 AM</span>
-            </div>
-        </div> -->
+    
 
     </form>
 
-    <!-- Persistent Floating Composition Baseline Bar -->
-    <form class="chat-input-composition-deck" action="error.html" method="GET">
+     <form class="chat-input-composition-deck" action="error.html" method="GET">
         <div class="composition-inner-capsule">
             <button class="composition-utility-btn" aria-label="Add Media Asset"><i class="fa-solid fa-plus"></i></button>
             <div class="composition-input-field-shield">
@@ -342,7 +330,7 @@
         </div>
     </form>
 
-</section>
+</section> -->
 
 
 

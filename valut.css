@@ -1094,79 +1094,119 @@
 /* ==========================================================================
    STRICT 768px LUXURY MEDIA QUERY REFLOW (Liquid Touch Control Runway Segment)
    ========================================================================== */
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Fixed Non-Overflow Stream)
+   ========================================================================== */
 @media (max-width: 768px) {
+    /* Prevent the top-level section element from allowing leaks */
+    html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
     .platform-category-matrix-stage {
         padding: 24px 0 60px 0;
+        width: 100%;
+        overflow-hidden: hidden; /* Encapsulate row content scopes safely */
     }
 
-    /* Collapse wide horizontal row splitting lanes down into a singular stacked mobile touch target stream */
+    /* Standardize wide boundaries to cleanly float within mobile width viewports */
+    .category-layout-wrapper {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Collapse wide lanes into a stacked column structure */
     .category-workspace-split-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 20px;
         width: 100%;
+        overflow: hidden;
     }
 
-    /* Convert structural vertical button sidebars straight into an app-native sliding category horizontal control lane track */
+    /* Convert button stack into a clean side-scrolling capsule bar */
     .category-filtration-control-sidebar {
         width: 100%;
-        padding: 0 5%;
+        padding: 0 16px; /* Uniform container edge clearance padding */
+        box-sizing: border-box;
     }
 
     .sidebar-sticky-enclosure {
         position: static;
         gap: 0;
-    }
-
-    .sidebar-header-row {
-        display: none; /* Purges static descriptive sidebar texts labels to create spatial bounds overhead clearance */
-    }
-
-    .filter-directory-buttons-stack {
-        flex-direction: row;
-        overflow-x: auto;
-        scrollbar-width: none; /* Hides raw desktop scrollbar tracking trails on touch targets displays monitors */
-        padding-bottom: 4px;
-        gap: 8px;
         width: 100%;
     }
 
-    .filter-directory-buttons-stack::-webkit-scrollbar { display: none; }
+    .sidebar-header-row {
+        display: none; /* Clear header rows to allow room for capsule buttons */
+    }
 
+    /* THE CORE FIX: Control horizontal slider boundaries safely */
+    .filter-directory-buttons-stack {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none; /* Hide default desktop scrollbars */
+        padding-bottom: 8px; /* Safe padding clearance underneath capsule pills */
+        gap: 8px;
+        width: 100%;
+        -webkit-overflow-scrolling: touch; /* Kinetic scrolling acceleration on iOS devices */
+    }
+
+    .filter-directory-buttons-stack::-webkit-scrollbar { 
+        display: none; /* Hide scrollbars on modern WebKit engines */
+    }
+
+    /* Keep capsule buttons uniform and prevent shrinking */
     .directory-filter-btn {
         width: auto;
-        flex-shrink: 0;
-        padding: 8px 14px;
-        font-size: 12px;
-        border-radius: 20px; /* Converts rigid card boxes straight into soft organic mobile micro-capsules */
+        flex-shrink: 0; /* Important: prevents text truncation or button collapse */
+        padding: 10px 16px;
+        font-size: 13px;
+        border-radius: 24px; /* Soft organic profile capsules */
+        display: inline-flex;
+        align-items: center;
         gap: 8px;
     }
 
-    .directory-filter-btn:hover { transform: none; } /* Deactivates desktop horizontal translation drifts offsets on click inputs screens */
-
-    .badge-count-dark {
-        font-size: 10px;
-        padding: 1px 6px;
+    .directory-filter-btn:hover { 
+        transform: none; /* Disable desktop translation transforms on touch devices */
     }
 
-    /* Media Showcase Component Adjustments Layers Over Mobile Viewports */
+    .badge-count-dark {
+        font-size: 11px;
+        padding: 2px 6px;
+        flex-shrink: 0;
+    }
+
+    /* Image Showcase Grid Component Structural Fixes */
     .category-primary-stream-axis {
-        padding: 0 5%;
+        width: 100%;
+        padding: 0 16px; /* Match filter sidebar layout track line perfectly */
+        box-sizing: border-box;
     }
 
     .category-portfolio-3x3-matrix {
-        gap: 12px; /* Tight liquid line spacing dividers parameters matching your home grid profiles patterns precisely */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Balanced double column media allocation layout */
+        gap: 12px;
+        width: 100%;
     }
 
     .category-item-viewport-shield {
         border-radius: 8px;
+        width: 100%;
     }
 
-    /* Suppress complex desktop hover veils to maximize scroll rendering processing speed natively over mobile hand frames */
+    /* Disable resource-heavy hover cards on mobile viewports */
     .category-item-hover-shutter {
-        display: none;
+        display: none !important;
     }
 }
-
 
 
 

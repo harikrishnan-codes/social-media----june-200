@@ -2,13 +2,12 @@
    ULTRA-PREMIUM & LUXURIOUS HEADER CORE MODULAR CSS WITH DROPDOWN MATRIX
    ========================================================================== */
 
-/* Typography Assignments: Serifs map onto your luxury corporate branding explicitly */
+/* Typography Assignments */
 .app-premium-header .app-logo-title,
 .app-premium-header .app-logo-title span {
     font-family: 'Playfair Display', serif !important;
 }
 
-/* Sans-serif pairing rules for crisp, scannable interactive navigation tracks */
 .app-premium-header .app-nav-link,
 .app-premium-header .btn-social-base,
 .dropdown-leaf-link {
@@ -23,13 +22,12 @@
     z-index: 1000;
     opacity: 0; 
     transform: translateY(-15px);
-    /* Accelerated hardware transition sequence executing on runtime load */
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Glassmorphic Fluid Layer Base Frame Alignment */
+/* Glassmorphic Layer Frame Setup */
 .header-glass-backdrop {
-    background: rgba(18, 18, 18, 0.75); /* Deep midnight slate frosted canvas overlay */
+    background: rgba(18, 18, 18, 0.75); 
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border-bottom: 1px solid var(--border-dark);
@@ -46,7 +44,6 @@
     align-items: center;
 }
 
-/* Symmetrical Typography Kerning Weights */
 .app-logo-title {
     font-size: 26px;
     font-weight: 900;
@@ -55,15 +52,7 @@
     letter-spacing: -1px;
 }
 
-.app-logo-title span {
-    color: var(--brand-vibrant);
-    font-style: italic;
-    font-weight: 700;
-}
-
-/* ==========================================================================
-   NAVIGATION CODES & DYNAMIC UNDERLINE INDICATOR MATRICES
-   ========================================================================== */
+/* Navigation Layout Alignment Grid */
 .app-navigation-deck {
     display: flex;
     align-items: center;
@@ -89,7 +78,7 @@
     opacity: 0.8;
 }
 
-/* Modern Minimalist Gradient Action Underline Trace */
+/* Modern Minimalist Underline Animation Trace */
 .app-nav-link::after {
     content: '';
     position: absolute;
@@ -113,12 +102,33 @@
     transform: scaleX(1);
 }
 
+/* Hide mobile duplicated links by default on desktop monitors sizes */
+.mobile-only-auth {
+    display: none !important;
+}
+
 /* ==========================================================================
-   EXACT ACCURATE DROPDOWN OVERLAY BOX GEOMETRY MODULE
+   EXACT SPLIT-ACTION DROPDOWN LAYOUT ARCHITECTURE
    ========================================================================== */
 .app-nav-dropdown-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     position: relative;
-    display: inline-block;
+}
+
+.dropdown-trigger-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 4px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.dropdown-trigger-icon:hover {
+    color: var(--text-dark-pure);
 }
 
 .dropdown-arrow-indicator {
@@ -132,7 +142,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(14px);
     width: 170px;
-    background-color: #121212; /* Matches your --surface-dark Slate Obsidian variable token precisely */
+    background-color: #121212; 
     border: 1px solid var(--border-dark);
     border-radius: 6px;
     padding: 6px;
@@ -141,12 +151,9 @@
     visibility: hidden;
     pointer-events: none;
     z-index: 2000;
-    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
-                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
-                visibility 0.3s ease;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
 }
 
-/* Active State Injections Driven via Interactive Clicks Hooks */
 .app-nav-dropdown-wrapper.dropdown-visible-active .app-nav-dropdown-panel {
     opacity: 1;
     visibility: visible;
@@ -156,7 +163,7 @@
 
 .app-nav-dropdown-wrapper.dropdown-visible-active .dropdown-arrow-indicator {
     transform: rotate(180deg);
-    color: var(--brand-vibrant); /* Fires Orange Accent color change match on open state */
+    color: var(--brand-vibrant); 
 }
 
 .dropdown-text-stack {
@@ -226,9 +233,6 @@
     transform: translateY(-1px);
 }
 
-/* ==========================================================================
-   HAMBURGER RIGID BAR LINE PACK MECHANICS
-   ========================================================================== */
 .mobile-menu-hamburger {
     display: none;
     background: transparent;
@@ -250,21 +254,31 @@
 }
 
 /* ==========================================================================
-   STRICT 768px LUXURY MEDIA QUERY REFLOW (Curtain Slate Open Panel)
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Curtain Slate Open Panel Segment)
    ========================================================================== */
 @media (max-width: 768px) {
     .mobile-menu-hamburger {
-        display: flex; /* Activate toggle vector engine visibility */
+        display: flex;
     }
 
-    /* Convert standard track options list into a gorgeous full screen slide curtain layout */
+    /* Hide standard horizontal desktop-placed actions */
+    .desktop-only-auth {
+        display: none !important;
+    }
+
+    /* Show layout buttons inside the slide out navigation tray drawer list path */
+    .mobile-only-auth {
+        display: inline-flex !important;
+    }
+
+    /* Full screen mobile slide out navigation deck configuration */
     .app-navigation-deck {
         position: fixed;
         top: 0;
         right: -100%;
         width: 300px;
         height: 100vh;
-        background: rgba(14, 14, 14, 0.98); /* Rich midnight matte canvas surface */
+        background: rgba(14, 14, 14, 0.98); 
         backdrop-filter: blur(35px);
         -webkit-backdrop-filter: blur(35px);
         border-left: 1px solid var(--border-dark);
@@ -272,33 +286,60 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 24px;
+        gap: 20px;
         transition: right 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         overflow-y: auto;
+        box-sizing: border-box;
     }
 
-    /* Triggered state layer driven directly via core script commands toggles */
     .app-navigation-deck.mobile-tray-active {
         right: 0;
         box-shadow: -30px 0 60px rgba(0, 0, 0, 0.7);
     }
 
+    /* Mobile alignment split framework */
     .app-nav-dropdown-wrapper {
         width: 100%;
-    }
-
-    .app-nav-link {
-        font-size: 18px; /* Scaled touch row heights for micro mobile actions */
-        width: 100%;
-        padding: 8px 0;
         justify-content: space-between;
     }
 
-    .app-nav-link::after {
-        display: none; /* Strip slider accent underline over mobile slide curtain views */
+    .app-nav-link {
+        font-size: 18px; 
+        width: auto;
+        padding: 8px 0;
     }
 
-    /* --- MOBILE CHASSIS ACCORDION EXPANSION --- */
+    .dropdown-trigger-icon {
+        padding: 8px 16px; /* Enhanced finger-touch click targets area */
+    }
+
+    .app-nav-link::after {
+        display: none; 
+    }
+
+    /* Mobile vertical button design mappings styling rules inside tray */
+    .app-navigation-deck .btn-social-base {
+        width: 100%;
+        padding: 14px 22px;
+        font-size: 16px;
+        box-sizing: border-box;
+        justify-content: center;
+        border-radius: var(--btn-radius);
+    }
+
+    .app-navigation-deck .btn-app-secondary {
+        margin-top: 20px; 
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border-dark);
+        color: var(--text-dark-pure);
+    }
+
+    .app-navigation-deck .btn-app-primary {
+        background: var(--btn-primary-bg);
+        color: var(--btn-primary-text);
+    }
+
+    /* Accordion expansion overrides over mobile views layout structures */
     .app-nav-dropdown-panel {
         position: static;
         transform: none !important;
@@ -311,7 +352,7 @@
         background-color: transparent;
         padding: 4px 0 0 16px;
         margin-top: 2px;
-        display: none; /* Managed cleanly via script hooks */
+        display: none; 
     }
 
     .app-nav-dropdown-wrapper.dropdown-visible-active .app-nav-dropdown-panel {
@@ -324,13 +365,7 @@
         color: var(--text-secondary);
     }
 
-    /* Hide horizontal button groups to keep viewport density clean */
-    .btn-app-secondary,
-    .btn-app-primary {
-        display: none;
-    }
-
-    /* High-Status Cross Shape Adaptations for Open States Menu */
+    /* Cross-shape button line animation transitions code mappings */
     .mobile-menu-hamburger.hamburger-active .burger-bar-line:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
         background-color: var(--brand-vibrant);
@@ -345,8 +380,6 @@
         background-color: var(--brand-vibrant);
     }
 }
-
-
 
 
 
@@ -1539,21 +1572,138 @@
 /* ==========================================================================
    STRICT 768px LUXURY MEDIA QUERY REFLOW (Vertical Panel Linear Stack)
    ========================================================================== */
+/* ==========================================================================
+   STRICT 768px LUXURY MEDIA QUERY REFLOW (Perfect Mobile Messaging Reflow)
+   ========================================================================== */
 @media (max-width: 768px) {
+    /* Prevent any unwanted horizontal leaks across messaging layers */
+    html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
     .app-messaging-canvas {
-        padding: 40px 0;
+        padding: 30px 0 60px 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    /* Collapse split grid layout columns into a balanced vertical stack structure */
+    /* Convert structural layout sizes to fluid screen percentages */
     .messaging-layout-wrapper {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        width: 90%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 16px; /* High fidelity side edge margins alignment */
+        box-sizing: border-box;
+        gap: 24px;
     }
 
-    .active-connections-deck,
+    /* ==========================================================================
+       LEFT WING: CAROUSEL TRACK RE-ALIGNMENT
+       ========================================================================== */
+    .active-connections-deck {
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+
+    .messaging-panel-title {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    /* Enable kinetic finger touch sliding acceleration for mobile bubbles track */
+    .connections-scroll-track {
+        gap: 16px;
+        padding-bottom: 8px;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .connection-status-node {
+        min-width: 60px;
+        gap: 6px;
+    }
+
+    .avatar-status-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+
+    .connection-user-tag {
+        font-size: 11px;
+    }
+
+    /* ==========================================================================
+       RIGHT WING: DIRECT MESSAGE INBOX TRACK RE-ALIGNMENT
+       ========================================================================== */
     .inbox-preview-deck {
-        padding: 22px;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
+
+    .inbox-header-row {
+        margin-bottom: 16px;
+    }
+
+    .unread-requests-badge {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+
+    .inbox-stream-track {
+        gap: 12px;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    /* Fix the text layout bounds inside your list item bars */
+    .inbox-message-row {
+        padding: 12px;
+        border-radius: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+
+    .inbox-sender-avatar {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0; /* Prevents user images from flattening into oval shapes */
+    }
+
+    .message-text-metadata {
+        margin-left: 12px;
+        flex-grow: 1; /* Automatically stretches to occupy the maximum safe middle width */
+        max-width: 60%; /* Locks text truncation boundaries perfectly */
+    }
+
+    .message-text-metadata h4 {
+        font-size: 14px;
+    }
+
+    .message-snippet-text {
+        font-size: 12px;
+    }
+
+    .message-metrics-node {
+        flex-shrink: 0;
+        align-items: flex-end;
+        gap: 6px;
+    }
+
+    .message-timestamp {
+        font-size: 10px;
+    }
+
+    /* Deactivate translation transforms over touch interfaces to optimize scroll performance */
+    .inbox-message-row:hover {
+        transform: none !important;
+        background-color: rgba(255, 255, 255, 0.04);
     }
 }
 
